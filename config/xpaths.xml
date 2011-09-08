@@ -1,0 +1,196 @@
+<elements>
+	<anchors>
+		<anchor>		
+			<generic>//a[@title=element]</generic>
+		</anchor>
+		<anchor>		
+			<generic>//a/span[normalize-space()=element]</generic>
+		</anchor>
+		<anchor>		
+			<generic>//a[normalize-space(text())=element]</generic>
+		</anchor>
+		<anchor>		
+			<generic>//a[normalize-space()=element]</generic>
+		</anchor>
+		<anchor>		
+			<generic>//img[@alt=element]</generic>
+		</anchor>
+	</anchors>
+
+	<bodytexts>
+		<bodytext>
+			<generic>//body[contains(normalize-space(), element)]</generic>
+		</bodytext>
+	</bodytexts>
+
+	<buttons>
+		<button>
+			<generic>//input[@id=element and (@type='button' or @type='submit')]</generic>
+		</button>
+		<button>
+			<generic>//input[@name=element and (@type='button' or @type='submit')]</generic>
+		</button>
+		<button>
+			<generic>//input[normalize-space(@value)=element and (@type='button' or @type='submit')]</generic>
+		</button>
+	</buttons>
+
+	<checkboxes>
+		<checkbox>
+			<generic>//input[@id=element and (@type='checkbox')]</generic>
+		</checkbox>
+		<checkbox>
+			<generic>//input[@name=element and (@type='checkbox')]</generic>
+		</checkbox>
+		<checkbox>
+			<generic>//input[starts-with(@id, element) and (@type='checkbox')]</generic>
+		</checkbox>		
+		<checkbox>
+			<generic>//input[@type='checkbox' and @id=//label[normalize-space()=element]/@for]</generic>
+		</checkbox>	
+		<checkbox>
+			<generic>//input[@type='checkbox' and @id=//label[starts-with(normalize-space(), element)]/@for]</generic>
+		</checkbox>					
+		<checkbox>
+			<generic>//label[normalize-space()=element]/preceding-sibling::input[@type='checkbox']</generic>
+		</checkbox>
+		<checkbox>
+			<generic>//label[normalize-space()=element]/following-sibling::input[@type='checkbox']</generic>
+		</checkbox>
+		<checkbox>
+			<messages>//input[starts-with(@name, element) and (@type='checkbox')]</messages>
+		</checkbox>	
+		<checkbox>
+			<testcenter>//*[normalize-space()=element]/preceding::input[1 and (@type='checkbox')]</testcenter>
+		</checkbox>		
+		<checkbox>
+			<testcenter>//label[starts-with(normalize-space(), element)]/preceding::input[@type='checkbox'][1]</testcenter>
+		</checkbox>		
+	</checkboxes>
+
+	<fckeditors>
+		<fckeditor>
+			<generic>//label[normalize-space()=element]/following::iframe[contains(@src, 'FCKeditor')]</generic>
+		</fckeditor>
+		<fckeditor>
+			<generic>//h4[normalize-space()=element]/following::iframe[contains(@src, 'FCKeditor')]</generic>
+		</fckeditor>
+		<fckeditor>
+			<historic>//td[@id='xToolbar']/table[1]/tbody/tr/td[2]/div/table/tbody/tr/td[2]</historic>
+		</fckeditor>
+	</fckeditors>
+
+	<listboxes>
+		<listbox>
+			<generic>//select[@id=element]</generic>
+		</listbox>
+		<listbox>
+			<generic>//select[@name=element]</generic>
+		</listbox>
+		<listbox>
+			<generic>//select[@id=//label[normalize-space()=element]/@for]</generic>
+		</listbox>		
+		<listbox>
+			<generic>//*[normalize-space()=element]/following-sibling::select</generic>
+		</listbox>		
+		<listbox>
+			<testcenter>//*[normalize-space()=element]/following::select</testcenter>
+		</listbox>
+	</listboxes>	
+
+	<mceeditors>
+		<mceeditor>
+			<generic>//div[normalize-space()=element]/following::table[@class='mceLayout']//iframe</generic>
+		</mceeditor>	
+		<mceeditor>
+			<generic>//div[starts-with(normalize-space(), element)]/following-sibling::div//iframe</generic>
+		</mceeditor>
+		<mceeditor>
+			<generic>//td[starts-with(normalize-space(), element)]/following-sibling::td//iframe</generic>
+		</mceeditor>
+	</mceeditors>
+	
+	<radios>
+		<radio>		
+			<generic>//input[@id=element and @type='radio']</generic>
+		</radio>
+		<radio>		
+			<generic>//input[@name=element and @type='radio']</generic>
+		</radio>
+		<radio>
+			<generic>//input[@value=element and @type='radio']</generic>
+		</radio>
+		<radio>		
+			<generic>//input[@type='radio' and @id=//label[normalize-space()=element]/@for]</generic>
+		</radio>		
+		<radio>		
+			<generic>//td[normalize-space()=element]/preceding-sibling::input[@type='radio'][1]</generic>
+		</radio>
+		<radio>		
+			<generic>//label[normalize-space()=element]/preceding-sibling::input[@type='radio'][1]</generic>
+		</radio>
+		<radio>		
+			<generic>//label[starts-with(normalize-space(), element)]/preceding-sibling::input[@type='radio'][1]</generic>
+		</radio>
+		<radio>		
+			<messages>//text()[normalize-space()=element]/preceding-sibling::input[@type='radio']</messages>
+		</radio>		
+		<radio>		
+			<testcenter>//td[starts-with(normalize-space(), element)]/preceding::input[@type='radio'][1]</testcenter>
+		</radio>												
+	</radios>
+
+	<textareas>
+		<textarea>
+			<generic>//textarea[@id=element]</generic>
+		</textarea>
+		<textarea>
+			<generic>//textarea[@name=element]</generic>
+		</textarea>
+		<textarea>
+			<generic>//label[starts-with(normalize-space(),element)]/following-sibling::textarea</generic>
+		</textarea>
+		<textarea>
+			<generic>//textarea[starts-with(@id, element)]</generic>
+		</textarea>
+		<textarea>
+			<generic>//textarea[starts-with(@name, element)]</generic>
+		</textarea>				
+	</textareas>
+	
+	<textboxes>
+		<textbox>
+			<generic>//input[@id=element and (@type='text')]</generic>
+		</textbox>
+		<textbox>
+			<generic>//input[@name=element and (@type='text')]</generic>
+		</textbox>
+		<textbox>
+			<generic>//input[@id=element and (@type='password')]</generic>
+		</textbox>
+		<textbox>
+			<generic>//input[@type='text' and @id=//label[normalize-space()=element]/@for]</generic>
+		</textbox>
+		<textbox>
+			<generic>//label[normalize-space()=element]/following-sibling::input[@type='text']</generic>
+		</textbox>
+		<textbox>
+			<generic>//input[starts-with(@id, element) and (@type='text')]</generic>
+		</textbox>
+		<textbox>
+			<generic>//input[starts-with(@name, element) and (@type='text')]</generic>
+		</textbox>		
+		<textbox>
+			<testcenter>//label[starts-with(normalize-space(),element)]/following::input[@type='text']</testcenter>
+		</textbox>	
+		<textbox>
+			<generic>//*[text()=element]/following::input[@type='text'][1]</generic>
+		</textbox>	
+	</textboxes>
+	
+	<uploadpaths>
+		<uploadpath>
+			<generic>//input[@type='file']</generic>
+		</uploadpath>
+	</uploadpaths>
+</elements>

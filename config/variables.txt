@@ -1,0 +1,12 @@
+url=https://testctools.ds.itd.umich.edu/portal/xlogin
+site=Selenium 001 001 W11
+project_site=Sample Project Site
+term=SPRING_SUMMER 2011
+creationCourseNum=101
+creationCourseNum2=102
+creationCourseEmail=testing_101_SpSu11
+creationSite=Testing 101 001 SpSu11
+UMIAC_ID1=2011,5,A,Testing,101,001
+UMIAC_ID2=2011,5,A,Testing,102,001
+providerID1=2011,5,A,Testing,101,001
+providerID2=2011,5,A,Testing,102,001

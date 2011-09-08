@@ -1,0 +1,121 @@
+/storage/code/svn/edu/umich/keyword/csv/announcements/01AnnouncementsInstructorCheckHelp.csv
+/storage/code/svn/edu/umich/keyword/csv/announcements/02AnnouncementsStudentCheckHelp.csv
+/storage/code/svn/edu/umich/keyword/csv/announcements/03AnnouncementsInstructorAddAnnouncement.csv
+/storage/code/svn/edu/umich/keyword/csv/announcements/04AnnouncementsInstructorAddAnnouncementAttachment.csv
+/storage/code/svn/edu/umich/keyword/csv/announcements/05AnnouncementsInstructorAddAnnouncementEmail.csv
+/storage/code/svn/edu/umich/keyword/csv/announcements/06AnnouncementsInstructorDeleteAnnouncements.csv
+
+/storage/code/svn/edu/umich/keyword/csv/assignments/01_assignments_InstructorCreate_LongAssignment.csv
+/storage/code/svn/edu/umich/keyword/csv/assignments/02_assignments_InstructorCreate_DraftAssignment.csv
+/storage/code/svn/edu/umich/keyword/csv/assignments/04_assignments_InstructorUpdate_DraftAssignment.csv
+/storage/code/svn/edu/umich/keyword/csv/assignments/05_assignments_StudentSubmit_LongAssignment.csv
+/storage/code/svn/edu/umich/keyword/csv/assignments/06_assignments_StudentChecks_ModelAnswer.csv
+/storage/code/svn/edu/umich/keyword/csv/assignments/07_assignments_InstructorGrade_LongAssignment.csv
+/storage/code/svn/edu/umich/keyword/csv/assignments/09_assignments_Student_CheckGrades.csv
+/storage/code/svn/edu/umich/keyword/csv/assignments/11_assignments_InstructorDeleteAll.csv
+/storage/code/svn/edu/umich/keyword/csv/assignments/13_assignments_Student_CheckHelp.csv
+/storage/code/svn/edu/umich/keyword/csv/assignments/14_assignments_Instructor_CheckHelp.csv
+
+/storage/code/svn/edu/umich/keyword/csv/chat/01_Chat_Instructor_AddRoom.csv
+/storage/code/svn/edu/umich/keyword/csv/chat/02_Chat_Instructor_SetNewRoomAsDefault.csv
+/storage/code/svn/edu/umich/keyword/csv/chat/03_Chat_Student_AddFirstChatMessage.csv
+/storage/code/svn/edu/umich/keyword/csv/chat/04_Chat_Instructor_AddSecondChatMessage.csv
+/storage/code/svn/edu/umich/keyword/csv/chat/05_Chat_Student_AddThirdChatMessage.csv
+/storage/code/svn/edu/umich/keyword/csv/chat/06_Chat_Instructor_AddFourthChatMessage.csv
+/storage/code/svn/edu/umich/keyword/csv/chat/09_Chat_Instructor_TypeAndClearChatMessage.csv
+/storage/code/svn/edu/umich/keyword/csv/chat/10_Chat_Student_TypeAndClearChatMessage.csv
+/storage/code/svn/edu/umich/keyword/csv/chat/13_Chat_Instructor_DeleteChatMessage.csv
+/storage/code/svn/edu/umich/keyword/csv/chat/15_Chat_Student_MoveToAnotherChatRoom.csv
+/storage/code/svn/edu/umich/keyword/csv/chat/21_Chat_Student_CheckHelp.csv
+/storage/code/svn/edu/umich/keyword/csv/chat/22_Chat_Instructor_CheckHelp.csv
+
+/storage/code/svn/edu/umich/keyword/csv/forums/01ForumsInstructorCheckHelp.csv
+/storage/code/svn/edu/umich/keyword/csv/forums/02ForumsStudentCheckHelp.csv
+/storage/code/svn/edu/umich/keyword/csv/forums/03ForumsInstructorCreateForumTopicThread.csv
+/storage/code/svn/edu/umich/keyword/csv/forums/04ForumsStudentReadReplyMessage.csv
+/storage/code/svn/edu/umich/keyword/csv/forums/05ForumsInstructorReadReplyMessage.csv
+
+/storage/code/svn/edu/umich/keyword/csv/gradebook/01_Gradebook_Instructor_AddItem.csv
+/storage/code/svn/edu/umich/keyword/csv/gradebook/02_Gradebook_Instructor_EditItem.csv
+/storage/code/svn/edu/umich/keyword/csv/gradebook/03_Gradebook_Instructor_ImportGrades.csv
+/storage/code/svn/edu/umich/keyword/csv/gradebook/04_Gradebook_Instructor_ChangeGradeOptions.csv
+/storage/code/svn/edu/umich/keyword/csv/gradebook/05_Gradebook_Instructor_OverrideGrades.csv
+/storage/code/svn/edu/umich/keyword/csv/gradebook/06_Gradebook_Instructor_ExportGrades.csv
+/storage/code/svn/edu/umich/keyword/csv/gradebook/07_Gradebook_Instructor_AddEditScores.csv
+/storage/code/svn/edu/umich/keyword/csv/gradebook/09_Gradebook_Student_ViewItemScore.csv
+/storage/code/svn/edu/umich/keyword/csv/gradebook/11_Gradebook_Instructor_CalculateCourseGrade.csv
+/storage/code/svn/edu/umich/keyword/csv/gradebook/12_Gradebook_Instructor_ReleaseCourseGrade.csv
+/storage/code/svn/edu/umich/keyword/csv/gradebook/14_Gradebook_Student_ViewCourseGrade.csv
+/storage/code/svn/edu/umich/keyword/csv/gradebook/21_Gradebook_Student_CheckHelp.csv
+/storage/code/svn/edu/umich/keyword/csv/gradebook/22_Gradebook_Instructor_CheckHelp.csv
+/storage/code/svn/edu/umich/keyword/csv/gradebook/31_Gradebook_Instructor_DeleteAll.csv
+
+/storage/code/svn/edu/umich/keyword/csv/honor code/01HonorCodeInstructorCheckHelp.csv
+/storage/code/svn/edu/umich/keyword/csv/honor code/02HonorCodeStudentCheckHelp.csv
+/storage/code/svn/edu/umich/keyword/csv/honor code/03HonorCodeInstructorModifyText.csv
+/storage/code/svn/edu/umich/keyword/csv/honor code/04HonorCodeInstructorCheckTextAndClickLink.csv
+/storage/code/svn/edu/umich/keyword/csv/honor code/05HonorCodeStudentCheckTextAndClickLink.csv
+/storage/code/svn/edu/umich/keyword/csv/honor code/06HonorCodeInstructorResetChanges.csv
+
+/storage/code/svn/edu/umich/keyword/csv/polls/01_Polls_Instructor_AddPoll.csv
+/storage/code/svn/edu/umich/keyword/csv/polls/02_Polls_Student_TakePoll.csv
+/storage/code/svn/edu/umich/keyword/csv/polls/03_Polls_Instructor_TakePoll.csv
+/storage/code/svn/edu/umich/keyword/csv/polls/04_Polls_Instructor_ViewResults.csv
+/storage/code/svn/edu/umich/keyword/csv/polls/05_Polls_Instructor_ViewHelp.csv
+/storage/code/svn/edu/umich/keyword/csv/polls/06_Polls_Student_ViewHelp.csv
+/storage/code/svn/edu/umich/keyword/csv/polls/07_Polls_Instructor_DeletePoll.csv
+
+/storage/code/svn/edu/umich/keyword/csv/schedule/01_Schedule_Instructor_AddEvent.csv
+/storage/code/svn/edu/umich/keyword/csv/schedule/02_Schedule_Instructor_EditEvent.csv
+/storage/code/svn/edu/umich/keyword/csv/schedule/03_Schedule_Instructor_DeleteEvent.csv
+/storage/code/svn/edu/umich/keyword/csv/schedule/04_Schedule_Instructor_MergeEvent.csv
+/storage/code/svn/edu/umich/keyword/csv/schedule/05_Schedule_Instructor_ImportEvent.csv
+/storage/code/svn/edu/umich/keyword/csv/schedule/07_Schedule_Instructor_Delete_ImportedEvents.csv
+/storage/code/svn/edu/umich/keyword/csv/schedule/11_Schedule_Student_AddEvent.csv
+/storage/code/svn/edu/umich/keyword/csv/schedule/12_Schedule_Student_EditEvent.csv
+/storage/code/svn/edu/umich/keyword/csv/schedule/14_Schedule_Student_DeleteEvent.csv
+/storage/code/svn/edu/umich/keyword/csv/schedule/21_Schedule_Instructor_CheckHelp.csv
+/storage/code/svn/edu/umich/keyword/csv/schedule/22_Schedule_Student_CheckHelp.csv
+
+/storage/code/svn/edu/umich/keyword/csv/test center/601_Mneme_instructor_AddPool.csv
+/storage/code/svn/edu/umich/keyword/csv/test center/602_Mneme_instructor_AddQuestionsToQuestionPool.csv
+/storage/code/svn/edu/umich/keyword/csv/test center/603_Mneme_instructor_EditQuestionPool.csv
+/storage/code/svn/edu/umich/keyword/csv/test center/604_Mneme_instructor_CreateAssessment_fromQuestionPool.csv
+/storage/code/svn/edu/umich/keyword/csv/test center/605_Mneme_instructor_CreateAssessment.csv
+/storage/code/svn/edu/umich/keyword/csv/test center/607_Mneme_instructor_TestDriveAssessment.csv
+/storage/code/svn/edu/umich/keyword/csv/test center/608_Mneme_instructor_PublishAssessment.csv
+/storage/code/svn/edu/umich/keyword/csv/test center/609_Mneme_student_TakeAssessment.csv
+/storage/code/svn/edu/umich/keyword/csv/test center/612_Mneme_instructor_GradeAssessment.csv
+/storage/code/svn/edu/umich/keyword/csv/test center/615_Mneme_student_CheckHelp.csv
+/storage/code/svn/edu/umich/keyword/csv/test center/616_Mneme_Instructor_CheckHelp.csv
+/storage/code/svn/edu/umich/keyword/csv/test center/620_Mneme_instructor_DeleteAll.csv
+
+/storage/code/svn/edu/umich/keyword/csv/textbook/01TextbookInstructorCheckHelp.csv
+/storage/code/svn/edu/umich/keyword/csv/textbook/02TextbookInstructorBooksellerCheck.csv
+/storage/code/svn/edu/umich/keyword/csv/textbook/03TextbookStudentCheckHelp.csv
+/storage/code/svn/edu/umich/keyword/csv/textbook/04TextbookStudentBooksellerCheck.csv
+/storage/code/svn/edu/umich/keyword/csv/textbook/05TextbookStudentSellBook.csv
+/storage/code/svn/edu/umich/keyword/csv/textbook/06TextbookStudentSearchBook.csv
+/storage/code/svn/edu/umich/keyword/csv/textbook/07TextbookStudentDeleteBook.csv
+
+/storage/code/svn/edu/umich/keyword/csv/worksite setup/101_WorksiteSetup_instructor_CreateCourseSite.csv
+/storage/code/svn/edu/umich/keyword/csv/worksite setup/102_WorksiteSetup_instructor_AddRosterToCourseSite.csv
+/storage/code/svn/edu/umich/keyword/csv/worksite setup/103_WorksiteSetup_instructor_AddParticipantToCourseSite.csv
+/storage/code/svn/edu/umich/keyword/csv/worksite setup/104_WorksiteSetup_instructor_DuplicateCourseSite.csv
+/storage/code/svn/edu/umich/keyword/csv/worksite setup/105_WorksiteSetup_instructor_DeleteDuplicateCourseSite.csv
+/storage/code/svn/edu/umich/keyword/csv/worksite setup/111_WorksiteSetup_student_CreateProjectSite.csv
+/storage/code/svn/edu/umich/keyword/csv/worksite setup/112_WorksiteSetup_student_ReviseToolsProjectSite.csv
+/storage/code/svn/edu/umich/keyword/csv/worksite setup/113_WorksiteSetup_student_AddParticipantProjectSite.csv
+/storage/code/svn/edu/umich/keyword/csv/worksite setup/114_WorksiteSetup_student_DuplicateProjectSite.csv
+/storage/code/svn/edu/umich/keyword/csv/worksite setup/115_WorksiteSetup_student_DeleteDuplicateProjectSite.csv
+/storage/code/svn/edu/umich/keyword/csv/worksite setup/121_WorksiteSetup_Student_CheckHelp.csv
+/storage/code/svn/edu/umich/keyword/csv/worksite setup/122_WorksiteSetup_Instructor_CheckHelp.csv
+
+/storage/code/svn/edu/umich/keyword/csv/webcontent/01InstructorCreateEmbeddedWebContent.csv
+/storage/code/svn/edu/umich/keyword/csv/webcontent/02StudentCheckEmbeddedWebContent.csv
+/storage/code/svn/edu/umich/keyword/csv/webcontent/03InstructorResetEmbeddedWebContent.csv
+/storage/code/svn/edu/umich/keyword/csv/webcontent/04InstructorCreatePopUpWebContent.csv
+/storage/code/svn/edu/umich/keyword/csv/webcontent/05StudentCheckPopUpWebContent.csv
+/storage/code/svn/edu/umich/keyword/csv/webcontent/06InstructorResetPopUpWebContent.csv
+/storage/code/svn/edu/umich/keyword/csv/webcontent/07InstructorCheckHelp.csv
+/storage/code/svn/edu/umich/keyword/csv/webcontent/08StudentCheckHelp.csv

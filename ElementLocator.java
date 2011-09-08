@@ -1,4 +1,4 @@
-package edu.umich.keyword2;
+package edu.umich.keyword;
 
 import java.io.File;
 import java.util.ArrayList;
@@ -38,23 +38,26 @@ public class ElementLocator {
 		Integer iteration = Integer.parseInt(paramHash.get("iteration"));
 		
 		try {
-			
-			// Get the list of paths for the first element type, like button, for instance.
-			List<String> locatorList = getAllLocators(xpathFile, elementTypes, objectID);
-			
-			// Start at the top frame to look for the element in question.
-			driver.switchTo().defaultContent();
-			
-			// Look for the element, and return it if you find it.
-			if(objectLocator(driver, locatorList, iteration)) {
-				return foundObject;
-			}
-			
-			// If you can't find it, call frameCrawler to look through the frames for it.
-			// return it if you find it.
-			frameLevel = 0;
-			if(frameCrawler(driver, locatorList, iteration)) {
-				return foundObject;
+
+			for (int i=0; i < 3; i++) {
+				// Get the list of paths for the first element type, like button, for instance.
+				List<String> locatorList = getAllLocators(xpathFile, elementTypes, objectID);
+				
+				// Start at the top frame to look for the element in question.
+				driver.switchTo().defaultContent();
+				
+				// Look for the element, and return it if you find it.
+				if(objectLocator(driver, locatorList, iteration)) {
+					return foundObject;
+				}
+				
+				// If you can't find it, call frameCrawler to look through the frames for it.
+				// return it if you find it.
+				frameLevel = 0;
+				if(frameCrawler(driver, locatorList, iteration)) {
+					return foundObject;
+				}
+				Thread.sleep(1000);
 			}
 	
 			// Return an exception if you still can't find it.
@@ -87,10 +90,12 @@ public class ElementLocator {
 				    
 				    // Store all generic and app-specific elements in our list.
 					if (uiElement.getElementsByTagName("generic").getLength() > 0) {
-						myLocators.add(uiElement.getElementsByTagName("generic").item(0).getChildNodes().item(0).getNodeValue().replace("element", "'"+ objectID + "'"));
+//						myLocators.add(uiElement.getElementsByTagName("generic").item(0).getChildNodes().item(0).getNodeValue().replace("element", "'"+ objectID + "'"));
+						myLocators.add(uiElement.getElementsByTagName("generic").item(0).getChildNodes().item(0).getNodeValue().replace("element", "\""+ objectID + "\""));
 					} else if (!application.isEmpty()) {
 						if (uiElement.getElementsByTagName(application).getLength() > 0) {
-							myLocators.add(uiElement.getElementsByTagName(application).item(0).getChildNodes().item(0).getNodeValue().replace("element", "'"+ objectID + "'"));
+//							myLocators.add(uiElement.getElementsByTagName(application).item(0).getChildNodes().item(0).getNodeValue().replace("element", "'"+ objectID + "'"));
+							myLocators.add(uiElement.getElementsByTagName(application).item(0).getChildNodes().item(0).getNodeValue().replace("element", "\""+ objectID + "\""));
 						}
 					}
 				}
@@ -137,9 +142,8 @@ public class ElementLocator {
 				numFrames[frameLevel] = driver.findElements(By.xpath("//frame")).size();
 			}
 			// We will get here if there are no frames, that means it will throw an exception for the iframes and never get
-			// to the other frames.  ***NEED TO FIX***
+			// to the other frames.  Will this ever happen?
 			} catch (NoSuchElementException e) {
-				System.out.println("In the exception handler");
 				// continue;
 			}	
 

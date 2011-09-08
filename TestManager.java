@@ -1,6 +1,6 @@
-package edu.umich.keyword2;
+package edu.umich.keyword;
 
-import edu.umich.keyword2.KeywordMethods;
+import edu.umich.keyword.KeywordMethods;
 
 import java.io.*;
 import java.text.DateFormat;
@@ -73,7 +73,11 @@ public class TestManager {
 		if (!logDirectory.endsWith("/")) {
 			logDirectory = logDirectory.concat("/");
 			}
-			
+		
+		if (!downloadDirectory.endsWith("/")) {
+			downloadDirectory = downloadDirectory.concat("/");
+			}
+		
 		//format of the output date for log directory
 		DateFormat dateFormat = new SimpleDateFormat("yyyyMMdd_hhmmss");
 		//get current date time with Date()
@@ -94,10 +98,14 @@ public class TestManager {
 		int passedTests = 0;
 		int failedTests = 0;
 
-
 		// This will be the reference to our master log file,
 		// which houses the results of all of our tests.
 		BufferedWriter reportLogPointer = new BufferedWriter(new FileWriter(logDirectory + "report.txt"));		
+
+		// Read the tests from the master file if it exists.
+		if (downloadDirectory==null) {
+			reportLogPointer.write("fail: you have not specified a download directory in your parameters file.");
+		}		
 		
 		List<String> testList = Lists.newArrayList();
 		
@@ -140,7 +148,7 @@ public class TestManager {
 			testName = testScriptPath[(testScriptPath.length - 1)];
 
 			// Actually run the test
-			testResult = testRunner(OS, fileDirectory, testScript, logDirectory, testName, variablesPath, xpathFile);
+			testResult = testRunner(testScript, OS, logDirectory, fileDirectory, downloadDirectory, testName, variablesPath, xpathFile);
 			// Shutdown the browser
 			driver.close();
 			
@@ -165,7 +173,7 @@ public class TestManager {
 			if (browser.contains("firefox")){
 				prepFirefoxProfile(downloadDirectory, mimeTypes);
 			} else if (browser.contains("explore")){
-				driver = new InternetExplorerDriver();
+				prepIEProfile(downloadDirectory, mimeTypes);
 			} else if (browser.contains("google")){
 				prepChromeProfile(downloadDirectory, mimeTypes, chromeExecutable);
 			}
@@ -174,13 +182,14 @@ public class TestManager {
 	}
 
 	// This method reads the test file line by line and calls commandRunner with the command to run.
-	private static String testRunner (String OS, String filePath, String testScript, String logDir, String testName, String variablePath, String xpathFile) throws Exception {
+	private static String testRunner (String testScript, String OS, String logDirectory, String fileDirectory, 
+			String downloadDirectory, String testName, String variablePath, String xpathFile) throws Exception {
 		
 		// Reset the application back to null, so the user can set it in a script.
 		application = "";
 		
 		// Create a log file for receiving the results of the commands as we process them.
-		BufferedWriter logPointer = new BufferedWriter(new FileWriter(logDir + testName + ".log"));
+		BufferedWriter logPointer = new BufferedWriter(new FileWriter(logDirectory + testName + ".log"));
 		
 		// Create the variables to read the test files
 		// test files have csv extension, but are pipe delimited.
@@ -205,7 +214,7 @@ public class TestManager {
 				logPointer.write("\r\n"); 
 			}
 			else { 
-				testStatus = commandRunner(OS, filePath, logDir, testName, scriptPointer, logPointer, scriptLine, variablePath, xpathFile);
+				testStatus = commandRunner(scriptLine, OS, logDirectory, fileDirectory, downloadDirectory, testName, variablePath, xpathFile, scriptPointer, logPointer);
 			}
 		}
 		
@@ -217,8 +226,8 @@ public class TestManager {
 
 	// This receives the command to call from testRunner, makes the appropriate call to selenium and logs
 	// the results in the script-level log file.
-	protected static String commandRunner (String OS, String filePath, String logDirectory, String testName, 
-			BufferedReader scriptPointer, BufferedWriter logPointer, String scriptLine, String variablesPath, String xpathFile) throws Exception {
+	protected static String commandRunner (String scriptLine, String OS, String logDirectory, String fileDirectory, String downloadDirectory, 
+			String testName, String variablePath, String xpathFile, BufferedReader scriptPointer, BufferedWriter logPointer) throws Exception {
 	
 		//Assume there are no variables unless explicitly stated.
 		boolean hasVariables = false;
@@ -242,22 +251,22 @@ public class TestManager {
 	    // if the variables file or variable itself doesn't exist.
 	    if (hasVariables) {
 	    	
-			if (variablesPath==null) {
+			if (variablePath==null) {
 				logPointer.write("Fail: Your script uses variables, but you didn't declare a variables file in your parameters file.");				
 				return "fail";
 			}	    	
 	    	
 			// This next section confirms that the variables file exists, then opens and reads it.
-			File variablesFile = new File(variablesPath);
+			File variablesFile = new File(variablePath);
 			
 			if (!variablesFile.exists()) {
-				logPointer.write("Fail: Your variables file: " + variablesPath + " does not exist.");				
+				logPointer.write("Fail: Your variables file: " + variablePath + " does not exist.");				
 				return "fail";
 			}
 			
 			//Define the variables streams and load the variables.
 			Properties variablesReader = new Properties();
-			FileInputStream variablesStream = new FileInputStream(variablesPath);
+			FileInputStream variablesStream = new FileInputStream(variablePath);
 			variablesReader.load(variablesStream);
 	    	
 			// Replace the command with a value from the variables file if it exists.
@@ -287,7 +296,7 @@ public class TestManager {
 	    	testStatus = "pass";
 	    	}	
 	    else if (vars[0].equalsIgnoreCase("capturetext")) { 
-	    	testStatus = KeywordMethods.captureText(driver, application, xpathFile, variablesPath, vars[1], vars[2], vars[3]);
+	    	testStatus = KeywordMethods.captureText(driver, application, xpathFile, variablePath, vars[1], vars[2], vars[3]);
 	    	}		    
 	    else if (vars[0].equalsIgnoreCase("click") && (vars.length == 2)) { 
 	    	testStatus = KeywordMethods.click(driver, application, xpathFile, vars[1]);
@@ -315,7 +324,7 @@ public class TestManager {
 	    	testStatus = KeywordMethods.fckEnter(driver, application, xpathFile, vars[1], vars[2]);
 	    }
 	    else if (vars[0].equalsIgnoreCase("loopwhile")) { 
-	    	testStatus = KeywordMethods.loopWhile(vars[1], OS, filePath, logDirectory, testName, scriptPointer, logPointer, variablesPath, xpathFile);
+	    	testStatus = KeywordMethods.loopWhile(vars[1], OS, logDirectory, fileDirectory, downloadDirectory, testName, variablePath, xpathFile, scriptPointer, logPointer);
 	    	}
 	    else if (vars[0].equalsIgnoreCase("mceEnter") && (vars.length == 3)) { 
 	    	testStatus = KeywordMethods.mceEnter(driver, application, xpathFile, vars[1], vars[2]);
@@ -339,17 +348,17 @@ public class TestManager {
 	    	testStatus = KeywordMethods.selectWindow(driver, vars[1]);
 	    	}
 	    else if (vars[0].equalsIgnoreCase("setvariable")) {
-	    	testStatus = KeywordMethods.setVariable(variablesPath, vars[1],vars[2]);
+	    	testStatus = KeywordMethods.setVariable(variablePath, vars[1],vars[2]);
 	    	}
 	    else if (vars[0].equalsIgnoreCase("uploadfile")) { 
-	    	testStatus = KeywordMethods.uploadFile(driver, application, xpathFile, vars[1], filePath, OS);
+	    	testStatus = KeywordMethods.uploadFile(driver, application, xpathFile, vars[1], fileDirectory, OS);
 	    	}			    
 	    else if (vars[0].equalsIgnoreCase("verifyfile")) { 
-	    	if (vars.length != 3) {
-	    		logPointer.write("Usage: verifyFile|fileToVerify|textToVerifyInFile\r\n");
+	    	if (vars.length != 2) {
+	    		logPointer.write("Usage: verifyFile|fileToVerify|\r\n");
 	    		testStatus = "fail: incorrect method call.";
 	    	} else {
-	    		testStatus = KeywordMethods.verifyFile(driver, application, xpathFile, vars[1], vars[2]);
+	    		testStatus = KeywordMethods.verifyFile(downloadDirectory, fileDirectory, vars[1]);
 	    	  }
 	    	}	
 	    else if (vars[0].equalsIgnoreCase("verifytext")) { 
@@ -436,11 +445,7 @@ public class TestManager {
 	
 	private static void prepIEProfile (String downloadDirectory, String mimeTypes)  throws Exception {
 		
-		DesiredCapabilities capabilities = DesiredCapabilities.chrome();
-		//capabilities.setCapability("chrome.switches", Arrays.asList("--user-download-dir=" + downloadDirectory));
-		capabilities.setCapability("chrome.switches", Arrays.asList("--download.prompt_for_download=false"));
-
-		driver = new ChromeDriver(capabilities);
+		driver = new InternetExplorerDriver();
 		}		
 	
 }

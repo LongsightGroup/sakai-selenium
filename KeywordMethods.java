@@ -1,11 +1,10 @@
-package edu.umich.keyword2;
+package edu.umich.keyword;
 
 import java.io.BufferedReader;
 import java.io.BufferedWriter;
 import java.io.File;
 import java.io.FileInputStream;
 import java.io.FileOutputStream;
-import java.io.InputStreamReader;
 
 import java.util.HashMap;
 import java.util.List;
@@ -63,7 +62,7 @@ public class KeywordMethods {
 		
 		try {
 			
-			String [] elementTypes = {"bodyText"};
+			String [] elementTypes = {"bodytext"};
 			
 			paramHash.put("application", application);
 	        paramHash.put("objectID", leftText); 
@@ -72,11 +71,10 @@ public class KeywordMethods {
 			
 	        // The call to pathFinder should move us to the correct frame.  We don't need the element itself.
 	        // So if this call doesn't throw an exception, we can execute the call to getPageSource.
-	        ElementLocator.pathFinder(driver, paramHash, elementTypes);
+	        WebElement frameWithText = ElementLocator.pathFinder(driver, paramHash, elementTypes);
 			
-			// Capture the text into a variable to be written to the varibles file.
-			//String allText = selenium.getText(textPath);
-			String allText = driver.getPageSource();
+			// Capture the text into a variable to be written to the variables file.
+			String allText = frameWithText.getText(); //driver.getPageSource();
 			String capturedText = StringUtils.substringBetween(allText, leftText, rightText).trim();
 			
 			//Define the variables stream, load the variables, and close the stream.
@@ -113,7 +111,7 @@ public class KeywordMethods {
 		
 		try {
 			
-			String [] elementTypes = {"button", "anchor", "link"};
+			String [] elementTypes = {"button", "anchor"};
 			
 			paramHash.put("application", application);
 	        paramHash.put("objectID", object[0]); 
@@ -244,8 +242,8 @@ public class KeywordMethods {
 		// loop|click|sample button name
 		// loop|verifyText|sample text to verify
 		// endloop		
-		protected static String loopWhile (String varName, String OS, String filePath, String logDir, String testName, 
-				BufferedReader scriptPointer, BufferedWriter logPointer, String variablesPath, String xpathFile)  throws Exception {
+		protected static String loopWhile (String varName, String OS, String logDirectory, String fileDirectory, String downloadDirectory, String testName, 
+				String variablePath, String xpathFile, BufferedReader scriptPointer, BufferedWriter logPointer)  throws Exception {
 			
 			try {
 				
@@ -253,18 +251,18 @@ public class KeywordMethods {
 				String testStatus; // Holds the return value from commandRunner sub-loop
 				String[] vars; // array to the split contents of scriptLine.
 				
-				//Open the temp file containing the variable value.
-				FileInputStream fis1 = new FileInputStream(logDir + varName + ".txt");
-				BufferedReader varPointer = new BufferedReader(new InputStreamReader(fis1));
-				
-				//Read the variable from the temp file
-				String upperString = varPointer.readLine();				
-		
+				//Open the variables file and read how many times we will be looping
+				//Define the variables stream, load the variables, and close the stream.
+				Properties currentVariables = new Properties();
+				FileInputStream curVarStream = new FileInputStream(variablePath);
+				currentVariables.load(curVarStream);
+				curVarStream.close();
+
+				//Add the new key to the properties hash.
+				String upperString = currentVariables.getProperty(varName);
+		        
 				// cast the variable from the file to an integer for use in the for loop later on
 				int upperLimit = Integer.parseInt(upperString);
-				
-				// Close pointer to file holding variable
-				fis1.close();
 				
 				// Read lines from the test script until they are no longer prefaced
 				// with 'loop'. 
@@ -284,7 +282,7 @@ public class KeywordMethods {
 						//which is 5 characters long.
 						scriptLine = scriptLine.substring(5);
 						
-						testStatus = TestManager.commandRunner(OS, filePath, logDir, testName, scriptPointer, logPointer, scriptLine, variablesPath, xpathFile);
+						testStatus = TestManager.commandRunner(scriptLine, OS, logDirectory, fileDirectory, downloadDirectory, testName, variablePath, xpathFile, scriptPointer, logPointer);
 		
 						if (testStatus.equalsIgnoreCase("fail")) {
 							return "fail";
@@ -548,20 +546,29 @@ public class KeywordMethods {
 			}			
 			
 		
-		protected static String verifyFile (WebDriver driver, String application, String xpathFile, String object, String text)  throws Exception {
+		protected static String verifyFile ( String downloadDirectory,  String fileDirectory, String fileName)  throws Exception {
 			
 			try {
 				
-				// Grab the url for the file to download from the assignment page.
-				//String fileURL = selenium.getValue("//a[contains(text(),'" + object + "')]/@href");
-				//String fileURL = driver..getValue("//a[contains(text(),'" + object + "')]/@href");
-
-				// Run our custom htmlunit method which logs in and downloads the file.
-				// htmlunit avoids modal windows as it is head-less.
-				//String testStatus = verifyDownload.getAndVerifyFile("https://testctools.ds.itd.umich.edu", "seleniumInstructor", "seleniumInstructor", fileURL, text);
-				//driver.
-				return "pass";
-				//return testStatus;
+				// Verify that our baseline file exists
+				File baselineFile = new File(fileDirectory + fileName);
+				
+				if (!baselineFile.exists()) {
+					return "fail: your baseline file does not exist at this path: " + fileDirectory + fileName;
+				}
+				
+				// Verify that our test file has been download and exists.
+				File testFile = new File(fileDirectory + fileName);
+				
+				if (!testFile.exists()) {
+					return "fail: your test file does not exist at this path: " + downloadDirectory + fileName;
+				}
+				
+				if (baselineFile.equals(testFile)) {
+					return "pass"; 
+				} else {
+					return "fail: the files do not match.";
+				}
 				
 				} catch (Exception e) {
 					

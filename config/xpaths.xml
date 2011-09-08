@@ -1,6 +1,9 @@
 <elements>
 	<anchors>
 		<anchor>		
+			<generic>//a[@id=element]</generic>
+		</anchor>
+		<anchor>		
 			<generic>//a[@title=element]</generic>
 		</anchor>
 		<anchor>		
@@ -15,6 +18,9 @@
 		<anchor>		
 			<generic>//img[@alt=element]</generic>
 		</anchor>
+		<anchor>		
+			<assignments>//h4[normalize-space()=element]</assignments>
+		</anchor>		
 	</anchors>
 
 	<bodytexts>
@@ -75,6 +81,9 @@
 		<fckeditor>
 			<generic>//h4[normalize-space()=element]/following::iframe[contains(@src, 'FCKeditor')]</generic>
 		</fckeditor>
+		<fckeditor>
+			<announcements>//label[contains(normalize-space(), element)]/following::iframe[contains(@src, 'FCKeditor')]</announcements>
+		</fckeditor>		
 		<fckeditor>
 			<historic>//td[@id='xToolbar']/table[1]/tbody/tr/td[2]/div/table/tbody/tr/td[2]</historic>
 		</fckeditor>

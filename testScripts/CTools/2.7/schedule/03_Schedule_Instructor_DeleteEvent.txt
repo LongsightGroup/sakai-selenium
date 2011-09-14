@@ -1,0 +1,49 @@
+openURL|$url
+enterText|eid|seleniumInstructor
+enterText|pw|seleniumInstructor
+
+click|Login
+verifyText|From the CTools Team
+verifyText|Welcome to your personal workspace
+
+click|$site
+verifyText|selenium instructor
+verifyText|Site Information Display
+verifyText|viewing announcements from the last 10 days
+
+click|Schedule
+verifyText|Schedule
+verifyText|seleniuminstructor
+verifyText|Calendar by Week
+selectList|View|List of Events
+verifyText|List of Events
+verifyText|Custom date range
+selectList|customStartMonth|JUL
+selectList|customStartDay|1
+selectList|customStartYear|2011
+selectList|customEndMonth|SEP
+selectList|customEndDay|13
+selectList|customEndYear|2014
+
+click|Filter Events
+verifyText|Team Meeting
+
+click|Team Meeting
+verifyText|Team Meeting
+verifyText|DMC 3350
+
+click|Remove event
+verifyText|Deleting schedule item
+verifyText|Are you sure you want to remove this event?
+
+comment|Where does this take us?
+click|Remove event
+verifyText|List of Events
+verifyTextnotpresent|Team Meeting
+
+click|Logout
+verifyText|You are about to log out
+
+click|Log Out
+verifyText|From the CTools Team
+verifyText|Welcome

@@ -1,0 +1,50 @@
+openURL|$url
+enterText|eid|seleniumStudent
+enterText|pw|seleniumStudent
+
+click|Login
+verifyText|From the CTools Team
+verifyText|Welcome to your personal workspace
+
+click|$site
+verifyText|selenium user
+verifyText|Site Information Display
+verifyText|viewing announcements from the last 10 days
+
+click|Messages
+verifyText|Received
+verifyText|Sent
+verifyText|Deleted
+verifyText|Student Test Folder
+verifyText|1 message - 0 unread
+verifyText|Messages
+
+comment|We will first search in the Received folder, which is now empty.
+click|Received
+verifyValue|View|All Messages
+enterText|Search for text:|Instructor
+click|Search
+verifyText|Alert: No matching result found
+
+click|Reset
+verifyText|Received
+verifyText|Sent
+verifyText|Deleted
+verifyText|Student Test Folder
+
+comment|Now look in the folder that contains the message.
+click|Student Test Folder
+verifyText|Instructor Test Message
+
+enterText|Search for text:|Instructor
+click|Search
+comment|Verify that the message is still listed.
+verifyText|Instructor Test Message
+verifyText|Normal
+
+click|Logout
+verifyText|You are about to log out
+
+click|Log Out
+verifyText|From the CTools Team
+verifyText|Welcome

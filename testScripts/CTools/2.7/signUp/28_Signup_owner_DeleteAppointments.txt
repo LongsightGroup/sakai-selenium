@@ -1,0 +1,31 @@
+comment|Delete appointments as the owner of a project site.
+
+openURL|$url
+enterText|eid|seleniumStudent
+enterText|pw|seleniumStudent
+
+click|Login
+verifyText|From the CTools Team
+verifyText|Welcome to your personal workspace
+
+click|$project_site
+verifyText|selenium user
+verifyText|Site Information Display
+verifyText|the Regents of The University of Michigan
+
+click|Sign-up
+verifyText|selenium user
+verifyText|Meetings
+verifyText|Sample Project Appointment
+selectCheckbox|items:meetinglist|1
+
+click|Remove Meetings
+modalClick|ok
+verifyTextNotPresent|Sample Project Appointment
+
+click|Logout
+verifyText|You are about to log out
+
+click|Log Out
+verifyText|From the CTools Team
+verifyText|Welcome

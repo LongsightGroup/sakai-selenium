@@ -1,0 +1,13 @@
+/storage/tests/scripts/schedule/01_Schedule_Instructor_AddEvent.txt
+/storage/tests/scripts/schedule/02_Schedule_Instructor_EditEvent.txt
+/storage/tests/scripts/schedule/03_Schedule_Instructor_DeleteEvent.txt
+/storage/tests/scripts/schedule/04_Schedule_Instructor_MergeEvent.txt
+/storage/tests/scripts/schedule/05_Schedule_Instructor_ImportEvent.txt
+/storage/tests/scripts/schedule/06_Schedule_Instructor_PrintableVersion.txt
+/storage/tests/scripts/schedule/07_Schedule_Instructor_Delete_ImportedEvents.txt
+/storage/tests/scripts/schedule/11_Schedule_Student_AddEvent.txt
+/storage/tests/scripts/schedule/12_Schedule_Student_EditEvent.txt
+/storage/tests/scripts/schedule/13_Schedule_Student_PrintableVersion.txt
+/storage/tests/scripts/schedule/14_Schedule_Student_DeleteEvent.txt
+/storage/tests/scripts/schedule/21_Schedule_Instructor_CheckHelp.txt
+/storage/tests/scripts/schedule/22_Schedule_Student_CheckHelp.txt

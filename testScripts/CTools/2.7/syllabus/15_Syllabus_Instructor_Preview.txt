@@ -1,0 +1,51 @@
+application|syllabus
+openURL|$url
+enterText|eid|seleniumInstructor
+enterText|pw|seleniumInstructor
+
+click|Login
+verifyText|From the CTools Team
+verifyText|Welcome to your personal workspace
+
+click|$site
+verifyText|selenium instructor
+verifyText|Site Information Display
+verifyText|viewing announcements from the last 10 days
+
+click|Syllabus
+verifyText|Syllabus
+verifyText|seleniuminstructor
+
+click|Create/Edit
+verifyText|Syllabus Item
+
+Click|Add
+verifyText|Add syllabus...
+verifyText|Title
+verifyValue|Only members of this site can see this syllabus item.|true
+verifyText|Email Notification
+enterText|Title|Preview Syllabus
+fckEnter|Content|Sample Syllabus to sample preview capability
+
+Click|Preview
+VerifyText|Preview Syllabus Item
+verifyText|Preview Syllabus
+verifyText|Sample Syllabus to sample preview capability
+
+comment|We don't need to save this preview, so just cancel it's creation
+click|Edit
+VerifyText|Add syllabus...
+VerifyText|Title
+verifyValue|Only members of this site can see this syllabus item.|true
+VerifyText|Email Notification
+
+click|Cancel
+verifyText|Syllabus Items
+verifyText|seleniuminstructor
+
+click|Logout
+verifyText|You are about to log out
+
+click|Log Out
+verifyText|From the CTools Team
+verifyText|Welcome

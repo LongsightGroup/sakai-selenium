@@ -1,0 +1,59 @@
+application|polls
+comment|Take Poll as a student
+
+openURL|$url
+enterText|eid|seleniumStudent
+enterText|pw|seleniumStudent
+
+click|Login
+verifyText|From the CTools Team
+verifyText|Welcome to your personal workspace
+
+click|$site
+verifyText|selenium user
+verifyText|Site Information Display
+verifyText|the Regents of The University of Michigan
+
+click|Polls
+verifyText|Poll list
+verifyText|What is your favorite color?
+verifyText|seleniumstudent
+
+click|What is your favorite color?
+verifyText|Choose your favorite color from the list below.
+verifyText|What is your favorite color?
+verifyValue|Red|false
+verifyValue|Blue|false
+verifyValue|Green|false
+selectCheckbox|Red
+selectCheckbox|Green
+
+click|Vote!
+verifyText|Thank you for voting!
+verifyText|Your reference number:
+
+click|Back
+verifyText|Poll list
+verifyText|What is your favorite color?
+verifyText|seleniumstudent
+
+click|Results|1
+verifyText|Results
+verifyText|What is your favorite color?
+verifyText|seleniumstudent
+verifyText|Blue
+comment|verifyText|50%
+verifyText|100%
+
+click|Back
+verifyText|Poll list
+verifyText|What is your favorite color?
+verifyText|seleniumstudent
+
+click|Logout
+verifyText|You are about to log out
+
+click|Log Out
+verifyText|From the CTools Team
+verifyText|Welcome
+

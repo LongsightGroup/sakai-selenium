@@ -1,0 +1,39 @@
+openURL|$url
+enterText|eid|seleniumInstructor
+enterText|pw|seleniumInstructor
+
+click|Login
+verifyText|From the CTools Team
+verifyText|Welcome to your personal workspace
+
+click|$site
+verifyText|selenium instructor
+verifyText|Site Information Display
+verifyText|viewing announcements from the last 10 days
+
+click|Chat Room
+verifyText|Chat Room
+verifyText|seleniuminstructor
+verifyText|All chat messages are archived and can be read by any site participant.
+verifyText|Currently viewing messages for 'Main Chat Room'
+
+click|Options
+verifyText|Manage Rooms
+verifyText|Main Chat Room
+verifyText|Description of Secondary Chat Room
+verifyText|Clear History
+
+click|Set as Default
+verifyText|Clear History
+verifyText|seleniuminstructor
+
+click|Reset
+verifyText|Only messages from the past 3 days are archived and can be read by any site participant.
+verifyText|Currently viewing messages for 'Secondary Chat Room'
+
+click|Logout
+verifyText|You are about to log out
+
+click|Log Out
+verifyText|From the CTools Team
+verifyText|Welcome

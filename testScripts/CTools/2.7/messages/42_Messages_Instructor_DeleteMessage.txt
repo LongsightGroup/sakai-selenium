@@ -1,0 +1,46 @@
+application|messages
+openURL|https://testctools.ds.itd.umich.edu/portal/xlogin
+enterText|eid|seleniumInstructor
+enterText|pw|seleniumInstructor
+
+click|Login
+verifyText|From the CTools Team
+verifyText|Welcome to your personal workspace
+
+click|$site
+verifyText|selenium instructor
+verifyText|Site Information Display
+verifyText|viewing announcements from the last 10 days
+
+click|Messages
+verifyText|Received
+verifyText|Sent
+verifyText|Deleted
+verifyText|Instructor Test Folder
+verifyText|Messages
+
+click|Instructor Test Folder
+verifyText|Student Test Message
+click|Check All
+verifyValue|prefs_pvt_form:pvtmsgs:0:|true
+
+click|Delete
+verifyText|The message(s) you selected have been successfully moved to the Deleted folder.
+verifyTextNotPresent|Student Test Message
+
+click|Reset
+verifyText|Received
+verifyText|Sent
+verifyText|Deleted
+verifyText|Instructor Test Folder
+verifyText|Messages
+
+click|Deleted
+verifyText|Student Test Message
+
+click|Logout
+verifyText|You are about to log out
+
+click|Log Out
+verifyText|From the CTools Team
+verifyText|Welcome

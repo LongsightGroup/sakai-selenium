@@ -1,0 +1,40 @@
+openURL|$url
+enterText|eid|seleniumInstructor
+enterText|pw|seleniumInstructor
+
+click|Login
+verifyText|From the CTools Team
+verifyText|Welcome to your personal workspace
+
+click|$site
+verifyText|selenium instructor
+verifyText|Site Information Display
+verifyText|viewing announcements from the last 10 days
+
+click|Gradebook
+verifyText|selenium instructor
+verifyText|Gradebook Items
+verifyText|Click a title to view complete details and to grade the item.
+verifyText|Sample Gradebook Item
+verifyText|128/132
+
+click|Course Grades
+verifyText|Course Grades
+verifyText|Total points
+verifyText|132
+verifyText|seleniumstudent
+verifyText|A (96.96%)
+
+enterText|gbForm:gradingTable:|B|1
+click|Save Changes
+verifyText|Course Grades
+verifyText|Grade overrides saved
+verifyText|seleniumstudent
+verifyValue|gbForm:gradingTable:|B
+
+click|Logout
+verifyText|You are about to log out
+
+click|Log Out
+verifyText|From the CTools Team
+verifyText|Welcome

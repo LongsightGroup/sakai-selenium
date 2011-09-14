@@ -1,0 +1,51 @@
+application|worksitesetup
+openURL|$url
+enterText|eid|seleniumStudent
+enterText|pw|seleniumStudent
+
+click|Login
+verifyText|From the CTools Team
+verifyText|Welcome to your personal workspace
+
+click|Worksite Setup
+verifyText|selenium user
+verifyText|Worksite Setup
+verifyText|Check box(es) to take action on a site.
+
+selectCheckbox|$creationProjectSite
+click|Edit
+verifyText|$creationProjectSite
+verifyText|seleniumstudent
+verifyText|A basic project site created during automated testing.
+verifyText|Can read, revise, delete, and add their own content to a site
+
+comment|Duplicate Site
+click|Duplicate Site
+verifyText|Duplicate site
+verifyText|$creationProjectSite
+enterText|Site Title|Dupe Project Site
+
+
+comment|This duplicates the site, but takes you back to the last page
+click|Duplicate
+verifyText|$creationProjectSite
+verifyText|seleniumstudent
+verifyText|A basic project site created during automated testing.
+verifyText|Librarian
+verifyText|Can read, revise, delete, and add their own content to a site
+
+click|Return to Sites List
+verifyText|Dupe Project Site
+
+comment|Open site to make sure it exists.
+click|Dupe Project Site
+verifyText|There are currently no announcements at this location
+verifyText|Recent Chat Messages
+verifyText|A basic project site created during automated testing.
+
+click|Logout
+verifyText|You are about to log out
+
+click|Log Out
+verifyText|From the CTools Team
+verifyText|Welcome

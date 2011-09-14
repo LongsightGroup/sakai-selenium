@@ -1,0 +1,32 @@
+openURL|$url
+enterText|eid|seleniumStudent
+enterText|pw|seleniumStudent
+
+click|Login
+verifyText|From the CTools Team
+verifyText|Welcome to your personal workspace
+
+click|$site
+verifyText|seleniumstudent
+verifyText|Site Information Display
+verifyText|viewing announcements from the last 10 days
+
+click|Schedule
+verifyText|Schedule
+verifyText|seleniumstudent
+verifyText|Calendar by Week
+verifyText|Legend
+
+click|Help for Schedule
+waitForPopup|30
+verifyText|CTools Overview
+verifyText|Search Help
+verifyText|Schedule
+closePopUp|
+
+click|Logout
+verifyText|You are about to log out
+
+click|Log Out
+verifyText|From the CTools Team
+verifyText|Welcome

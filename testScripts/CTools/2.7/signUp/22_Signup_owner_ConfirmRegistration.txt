@@ -1,0 +1,31 @@
+application|signup
+openURL|$url
+enterText|eid|seleniumStudent
+enterText|pw|seleniumStudent
+
+click|Login
+verifyText|From the CTools Team
+verifyText|Welcome to your personal workspace
+
+click|$project_site
+verifyText|selenium user
+verifyText|Site Information Display
+verifyText|viewing announcements from the last 10 days
+
+click|Sign-up
+verifyText|Meetings
+verifyText|Click 'Add' to create a new meeting, or click a meeting title to modify or copy it.
+
+click|Sample Project Appointment
+verifyText|Sample Project Appointment
+verifyText|This is a sample appointment, used when testing the Sign-up tool.
+verifyText|selenium instructor
+verifyText|The Big House
+verifyText|selenium user
+
+click|Logout
+verifyText|You are about to log out
+
+click|Log Out
+verifyText|From the CTools Team
+verifyText|Welcome

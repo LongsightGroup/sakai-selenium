@@ -1,0 +1,30 @@
+application|signup
+openURL|$url
+enterText|eid|seleniumStudent
+enterText|pw|seleniumStudent
+
+click|Login
+verifyText|From the CTools Team
+verifyText|Welcome to your personal workspace
+
+click|$site
+verifyText|selenium user
+verifyText|Site Information Display
+verifyText|viewing announcements from the last 10 days
+
+click|Schedule
+verifyText|Calendar by Week
+verifyText|Sample Course Appointment
+
+click|Sample Course Appointment
+verifyText|Sample Course Appointment
+verifyText|This is a sample appointment, used when testing the Sign-up tool.
+verifyText|selenium instructor
+verifyText|The Diag
+
+click|Logout
+verifyText|You are about to log out
+
+click|Log Out
+verifyText|From the CTools Team
+verifyText|Welcome

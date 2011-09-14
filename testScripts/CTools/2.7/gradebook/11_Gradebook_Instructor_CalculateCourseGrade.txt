@@ -1,0 +1,60 @@
+openURL|$url
+enterText|eid|seleniumInstructor
+enterText|pw|seleniumInstructor
+
+click|Login
+verifyText|From the CTools Team
+verifyText|Welcome to your personal workspace
+
+click|$site
+verifyText|selenium instructor
+verifyText|Site Information Display
+verifyText|viewing announcements from the last 10 days
+
+click|Gradebook
+verifyText|selenium instructor
+verifyText|Gradebook Items
+verifyText|Click a title to view complete details and to grade the item.
+verifyText|Sample Gradebook Item
+verifyText|132/132
+
+comment|Verify the effects of the previous tests.
+click|Course Grades
+verifyText|Course Grades
+verifyText|Total points
+verifyText|132
+verifyText|seleniumstudent
+verifyValue|gbForm:gradingTable:|B
+
+comment|Remove any override so the actual computed grade takes precedence.
+enterText|gbForm:gradingTable:|  
+click|Save Changes
+verifyText|Course Grades
+verifyText|Grade overrides saved
+verifyText|seleniumstudent
+verifyValue|gbForm:gradingTable:| 
+
+comment|Calculate the course grade based on the score of the 1 item.
+click|Calculate Course Grades
+verifyText|Currently, the gradebook does not include gradebook items that have not been graded
+verifyText|Calculate Course Grades
+
+click|Continue
+verifyText|Course Grades have been calculated
+verifyText|A+ (100%)
+verifyText|seleniumstudent
+
+comment|Confirm that the grade is calculated, but not displayed.
+click|Gradebook Items
+verifyText|Click a title to view complete details and to grade the item
+
+comment|This will fail if the grade has been released prematurely.
+verifyText|Currently, students can see their gradebook item scores, but not their course grade.
+verifyText|Gradebook Items
+
+click|Logout
+verifyText|You are about to log out
+
+click|Log Out
+verifyText|From the CTools Team
+verifyText|Welcome

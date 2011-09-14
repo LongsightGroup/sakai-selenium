@@ -1,0 +1,56 @@
+openURL|$url
+enterText|eid|seleniumInstructor
+enterText|pw|seleniumInstructor
+
+click|Login
+verifyText|From the CTools Team
+verifyText|Welcome to your personal workspace
+
+click|$site
+verifyText|selenium instructor
+verifyText|Site Information Display
+verifyText|viewing announcements from the last 10 days
+
+click|Test Center
+verifyText|Assessments
+verifyText|Sample Assessment
+verifyText|Pool Assessment
+
+comment|This selects all non-live assessments and deletes them.
+comment|The Sample Assessment is live with submissions, so it won't be deleted.
+selectCheckbox|all_a25
+
+click|Delete
+verifyText|Are you sure you want to delete the selected assessments?
+
+click|Delete
+verifyText|Sample Assessment
+verifyValue|all_a25|false
+
+comment|This selects all remaining assessments and archives them.
+selectCheckbox|all_a25
+
+click|Archive
+verifyText|Are you sure you want to archive the selected assessments?
+
+click|Archive
+verifyText|No Assessments are defined
+
+click|Question Pools
+verifyText|Question Pools
+verifyText|Test Pool
+
+comment|This selects all question pools and deletes them.
+selectCheckbox|all_a7
+click|Delete
+verifyText|Are you sure you want to delete the selected pools?
+click|Delete
+verifyText|There are no pools defined
+
+click|Logout
+verifyText|You are about to log out
+
+click|Log Out
+verifyText|From the CTools Team
+verifyText|Welcome
+

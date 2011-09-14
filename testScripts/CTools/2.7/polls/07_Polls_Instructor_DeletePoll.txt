@@ -1,0 +1,30 @@
+openURL|$url
+enterText|eid|seleniumInstructor
+enterText|pw|seleniumInstructor
+
+click|Login
+verifyText|From the CTools Team
+verifyText|Welcome to your personal workspace
+
+click|$site
+verifyText|selenium instructor
+verifyText|Site Information Display
+verifyText|viewing announcements from the last 10 days
+
+click|Polls
+verifyText|Poll list
+verifyText|seleniuminstructor
+verifyText|Add
+selectCheckbox|Select to remove: What is your favorite color?
+
+click|Update
+verifyText|Add a poll
+verifyText|No polls have been created yet.
+verifyText|Poll list
+
+click|Logout
+verifyText|You are about to log out
+
+click|Log Out
+verifyText|From the CTools Team
+verifyText|Welcome

@@ -1,0 +1,91 @@
+application|worksitesetup
+openURL|$url
+enterText|eid|seleniumStudent
+enterText|pw|seleniumStudent
+
+click|Login
+verifyText|From the CTools Team
+verifyText|Welcome to your personal workspace
+
+click|Worksite Setup
+verifyText|selenium user
+verifyText|Worksite Setup
+verifyText|Check box(es) to take action on a site.
+
+selectCheckbox|$creationProjectSite
+click|Edit
+verifyText|A basic project site created during automated testing.
+verifyText|Test Project Site
+verifyText|seleniumstudent
+verifyText|Librarian
+verifyText|Can read, revise, delete, and add their own content to a site
+
+comment|Revise the tools that are part of this site.
+click|Edit Tools
+verifyText|Choose tools to include on your site...
+verifyValue|Gradebook|true
+verifyValue|Messages|true
+verifyValue|SAMS Scores|false
+selectCheckbox|Gradebook
+selectCheckbox|Messages
+selectCheckbox|SAMS Scores
+
+click|Continue
+verifyText|Confirming site tools edits for
+verifyText|$creationProjectSite
+verifyText|You have selected the following for your site
+verifyText|SAMS Scores
+
+comment|This should put us back at the basic information page
+click|Finish
+verifyText|A basic project site created during automated testing.
+verifyText|$creationProjectSite
+verifyText|seleniumstudent
+verifyText|Librarian
+verifyText|Can read, revise, delete, and add their own content to a site
+
+comment|Put the tools back to their original values
+click|Edit Tools
+verifyText|Choose tools to include on your site...
+verifyValue|Gradebook|false
+verifyValue|Messages|false
+verifyValue|SAMS Scores|true
+selectCheckbox|Gradebook
+selectCheckbox|Messages
+selectCheckbox|SAMS Scores
+
+click|Continue
+verifyText|Confirming site tools edits for
+verifyText|$creationProjectSite
+verifyText|SAMS Scores
+verifyText|You have selected the following for your site
+verifyText|Messages
+
+comment|This should put us back at the basic information page
+click|Finish
+verifyText|A basic project site created during automated testing.
+verifyText|$creationProjectSite
+verifyText|seleniumstudent
+verifyText|Librarian
+verifyText|Can read, revise, delete, and add their own content to a site
+
+comment|Confirm the end state of tools
+click|Edit Tools
+verifyText|Choose tools to include on your site...
+verifyValue|Gradebook|true
+verifyValue|Messages|true
+verifyValue|SAMS Scores|false
+
+comment|click|Cancel
+comment|verifyText|A basic course created during automated testing.
+comment|verifyText|$creationProjectSite
+comment|verifyText|seleniumstudent
+comment|verifyText|Librarian
+comment|verifyText|Can read, revise, delete, and add their own content to a site
+
+click|Logout
+verifyText|You are about to log out
+
+click|Log Out
+verifyText|From the CTools Team
+verifyText|Welcome

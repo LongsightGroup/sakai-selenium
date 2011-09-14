@@ -1,0 +1,38 @@
+openURL|$url
+enterText|eid|seleniumInstructor
+enterText|pw|seleniumInstructor
+
+click|Login
+verifyText|From the CTools Team
+verifyText|Welcome to your personal workspace
+
+click|$site
+verifyText|selenium instructor
+verifyText|Site Information Display
+verifyText|viewing announcements from the last 10 days
+
+click|Assignments
+verifyText|Assignment List
+verifyText|Draft - Draft Assignment
+
+click|Assignment title
+verifyText|Assignment title
+
+comment|Update draft assignment.  Should now be first element in list.
+click|Edit|1
+verifyText|Draft Assignment - edit
+verifyValue|new_assignment_grade_type|Letter grade
+verifyValue|sendnotifsummary|true
+
+click|Post
+verifyText|Assignment List
+verifyText|Draft Assignment 
+verifyText|A-F
+
+click|Logout
+verifyText|You are about to log out
+
+click|Log Out
+verifyText|From the CTools Team
+verifyText|Welcome
+

@@ -1,0 +1,38 @@
+openURL|$url
+enterText|eid|seleniumInstructor
+enterText|pw|seleniumInstructor
+
+click|Login
+verifyText|From the CTools Team
+verifyText|Welcome to your personal workspace
+
+click|$site
+verifyText|selenium instructor
+verifyText|Site Information Display
+verifyText|viewing announcements from the last 10 days
+
+click|Polls
+verifyText|Poll list
+verifyText|seleniuminstructor
+verifyText|Add
+
+click|Results|1
+verifyText|Results
+verifyText|What is your favorite color?
+verifyText|seleniuminstructor
+verifyText|Blue
+verifyText|1
+comment|verifyText|33%
+verifyText|50%
+
+click|Back
+verifyText|Poll list
+verifyText|What is your favorite color?
+verifyText|seleniuminstructor
+
+click|Logout
+verifyText|You are about to log out
+
+click|Log Out
+verifyText|From the CTools Team
+verifyText|Welcome

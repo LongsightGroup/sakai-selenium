@@ -1,0 +1,8 @@
+/storage/tests/scripts/webcontent/01_WebContent_InstructorCreateEmbedded.txt
+/storage/tests/scripts/webcontent/02_WebContent_StudentCheckEmbedded.txt
+/storage/tests/scripts/webcontent/03_WebContent_InstructorResetEmbedded.txt
+/storage/tests/scripts/webcontent/04_WebContent_InstructorCreatePopUp.txt
+/storage/tests/scripts/webcontent/05_WebContent_StudentCheckPopUp.txt
+/storage/tests/scripts/webcontent/06_WebContent_InstructorResetPopUp.txt
+/storage/tests/scripts/webcontent/07_WebContent_InstructorCheckHelp.txt
+/storage/tests/scripts/webcontent/08_WebContent_StudentCheckHelp.txt

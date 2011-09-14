@@ -1,0 +1,59 @@
+application|syllabus
+openURL|$url
+enterText|eid|seleniumInstructor
+enterText|pw|seleniumInstructor
+
+click|Login
+verifyText|From the CTools Team
+verifyText|Welcome to your personal workspace
+
+click|$site
+verifyText|selenium instructor
+verifyText|Site Information Display
+verifyText|viewing announcements from the last 10 days
+
+click|Syllabus
+verifyText|Syllabus
+verifyText|seleniuminstructor
+
+click|Create/Edit
+verifyText|Syllabus Items
+verifyText|Selenium Syllabus
+verifyText|Posted
+
+Click|Selenium Syllabus
+VerifyText|Edit Syllabus Item
+VerifyText|Title
+verifyValue|Only members of this site can see this syllabus item.|true
+VerifyValue|Email Notification|None - No notification
+
+selectRadio|This syllabus item is publicly viewable.
+verifyValue|This syllabus item is publicly viewable.|true
+
+Click|Post
+VerifyText|Syllabus Items
+VerifyText|selenium instructor
+VerifyText|Selenium Syllabus
+VerifyText|Posted
+
+Click|Selenium Syllabus
+VerifyText|Edit Syllabus Item
+VerifyText|Title
+verifyValue|Only members of this site can see this syllabus item.|false
+VerifyValue|Email Notification|None - No notification
+
+selectRadio|Only members of this site can see this syllabus item.
+verifyValue|Only members of this site can see this syllabus item.|true
+
+Click|Post
+VerifyText|Syllabus Items
+VerifyText|selenium instructor
+VerifyText|Selenium Syllabus
+VerifyText|Posted
+
+click|Logout
+verifyText|You are about to log out
+
+click|Log Out
+verifyText|From the CTools Team
+verifyText|Welcome

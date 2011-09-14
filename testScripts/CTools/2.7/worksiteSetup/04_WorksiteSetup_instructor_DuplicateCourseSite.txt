@@ -1,0 +1,50 @@
+application|worksitesetup
+openURL|$url
+enterText|eid|seleniumInstructor
+enterText|pw|seleniumInstructor
+
+click|Login
+verifyText|From the CTools Team
+verifyText|Welcome to your personal workspace
+
+click|Worksite Setup
+verifyText|selenium instructor
+verifyText|Worksite Setup
+verifyText|Check box(es) to take action on a site.
+
+selectCheckbox|$creationSite
+click|Edit
+verifyText|$creationSite
+verifyText|seleniuminstructor
+verifyText|A basic course created during automated testing.
+verifyText|Can read, add, and revise content on sites in a particular department
+
+comment|Duplicate Site
+click|Duplicate Site
+verifyText|Duplicate site
+verifyText|$creationSite
+verifyValue|Academic term:|$term
+enterText|Site Title|Test Duplicate Site
+
+comment|This duplicates the site, but takes you back to the last page
+click|Duplicate
+verifyText|$creationSite
+verifyText|$providerID1
+verifyText|seleniumstudent
+verifyText|Can read content
+
+click|Return to Sites List
+verifyText|Test Duplicate Site
+
+comment|Open site to make sure it exists.
+click|Test Duplicate Site
+verifyText|There are currently no announcements at this location
+verifyText|Recent Chat Messages
+verifyText|A basic course created during automated testing.
+
+click|Logout
+verifyText|You are about to log out
+
+click|Log Out
+verifyText|From the CTools Team
+verifyText|Welcome

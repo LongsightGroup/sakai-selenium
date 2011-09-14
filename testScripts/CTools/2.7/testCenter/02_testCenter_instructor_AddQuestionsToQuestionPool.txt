@@ -1,0 +1,122 @@
+openURL|$url
+enterText|eid|seleniumInstructor
+enterText|pw|seleniumInstructor
+
+click|Login
+verifyText|From the CTools Team
+verifyText|Welcome to your personal workspace
+
+click|$site
+verifyText|selenium instructor
+verifyText|Site Information Display
+verifyText|viewing announcements from the last 10 days
+
+click|Test Center
+verifyText|Assessments
+verifyText|No Assessments are defined
+
+click|Question Pools
+verifyText|Question Pools
+verifyText|Combine
+verifyText|Test Pool
+
+click|Test Pool
+verifyText|Edit Pool Properties
+verifyText|There are no questions defined.
+
+comment|Add First Question
+click|Add Question
+verifyText|Edit Question
+verifyText|Question Type
+selectRadio|Multiple Choice
+verifyValue|mneme:MultipleChoice|true
+verifyText|Correct
+verifyText|Feedback
+mceEnter|Question|Choose the correct answer
+selectRadio|Single Choice
+mceEnter|A.|Correct Answer
+mceEnter|B.|Wrong 1
+mceEnter|C.|Wrong 2
+mceEnter|D.|Wrong 3
+mceEnter|Hints|Choose the correct answer promptly.
+mceEnter|Feedback|You should have chosed the correct answer promptly.
+comment|End of Question Definition
+
+comment|Add Second Question
+click|Add Another
+verifyText|Edit Question
+verifyText|Question Type
+selectRadio|True / False
+verifyValue|mneme:TrueFalse|true
+verifyText|Feedback
+mceEnter|Question|Is this question true or false?
+selectRadio|True
+mceEnter|Hints|Choose true promptly.
+mceEnter|Feedback|You should have chosen true promptly.
+comment|End of Question Definition
+
+comment|Add Third Question
+click|Add Another
+verifyText|Edit Question
+verifyText|Question Type
+selectRadio|Essay
+verifyValue|mneme:Essay|true
+verifyText|Submission
+verifyText|Feedback
+mceEnter|Question|Answer this sample essay question
+UploadFile|test.doc
+click|Upload
+verifyText|Remove
+selectRadio|Inline or attachments
+mceEnter|Model answer|This is my model answer.
+comment|End of Question Definition
+
+comment|Add Fourth Question
+click|Add Another
+verifyText|Edit Question
+verifyText|Question Type
+selectRadio|Fill In The Blank
+verifyValue|mneme:FillBlanks|true
+verifyText|Survey
+verifyText|Feedback
+mceEnter|Question|Roses are {red} and violets are {blue}.
+selectCheckbox|Case Sensitive
+verifyValue|Case Sensitive|true
+mceEnter|Hints|We are looking for the colors of these flowers.
+mceEnter|Feedback|Good Job!
+comment|End of Question Definition
+
+comment|Add Fifth Question
+click|Add Another
+verifyText|Edit Question
+verifyText|Question Type
+selectRadio|Matching
+verifyValue|mneme:Match|true
+verifyText|Choices
+verifyText|Distractor Choice
+mceEnter|Question|Match the colors with colors, simple!
+mceEnter|A.|Red
+mceEnter|B.|Green
+mceEnter|C.|Blue
+mceEnter|A.|Red|2
+mceEnter|B.|Green|2
+mceEnter|C.|Blue|2
+mceEnter|Distractor Choice|Purple
+mceEnter|Hints|We are looking for the colors of these flowers.
+mceEnter|Feedback|Good Job!
+comment|End of Question Definition
+
+click|Done
+verifyText|Choose the correct answer
+verifyText|Is this question true or false?
+
+click|Return
+verifyText|Question Pools
+
+click|Logout
+verifyText|You are about to log out
+
+click|Log Out
+verifyText|From the CTools Team
+verifyText|Welcome
+

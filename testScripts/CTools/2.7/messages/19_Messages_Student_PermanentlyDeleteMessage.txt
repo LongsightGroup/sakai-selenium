@@ -1,0 +1,49 @@
+application|messages
+openURL|$url
+enterText|eid|seleniumStudent
+enterText|pw|seleniumStudent
+
+click|Login
+verifyText|From the CTools Team
+verifyText|Welcome to your personal workspace
+
+click|$site
+verifyText|selenium user
+verifyText|Site Information Display
+verifyText|viewing announcements from the last 10 days
+
+click|Messages
+verifyText|Received
+verifyText|Sent
+verifyText|Deleted
+verifyText|Student Test Folder
+verifyText|Messages
+
+comment|Permanently delete the message.
+click|Deleted
+verifyText|Instructor Test Message
+click|Check All
+verifyValue|prefs_pvt_form:pvtmsgs:0:|true
+
+click|Delete
+verifyText|Alert: Are you sure you want to permanently delete the following message(s)?
+verifyText|Instructor Test Message
+
+click|Delete Message(s)
+verifyText|The message(s) you selected have been successfully deleted.
+
+click|Reset
+verifyText|Received
+verifyText|Sent
+verifyText|Deleted
+verifyText|Student Test Folder
+verifyText|Messages
+comment|There should be no messages left.
+verifyTextNotPresent|1 message
+
+click|Logout
+verifyText|You are about to log out
+
+click|Log Out
+verifyText|From the CTools Team
+verifyText|Welcome

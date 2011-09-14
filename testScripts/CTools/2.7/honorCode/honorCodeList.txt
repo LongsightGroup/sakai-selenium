@@ -1,0 +1,6 @@
+/storage/tests/scripts/honorCode/01HonorCodeInstructorCheckHelp.txt
+/storage/tests/scripts/honorCode/02HonorCodeStudentCheckHelp.txt
+/storage/tests/scripts/honorCode/03HonorCodeInstructorModifyText.txt
+/storage/tests/scripts/honorCode/04HonorCodeInstructorCheckTextAndClickLink.txt
+/storage/tests/scripts/honorCode/05HonorCodeStudentCheckTextAndClickLink.txt
+/storage/tests/scripts/honorCode/06HonorCodeInstructorResetChanges.txt

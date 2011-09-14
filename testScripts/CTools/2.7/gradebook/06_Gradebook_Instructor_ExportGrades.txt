@@ -1,0 +1,39 @@
+openURL|$url
+enterText|eid|seleniumInstructor
+enterText|pw|seleniumInstructor
+
+click|Login
+verifyText|From the CTools Team
+verifyText|Welcome to your personal workspace
+
+click|$site
+verifyText|selenium instructor
+verifyText|Site Information Display
+verifyText|viewing announcements from the last 10 days
+
+click|Gradebook
+verifyText|selenium instructor
+verifyText|Gradebook Items
+verifyText|Click a title to view complete details and to grade the item.
+verifyText|Sample Gradebook Item
+verifyText|128/132
+
+click|Course Grades
+verifyText|Course Grades
+verifyText|Total points
+verifyText|132
+verifyText|seleniumstudent
+verifyText|A (96.96%)
+
+comment|Probably better as a manual test, the download process for this button will be different for each browser.
+comment|This does not work and will break.
+click|Export Course Grades as CSV
+verifyFile|course_grades.csv
+
+click|Logout
+verifyText|You are about to log out
+
+click|Log Out
+verifyText|From the CTools Team
+verifyText|Welcome
+

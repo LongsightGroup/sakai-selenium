@@ -1,0 +1,33 @@
+application|worksitesetup
+openURL|$url
+enterText|eid|seleniumInstructor
+enterText|pw|seleniumInstructor
+
+click|Login
+verifyText|From the CTools Team
+verifyText|Welcome to your personal workspace
+
+click|Worksite Setup
+verifyText|selenium instructor
+verifyText|Worksite Setup
+verifyText|Check box(es) to take action on a site.
+verifyText|Test Duplicate Site
+
+selectCheckbox|Test Duplicate Site
+click|Delete
+verifyText|Deleting a site removes the entire site
+verifyText|You have selected the following site for removal
+verifyText|Test Duplicate Site
+
+comment|Actually Delete Site
+click|Remove
+verifyText|selenium instructor
+verifyText|Worksite Setup
+verifyText|Check box(es) to take action on a site.
+
+click|Logout
+verifyText|You are about to log out
+
+click|Log Out
+verifyText|From the CTools Team
+verifyText|Welcome

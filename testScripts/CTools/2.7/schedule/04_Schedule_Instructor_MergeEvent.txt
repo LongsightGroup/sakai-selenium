@@ -1,0 +1,73 @@
+openURL|$url
+enterText|eid|seleniumInstructor
+enterText|pw|seleniumInstructor
+
+click|Login
+verifyText|From the CTools Team
+verifyText|Welcome to your personal workspace
+
+click|$site
+verifyText|selenium instructor
+verifyText|Site Information Display
+verifyText|viewing announcements from the last 10 days
+
+click|Schedule
+verifyText|Schedule
+verifyText|seleniuminstructor
+verifyText|Calendar by Week
+verifyText|Merge
+
+click|Merge
+verifyText|Merging calendars
+verifyText|Show Schedule
+verifyText|Selenium 999 999 F09
+verifyValue|Selenium 999 999 F09 (47992ced-359f-4130-8e31-9fe5f400eec5)|false
+selectCheckbox|Selenium 999 999 F09 (47992ced-359f-4130-8e31-9fe5f400eec5)
+verifyValue|Selenium 999 999 F09 (47992ced-359f-4130-8e31-9fe5f400eec5)|true
+
+click|Save
+comment|should be at the "Calendar by Week" window
+verifyText|Calendar by Week
+
+comment|verify successful merge
+selectList|View|List of Events
+verifyText|List of Events
+verifyText|Custom date range
+selectList|customStartMonth|JUL
+selectList|customStartDay|1
+selectList|customStartYear|2011
+selectList|customEndMonth|SEP
+selectList|customEndDay|13
+selectList|customEndYear|2014
+
+click|Filter Events
+verifyText|seleniuminstructor
+verifyText|Scheduled event to test merging calendars
+
+click|Selenium 999 Event
+verifyText|Selenium 999 Event
+verifyText|Scheduled event to test merging calendars
+
+click|Back to Calendar
+verifyText|seleniuminstructor
+verifyText|Scheduled event to test merging calendars
+
+comment|removing the merged calendar so the test runs the next time.
+click|Merge
+verifyText|Merging calendars
+verifyText|Show Schedule
+verifyText|Selenium 999 999 F09
+verifyValue|Selenium 999 999 F09 (47992ced-359f-4130-8e31-9fe5f400eec5)|true
+selectCheckbox|Selenium 999 999 F09 (47992ced-359f-4130-8e31-9fe5f400eec5)
+verifyValue|Selenium 999 999 F09 (47992ced-359f-4130-8e31-9fe5f400eec5)|false
+
+click|Save
+comment|should be at the "Calendar by Week" window
+verifyText|Calendar by Week
+
+click|Logout
+verifyText|You are about to log out
+
+click|Log Out
+verifyText|From the CTools Team
+verifyText|Welcome

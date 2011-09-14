@@ -1,0 +1,52 @@
+openURL|$url
+enterText|eid|seleniumStudent
+enterText|pw|seleniumStudent
+
+click|Login
+verifyText|From the CTools Team
+verifyText|Welcome to your personal workspace
+
+click|$site
+verifyText|selenium user
+verifyText|Site Information Display
+verifyText|viewing announcements from the last 10 days
+
+click|Assignments
+verifyText|Assignment List
+verifyText|Long Assignment
+
+comment|Open Long Assignment.  Should be inside the assignment window
+click|Long Assignment
+verifyText|Assignment - In progress
+verifyText|Complete the form, then choose the appropriate button at the bottom.
+verifyText|All Purpose item
+fckEnter|Assignment Text|This is my test submission for an assignment that I will be submitting.
+click|FakeAssignment.doc
+verifyFile|FakeAssignment.doc
+
+UploadFile|test.doc
+verifyText|Honor Pledge: I have neither given nor received aid on this assignment
+selectCheckbox|Assignment.view_submission_honor_pledge_yes
+
+click|Preview
+verifyText|Assignment - Preview
+verifyText|Long Assignment
+click|test.doc
+verifyFile|test.doc
+
+click|Submit
+verifyText|You have successfully submitted your work
+verifyText|selenium user
+verifyText|Long Assignment
+
+click|Back to list
+verifyText|Assignment List
+verifyText|Long Assignment
+
+click|Logout
+verifyText|You are about to log out
+
+click|Log Out
+verifyText|From the CTools Team
+verifyText|Welcome
+

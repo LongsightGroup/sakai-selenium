@@ -1,0 +1,60 @@
+application|worksitesetup
+openURL|$url
+enterText|eid|seleniumInstructor
+enterText|pw|seleniumInstructor
+
+click|Login
+verifyText|From the CTools Team
+verifyText|Welcome to your personal workspace
+
+click|Worksite Setup
+verifyText|selenium instructor
+verifyText|Worksite Setup
+verifyText|Check box(es) to take action on a site.
+
+selectCheckbox|$creationSite
+click|Edit
+verifyText|$creationSite
+verifyText|seleniuminstructor
+verifyText|A basic course created during automated testing.
+verifyText|Can read, add, and revise content on sites in a particular department
+
+click|Edit Class Roster(s)
+verifyText|Edit Roster Access for
+verifyText|$UMIAC_ID1
+verifyText|requested
+
+comment|So far we have just seen the result of course creation, now we will add a new roster
+click|Add Roster(s)
+verifyText|Editing Course/Section Information for
+verifyValue|Academic term:|$term
+
+click|Add course(s) and/or section(s) not listed above...
+verifyText|Editing site...
+verifyText|$UMIAC_ID1
+verifyText|At this time we cannot verify you are the instructor of record
+enterText|id-Subject:1|Testing
+enterText|id-Course:1|$creationCourseNum2
+enterText|id-Section:1|001
+enterText|uniqname|seleniuminstructor
+
+click|Continue
+verifyText|Request Site Access
+verifyText|$creationSite
+verifyText|$creationCourseNum2
+click|Add Class(es)
+
+comment|Should be on the participant page.
+verifyText|$UMIAC_ID1
+verifyText|$UMIAC_ID2
+verifyText|$creationSite
+verifyText|A basic course created during automated testing.
+verifyText|seleniuminstructor
+verifyText|Can read content, and add content
+
+click|Logout
+verifyText|You are about to log out
+
+click|Log Out
+verifyText|From the CTools Team
+verifyText|Welcome

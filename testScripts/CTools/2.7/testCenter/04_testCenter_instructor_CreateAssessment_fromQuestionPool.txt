@@ -1,0 +1,61 @@
+openURL|$url
+enterText|eid|seleniumInstructor
+enterText|pw|seleniumInstructor
+
+click|Login
+verifyText|From the CTools Team
+verifyText|Welcome to your personal workspace
+
+click|$site
+verifyText|selenium instructor
+verifyText|Site Information Display
+verifyText|viewing announcements from the last 10 days
+
+click|Test Center
+verifyText|Assessments
+verifyText|No Assessments are defined
+
+click|Add
+verifyText|Edit Assessment
+verifyText|Type
+verifyText|No Questions
+enterText|Title|Pool Assessment
+
+click|Edit Instructions
+verifyText|Pool Assessment
+mceEnter|Instructions for Test|Take the entire test assessment in the time provided.
+
+comment|This should leave you on the same screen
+click|Save
+verifyText|Pool Assessment
+
+comment|This takes you back to the assessment screen.
+click|Done
+verifyText|Title
+verifyText|No Questions
+
+comment|Draw from a question pool
+click|Draw
+verifyText|Draw From Pools
+verifyText|Pool Assessment
+verifyText|Total questions drawn overall: 0
+
+comment|There should be 5 questions to draw from
+comment|This will fail if the question creation failed in any way.
+enterText|UiCountEdit_|5
+verifyText|Total questions drawn overall: 5
+
+click|Done
+verifyText|Total Points: 525.0
+verifyText|Random Draw
+
+click|Save
+verifyText|Part 1
+
+click|Logout
+verifyText|You are about to log out
+
+click|Log Out
+verifyText|From the CTools Team
+verifyText|Welcome
+

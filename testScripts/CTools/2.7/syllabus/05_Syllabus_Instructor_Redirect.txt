@@ -1,0 +1,35 @@
+openURL|$url
+enterText|eid|seleniumInstructor
+enterText|pw|seleniumInstructor
+
+click|Login
+verifyText|From the CTools Team
+verifyText|Welcome to your personal workspace
+
+click|$site
+verifyText|selenium instructor
+verifyText|Site Information Display
+verifyText|viewing announcements from the last 10 days
+
+click|Syllabus
+verifyText|Syllabus
+verifyText|seleniuminstructor
+
+click|Create/Edit
+verifyText|Syllabus Item
+
+click|Redirect
+verifyText|Redirect Syllabus
+verifyText|URL
+enterText|URL|http://www.google.com
+
+click|Save
+verifyText|Redirect Syllabus
+verifyText|About Google
+
+click|Logout
+verifyText|You are about to log out
+
+click|Log Out
+verifyText|From the CTools Team
+verifyText|Welcome

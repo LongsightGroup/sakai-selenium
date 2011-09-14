@@ -1,0 +1,46 @@
+openURL|$url
+enterText|eid|seleniumInstructor
+enterText|pw|seleniumInstructor
+
+click|Login
+verifyText|From the CTools Team
+verifyText|Welcome to your personal workspace
+
+click|$site
+verifyText|selenium instructor
+verifyText|Site Information Display
+verifyText|viewing announcements from the last 10 days
+
+click|Syllabus
+verifyText|Syllabus
+verifyText|seleniuminstructor
+
+click|Create/Edit
+verifyText|Syllabus Items
+verifyText|Selenium Syllabus
+verifyText|Draft Syllabus
+verifyText|Attach a Syllabus
+verifyText|Posted
+
+selectCheckbox|Select this item|1
+selectCheckbox|Select this item|2
+selectCheckbox|Select this item|3
+
+click|Update
+verifyText|Deleting selected items
+verifyText|Are you sure you want to delete the specified item(s)?
+verifyText|Selenium Syllabus
+verifyText|Draft Syllabus
+verifyText|Attach a Syllabus
+
+click|Delete
+verifyText|Syllabus Items
+verifyTextNotPresent|Selenium Syllabus
+
+click|Logout
+verifyText|You are about to log out
+
+click|Log Out
+verifyText|From the CTools Team
+verifyText|Welcome
+

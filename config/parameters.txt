@@ -1,13 +1,13 @@
-OS=linux
-browser=firefox
-
+downloadDirectory=/storage/tests/downloads/
 fileDirectory=/storage/tests/files/
 logDirectory=/storage/tests/logs/
-downloadDirectory=/storage/tests/downloads/
 
-testList=/storage/tests/sample.txt
+testList=/storage/tests/scripts/assignments/assignmentsList.txt
 variablesFile=/storage/tests/variables.txt
 xpathFile=/storage/tests/xpaths.xml
 
+OS=linux
+browser=firefox
+
 chromeExecutable=/storage/builds/Selenium/chromedriver
-mimeTypes=text/comma-separated-values,application/vnd.ms-excel,application/pdf,video/mpeg
+mimeTypes=text/comma-separated-values,application/vnd.ms-excel,application/pdf,application/msword,text/plain,application/vnd.openxmlformats-officedocument.wordprocessingml.document

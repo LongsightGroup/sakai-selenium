@@ -7,7 +7,7 @@
 			<generic>//a[@title=element]</generic>
 		</anchor>
 		<anchor>		
-			<generic>//a/span[normalize-space()=element]</generic>
+			<generic>//a/span[normalize-space()=element and @class!='skip']</generic>
 		</anchor>
 		<anchor>		
 			<generic>//a[normalize-space(text())=element]</generic>
@@ -20,7 +20,16 @@
 		</anchor>
 		<anchor>		
 			<assignments>//h4[normalize-space()=element]</assignments>
+		</anchor>
+		<anchor>		
+			<dropbox>//li[contains(text(), element)]</dropbox>
+		</anchor>			
+		<anchor>		
+			<resources>//li[contains(text(), element)]</resources>
 		</anchor>		
+		<anchor>		
+			<signup>//label[@id=element]</signup>
+		</anchor>				
 	</anchors>
 
 	<bodytexts>
@@ -52,6 +61,12 @@
 			<generic>//input[starts-with(@id, element) and (@type='checkbox')]</generic>
 		</checkbox>		
 		<checkbox>
+			<generic>//input[starts-with(@name, element) and (@type='checkbox')]</generic>
+		</checkbox>	
+		<checkbox>
+			<generic>//input[starts-with(@title, element) and (@type='checkbox')]</generic>
+		</checkbox>				
+		<checkbox>
 			<generic>//input[@type='checkbox' and @id=//label[normalize-space()=element]/@for]</generic>
 		</checkbox>	
 		<checkbox>
@@ -64,14 +79,17 @@
 			<generic>//label[normalize-space()=element]/following-sibling::input[@type='checkbox']</generic>
 		</checkbox>
 		<checkbox>
-			<messages>//input[starts-with(@name, element) and (@type='checkbox')]</messages>
-		</checkbox>	
+			<polls>//span[normalize-space()=element]/preceding::input[(@type='checkbox')][1]</polls>
+		</checkbox>			
 		<checkbox>
 			<testcenter>//*[normalize-space()=element]/preceding::input[1 and (@type='checkbox')]</testcenter>
 		</checkbox>		
 		<checkbox>
 			<testcenter>//label[starts-with(normalize-space(), element)]/preceding::input[@type='checkbox'][1]</testcenter>
-		</checkbox>		
+		</checkbox>	
+		<checkbox>
+			<worksitesetup>//a[normalize-space()=element]/preceding::input[@type='checkbox'][1]</worksitesetup>
+		</checkbox>				
 	</checkboxes>
 
 	<fckeditors>
@@ -79,14 +97,23 @@
 			<generic>//label[normalize-space()=element]/following::iframe[contains(@src, 'FCKeditor')]</generic>
 		</fckeditor>
 		<fckeditor>
+			<generic>//span[contains(normalize-space(), element)]/following::iframe[contains(@src, 'FCKeditor')]</generic>
+		</fckeditor>
+		<fckeditor>
 			<generic>//h4[normalize-space()=element]/following::iframe[contains(@src, 'FCKeditor')]</generic>
 		</fckeditor>
 		<fckeditor>
 			<announcements>//label[contains(normalize-space(), element)]/following::iframe[contains(@src, 'FCKeditor')]</announcements>
-		</fckeditor>		
-		<fckeditor>
-			<historic>//td[@id='xToolbar']/table[1]/tbody/tr/td[2]/div/table/tbody/tr/td[2]</historic>
 		</fckeditor>
+		<fckeditor>
+			<worksitesetup>//label[contains(normalize-space(), element)]/following::iframe[contains(@src, 'FCKeditor')]</worksitesetup>
+		</fckeditor>				
+		<fckeditor>
+			<forums>//text()[normalize-space()=element]/following::iframe[contains(@src, 'FCKeditor')]</forums>
+		</fckeditor>
+		<fckeditor>
+			<resources>//text()[normalize-space()=element]/following::iframe[contains(@src, 'FCKeditor')]</resources>
+		</fckeditor>						
 	</fckeditors>
 
 	<listboxes>
@@ -98,7 +125,10 @@
 		</listbox>
 		<listbox>
 			<generic>//select[@id=//label[normalize-space()=element]/@for]</generic>
-		</listbox>		
+		</listbox>
+		<listbox>
+			<generic>//select[@name=//label[normalize-space()=element]/@for]</generic>
+		</listbox>				
 		<listbox>
 			<generic>//*[normalize-space()=element]/following-sibling::select</generic>
 		</listbox>		
@@ -146,7 +176,13 @@
 		</radio>		
 		<radio>		
 			<testcenter>//td[starts-with(normalize-space(), element)]/preceding::input[@type='radio'][1]</testcenter>
-		</radio>												
+		</radio>
+		<radio>		
+			<syllabus>//label[normalize-space()=element]/input[@type="radio"]</syllabus>
+		</radio>
+		<radio>		
+			<worksitesetup>//text()[normalize-space()=element]/preceding-sibling::input[@type='radio'][1]</worksitesetup>
+		</radio>															
 	</radios>
 
 	<textareas>
@@ -194,7 +230,10 @@
 		</textbox>	
 		<textbox>
 			<generic>//*[text()=element]/following::input[@type='text'][1]</generic>
-		</textbox>	
+		</textbox>
+		<textbox>
+			<signup>//input[@id=element]</signup>
+		</textbox>		
 	</textboxes>
 	
 	<uploadpaths>

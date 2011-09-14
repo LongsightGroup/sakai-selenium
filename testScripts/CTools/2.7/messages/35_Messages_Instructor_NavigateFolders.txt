@@ -1,0 +1,43 @@
+openURL|$url
+enterText|eid|seleniumInstructor
+enterText|pw|seleniumInstructor
+
+click|Login
+verifyText|From the CTools Team
+verifyText|Welcome to your personal workspace
+
+click|$site
+verifyText|selenium instructor
+verifyText|Site Information Display
+verifyText|viewing announcements from the last 10 days
+
+click|Messages
+verifyText|Received
+verifyText|Sent
+verifyText|Deleted
+verifyText|Instructor Test Folder
+verifyText|1 message - 0 unread
+verifyText|Messages
+
+comment|We will go into a folder which contains a message, than navigate to other folders which don't
+click|Instructor Test Folder
+verifyText|Student Test Message
+
+click|< Previous Folder
+verifyText|Deleted
+verifyTextNotPresent|Student Test Message
+
+click|< Previous Folder
+verifyText|Sent
+verifyTextNotPresent|Student Test Message
+
+click|< Previous Folder
+verifyText|Received
+verifyTextNotPresent|Student Test Message
+
+click|Logout
+verifyText|You are about to log out
+
+click|Log Out
+verifyText|From the CTools Team
+verifyText|Welcome

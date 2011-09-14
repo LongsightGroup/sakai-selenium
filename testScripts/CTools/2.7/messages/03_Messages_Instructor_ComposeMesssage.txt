@@ -1,0 +1,57 @@
+openURL|$url
+enterText|eid|seleniumInstructor
+enterText|pw|seleniumInstructor
+
+click|Login
+verifyText|From the CTools Team
+verifyText|Welcome to your personal workspace
+
+click|$site
+verifyText|selenium instructor
+verifyText|Site Information Display
+verifyText|viewing announcements from the last 10 days
+
+click|Messages
+verifyText|Received
+verifyText|Sent
+verifyText|Deleted
+verifyText|Instructor Test Folder
+verifyText|Messages
+
+click|Compose Message
+verifyText|Compose a Message
+verifyText|Required items marked with *
+selectList|To|Student Role
+verifyValue|Send a copy of this message to recipients|false
+selectList|Label|High
+enterText|Subject|Instructor Test Message
+fckEnter|Message|A hearty hello to you.
+
+click|Add attachments
+verifyText|Upload local file
+verifyText|Add Attachment
+
+uploadFile|test.docx
+verifyText|test.docx
+
+click|test.docx
+verifyFile|test.docx
+
+click|Continue
+verifyText|Compose a Message
+verifyValue|To|Student Role
+verifyValue|Subject|Instructor Test Message
+verifyText|A hearty hello to you.
+verifyText|test.docx
+
+click|Send
+verifyText|Received
+verifyText|Instructor Test Folder
+verifyText|1 message
+
+click|Logout
+verifyText|You are about to log out
+
+click|Log Out
+verifyText|From the CTools Team
+verifyText|Welcome

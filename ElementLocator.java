@@ -30,7 +30,7 @@ public class ElementLocator {
 	private static Integer [] numFrames = new Integer[5]; 
 	private static Integer [] currentFrame = new Integer[5];
 	
-	protected static WebElement pathFinder (WebDriver driver, HashMap<String, String> paramHash, String [] elementTypes)  throws Exception {
+	protected static WebElement pathFinder (WebDriver driver, Integer timeout, HashMap<String, String> paramHash, String [] elementTypes)  throws Exception {
 		
 		String objectID = paramHash.get("objectID");
 		String xpathFile = paramHash.get("xpathFile");
@@ -39,7 +39,7 @@ public class ElementLocator {
 		
 		try {
 
-			for (int i=0; i < 3; i++) {
+			for (int i=0; i < timeout; i++) {
 				// Get the list of paths for the first element type, like button, for instance.
 				List<String> locatorList = getAllLocators(xpathFile, elementTypes, objectID);
 				

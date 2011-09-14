@@ -18,13 +18,12 @@ import org.openqa.selenium.WebElement;
 import org.openqa.selenium.Keys;
 import org.openqa.selenium.support.ui.Select;
 
-
 public class KeywordMethods {
 	
 	// enter text into a text field
 	// use: enterText|object|text where object is the id for the text field and 
 	// text is the string to be entered.		
-	protected static String addText (WebDriver driver, String application, String xpathFile, String ... object)  throws Exception {
+	protected static String addText (WebDriver driver, String application, Integer timeout, String xpathFile, String ... object)  throws Exception {
 
 		String textToEnter = object[1];
 		String iteration = "1";
@@ -42,7 +41,7 @@ public class KeywordMethods {
 	        paramHash.put("iteration", iteration);
 	        paramHash.put("xpathFile", xpathFile);
 	        
-	        WebElement objectInQuestion = ElementLocator.pathFinder(driver, paramHash, elementTypes);
+	        WebElement objectInQuestion = ElementLocator.pathFinder(driver, timeout, paramHash, elementTypes);
 	        
 			objectInQuestion.sendKeys(textToEnter);
 			return "pass";
@@ -56,7 +55,7 @@ public class KeywordMethods {
  	//captureText stores all text between leftText and rightText into a variable
 	//use: captureText|leftText|rightText|varName where varName will be the file name
 	//houses the variable.  Stored in the log file directory.
-	protected static String captureText (WebDriver driver, String application, String xpathFile, String variablesPath, String leftText, String rightText, String varName)  throws Exception {
+	protected static String captureText (WebDriver driver, String application, Integer timeout, String xpathFile, String variablesPath, String leftText, String rightText, String varName)  throws Exception {
 		
 		HashMap<String, String> paramHash = new HashMap<String, String>();
 		
@@ -71,7 +70,7 @@ public class KeywordMethods {
 			
 	        // The call to pathFinder should move us to the correct frame.  We don't need the element itself.
 	        // So if this call doesn't throw an exception, we can execute the call to getPageSource.
-	        WebElement frameWithText = ElementLocator.pathFinder(driver, paramHash, elementTypes);
+	        WebElement frameWithText = ElementLocator.pathFinder(driver, timeout, paramHash, elementTypes);
 			
 			// Capture the text into a variable to be written to the variables file.
 			String allText = frameWithText.getText(); //driver.getPageSource();
@@ -101,7 +100,7 @@ public class KeywordMethods {
 	
 	// click clicks on an interface element.
 	// use: click|object where object is the id, name or label of an element to be clicked on.
-	protected static String click (WebDriver driver, String application, String xpathFile, String ... object)  throws Exception {
+	protected static String click (WebDriver driver, String application, Integer timeout, String xpathFile, String ... object)  throws Exception {
 		
 		String iteration = "1";
 		if (object.length >= 2) 
@@ -118,7 +117,7 @@ public class KeywordMethods {
 	        paramHash.put("iteration", iteration);
 	        paramHash.put("xpathFile", xpathFile);
 		
-			ElementLocator.pathFinder(driver, paramHash, elementTypes).click();
+			ElementLocator.pathFinder(driver, timeout, paramHash, elementTypes).click();
 			
 			return "pass";
 			
@@ -166,7 +165,7 @@ public class KeywordMethods {
 		// enter text into a text field
 		// use: enterText|object|text where object is the id for the text field and 
 		// text is the string to be entered.		
-		protected static String enterText (WebDriver driver, String application, String xpathFile, String ... object)  throws Exception {
+		protected static String enterText (WebDriver driver, String application, Integer timeout, String xpathFile, String ... object)  throws Exception {
 
 			String textToEnter = object[1];
 			String iteration = "1";
@@ -184,7 +183,7 @@ public class KeywordMethods {
 		        paramHash.put("iteration", iteration);
 		        paramHash.put("xpathFile", xpathFile);
 		        
-		        WebElement objectInQuestion = ElementLocator.pathFinder(driver, paramHash, elementTypes);
+		        WebElement objectInQuestion = ElementLocator.pathFinder(driver, timeout, paramHash, elementTypes);
 		        
 				// This clears all text from the existing field before typing the new...
 				objectInQuestion.sendKeys(Keys.chord(Keys.CONTROL, "a"), textToEnter);
@@ -200,7 +199,7 @@ public class KeywordMethods {
 
 		// Enter text to the first fckEditor on a page.
 		// use: fckEnter|text where text is the text string to be entered.		
-	    protected static String fckEnter (WebDriver driver, String application, String xpathFile, String ... object) throws Exception {
+	    protected static String fckEnter (WebDriver driver, String application, Integer timeout, String xpathFile, String ... object) throws Exception {
 	    	
 				try {
 					
@@ -219,12 +218,12 @@ public class KeywordMethods {
 			        paramHash.put("xpathFile", xpathFile);
 				
 			        // This locates the sub-frame within which the fckEditor resides from the preceding label
-					driver.switchTo().frame(ElementLocator.pathFinder(driver, paramHash, elementTypes));
+					driver.switchTo().frame(ElementLocator.pathFinder(driver, timeout, paramHash, elementTypes));
 					
 					// But we're not done there, as the text area resides in another nested sub-frame.
 					driver.switchTo().frame(driver.findElement(By.id("xEditingArea")).findElement(By.xpath("//iframe")));
 					
-					driver.findElement(By.xpath("//body")).sendKeys(textToEnter);
+					driver.findElement(By.xpath("//body")).sendKeys(Keys.chord(Keys.CONTROL, "a"), textToEnter);
 					
 					return "pass";
 	
@@ -309,7 +308,7 @@ public class KeywordMethods {
 		// enter text into an MCE Rich-Text Editor
 		// use: mceEnter|object|text where object is the id for the text field and 
 		// text is the string to be entered.  Optionally you can specify an iteration.
-		protected static String mceEnter (WebDriver driver, String application, String xpathFile, String ... object)  throws Exception {
+		protected static String mceEnter (WebDriver driver, String application, Integer timeout, String xpathFile, String ... object)  throws Exception {
 
 			String textToEnter = object[1];
 			String iteration = "1";
@@ -328,7 +327,7 @@ public class KeywordMethods {
 		        paramHash.put("xpathFile", xpathFile);
 			
 				// Find the frame the contains the mceEditor and switch to it. 
-				WebElement enterPath = ElementLocator.pathFinder(driver, paramHash, elementTypes);
+				WebElement enterPath = ElementLocator.pathFinder(driver, timeout, paramHash, elementTypes);
 				
 				driver.switchTo().frame(enterPath);
 
@@ -341,8 +340,28 @@ public class KeywordMethods {
 			} catch (Exception e) {
 				return "fail: " + e.toString();
 			}		
-		}			
+		}		
 	    
+
+		// Handle modal dialogs
+		// use: modalClick|action where action is the desired button to push.
+		protected static String modalClick (WebDriver driver, String action)  throws Exception {
+			
+			try {
+				
+				if(action.equalsIgnoreCase("ok")) {
+					driver.switchTo().alert().accept();
+					return "pass";
+				} else {
+					driver.switchTo().alert().dismiss();
+					return "pass";
+				}
+			
+			} catch (Exception e) {
+				
+				return "fail: " + e.toString();
+			}
+		}	
 		
 
 		// opens the url of the application to test.
@@ -365,7 +384,7 @@ public class KeywordMethods {
 		// Click within a given checkbox, identified either by the ID or label of the box.
 		// Will either select or de-select, depending on the original value.
 		// use: selectCheckbox|checkBox		
-		protected static String selectCheckbox (WebDriver driver, String application, String xpathFile, String ... object)  throws Exception {
+		protected static String selectCheckbox (WebDriver driver, String application, Integer timeout, String xpathFile, String ... object)  throws Exception {
 			
 			String iteration = "1";
 			if (object.length >= 2) 
@@ -382,7 +401,7 @@ public class KeywordMethods {
 		        paramHash.put("iteration", iteration);
 		        paramHash.put("xpathFile", xpathFile);
 
-				ElementLocator.pathFinder(driver, paramHash, elementTypes).click();
+				ElementLocator.pathFinder(driver, timeout, paramHash, elementTypes).click();
 				return "pass";
 				
 			}  catch (Exception e) {
@@ -393,7 +412,7 @@ public class KeywordMethods {
 		
 		// Select a given value from a drop-down list box, which is specified by id
 		// use: selectList|IDofListBox|SelectedOption		
-		protected static String selectList (WebDriver driver, String application, String xpathFile, String ... object)  throws Exception {
+		protected static String selectList (WebDriver driver, String application, Integer timeout, String xpathFile, String ... object)  throws Exception {
 			
 			String iteration = "1";
 			if (object.length > 2) 
@@ -410,7 +429,7 @@ public class KeywordMethods {
 		        paramHash.put("iteration", iteration);
 		        paramHash.put("xpathFile", xpathFile);
 
-		        WebElement myElement = ElementLocator.pathFinder(driver, paramHash, elementTypes);
+		        WebElement myElement = ElementLocator.pathFinder(driver, timeout, paramHash, elementTypes);
 		        
 		        Select mySelect = new Select(myElement);
 		        
@@ -426,7 +445,7 @@ public class KeywordMethods {
 		
 		// Select a radio button, which is specified by its label
 		// use: selectRadio|labelOfRadio
-		protected static String selectRadio (WebDriver driver, String application, String xpathFile, String ... object)  throws Exception {
+		protected static String selectRadio (WebDriver driver, String application, Integer timeout, String xpathFile, String ... object)  throws Exception {
 			
 			String iteration = "1";
 			if (object.length >= 2) 
@@ -443,7 +462,7 @@ public class KeywordMethods {
 		        paramHash.put("iteration", iteration);
 		        paramHash.put("xpathFile", xpathFile);
 
-				ElementLocator.pathFinder(driver, paramHash, elementTypes).click();
+				ElementLocator.pathFinder(driver, timeout, paramHash, elementTypes).click();
 				return "pass";
 				
 				}  catch (Exception e) {
@@ -504,7 +523,7 @@ public class KeywordMethods {
 		// Within sakai, this will browse to a file within the default directory and upload it.
 		// Should be followed by a waitFor|Page
 		// use: uploadFile|fileName
-		protected static String uploadFile (WebDriver driver, String application, String xpathFile, String fileName, String filePath, String OS)  throws Exception {
+		protected static String uploadFile (WebDriver driver, String application, Integer timeout, String xpathFile, String fileName, String filePath, String OS)  throws Exception {
 			
 			String iteration = "1";
 			
@@ -534,7 +553,7 @@ public class KeywordMethods {
 		        paramHash.put("iteration", iteration);
 		        paramHash.put("xpathFile", xpathFile);
 
-				WebElement myElement = ElementLocator.pathFinder(driver, paramHash, elementTypes);
+				WebElement myElement = ElementLocator.pathFinder(driver, timeout, paramHash, elementTypes);
 				
 				myElement.sendKeys(uploadPath);
 
@@ -546,7 +565,7 @@ public class KeywordMethods {
 			}			
 			
 		
-		protected static String verifyFile ( String downloadDirectory,  String fileDirectory, String fileName)  throws Exception {
+		protected static String verifyFile ( String downloadDirectory,  String fileDirectory, String fileName, Integer timeout)  throws Exception {
 			
 			try {
 				
@@ -558,13 +577,21 @@ public class KeywordMethods {
 				}
 				
 				// Verify that our test file has been download and exists.
-				File testFile = new File(fileDirectory + fileName);
+				// Give it 30 seconds to download.
+				File testFile = new File(downloadDirectory + fileName);
 				
+				for (int i=0; i<timeout; i++) {
+					if (testFile.canRead()) {
+						break;
+					}
+					Thread.sleep(1000);
+				}
+					
 				if (!testFile.exists()) {
 					return "fail: your test file does not exist at this path: " + downloadDirectory + fileName;
 				}
 				
-				if (baselineFile.equals(testFile)) {
+				if (baselineFile.length() == testFile.length()) {
 					return "pass"; 
 				} else {
 					return "fail: the files do not match.";
@@ -578,7 +605,7 @@ public class KeywordMethods {
 		}
 		
 		
-		protected static String verifyText (WebDriver driver, String application, String xpathFile, String text)  throws Exception {
+		protected static String verifyText (WebDriver driver, String application, Integer timeout, String xpathFile, String text)  throws Exception {
 			
 			HashMap<String, String> paramHash = new HashMap<String, String>();
 			
@@ -591,7 +618,7 @@ public class KeywordMethods {
 		        paramHash.put("iteration", "1");
 		        paramHash.put("xpathFile", xpathFile);
 
-				ElementLocator.pathFinder(driver, paramHash, elementTypes);
+				ElementLocator.pathFinder(driver, timeout, paramHash, elementTypes);
 				// If pathFinder has found the element, we assume the text is present on the page.		
 				return "pass";
 				
@@ -600,7 +627,7 @@ public class KeywordMethods {
 				}  
 			}
 		
-		protected static String verifyTextNotPresent (WebDriver driver, String application, String xpathFile, String text)  throws Exception {
+		protected static String verifyTextNotPresent (WebDriver driver, String application, Integer timeout, String xpathFile, String text)  throws Exception {
 			
 			HashMap<String, String> paramHash = new HashMap<String, String>();
 			
@@ -613,7 +640,7 @@ public class KeywordMethods {
 		        paramHash.put("iteration", "1");
 		        paramHash.put("xpathFile", xpathFile);
 
-				ElementLocator.pathFinder(driver, paramHash, elementTypes);
+				ElementLocator.pathFinder(driver, timeout, paramHash, elementTypes);
 				// If pathFinder has found the element, we assume the text is present on the page.		
 				return "fail: " + text + " is visible on the page.";
 				
@@ -625,7 +652,7 @@ public class KeywordMethods {
 
 		
 		
-		protected static String verifyValue (WebDriver driver, String application, String xpathFile, String ... object)  throws Exception {
+		protected static String verifyValue (WebDriver driver, String application, Integer timeout, String xpathFile, String ... object)  throws Exception {
 			
 			String valueToVerify = object[1];
 			String iteration = "1";
@@ -649,7 +676,7 @@ public class KeywordMethods {
 		        paramHash.put("xpathFile", xpathFile);
 		        
 		        //Get our webElement
-		        WebElement objectInQuestion = ElementLocator.pathFinder(driver, paramHash, elementTypes); 
+		        WebElement objectInQuestion = ElementLocator.pathFinder(driver, timeout, paramHash, elementTypes); 
 		        
 				// For radios and check boxes, we verify if they are checked--which returns true--or not--which returns false.
 				if ((objectInQuestion.getAttribute("type").contains("radio")) || (objectInQuestion.getAttribute("type").contains("checkbox")))	{

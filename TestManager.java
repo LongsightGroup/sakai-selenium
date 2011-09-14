@@ -27,6 +27,7 @@ public class TestManager {
 	
 	private static WebDriver driver;
 	private static String application;
+	private static Integer timeout, minTimeout;
 
 	// This method reads the parameters file, creates the logging directory, and reads all tests into
 	// an array.  For each test, it starts the browser and calls testRunner with the test to run.
@@ -60,6 +61,8 @@ public class TestManager {
 		String testListFile = propReader.getProperty("testList", null);
 		String variablesPath = propReader.getProperty("variablesFile", null);
 		String xpathFile = propReader.getProperty("xpathFile");
+		timeout = Integer.parseInt(propReader.getProperty("timeout", "10"));
+		minTimeout = Integer.parseInt(propReader.getProperty("minTimeout", "3"));
 		
 		// Close the properties file
 		propertiesStream.close();
@@ -102,10 +105,10 @@ public class TestManager {
 		// which houses the results of all of our tests.
 		BufferedWriter reportLogPointer = new BufferedWriter(new FileWriter(logDirectory + "report.txt"));		
 
-		// Read the tests from the master file if it exists.
+		// Make sure the download directory is not null, then empty it.
 		if (downloadDirectory==null) {
 			reportLogPointer.write("fail: you have not specified a download directory in your parameters file.");
-		}		
+		}
 		
 		List<String> testList = Lists.newArrayList();
 		
@@ -177,7 +180,7 @@ public class TestManager {
 			} else if (browser.contains("google")){
 				prepChromeProfile(downloadDirectory, mimeTypes, chromeExecutable);
 			}
-
+			
 			return driver;
 	}
 
@@ -204,6 +207,19 @@ public class TestManager {
 		// scriptLine holds single line from a test script.
 		// testStatus holds the status of a test.
 		String scriptLine, testStatus = "";	
+		
+		// Empty the downloads directory, so that previously download files won't be used by this script.
+		File dir = new File(downloadDirectory);
+	    String[] files = dir.list();
+	    
+	    for (int i = 0; i < files.length; i++) {
+	      
+	    	File downloadFile = new File(downloadDirectory + files[i]);
+	      
+	    	if (downloadFile.isFile()) { // skip ., .., other directories too
+	    		downloadFile.delete();
+	    	}
+	    }
 		
 		// Read the next line while there is a line to read and the last command did NOT fail.
 		while (((scriptLine = scriptPointer.readLine()) != null) && (!testStatus.equals("fail"))) {
@@ -286,23 +302,23 @@ public class TestManager {
 	    }
 	    
 	    if (vars[0].equalsIgnoreCase("addtext") && (vars.length == 3)) { 
-	    	testStatus = KeywordMethods.addText(driver, application, xpathFile, vars[1], vars[2]);
+	    	testStatus = KeywordMethods.addText(driver, application, timeout, xpathFile, vars[1], vars[2]);
 	    	}
 	    else if (vars[0].equalsIgnoreCase("addtext") && (vars.length == 4)) { 
-	    	testStatus = KeywordMethods.addText(driver, application, xpathFile, vars[1], vars[2], vars[3]);
+	    	testStatus = KeywordMethods.addText(driver, application, timeout, xpathFile, vars[1], vars[2], vars[3]);
 	    	}
 	    else if (vars[0].equalsIgnoreCase("application")) { 
 	    	application = vars[1];
 	    	testStatus = "pass";
 	    	}	
 	    else if (vars[0].equalsIgnoreCase("capturetext")) { 
-	    	testStatus = KeywordMethods.captureText(driver, application, xpathFile, variablePath, vars[1], vars[2], vars[3]);
+	    	testStatus = KeywordMethods.captureText(driver, application, timeout, xpathFile, variablePath, vars[1], vars[2], vars[3]);
 	    	}		    
 	    else if (vars[0].equalsIgnoreCase("click") && (vars.length == 2)) { 
-	    	testStatus = KeywordMethods.click(driver, application, xpathFile, vars[1]);
+	    	testStatus = KeywordMethods.click(driver, application, timeout, xpathFile, vars[1]);
 	    	}	
 	    else if (vars[0].equalsIgnoreCase("click") && (vars.length == 3)) { 
-	    	testStatus = KeywordMethods.click(driver, application, xpathFile, vars[1], vars[2]);
+	    	testStatus = KeywordMethods.click(driver, application, timeout, xpathFile, vars[1], vars[2]);
 	    	}			 	    
 	    else if (vars[0].equalsIgnoreCase("clickxpath")) { 
 	    	testStatus = KeywordMethods.clickXPath(driver, vars[1]);
@@ -315,34 +331,40 @@ public class TestManager {
 	    	testStatus = "comment";
 	    	}		    
 	    else if (vars[0].equalsIgnoreCase("entertext") && (vars.length == 3)) { 
-	    	testStatus = KeywordMethods.enterText(driver, application, xpathFile, vars[1], vars[2]);
+	    	testStatus = KeywordMethods.enterText(driver, application, timeout, xpathFile, vars[1], vars[2]);
 	    	}
 	    else if (vars[0].equalsIgnoreCase("entertext") && (vars.length == 4)) { 
-	    	testStatus = KeywordMethods.enterText(driver, application, xpathFile, vars[1], vars[2], vars[3]);
+	    	testStatus = KeywordMethods.enterText(driver, application, timeout, xpathFile, vars[1], vars[2], vars[3]);
 	    	}	    
 	    else if (vars[0].equalsIgnoreCase("fckEnter")) {
-	    	testStatus = KeywordMethods.fckEnter(driver, application, xpathFile, vars[1], vars[2]);
+	    	testStatus = KeywordMethods.fckEnter(driver, application, timeout, xpathFile, vars[1], vars[2]);
 	    }
 	    else if (vars[0].equalsIgnoreCase("loopwhile")) { 
 	    	testStatus = KeywordMethods.loopWhile(vars[1], OS, logDirectory, fileDirectory, downloadDirectory, testName, variablePath, xpathFile, scriptPointer, logPointer);
 	    	}
 	    else if (vars[0].equalsIgnoreCase("mceEnter") && (vars.length == 3)) { 
-	    	testStatus = KeywordMethods.mceEnter(driver, application, xpathFile, vars[1], vars[2]);
+	    	testStatus = KeywordMethods.mceEnter(driver, application, timeout, xpathFile, vars[1], vars[2]);
 	    	}
 	    else if (vars[0].equalsIgnoreCase("mceEnter") && (vars.length == 4)) { 
-	    	testStatus = KeywordMethods.mceEnter(driver, application, xpathFile, vars[1], vars[2], vars[3]);
-	    	}	    	    
+	    	testStatus = KeywordMethods.mceEnter(driver, application, timeout, xpathFile, vars[1], vars[2], vars[3]);
+	    	}
+	    else if (vars[0].equalsIgnoreCase("modalClick")) {
+   			testStatus = KeywordMethods.modalClick(driver, vars[1]);
+	    	}		    
 	    else if (vars[0].equalsIgnoreCase("openurl")) {
    			testStatus = KeywordMethods.openUrl(driver, vars[1]);
 	    	}	
-	    else if (vars[0].equalsIgnoreCase("selectcheckbox")) { 
-	    	testStatus = KeywordMethods.selectCheckbox(driver, application, xpathFile, vars[1]);
+	    else if (vars[0].equalsIgnoreCase("selectcheckbox") && (vars.length == 2)) { 
+	    	testStatus = KeywordMethods.selectCheckbox(driver, application, timeout, xpathFile, vars[1]);
+	    	}
+	    else if (vars[0].equalsIgnoreCase("selectcheckbox") && (vars.length == 3)) { 
+	    	testStatus = KeywordMethods.selectCheckbox(driver, application, timeout, xpathFile, vars[1], vars[2]);
 	    	}		    
 	    else if (vars[0].equalsIgnoreCase("selectlist")) { 
-	    	testStatus = KeywordMethods.selectList(driver, application, xpathFile, vars[1],vars[2]);
+	    	testStatus = KeywordMethods.selectList(driver, application, timeout, xpathFile, vars[1],vars[2]);
 	    	}
 	    else if (vars[0].equalsIgnoreCase("selectradiobutton") || vars[0].equalsIgnoreCase("selectradio")) { 
-	    	testStatus = KeywordMethods.selectRadio(driver, application, xpathFile, vars[1]);
+	    	testStatus = KeywordMethods.selectRadio(driver, application, timeout, xpathFile, vars[1]);
 	    	}	
 	    else if (vars[0].equalsIgnoreCase("selectwindow")) { 
 	    	testStatus = KeywordMethods.selectWindow(driver, vars[1]);
@@ -351,27 +373,27 @@ public class TestManager {
 	    	testStatus = KeywordMethods.setVariable(variablePath, vars[1],vars[2]);
 	    	}
 	    else if (vars[0].equalsIgnoreCase("uploadfile")) { 
-	    	testStatus = KeywordMethods.uploadFile(driver, application, xpathFile, vars[1], fileDirectory, OS);
+	    	testStatus = KeywordMethods.uploadFile(driver, application, timeout, xpathFile, vars[1], fileDirectory, OS);
 	    	}			    
 	    else if (vars[0].equalsIgnoreCase("verifyfile")) { 
 	    	if (vars.length != 2) {
 	    		logPointer.write("Usage: verifyFile|fileToVerify|\r\n");
 	    		testStatus = "fail: incorrect method call.";
 	    	} else {
-	    		testStatus = KeywordMethods.verifyFile(downloadDirectory, fileDirectory, vars[1]);
+	    		testStatus = KeywordMethods.verifyFile(downloadDirectory, fileDirectory, vars[1], timeout);
 	    	  }
 	    	}	
 	    else if (vars[0].equalsIgnoreCase("verifytext")) { 
-	    	testStatus = KeywordMethods.verifyText(driver, application, xpathFile, vars[1]);
+	    	testStatus = KeywordMethods.verifyText(driver, application, timeout, xpathFile, vars[1]);
 	    	}
 	    else if (vars[0].equalsIgnoreCase("verifytextnotpresent")) { 
-	    	testStatus = KeywordMethods.verifyTextNotPresent(driver, application, xpathFile, vars[1]);
+	    	testStatus = KeywordMethods.verifyTextNotPresent(driver, application, minTimeout, xpathFile, vars[1]);
 	    	}	    
 	    else if ((vars[0].equalsIgnoreCase("verifyvalue")) && (vars.length == 3)) { 
-	    	testStatus = KeywordMethods.verifyValue(driver, application, xpathFile, vars[1],vars[2]);
+	    	testStatus = KeywordMethods.verifyValue(driver, application, timeout, xpathFile, vars[1],vars[2]);
 	    	}
 	    else if ((vars[0].equalsIgnoreCase("verifyvalue")) && (vars.length == 4)) { 
-	    	testStatus = KeywordMethods.verifyValue(driver, application, xpathFile, vars[1],vars[2],vars[3]);
+	    	testStatus = KeywordMethods.verifyValue(driver, application, timeout, xpathFile, vars[1],vars[2],vars[3]);
 	    	}	    
 	    else if ((vars[0].equalsIgnoreCase("waitforpopup"))) { 
 	    	testStatus = KeywordMethods.waitForPopUp(driver, vars[1]);

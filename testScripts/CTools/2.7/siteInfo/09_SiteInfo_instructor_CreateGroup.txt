@@ -1,0 +1,44 @@
+application|siteinfo
+openURL|$url
+enterText|eid|seleniumInstructor
+enterText|pw|seleniumInstructor
+
+click|Login
+verifyText|From the CTools Team
+verifyText|Welcome to your personal workspace
+
+click|$site
+verifyText|selenium instructor
+verifyText|Site Information Display
+verifyText|There are currently no announcements at this location.
+
+click|Site Info
+verifyText|$site
+verifyText|Site Contact and email
+verifyText|Site Description
+verifyText|Can read, revise, delete and add both content and participants to a site.
+
+click|Manage Groups
+verifyText|Group List
+verifyText|There are no groups defined.
+
+click|Create New Group
+verifyText|Create New Group
+verifyText|Select members of the site member list and add to group. Select members of group list and remove. Click Add to save changes.
+
+enterText|Title|Alarmingly Incredible Bad-asses
+enterText|Description|Wild and crazy hooligans
+selectList|siteMembers-selection|Role: Student
+click|right
+verifyContents|groupMembers-selection|Role: Student
+
+click|Add
+verifyText|Group List
+verifyText|Alarmingly Incredible Bad-asses
+
+click|Logout
+verifyText|You are about to log out
+
+click|Log Out
+verifyText|From the CTools Team
+verifyText|Welcome

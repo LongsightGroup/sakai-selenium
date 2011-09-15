@@ -1,0 +1,53 @@
+application|siteinfo
+openURL|$url
+enterText|eid|seleniumInstructor
+enterText|pw|seleniumInstructor
+
+click|Login
+verifyText|From the CTools Team
+verifyText|Welcome to your personal workspace
+
+click|$site
+verifyText|selenium instructor
+verifyText|Site Information Display
+verifyText|There are currently no announcements at this location.
+
+click|Announcements
+verifyText|There are currently no announcements at this location.
+verifyValue|View|All
+
+click|Site Info
+verifyText|$site
+verifyText|Site Contact and email
+verifyText|Site Description
+verifyText|Can read, revise, delete and add both content and participants to a site.
+
+click|Import from Site
+verifyText|Please choose a method below to proceed: 
+
+click|I would like to merge my data
+verifyText|Import Material from Other Sites
+verifyText|You can choose to import material only from other sites that you own. You can combine material from more than one site.
+
+selectCheckbox|Selenium 999 999 F09
+click|Continue
+verifyText|Re-use Material from Other Sites
+
+selectCheckbox|sakai.announcements
+click|Finish
+verifyText|$site
+verifyText|Site Contact and email
+verifyText|Site Description
+verifyText|Can read, revise, delete and add both content and participants to a site.
+
+comment|Verify that the new announcement appears on the site.
+click|Announcements
+verifyText|Selenium Announcement
+verifyValue|View|All
+
+click|Logout
+verifyText|You are about to log out
+
+click|Log Out
+verifyText|From the CTools Team
+verifyText|Welcome

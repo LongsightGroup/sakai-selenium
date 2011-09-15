@@ -1,0 +1,32 @@
+application|siteinfo
+openURL|$url
+enterText|eid|seleniumInstructor
+enterText|pw|seleniumInstructor
+
+click|Login
+verifyText|From the CTools Team
+verifyText|Welcome to your personal workspace
+
+click|$site
+verifyText|selenium instructor
+verifyText|Site Information Display
+
+click|Announcements
+verifyText|Selenium Announcement
+verifyValue|View|All
+selectCheckbox|Select to remove
+
+click|Update
+verifyText|Are you sure you want to delete the following announcements?
+verifyText|Selenium Announcement
+
+click|Remove
+verifyText|viewing announcements from the last 365 days
+verifyText|There are currently no announcements at this location.
+
+click|Logout
+verifyText|You are about to log out
+
+click|Log Out
+verifyText|From the CTools Team
+verifyText|Welcome

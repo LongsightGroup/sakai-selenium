@@ -1,0 +1,4 @@
+/storage/tests/scripts/lectureTools/01_LectureTools_Instructor_RequestRegistration.txt
+/storage/tests/scripts/lectureTools/02_LectureTools_Student_VerifyNoAuth.txt
+/storage/tests/scripts/lectureTools/04_LectureTools_Instructor_CheckHelp.csv
+/storage/tests/scripts/lectureTools/05_LectureTools_Student_CheckHelp.csv

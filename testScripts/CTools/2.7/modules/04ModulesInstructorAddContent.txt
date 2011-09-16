@@ -1,0 +1,10 @@
+comment|Check help text as instructor.openURL|$urlenterText|eid|seleniumInstructorenterText|pw|seleniumInstructorclick|LoginverifyText|From the CTools TeamverifyText|Welcome to your personal workspaceclick|$siteverifyText|selenium instructorverifyText|Site Information DisplayverifyText|the Regents of The University of Michiganclick|Modules
+verifyText|Test Module
+click|Test Module
+click|Add Content Sections
+verifyText|Test Module È Untitled section
+enterText|EditSectionForm:title|Test 
+click|Done
+verifyText|1. Test Module
+verifyText|1.1. Test Untitled section
+click|LogoutverifyText|You are about to log outclick|Log OutverifyText|From the CTools TeamverifyText|Welcome

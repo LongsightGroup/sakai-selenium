@@ -1,0 +1,31 @@
+openURL|$url
+enterText|eid|seleniumStudent
+enterText|pw|seleniumStudent
+
+click|Login
+verifyText|From the CTools Team
+verifyText|Welcome to your personal workspace
+
+click|Dupe Search Site
+verifyText|selenium user
+verifyText|Site Information Display
+verifyText|A project site meant to be used as a source for duplication during testing.
+
+click|Search
+verifyText|Dupe Search Site
+verifyText|This Site
+
+comment|Access the search administrative panel.
+click|Admin
+verifyText|Last loaded at
+verifyText|Being indexed by none
+
+comment|The upper case Pending only appears when the index is being rebuilt.
+verifyTextNotPresent|Pending
+
+click|Logout
+verifyText|You are about to log out
+
+click|Log Out
+verifyText|From the CTools Team
+verifyText|Welcome

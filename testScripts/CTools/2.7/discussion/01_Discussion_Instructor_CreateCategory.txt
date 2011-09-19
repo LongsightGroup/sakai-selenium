@@ -1,0 +1,37 @@
+openURL|$url
+enterText|eid|seleniumInstructor
+enterText|pw|seleniumInstructor
+
+click|Login
+verifyText|From the CTools Team
+verifyText|Welcome to your personal workspace
+
+click|$site
+verifyText|selenium instructor
+verifyText|Site Information Display
+verifyText|viewing announcements from the last 10 days
+
+click|Discussion
+verifyText|Add Topic
+verifyText|Add Category
+verifyText|Expand All
+verifyText|Permissions
+
+click|Add Category
+verifyText|Create a Category
+verifyText|Required information is denoted with a 
+enterText|Create a New Category|Instructor Test Category
+
+click|Create Category
+verifyText|Add Topic
+verifyText|Add Category
+verifyText|Expand All
+verifyText|Permissions
+verifyText|Instructor Test Category
+
+click|Logout
+verifyText|You are about to log out
+
+click|Log Out
+verifyText|From the CTools Team
+verifyText|Welcome

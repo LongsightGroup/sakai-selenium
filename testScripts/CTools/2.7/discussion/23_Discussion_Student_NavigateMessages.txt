@@ -1,0 +1,41 @@
+openURL|$url
+enterText|eid|seleniumStudent
+enterText|pw|seleniumStudent
+
+click|Login
+verifyText|From the CTools Team
+verifyText|Welcome to your personal workspace
+
+click|$site
+verifyText|selenium user
+verifyText|Site Information Display
+verifyText|viewing announcements from the last 10 days
+
+click|Discussion
+verifyText|Expand All
+
+click|Expand All
+verifyText|Instructor Test Reply
+verifyText|Instructor Reply to Post
+
+click|Instructor Test Topic
+verifyText|This is a test topic message. This is sent to a new topic on an existing category
+
+click|Next Message
+verifyText|This is a test topic reply.
+
+click|Next Message
+verifyText|This is a test reply to a post.
+
+click|Next Message
+verifyText|This is a student test post reply.
+
+click|Previous Message
+verifyText|This is a test reply to a post.
+
+click|Logout
+verifyText|You are about to log out
+
+click|Log Out
+verifyText|From the CTools Team
+verifyText|Welcome

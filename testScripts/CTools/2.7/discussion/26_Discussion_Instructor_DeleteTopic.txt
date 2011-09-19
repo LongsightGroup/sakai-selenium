@@ -1,0 +1,43 @@
+openURL|$url
+enterText|eid|seleniumInstructor
+enterText|pw|seleniumInstructor
+
+click|Login
+verifyText|From the CTools Team
+verifyText|Welcome to your personal workspace
+
+click|$site
+verifyText|selenium instructor
+verifyText|Site Information Display
+verifyText|viewing announcements from the last 10 days
+
+click|Discussion
+verifyText|Add Topic
+verifyText|Add Category
+verifyText|Expand All
+verifyText|Permissions
+
+click|Expand All
+verifyText|Instructor Test Reply
+verifyText|Instructor Reply to Post
+verifyText|Student Test Reply
+
+clickXpath|//a[normalize-space()="Instructor Test Topic"]/following::a[@title='Delete this message'][1]
+verifyText|Delete Topic
+verifyText|Are you sure you want to delete this topic? All replies to this topic will also be deleted.
+verifyText|Student Test Reply
+verifyText|Instructor Test Reply
+
+click|Delete Topic
+verifyText|Add Topic
+verifyText|Add Category
+verifyText|Permissions
+verifyText|Instructor Test Category
+verifyTextNotPresent|Student Test Reply
+
+click|Logout
+verifyText|You are about to log out
+
+click|Log Out
+verifyText|From the CTools Team
+verifyText|Welcome

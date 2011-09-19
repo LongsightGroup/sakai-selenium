@@ -1,0 +1,31 @@
+openURL|$url
+enterText|eid|seleniumStudent
+enterText|pw|seleniumStudent
+
+click|Login
+verifyText|From the CTools Team
+verifyText|Welcome to your personal workspace
+
+click|$site
+verifyText|selenium user
+verifyText|Site Information Display
+verifyText|viewing announcements from the last 10 days
+
+click|Discussion
+verifyText|Expand All
+
+verifyValue|View:|Row Layout
+selectList|View:|Column Layout
+verifyText|Instructor Test Topic in New Category
+verifyValue|View:|Column Layout
+
+selectList|View:|Row Layout
+verifyText|Instructor Test Topic in New Category
+verifyValue|View:|Row Layout
+
+click|Logout
+verifyText|You are about to log out
+
+click|Log Out
+verifyText|From the CTools Team
+verifyText|Welcome

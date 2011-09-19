@@ -1,0 +1,34 @@
+application|worksitesetup
+openURL|$url
+enterText|eid|seleniumStudent
+enterText|pw|seleniumStudent
+
+click|Login
+verifyText|From the CTools Team
+verifyText|Welcome to your personal workspace
+
+click|Worksite Setup
+verifyText|selenium user
+verifyText|Worksite Setup
+verifyText|Check box(es) to take action on a site.
+verifyText|Dupe SiteMaker Site
+
+selectCheckbox|Dupe SiteMaker Site
+click|Delete
+verifyText|Deleting a site removes the entire site
+verifyText|You have selected the following site for removal
+verifyText|Dupe SiteMaker Site
+
+comment|Actually Delete Site
+click|Remove
+verifyText|selenium user
+verifyText|Worksite Setup
+verifyText|Check box(es) to take action on a site.
+verifyTextNotPresent|Dupe SiteMaker Site
+
+click|Logout
+verifyText|You are about to log out
+
+click|Log Out
+verifyText|From the CTools Team
+verifyText|Welcome

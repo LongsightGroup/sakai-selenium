@@ -1,0 +1,30 @@
+comment|Configure the siteMaker site as the course site owner.
+
+openURL|$url
+enterText|eid|seleniumInstructor
+enterText|pw|seleniumInstructor
+
+click|Login
+verifyText|From the CTools Team
+verifyText|Welcome to your personal workspace
+
+click|SiteMaker 101 001
+verifyText|selenium instructor
+verifyText|Site Information Display
+verifyText|Course site that acts as a duplicate for sites that require stealth tools.
+
+click|SiteMaker
+verifyText|IMS Learning Tool Interoperability (JSR-168)
+verifyText|Not yet configured
+
+click|Edit
+verifyText|IMS Learning Tool Interoperability (JSR-168)
+enterText|imsti.launch|http://sitemaker.umich.edu/apps/WebObjects/GVCSiteMaker.woa/wa/TILaunch/johnpj1
+enterText|imsti.password|remote
+
+click|Update Options
+verifyText|Would you like to save your settings?
+
+comment|This should redirect the user to the cosign page, as the user has not authenticated before.
+click|YES
+verifyText|You are connecting to a U-M website that requires authentication.

@@ -1,0 +1,17 @@
+comment|View the siteMaker site as the project site member
+
+openURL|$url
+enterText|eid|seleniumInstructor
+enterText|pw|seleniumInstructor
+
+click|Login
+verifyText|From the CTools Team
+verifyText|Welcome to your personal workspace
+
+click|Dupe SiteMaker Site
+verifyText|selenium instructor
+verifyText|Site Information Display
+verifyText|A project site meant to be used as a source for duplication during testing.
+
+click|SiteMaker
+verifyText|You are connecting to a U-M website that requires authentication.

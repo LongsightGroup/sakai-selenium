@@ -1,0 +1,33 @@
+openURL|$url
+enterText|eid|seleniumInstructor
+enterText|pw|seleniumInstructor
+
+click|Login
+verifyText|From the CTools Team
+verifyText|Welcome to your personal workspace
+
+click|DupeSrc 101 001 F11
+verifyText|selenium instructor
+verifyText|Site Information Display
+verifyText|Course site that acts as a duplicate for sites that require stealth tools.
+
+click|Site Info
+verifyText|DupeSrc 101 001 F11
+verifyText|Course site that acts as a duplicate for sites that require stealth tools.
+verifyText|Edit Site Information
+
+click|Duplicate Site
+verifyText|Duplicate site
+verifyText|DupeSrc 101 001 F11
+enterText|Site Title|SiteMaker 101 001
+
+click|Duplicate
+verifyText|DupeSrc 101 001 F11
+verifyText|SiteMaker 101 001
+
+click|Logout
+verifyText|You are about to log out
+
+click|Log Out
+verifyText|From the CTools Team
+verifyText|Welcome

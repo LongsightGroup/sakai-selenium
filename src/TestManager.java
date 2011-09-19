@@ -389,12 +389,18 @@ public class TestManager {
 	    else if (vars[0].equalsIgnoreCase("verifytextnotpresent")) { 
 	    	testStatus = KeywordMethods.verifyTextNotPresent(driver, application, minTimeout, xpathFile, vars[1]);
 	    	}	    
+	    else if (vars[0].equalsIgnoreCase("verifycontents")) { 
+	    	testStatus = KeywordMethods.verifyContents(driver, application, timeout, xpathFile, vars[1],vars[2]);
+	    	}
 	    else if ((vars[0].equalsIgnoreCase("verifyvalue")) && (vars.length == 3)) { 
 	    	testStatus = KeywordMethods.verifyValue(driver, application, timeout, xpathFile, vars[1],vars[2]);
 	    	}
 	    else if ((vars[0].equalsIgnoreCase("verifyvalue")) && (vars.length == 4)) { 
 	    	testStatus = KeywordMethods.verifyValue(driver, application, timeout, xpathFile, vars[1],vars[2],vars[3]);
 	    	}	    
+	    else if ((vars[0].equalsIgnoreCase("wait"))) { 
+	    	testStatus = KeywordMethods.wait(vars[1]);
+	    	}
 	    else if ((vars[0].equalsIgnoreCase("waitforpopup"))) { 
 	    	testStatus = KeywordMethods.waitForPopUp(driver, vars[1]);
 	    	}	    

@@ -8,6 +8,7 @@ import java.io.FileOutputStream;
 
 import java.util.HashMap;
 import java.util.List;
+import java.util.ListIterator;
 import java.util.Properties;
 
 import org.apache.commons.lang.StringUtils;
@@ -650,6 +651,52 @@ public class KeywordMethods {
 				}  
 			}		
 
+
+		protected static String verifyContents (WebDriver driver, String application, Integer timeout, String xpathFile, String ... object)  throws Exception {
+			
+			String valueToVerify = object[1];
+			String iteration = "1";
+			if (object.length > 2) 
+				iteration = object[2];
+			
+			// Empty text boxes will not match with a space value. So we need to recast to an empty string
+			if (object[1].equals(" ")) {
+				object[1]="";
+			}
+			
+			HashMap<String, String> paramHash = new HashMap<String, String>();
+			
+			try {
+				
+				String [] elementTypes = {"listbox"};
+				
+				paramHash.put("application", application);
+		        paramHash.put("objectID", object[0]); 
+		        paramHash.put("iteration", iteration);
+		        paramHash.put("xpathFile", xpathFile);
+		        
+		        //Get our webElement
+		        WebElement objectInQuestion = ElementLocator.pathFinder(driver, timeout, paramHash, elementTypes); 
+		        
+		        Select selectInQuestion = new Select(objectInQuestion);
+			        
+		        List<WebElement> selectedOptions = selectInQuestion.getOptions();
+		        
+		        ListIterator<WebElement> optionList = selectedOptions.listIterator();
+		        
+		        while(optionList.hasNext()) {
+
+		            if(optionList.next().getText().equals(valueToVerify)){
+		            	return "pass";
+		            }
+		        } 
+					
+				return "fail";
+							
+			} catch (Exception e) {
+				return "fail: " + e.toString();
+			}
+		}	
 		
 		
 		protected static String verifyValue (WebDriver driver, String application, Integer timeout, String xpathFile, String ... object)  throws Exception {
@@ -718,7 +765,24 @@ public class KeywordMethods {
 			}
 		}	
 
-					
+
+		//wait for a defined period of time.
+		protected static String wait(String timeout) throws Exception{
+			
+			try {
+			
+			Integer intTimeout = Integer.parseInt(timeout + "000");
+			Thread.sleep(intTimeout);
+			
+			return "pass";
+			
+			} catch (Exception e) {
+				return "fail: " + e.toString();
+			}
+
+		}		
+
+		
 
 		//wait for a pop up window to open.  Timeout is in milliseconds.
 		protected static String waitForPopUp(WebDriver driver, String timeout) throws Exception {

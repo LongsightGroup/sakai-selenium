@@ -80,7 +80,10 @@
 		</checkbox>
 		<checkbox>
 			<polls>//span[normalize-space()=element]/preceding::input[(@type='checkbox')][1]</polls>
-		</checkbox>			
+		</checkbox>	
+		<checkbox>
+			<siteinfo>//input[@type='checkbox' and @id=//label[contains(normalize-space(),element)]/@for]</siteinfo>
+		</checkbox>					
 		<checkbox>
 			<testcenter>//*[normalize-space()=element]/preceding::input[1 and (@type='checkbox')]</testcenter>
 		</checkbox>		
@@ -89,7 +92,10 @@
 		</checkbox>	
 		<checkbox>
 			<worksitesetup>//a[normalize-space()=element]/preceding::input[@type='checkbox'][1]</worksitesetup>
-		</checkbox>				
+		</checkbox>
+		<checkbox>
+			<siteinfo>//input[@type='checkbox' and @id=//label[contains(normalize-space(), element)]/@for]</siteinfo>
+		</checkbox>
 	</checkboxes>
 
 	<fckeditors>
@@ -172,7 +178,7 @@
 			<generic>//label[starts-with(normalize-space(), element)]/preceding-sibling::input[@type='radio'][1]</generic>
 		</radio>
 		<radio>		
-			<messages>//text()[normalize-space()=element]/preceding-sibling::input[@type='radio']</messages>
+			<generic>//text()[normalize-space()=element]/preceding-sibling::input[@type='radio'][1]</generic> //used by gateway, messages, worksite setup
 		</radio>		
 		<radio>		
 			<testcenter>//td[starts-with(normalize-space(), element)]/preceding::input[@type='radio'][1]</testcenter>
@@ -180,9 +186,6 @@
 		<radio>		
 			<syllabus>//label[normalize-space()=element]/input[@type="radio"]</syllabus>
 		</radio>
-		<radio>		
-			<worksitesetup>//text()[normalize-space()=element]/preceding-sibling::input[@type='radio'][1]</worksitesetup>
-		</radio>															
 	</radios>
 
 	<textareas>
@@ -193,47 +196,50 @@
 			<generic>//textarea[@name=element]</generic>
 		</textarea>
 		<textarea>
-			<generic>//label[starts-with(normalize-space(),element)]/following-sibling::textarea</generic>
+			<generic>//textarea[@id=//label[normalize-space()=element]/@for]</generic>
 		</textarea>
+		<textarea>
+			<generic>//textarea[@name=//label[normalize-space()=element]/@for]</generic>
+		</textarea>		
 		<textarea>
 			<generic>//textarea[starts-with(@id, element)]</generic>
 		</textarea>
 		<textarea>
 			<generic>//textarea[starts-with(@name, element)]</generic>
-		</textarea>				
+		</textarea>
+		<textarea>
+			<generic>//label[starts-with(normalize-space(),element)]/following-sibling::textarea</generic>
+		</textarea>						
 	</textareas>
-	
+
 	<textboxes>
 		<textbox>
-			<generic>//input[@id=element and (@type='text')]</generic>
+			<generic>//input[@id=element and (@type='text' or @type='password')]</generic>
 		</textbox>
 		<textbox>
-			<generic>//input[@name=element and (@type='text')]</generic>
+			<generic>//input[@name=element and (@type='text' or @type='password')]</generic>
 		</textbox>
 		<textbox>
-			<generic>//input[@id=element and (@type='password')]</generic>
+			<generic>//input[(@type='text' or @type='password') and @id=//label[normalize-space()=element]/@for]</generic>
 		</textbox>
 		<textbox>
-			<generic>//input[@type='text' and @id=//label[normalize-space()=element]/@for]</generic>
+			<generic>//label[normalize-space()=element]/following-sibling::input[(@type='text' or @type='password')]</generic>
 		</textbox>
 		<textbox>
-			<generic>//label[normalize-space()=element]/following-sibling::input[@type='text']</generic>
+			<generic>//input[starts-with(@id, element) and (@type='text' or @type='password')]</generic>
 		</textbox>
 		<textbox>
-			<generic>//input[starts-with(@id, element) and (@type='text')]</generic>
-		</textbox>
-		<textbox>
-			<generic>//input[starts-with(@name, element) and (@type='text')]</generic>
+			<generic>//input[starts-with(@name, element) and (@type='text' or @type='password')]</generic>
 		</textbox>		
 		<textbox>
-			<testcenter>//label[starts-with(normalize-space(),element)]/following::input[@type='text']</testcenter>
+			<testcenter>//label[starts-with(normalize-space(),element)]/following::input[(@type='text' or @type='password')]</testcenter>
 		</textbox>	
 		<textbox>
-			<generic>//*[text()=element]/following::input[@type='text'][1]</generic>
+			<generic>//*[text()=element]/following::input[(@type='text' or @type='password')][1]</generic>
 		</textbox>
 		<textbox>
 			<signup>//input[@id=element]</signup>
-		</textbox>		
+		</textbox>
 	</textboxes>
 	
 	<uploadpaths>

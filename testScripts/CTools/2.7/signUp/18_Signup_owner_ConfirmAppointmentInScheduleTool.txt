@@ -7,7 +7,7 @@ click|Login
 verifyText|From the CTools Team
 verifyText|Welcome to your personal workspace
 
-click|$project_site
+click|Dupe Signup Site
 verifyText|selenium user
 verifyText|Site Information Display
 verifyText|viewing announcements from the last 10 days

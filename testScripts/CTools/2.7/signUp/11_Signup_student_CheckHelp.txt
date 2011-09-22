@@ -8,7 +8,7 @@ click|Login
 verifyText|From the CTools Team
 verifyText|Welcome to your personal workspace
 
-click|$site
+click|$testDupeSite
 verifyText|selenium user
 verifyText|Site Information Display
 verifyText|the Regents of The University of Michigan

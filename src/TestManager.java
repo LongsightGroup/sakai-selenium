@@ -3,6 +3,9 @@ package edu.umich.keyword;
 import edu.umich.keyword.KeywordMethods;
 
 import java.io.*;
+import java.nio.MappedByteBuffer;
+import java.nio.channels.FileChannel;
+import java.nio.charset.Charset;
 import java.text.DateFormat;
 import java.text.SimpleDateFormat;
 import java.util.Arrays;
@@ -26,7 +29,8 @@ import org.testng.collections.Lists;
 public class TestManager {
 	
 	private static WebDriver driver;
-	private static String application;
+	private static String application, browser, chromeExecutable, fileDirectory, downloadDirectory, logDirectory,
+		mimeTypes, OS, testListFile, variablesPath, xpathFile;
 	private static Integer timeout, minTimeout;
 
 	// This method reads the parameters file, creates the logging directory, and reads all tests into
@@ -34,53 +38,8 @@ public class TestManager {
 	// After the test is run, it makes an entry to the master log file.
 	public static void main(String[] args) throws Exception {
 	
-		// This prints the user directory out to the console and the java window
-		// Useful for understanding where the parameters file needs to be.
-		System.out.println("Your test properties file should be located here: " + System.getProperty("user.dir"));
-		
-		// This next section confirms that the parameters file exists,
-		// then opens and reads it.
-		File file = new File("parameters.txt");
-		
-		if (!file.exists()) {
-			throw new Exception("Parameters file does not exist here: " + System.getProperty("user.dir"));
-		}
-		
-		Properties propReader = new Properties();
-		FileInputStream propertiesStream = new FileInputStream("parameters.txt");
-		
-		// Read our properties, with defaults.
-		propReader.load(propertiesStream);
-		String browser = propReader.getProperty("browser", "firefox");
-		String chromeExecutable = propReader.getProperty("chromeExecutable", "none");
-		String fileDirectory = propReader.getProperty("fileDirectory");
-		String downloadDirectory = propReader.getProperty("downloadDirectory");
-		String logDirectory = propReader.getProperty("logDirectory");
-		String mimeTypes = propReader.getProperty("mimeTypes");		
-		String OS = propReader.getProperty("os", "mac");
-		String testListFile = propReader.getProperty("testList", null);
-		String variablesPath = propReader.getProperty("variablesFile", null);
-		String xpathFile = propReader.getProperty("xpathFile");
-		timeout = Integer.parseInt(propReader.getProperty("timeout", "10"));
-		minTimeout = Integer.parseInt(propReader.getProperty("minTimeout", "3"));
-		
-		// Close the properties file
-		propertiesStream.close();
-		
- 		// Check that the user has ended the path to their test scripts with a slash, add one if they haven't put it there.
-		if (!fileDirectory.endsWith("/")) {
-			fileDirectory = fileDirectory.concat("/");
-			}		
-		
- 		// Check that the user has ended the path to their test scripts with a slash, add one if they haven't put it there.
-		if (!logDirectory.endsWith("/")) {
-			logDirectory = logDirectory.concat("/");
-			}
-		
-		if (!downloadDirectory.endsWith("/")) {
-			downloadDirectory = downloadDirectory.concat("/");
-			}
-		
+		readProperties();
+				
 		//format of the output date for log directory
 		DateFormat dateFormat = new SimpleDateFormat("yyyyMMdd_hhmmss");
 		//get current date time with Date()
@@ -146,8 +105,14 @@ public class TestManager {
 			driver = startDriver(browser, downloadDirectory, mimeTypes, chromeExecutable);
 			
 			// Our tests come from the master test list, specified in parameters.
-			testScript = testList.get(a); //.substring(0, testName.length() - 4);
-			testScriptPath = testScript.split("/");
+			testScript = testList.get(a);
+			
+			if(File.separator.equals("/")){
+				testScriptPath = testScript.split("/");	
+			} else {
+				testScriptPath = testScript.split("\\\\");
+			}
+			
 			testName = testScriptPath[(testScriptPath.length - 1)];
 
 			// Actually run the test
@@ -170,6 +135,70 @@ public class TestManager {
 		// Close the master report after all the tests are finished.
 		reportLogPointer.close();
 	}
+	
+	private static void readProperties() throws Exception {
+		
+		// This prints the user directory out to the console and the java window
+		// Useful for understanding where the parameters file needs to be.
+		System.out.println("Your test properties file should be located here: " + System.getProperty("user.dir"));
+		
+		// This next section confirms that the parameters file exists,
+		// then opens and reads it.
+		File file = new File("parameters.txt");
+		
+		if (!file.exists()) {
+			throw new Exception("Parameters file does not exist here: " + System.getProperty("user.dir"));
+		}
+		
+		Properties propReader = new Properties();
+		String myProperties = readFile("parameters.txt");
+		// This is necessary for windows.
+		propReader.load(new StringReader(myProperties.replace("\\", "\\\\"))); 
+
+		//Read our properties values, with default values.
+		browser = propReader.getProperty("browser", "firefox");
+		chromeExecutable = propReader.getProperty("chromeExecutable", "none");
+		fileDirectory = propReader.getProperty("fileDirectory");
+		downloadDirectory = propReader.getProperty("downloadDirectory");
+		logDirectory = propReader.getProperty("logDirectory");
+		mimeTypes = propReader.getProperty("mimeTypes");		
+		OS = propReader.getProperty("os", "mac");
+		testListFile = propReader.getProperty("testList", null);
+		variablesPath = propReader.getProperty("variablesFile", null);
+		xpathFile = propReader.getProperty("xpathFile");
+		timeout = Integer.parseInt(propReader.getProperty("timeout", "10"));
+		minTimeout = Integer.parseInt(propReader.getProperty("minTimeout", "3"));
+		
+		// Check that the user has ended the path to their test scripts with a slash, add one if they haven't put it there.
+		if (!fileDirectory.endsWith(File.separator)) {
+			fileDirectory = fileDirectory.concat(File.separator);
+			}		
+		
+ 		// Check that the user has ended the path to their test scripts with a slash, add one if they haven't put it there.
+		if (!logDirectory.endsWith(File.separator)) {
+			logDirectory = logDirectory.concat(File.separator);
+			}
+		
+		if (!downloadDirectory.endsWith(File.separator)) {
+			downloadDirectory = downloadDirectory.concat(File.separator);
+			}
+		
+	}
+	
+	private static String readFile(String path) throws IOException {
+		  FileInputStream stream = new FileInputStream(new File(path));
+		  try {
+		    FileChannel fc = stream.getChannel();
+		    MappedByteBuffer bb = fc.map(FileChannel.MapMode.READ_ONLY, 0, fc.size());
+		    /* Instead of using default, pass in a decoder. */
+		    return Charset.defaultCharset().decode(bb).toString();
+		  }
+		  finally {
+		    stream.close();
+		  }
+		}
+	
+	
 	
 	private static WebDriver startDriver(String browser, String downloadDirectory, String mimeTypes, String chromeExecutable) throws Exception {
 		
@@ -212,13 +241,18 @@ public class TestManager {
 		File dir = new File(downloadDirectory);
 	    String[] files = dir.list();
 	    
-	    for (int i = 0; i < files.length; i++) {
-	      
-	    	File downloadFile = new File(downloadDirectory + files[i]);
-	      
-	    	if (downloadFile.isFile()) { // skip ., .., other directories too
-	    		downloadFile.delete();
-	    	}
+	    if (files == null) {
+	    	
+	    } else {
+	    
+		    for (int i = 0; i < files.length; i++) {
+		      
+		    	File downloadFile = new File(downloadDirectory + files[i]);
+		      
+		    	if (downloadFile.isFile()) { // skip ., .., other directories too
+		    		downloadFile.delete();
+		    	}
+		    }
 	    }
 		
 		// Read the next line while there is a line to read and the last command did NOT fail.
@@ -473,7 +507,10 @@ public class TestManager {
 	
 	private static void prepIEProfile (String downloadDirectory, String mimeTypes)  throws Exception {
 		
-		driver = new InternetExplorerDriver();
+        DesiredCapabilities ieCapabilities = DesiredCapabilities.internetExplorer();
+        ieCapabilities.setCapability(InternetExplorerDriver.INTRODUCE_FLAKINESS_BY_IGNORING_SECURITY_DOMAINS, true);
+		
+		driver = new InternetExplorerDriver(ieCapabilities);
 		}		
 	
 }

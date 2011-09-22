@@ -38,8 +38,7 @@ verifyText|$testDupeSite
 
 comment|Open site to make sure it exists.
 click|$testDupeSite
-verifyText|There are currently no announcements at this location
-verifyText|Recent Chat Messages
+verifyText|Site Information Display
 verifyText|Course site that acts as a duplicate for sites that require stealth tools.
 
 click|Logout

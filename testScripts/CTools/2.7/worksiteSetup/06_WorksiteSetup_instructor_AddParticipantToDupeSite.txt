@@ -11,7 +11,7 @@ click|Worksite Setup
 verifyText|selenium instructor
 verifyText|Worksite Setup
 verifyText|Check box(es) to take action on a site.
-selectCheckbox|$site
+selectCheckbox|$testDupeSite
 
 click|Edit
 verifyText|$testDupeSite

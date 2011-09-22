@@ -11,7 +11,7 @@ verifyText|selenium instructor
 verifyText|Site Information Display
 verifyText|viewing announcements from the last 10 days
 
-click|Lecture Tools
+click|LectureTools
 verifyText|Welcome to LectureTools
 verifyText|Click the button below to register your course within LectureTools
 

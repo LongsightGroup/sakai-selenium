@@ -20,7 +20,6 @@ verifyText|Currently viewing messages for 'Main Chat Room'
 click|Options
 verifyText|Manage Rooms
 verifyText|Main Chat Room
-verifyText|Clear History
 
 click|Add Room
 verifyText|Add Room

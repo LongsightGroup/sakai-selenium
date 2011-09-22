@@ -22,7 +22,7 @@ click|Edit
 verifyText|Edit: Sample Gradebook Item
 verifyText|Gradebook Item Point Value
 verifyValue|Release this item to Students|true
-enterText|Gradebook Item Point Value|132
+enterText|Gradebook Item Point Value *|132
 
 click|Save Changes
 verifyText|Gradebook item Sample Gradebook Item has been updated

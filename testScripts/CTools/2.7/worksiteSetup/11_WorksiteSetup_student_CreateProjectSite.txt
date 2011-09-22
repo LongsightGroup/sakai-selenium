@@ -29,7 +29,7 @@ selectRadio|Group project (e.g., course project, writing group, professional dev
 click|Continue
 verifyText|Project Site Information
 verifyText|Enter basic information about the project site...
-enterText|Site Title|$creationProjectSite
+enterText|Site Title|$project_site
 fckEnter|Description|A basic project site created during automated testing.  This is a description.
 enterText|Short Description|An even shorter description
 verifyText|selenium user
@@ -105,7 +105,7 @@ comment|This will create the site and bring you back to a list of sites.
 click|Create Site
 verifyText|Check box(es) to take action on a site. Click column title to sort.
 verifyText|seleniumstudent
-verifyText|$creationProjectSite
+verifyText|$project_site
 
 click|Logout
 verifyText|You are about to log out

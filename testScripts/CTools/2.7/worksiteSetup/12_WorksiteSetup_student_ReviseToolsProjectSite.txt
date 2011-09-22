@@ -12,7 +12,7 @@ verifyText|selenium user
 verifyText|Worksite Setup
 verifyText|Check box(es) to take action on a site.
 
-selectCheckbox|$creationProjectSite
+selectCheckbox|$project_site
 click|Edit
 verifyText|A basic project site created during automated testing.
 verifyText|Test Project Site
@@ -32,14 +32,14 @@ selectCheckbox|SAMS Scores
 
 click|Continue
 verifyText|Confirming site tools edits for
-verifyText|$creationProjectSite
+verifyText|$project_site
 verifyText|You have selected the following for your site
 verifyText|SAMS Scores
 
 comment|This should put us back at the basic information page
 click|Finish
 verifyText|A basic project site created during automated testing.
-verifyText|$creationProjectSite
+verifyText|$project_site
 verifyText|seleniumstudent
 verifyText|Librarian
 verifyText|Can read, revise, delete, and add their own content to a site
@@ -56,7 +56,7 @@ selectCheckbox|SAMS Scores
 
 click|Continue
 verifyText|Confirming site tools edits for
-verifyText|$creationProjectSite
+verifyText|$project_site
 verifyText|SAMS Scores
 verifyText|You have selected the following for your site
 verifyText|Messages
@@ -64,7 +64,7 @@ verifyText|Messages
 comment|This should put us back at the basic information page
 click|Finish
 verifyText|A basic project site created during automated testing.
-verifyText|$creationProjectSite
+verifyText|$project_site
 verifyText|seleniumstudent
 verifyText|Librarian
 verifyText|Can read, revise, delete, and add their own content to a site
@@ -78,7 +78,7 @@ verifyValue|SAMS Scores|false
 
 comment|click|Cancel
 comment|verifyText|A basic course created during automated testing.
-comment|verifyText|$creationProjectSite
+comment|verifyText|$project_site
 comment|verifyText|seleniumstudent
 comment|verifyText|Librarian
 comment|verifyText|Can read, revise, delete, and add their own content to a site

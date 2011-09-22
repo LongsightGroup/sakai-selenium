@@ -12,10 +12,10 @@ verifyText|selenium user
 verifyText|Worksite Setup
 verifyText|Check box(es) to take action on a site.
 
-selectCheckbox|$creationProjectSite
+selectCheckbox|$project_site
 click|Edit
 verifyText|A basic project site created during automated testing.
-verifyText|$creationProjectSite
+verifyText|$project_site
 verifyText|seleniumstudent
 verifyText|Librarian
 verifyText|Can read, revise, delete, and add their own content to a site
@@ -47,7 +47,7 @@ verifyText|seleniuminstructor
 click|Finish
 comment|Back at participant page
 verifyText|A basic project site created during automated testing.
-verifyText|$creationProjectSite
+verifyText|$project_site
 verifyText|seleniumstudent
 verifyText|Librarian
 verifyText|Can read, revise, delete, and add their own content to a site

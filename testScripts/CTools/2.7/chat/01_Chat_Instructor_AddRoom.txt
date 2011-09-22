@@ -34,7 +34,6 @@ click|Update Options
 verifyText|Manage Rooms
 verifyText|Main Chat Room
 verifyText|Description of Secondary Chat Room
-verifyText|Clear History
 
 click|Reset
 verifyText|All chat messages are archived and can be read by any site participant.

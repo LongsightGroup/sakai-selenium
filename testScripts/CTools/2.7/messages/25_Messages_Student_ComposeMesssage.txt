@@ -20,7 +20,7 @@ verifyText|Messages
 click|Compose Message
 verifyText|Compose a Message
 verifyText|Required items marked with *
-selectList|To|Instructor Role
+selectList|To|Owner Role
 verifyValue|Send a copy of this message to recipients|false
 selectList|Label|High
 enterText|Subject|Student Test Message
@@ -38,7 +38,7 @@ verifyFile|test.docx
 
 click|Continue
 verifyText|Compose a Message
-verifyValue|To|Instructor Role
+verifyValue|To|Owner Role
 verifyValue|Subject|Student Test Message
 verifyText|A hearty hello to you.
 verifyText|test.docx

@@ -13,6 +13,7 @@ import java.util.Properties;
 
 import org.apache.commons.lang.StringUtils;
 
+import org.openqa.selenium.NoSuchElementException;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
@@ -221,8 +222,24 @@ public class KeywordMethods {
 			        // This locates the sub-frame within which the fckEditor resides from the preceding label
 					driver.switchTo().frame(ElementLocator.pathFinder(driver, timeout, paramHash, elementTypes));
 					
+					WebElement fckFrame = null;
+					
 					// But we're not done there, as the text area resides in another nested sub-frame.
-					driver.switchTo().frame(driver.findElement(By.id("xEditingArea")).findElement(By.xpath("//iframe")));
+					// This sub-frame will sometimes take a long time to load on slow connections.
+					for(int i=0; i<timeout; i++) {
+						try {
+							fckFrame = driver.findElement(By.id("xEditingArea")).findElement(By.xpath("//iframe"));
+							
+							if (fckFrame.isDisplayed()){
+								break;
+							}
+						} catch (NoSuchElementException ex) {
+							continue;
+						}
+					
+					}
+					//driver.switchTo().frame(driver.findElement(By.id("xEditingArea")).findElement(By.xpath("//iframe")));
+					driver.switchTo().frame(fckFrame);
 					
 					driver.findElement(By.xpath("//body")).sendKeys(Keys.chord(Keys.CONTROL, "a"), textToEnter);
 					

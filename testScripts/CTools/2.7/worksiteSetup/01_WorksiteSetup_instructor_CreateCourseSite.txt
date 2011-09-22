@@ -48,6 +48,7 @@ selectCheckbox|Assignments
 selectCheckbox|Chat Room
 selectCheckbox|Drop Box
 selectCheckbox|Email Archive
+selectCheckbox|Engineering Honor Code
 selectCheckbox|Evaluate This Class
 selectCheckbox|Forums
 selectCheckbox|Gradebook
@@ -90,6 +91,7 @@ verifyText|Assignments
 verifyText|Chat Room
 verifyText|Drop Box
 verifyText|$creationCourseEmail
+verifyText|Engineering Honor Code
 verifyText|Evaluate This Class
 verifyText|Forums
 verifyText|Gradebook

@@ -3,6 +3,7 @@
 /storage/tests/scripts/worksiteSetup/03_WorksiteSetup_instructor_AddParticipantToCourseSite.txt
 /storage/tests/scripts/worksiteSetup/04_WorksiteSetup_instructor_DuplicateCourseSite.txt
 /storage/tests/scripts/worksiteSetup/05_WorksiteSetup_instructor_DeleteDuplicateCourseSite.txt
+/storage/tests/scripts/worksiteSetup/06_WorksiteSetup_instructor_AddParticipantToDupeSite.txt
 /storage/tests/scripts/worksiteSetup/11_WorksiteSetup_student_CreateProjectSite.txt
 /storage/tests/scripts/worksiteSetup/12_WorksiteSetup_student_ReviseToolsProjectSite.txt
 /storage/tests/scripts/worksiteSetup/13_WorksiteSetup_student_AddParticipantProjectSite.txt

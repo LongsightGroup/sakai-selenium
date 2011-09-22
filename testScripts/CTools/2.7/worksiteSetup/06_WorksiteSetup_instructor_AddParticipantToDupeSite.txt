@@ -1,0 +1,58 @@
+application|worksitesetup
+openURL|$url
+enterText|eid|seleniumInstructor
+enterText|pw|seleniumInstructor
+
+click|Login
+verifyText|From the CTools Team
+verifyText|Welcome to your personal workspace
+
+click|Worksite Setup
+verifyText|selenium instructor
+verifyText|Worksite Setup
+verifyText|Check box(es) to take action on a site.
+selectCheckbox|$site
+
+click|Edit
+verifyText|$testDupeSite
+verifyText|seleniuminstructor
+verifyText|Course site that acts as a duplicate for sites that require stealth tools.
+verifyText|Can read, add, and revise content on sites in a particular department
+
+comment|Add the selenium student to the course.
+click|Add Participants
+verifyText|Add Participants
+verifyText|Enter multiples each on separate line
+verifyValue|Assign all participants to the same role|true
+enterText|Official Email Address or Username|seleniumstudent
+
+click|Continue
+verifyText|Choose a Role for Participants
+verifyValue|Student|false
+verifyText|seleniumstudent
+selectRadio|Student
+
+comment|Should email go to the participant?
+click|Continue
+verifyText|Add participant(s) to
+verifyText|do not send an email notifying new participants
+verifyValue|Send Now|false
+
+comment|Confirmation screen
+click|Continue
+verifyText|Confirming Add Participant(s) to My Workspace
+verifyText|seleniumstudent
+
+click|Finish
+comment|Back at participant page
+verifyText|$testDupeSite
+comment|We the roster from the previous script is not added in a timely fashion.  So, we cannot assume it exists here.
+verifyText|A basic course created during automated testing
+verifyText|seleniumstudent
+
+click|Logout
+verifyText|You are about to log out
+
+click|Log Out
+verifyText|From the CTools Team
+verifyText|Welcome

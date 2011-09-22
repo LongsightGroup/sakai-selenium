@@ -15,10 +15,10 @@ verifyText|Check box(es) to take action on a site.
 selectCheckbox|$project_site
 click|Edit
 verifyText|A basic project site created during automated testing.
-verifyText|Test Project Site
 verifyText|seleniumstudent
 verifyText|Librarian
 verifyText|Can read, revise, delete, and add their own content to a site
+verifyText|$project_site
 
 comment|Revise the tools that are part of this site.
 click|Edit Tools

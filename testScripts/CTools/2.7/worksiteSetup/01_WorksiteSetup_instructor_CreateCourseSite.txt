@@ -54,7 +54,9 @@ selectCheckbox|Gradebook
 selectCheckbox|iTunes U
 selectCheckbox|LectureTools
 selectCheckbox|Library Help
+selectCheckbox|Library Materials
 selectCheckbox|Messages
+selectCheckbox|Modules
 selectCheckbox|News
 selectCheckbox|Polls
 selectCheckbox|Resources
@@ -94,7 +96,9 @@ verifyText|Gradebook
 verifyText|iTunes U
 verifyText|LectureTools
 verifyText|Library Help
+verifyText|Library Materials
 verifyText|Messages
+verifyText|Modules
 verifyText|News ( channel-url = http://feeds.nytimes.com/nyt/rss/World )
 verifyText|Polls
 verifyText|Resources

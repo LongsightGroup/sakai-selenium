@@ -21,7 +21,7 @@ verifyText|Can read, add, and revise content on sites in a particular department
 
 click|Edit Class Roster(s)
 verifyText|Edit Roster Access for
-verifyText|$UMIAC_ID1
+verifyText|$providerID1
 verifyText|requested
 
 comment|So far we have just seen the result of course creation, now we will add a new roster
@@ -31,7 +31,7 @@ verifyValue|Academic term:|$term
 
 click|Add course(s) and/or section(s) not listed above...
 verifyText|Editing site...
-verifyText|$UMIAC_ID1
+verifyText|$providerID1
 verifyText|At this time we cannot verify you are the instructor of record
 enterText|id-Subject:1|Testing
 enterText|id-Course:1|$creationCourseNum2
@@ -45,8 +45,8 @@ verifyText|$creationCourseNum2
 click|Add Class(es)
 
 comment|Should be on the participant page.
-verifyText|$UMIAC_ID1
-verifyText|$UMIAC_ID2
+verifyText|$providerID1
+verifyText|$providerID2
 verifyText|$creationSite
 verifyText|A basic course created during automated testing.
 verifyText|seleniuminstructor

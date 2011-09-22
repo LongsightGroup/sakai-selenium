@@ -46,8 +46,8 @@ verifyText|seleniumstudent
 click|Finish
 comment|Back at participant page
 verifyText|$creationSite
-verifyText|$UMIAC_ID1
-verifyText|$UMIAC_ID2
+verifyText|$providerID1
+comment|We the roster from the previous script is not added in a timely fashion.  So, we cannot assume it exists here.
 verifyText|A basic course created during automated testing
 verifyText|seleniumstudent
 

@@ -19,7 +19,7 @@ verifyText|Legend
 
 comment|This will probable not work
 click|Printable Version
-verifyFile|schedule.pdf
+verifyFileExists|schedule.pdf
 
 click|Logout
 verifyText|You are about to log out

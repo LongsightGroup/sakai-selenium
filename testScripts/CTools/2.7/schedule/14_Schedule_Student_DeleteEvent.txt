@@ -7,7 +7,7 @@ verifyText|From the CTools Team
 verifyText|Welcome to your personal workspace
 
 comment|Student can only add a schedule to a project site. 
-click|Test Project Site
+click|$project_site
 verifyText|selenium user
 verifyText|Site Information Display
 verifyText|viewing announcements from the last 10 days

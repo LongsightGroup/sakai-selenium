@@ -6,7 +6,7 @@ click|Login
 verifyText|From the CTools Team
 verifyText|Welcome to your personal workspace
 
-click|Test Project Site
+click|$project_site
 verifyText|seleniumstudent
 verifyText|Site Information Display
 verifyText|viewing announcements from the last 10 days
@@ -17,9 +17,8 @@ verifyText|seleniumstudent
 verifyText|Calendar by Week
 verifyText|Legend
 
-comment|This will probably not work
-click|Printable Version|
-verifyFile|schedule.pdf
+click|Printable Version
+verifyFileExists|schedule.pdf
 
 click|Logout
 verifyText|You are about to log out

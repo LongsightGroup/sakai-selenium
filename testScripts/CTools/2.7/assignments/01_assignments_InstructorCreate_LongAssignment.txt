@@ -59,7 +59,7 @@ verifyText|Information displayed at a specific time to whomever you choose
 enterText|allPurpose_title|Sample All Purpose Item
 enterText|allPurpose_text|Some sample all purpose text.
 selectCheckbox|allPurpose_Student
-selectCheckbox|allPurpose_Instructor
+selectCheckbox|allPurpose_Owner
 click|allPurpose_save
 
 click|Post

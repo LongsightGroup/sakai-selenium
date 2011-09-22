@@ -12,9 +12,9 @@ verifyText|selenium instructor
 verifyText|Worksite Setup
 verifyText|Check box(es) to take action on a site.
 
-selectCheckbox|$creationSite
+selectCheckbox|$site
 click|Edit
-verifyText|$creationSite
+verifyText|$site
 verifyText|seleniuminstructor
 verifyText|A basic course created during automated testing.
 verifyText|Can read, add, and revise content on sites in a particular department
@@ -40,14 +40,14 @@ enterText|uniqname|seleniuminstructor
 
 click|Continue
 verifyText|Request Site Access
-verifyText|$creationSite
+verifyText|$site
 verifyText|$creationCourseNum2
 click|Add Class(es)
 
 comment|Should be on the participant page.
 verifyText|$providerID1
 verifyText|$providerID2
-verifyText|$creationSite
+verifyText|$site
 verifyText|A basic course created during automated testing.
 verifyText|seleniuminstructor
 verifyText|Can read content, and add content

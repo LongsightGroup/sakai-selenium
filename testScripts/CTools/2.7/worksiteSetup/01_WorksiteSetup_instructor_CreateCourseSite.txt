@@ -115,7 +115,7 @@ comment|This will create the site and bring you back to a list of sites.
 click|Request Site
 verifyText|Check box(es) to take action on a site. Click column title to sort.
 verifyText|seleniuminstructor
-verifyText|$creationSite
+verifyText|$site
 
 click|Logout
 verifyText|You are about to log out

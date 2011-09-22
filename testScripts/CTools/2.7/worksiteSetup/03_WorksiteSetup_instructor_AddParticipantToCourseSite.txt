@@ -11,10 +11,10 @@ click|Worksite Setup
 verifyText|selenium instructor
 verifyText|Worksite Setup
 verifyText|Check box(es) to take action on a site.
-selectCheckbox|$creationSite
+selectCheckbox|$site
 
 click|Edit
-verifyText|$creationSite
+verifyText|$site
 verifyText|seleniuminstructor
 verifyText|A basic course created during automated testing.
 verifyText|Can read, add, and revise content on sites in a particular department
@@ -45,7 +45,7 @@ verifyText|seleniumstudent
 
 click|Finish
 comment|Back at participant page
-verifyText|$creationSite
+verifyText|$site
 verifyText|$providerID1
 comment|We the roster from the previous script is not added in a timely fashion.  So, we cannot assume it exists here.
 verifyText|A basic course created during automated testing

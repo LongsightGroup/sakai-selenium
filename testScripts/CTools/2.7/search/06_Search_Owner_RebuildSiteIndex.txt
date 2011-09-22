@@ -21,7 +21,9 @@ verifyText|Last loaded at
 verifyText|Being indexed by none
 
 click|Rebuild Site Index
-verifyText|1 pending
+verifyText|Last loaded at
+verifyText|Being indexed by
+verifyText|Index contains
 verifyText|Pending
 
 click|Logout

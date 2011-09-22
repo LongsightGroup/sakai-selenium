@@ -23,7 +23,7 @@ click|Search
 verifyText|test.doc
 verifyText|Test.pdf
 verifyText|test.txt
-verifyText|Found 1 to 3
+verifyText|Found 1 to
 
 click|Logout
 verifyText|You are about to log out

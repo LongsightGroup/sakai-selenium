@@ -416,7 +416,15 @@ public class TestManager {
 	    	} else {
 	    		testStatus = KeywordMethods.verifyFile(downloadDirectory, fileDirectory, vars[1], timeout);
 	    	  }
-	    	}	
+	    	}
+	    else if (vars[0].equalsIgnoreCase("verifyfile")) { 
+	    	if (vars.length != 2) {
+	    		logPointer.write("Usage: verifyFile|fileToVerify|\r\n");
+	    		testStatus = "fail: incorrect method call.";
+	    	} else {
+	    		testStatus = KeywordMethods.verifyFileExists(downloadDirectory, vars[1], timeout);
+	    	  }
+	    	}	    
 	    else if (vars[0].equalsIgnoreCase("verifytext")) { 
 	    	testStatus = KeywordMethods.verifyText(driver, application, timeout, xpathFile, vars[1]);
 	    	}

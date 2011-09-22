@@ -582,7 +582,7 @@ public class KeywordMethods {
 				}			
 			}			
 			
-		
+
 		protected static String verifyFile ( String downloadDirectory,  String fileDirectory, String fileName, Integer timeout)  throws Exception {
 			
 			try {
@@ -613,6 +613,39 @@ public class KeywordMethods {
 					return "pass"; 
 				} else {
 					return "fail: the files do not match.";
+				}
+				
+				} catch (Exception e) {
+					
+						return "fail: " + e.toString();
+				}
+			
+		}		
+		
+		// Useful for dynamic files, you just want to verify that a non-zero file has been downloaded.
+		protected static String verifyFileExists ( String downloadDirectory,  String fileName, Integer timeout)  throws Exception {
+			
+			try {
+				
+				// Verify that our test file has been download and exists.
+				// Wait for as long as the timeout is specified.
+				File testFile = new File(downloadDirectory + fileName);
+				
+				for (int i=0; i<timeout; i++) {
+					if (testFile.canRead()) {
+						break;
+					}
+					Thread.sleep(1000);
+				}
+					
+				if (!testFile.exists()) {
+					return "fail: your test file does not exist at this path: " + downloadDirectory + fileName;
+				}
+				
+				if (testFile.length() > 0) {
+					return "pass"; 
+				} else {
+					return "fail: you have downloaded a zero-byte file.";
 				}
 				
 				} catch (Exception e) {

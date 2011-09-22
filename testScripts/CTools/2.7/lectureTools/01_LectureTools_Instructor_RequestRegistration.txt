@@ -18,7 +18,7 @@ verifyText|Click the button below to register your course within LectureTools
 click|Enter LectureTools
 waitForPopUp|30
 verifyText|Email Verification
-verifyText|selenium@instructor.qa.com
+verifyText|um.test.friend@gmail.com
 
 click|Send Verification Email
 verifyText|Your requested verification information was sent

@@ -6,10 +6,10 @@ click|Login
 verifyText|From the CTools Team
 verifyText|Welcome to your personal workspace
 
-click|$site
+click|$testDupeSite
 verifyText|selenium instructor
 verifyText|Site Information Display
-verifyText|viewing announcements from the last 10 days
+verifyText|Course site that acts as a duplicate for sites that require stealth tools.
 
 click|Discussion
 verifyText|Add Topic

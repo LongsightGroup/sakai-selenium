@@ -21,10 +21,8 @@ click|Options
 verifyText|Manage Rooms
 verifyText|Main Chat Room
 verifyText|Description of Secondary Chat Room
-verifyText|Clear History
 
 click|Set as Default
-verifyText|Clear History
 verifyText|seleniuminstructor
 
 click|Reset

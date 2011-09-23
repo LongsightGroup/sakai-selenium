@@ -417,9 +417,9 @@ public class TestManager {
 	    		testStatus = KeywordMethods.verifyFile(downloadDirectory, fileDirectory, vars[1], timeout);
 	    	  }
 	    	}
-	    else if (vars[0].equalsIgnoreCase("verifyfile")) { 
+	    else if (vars[0].equalsIgnoreCase("verifyfileexists")) { 
 	    	if (vars.length != 2) {
-	    		logPointer.write("Usage: verifyFile|fileToVerify|\r\n");
+	    		logPointer.write("Usage: verifyFileExists|fileToVerify|\r\n");
 	    		testStatus = "fail: incorrect method call.";
 	    	} else {
 	    		testStatus = KeywordMethods.verifyFileExists(downloadDirectory, vars[1], timeout);

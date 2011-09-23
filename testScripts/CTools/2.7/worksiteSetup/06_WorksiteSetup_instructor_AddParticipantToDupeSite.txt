@@ -46,8 +46,7 @@ verifyText|seleniumstudent
 click|Finish
 comment|Back at participant page
 verifyText|$testDupeSite
-comment|We the roster from the previous script is not added in a timely fashion.  So, we cannot assume it exists here.
-verifyText|A basic course created during automated testing
+verifyText|Course site that acts as a duplicate for sites that require stealth tools.
 verifyText|seleniumstudent
 
 click|Logout

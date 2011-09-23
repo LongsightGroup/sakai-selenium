@@ -10,7 +10,6 @@ verifyText|Welcome to your personal workspace
 click|$testDupeSite
 verifyText|selenium instructor
 verifyText|Site Information Display
-verifyText|viewing announcements from the last 10 days
 
 click|Sign-up
 verifyText|Meetings

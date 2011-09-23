@@ -22,7 +22,7 @@ verifyText|Custom date range
 
 selectList|customStartMonth|JUL
 selectList|customStartDay|1
-selectList|customStartYearSelect|2011
+selectList|customStartYear|2011
 selectList|customEndMonth|SEP
 selectList|customEndDay|16
 selectList|customEndYear|2014

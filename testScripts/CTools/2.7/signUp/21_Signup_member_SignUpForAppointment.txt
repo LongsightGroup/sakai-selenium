@@ -10,7 +10,7 @@ verifyText|Welcome to your personal workspace
 click|Dupe Signup Site
 verifyText|selenium instructor
 verifyText|Site Information Display
-verifyText|viewing announcements from the last 10 days
+verifyText|A project site meant to be used as a source for duplication during testing.
 
 click|Sign-up
 verifyText|Meetings

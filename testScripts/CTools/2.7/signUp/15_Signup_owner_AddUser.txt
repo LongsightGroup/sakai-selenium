@@ -1,0 +1,55 @@
+openURL|$url
+enterText|eid|seleniumStudent
+enterText|pw|seleniumStudent
+
+click|Login
+verifyText|From the CTools Team
+verifyText|Welcome to your personal workspace
+
+click|Dupe Signup Site
+verifyText|selenium user
+verifyText|Site Information Display
+verifyText|A project site meant to be used as a source for duplication during testing.
+
+click|Site Info
+verifyText|Dupe Signup Site
+verifyText|A project site meant to be used as a source for duplication during testing.
+verifyText|Edit Site Information
+
+comment|Add the selenium instructor to the course.
+click|Add Participants
+verifyText|Add Participants
+verifyText|Enter multiples each on separate line
+verifyValue|Assign all participants to the same role|true
+enterText|Official Email Address or Username|seleniuminstructor
+
+click|Continue
+verifyText|Choose a Role for Participants
+verifyValue|Member|false
+verifyText|seleniuminstructor
+selectRadio|Member
+
+click|Continue
+comment|Should email go to the participant?
+verifyText|Add participant(s) to
+verifyText|do not send an email notifying new participants
+verifyValue|Send Now|false
+
+comment|Confirmation screen
+click|Continue
+verifyText|Confirming Add Participant(s) to Dupe Signup Site
+verifyText|seleniuminstructor
+
+click|Finish
+comment|Back at participant page
+verifyText|Dupe Signup Site
+verifyText|A project site meant to be used as a source for duplication during testing.
+verifyText|seleniumstudent
+verifyText|Can read, revise, delete, and add their own content to a site
+
+click|Logout
+verifyText|You are about to log out
+
+click|Log Out
+verifyText|From the CTools Team
+verifyText|Welcome

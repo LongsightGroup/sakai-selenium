@@ -1,4 +1,3 @@
-application|signup
 openURL|$url
 enterText|eid|seleniumStudent
 enterText|pw|seleniumStudent
@@ -7,20 +6,24 @@ click|Login
 verifyText|From the CTools Team
 verifyText|Welcome to your personal workspace
 
-click|Dupe Signup Site
+click|Project Dupe Source
 verifyText|selenium user
 verifyText|Site Information Display
 verifyText|A project site meant to be used as a source for duplication during testing.
 
-click|Schedule
-verifyText|Calendar by Week
-verifyText|Sample Project Appointment
+click|Site Info
+verifyText|Project Dupe Source
+verifyText|A project site meant to be used as a source for duplication during testing.
+verifyText|Edit Site Information
 
-click|Sample Project Appointment
-verifyText|Sample Project Appointment
-verifyText|This is a sample appointment, used when testing the Sign-up tool.
-verifyText|selenium user
-verifyText|The Big House
+click|Duplicate Site
+verifyText|Duplicate site
+verifyText|Project Dupe Source
+enterText|Site Title|Dupe Signup Site
+
+click|Duplicate
+verifyText|Project Dupe Source
+verifyText|Dupe Signup Site
 
 click|Logout
 verifyText|You are about to log out

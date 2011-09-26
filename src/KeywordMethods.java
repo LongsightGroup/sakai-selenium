@@ -3,6 +3,7 @@ package edu.umich.keyword;
 import java.io.BufferedReader;
 import java.io.BufferedWriter;
 import java.io.File;
+import java.io.FileFilter;
 import java.io.FileInputStream;
 import java.io.FileOutputStream;
 
@@ -12,6 +13,7 @@ import java.util.ListIterator;
 import java.util.Properties;
 
 import org.apache.commons.lang.StringUtils;
+import org.apache.commons.io.filefilter.WildcardFileFilter;
 
 import org.openqa.selenium.NoSuchElementException;
 import org.openqa.selenium.By;
@@ -587,22 +589,62 @@ public class KeywordMethods {
 			
 			try {
 				
-				// Verify that our baseline file exists
-				File baselineFile = new File(fileDirectory + fileName);
+				File[] baselineFiles, testFiles;
+				File baselineFile, testFile = null;
+
+				// Construct a filter, for use later if the file contains a wildcard.
+				FileFilter fileFilter = new WildcardFileFilter(fileName);				
 				
-				if (!baselineFile.exists()) {
-					return "fail: your baseline file does not exist at this path: " + fileDirectory + fileName;
+				// Verify that our baseline file exists
+				if (fileName.contains("*")) {
+					
+					File baselineDirectory = new File(fileDirectory);
+					baselineFiles = baselineDirectory.listFiles(fileFilter);
+					
+					if (baselineFiles.length > 0) {
+						baselineFile = baselineFiles[0];
+					} else {
+						return "fail: your baseline file does not exist at this path: " + fileDirectory + fileName;
+					}
+					
+				} else {
+					baselineFile = new File(fileDirectory + fileName);
+					
+					if (!baselineFile.exists()) {
+						return "fail: your baseline file does not exist at this path: " + fileDirectory + fileName;
+					}	
 				}
 				
 				// Verify that our test file has been download and exists.
-				// Give it 30 seconds to download.
-				File testFile = new File(downloadDirectory + fileName);
-				
-				for (int i=0; i<timeout; i++) {
+				// Wait for as long as the timeout is specified.
+				if (fileName.contains("*")) {
+						
+					File downloadFileDirectory = new File(downloadDirectory);
+					
+					for (int i=0; i<timeout; i++) {
+						
+						testFiles = downloadFileDirectory.listFiles(fileFilter);
+						
+						if (testFiles.length > 0) {
+							testFile = testFiles[0];
+							break;
+						}
+						
+						Thread.sleep(1000);	
+					}
+						
+				} else {
+
+					for (int i=0; i<timeout; i++) {
+					
+					testFile = new File(downloadDirectory + fileName);
+					
 					if (testFile.canRead()) {
 						break;
 					}
+					
 					Thread.sleep(1000);
+					}
 				}
 					
 				if (!testFile.exists()) {
@@ -627,15 +669,42 @@ public class KeywordMethods {
 			
 			try {
 				
+				File[] testFiles;
+				File testFile = null;
+				
+				// Construct a filter, for use later if the file contains a wildcard.
+				FileFilter fileFilter = new WildcardFileFilter(fileName);								
+				
 				// Verify that our test file has been download and exists.
 				// Wait for as long as the timeout is specified.
-				File testFile = new File(downloadDirectory + fileName);
-				
-				for (int i=0; i<timeout; i++) {
+				if (fileName.contains("*")) {
+						
+					File downloadFileDirectory = new File(downloadDirectory);
+					
+					for (int i=0; i<timeout; i++) {
+						
+						testFiles = downloadFileDirectory.listFiles(fileFilter);
+						
+						if (testFiles.length > 0) {
+							testFile = testFiles[0];
+							break;
+						}
+						
+						Thread.sleep(1000);	
+					}
+						
+				} else {
+
+					for (int i=0; i<timeout; i++) {
+					
+					testFile = new File(downloadDirectory + fileName);
+					
 					if (testFile.canRead()) {
 						break;
 					}
+					
 					Thread.sleep(1000);
+					}
 				}
 					
 				if (!testFile.exists()) {
@@ -751,15 +820,16 @@ public class KeywordMethods {
 		
 		protected static String verifyValue (WebDriver driver, String application, Integer timeout, String xpathFile, String ... object)  throws Exception {
 			
-			String valueToVerify = object[1];
 			String iteration = "1";
 			if (object.length > 2) 
 				iteration = object[2];
-			
+	
 			// Empty text boxes will not match with a space value. So we need to recast to an empty string
 			if (object[1].equals(" ")) {
 				object[1]="";
 			}
+
+			String valueToVerify = object[1];			
 			
 			HashMap<String, String> paramHash = new HashMap<String, String>();
 			

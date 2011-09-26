@@ -28,7 +28,7 @@ verifyText|A (96.96%)
 comment|Probably better as a manual test, the download process for this button will be different for each browser.
 comment|This does not work and will break.
 click|Export Course Grades as CSV
-verifyFile|course_grades.csv
+verifyFile|course_grade-*.csv
 
 click|Logout
 verifyText|You are about to log out

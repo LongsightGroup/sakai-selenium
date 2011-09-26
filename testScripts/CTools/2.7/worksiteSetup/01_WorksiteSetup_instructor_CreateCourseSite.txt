@@ -75,7 +75,7 @@ verifyText|Email Archive
 verifyText|News
 verifyText|Web Content
 enterText|Site email address|$creationCourseEmail
-enterText|URL Channel|http://feeds.nytimes.com/nyt/rss/World
+enterText|URL Channel|http://www.ns.umich.edu/htdocs/releases/rss.php
 
 click|Continue
 verifyText|Course Site Access
@@ -101,7 +101,7 @@ verifyText|Library Help
 verifyText|Library Materials
 verifyText|Messages
 verifyText|Modules
-verifyText|News ( channel-url = http://feeds.nytimes.com/nyt/rss/World )
+verifyText|News ( channel-url = http://www.ns.umich.edu/htdocs/releases/rss.php )
 verifyText|Polls
 verifyText|Resources
 verifyText|Schedule

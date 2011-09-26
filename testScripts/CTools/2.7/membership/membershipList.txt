@@ -1,0 +1,3 @@
+/Users/admin/Desktop/keywordframework/trunk/selenium/keyword2/testScripts/CTools/2.7/membership/01MembershipInstructorViewSiteList.txt
+/Users/admin/Desktop/keywordframework/trunk/selenium/keyword2/testScripts/CTools/2.7/membership/02MembershipInstructorJoin.txt
+/Users/admin/Desktop/keywordframework/trunk/selenium/keyword2/testScripts/CTools/2.7/membership/03MembershipInstructorUnJoin.txt

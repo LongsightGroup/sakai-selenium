@@ -1,0 +1,11 @@
+comment|View membership list as instructor.openURL|$urlenterText|eid|seleniumInstructorenterText|pw|seleniumInstructorclick|LoginverifyText|From the CTools TeamverifyText|Welcome to your personal workspaceverifyText| selenium instructorclick|MembershipverifyText|selenium instructorverifyText|My Current SitesverifyText|Selenium 001 001 W11
+verifyText|Sample Project Site
+verifyText|Selenium 999 999 F09
+verifyText|2005 Ford students selectCheckbox|check-1
+click|Unjoin
+verifyText|Confirm Change
+verifyText|Are you sure you want to unjoin the following sites?
+verifyText|2005 Ford students
+click|Unjoin
+verifyText|My Current Sites
+verifyText|You are no longer a participant in site 2005 Ford studentsclick|LogoutverifyText|You are about to log outclick|Log OutverifyText|From the CTools TeamverifyText|Welcome

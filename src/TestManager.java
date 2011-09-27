@@ -107,7 +107,8 @@ public class TestManager {
 			// Our tests come from the master test list, specified in parameters.
 			testScript = testList.get(a);
 			
-			if(File.separator.equals("/")){
+			//if(File.separator.equals("/")){
+			if(testScript.contains("/")){
 				testScriptPath = testScript.split("/");	
 			} else {
 				testScriptPath = testScript.split("\\\\");

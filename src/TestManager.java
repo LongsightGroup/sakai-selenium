@@ -207,9 +207,9 @@ public class TestManager {
 				prepFirefoxProfile(downloadDirectory, mimeTypes);
 			} else if (browser.contains("explore")){
 				prepIEProfile(downloadDirectory, mimeTypes);
-			} else if (browser.contains("google")){
+			} else if (browser.contains("chrome")){
 				prepChromeProfile(downloadDirectory, mimeTypes, chromeExecutable);
-			}
+			} else throw new Exception("You have entered an invalid browser string.  Must be either firefox, explorer or chrome.");
 			
 			return driver;
 	}

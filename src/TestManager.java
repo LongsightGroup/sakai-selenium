@@ -119,7 +119,8 @@ public class TestManager {
 			// Actually run the test
 			testResult = testRunner(testScript, OS, logDirectory, fileDirectory, downloadDirectory, testName, variablesPath, xpathFile);
 			// Shutdown the browser
-			driver.close();
+			//driver.close();
+			driver.quit();
 			
 			if (testResult.equals("pass")) {
 				passedTests++;

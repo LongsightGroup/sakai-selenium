@@ -2,7 +2,7 @@ downloadDirectory=/storage/tests/downloads/
 fileDirectory=/storage/tests/files/
 logDirectory=/storage/tests/logs/
 
-testList=/storage/tests/scripts/assignments/assignmentsList.txt
+testList=/storage/code/svn/edu/umich/keyword2/testScripts/CTools/2.7/testList.txt
 variablesFile=/storage/tests/variables.txt
 xpathFile=/storage/tests/xpaths.xml
 

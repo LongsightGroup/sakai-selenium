@@ -1,15 +1,15 @@
-#Wed Sep 14 10:52:07 EDT 2011
+#Mon Sep 26 23:23:24 EDT 2011
 creationCourseNum2=102
-UMIAC_ID1=2011,2,A,Testing,101,001
 url=https\://testctools.ds.itd.umich.edu/portal/xlogin
-site=Selenium 001 001 W11
-creationProjectSite=F11 Test Project
-creationSite=Testing 101 001 F11
+site=Testing 101 001 F11
+dupeProvider=2011,2,A,DupeSrc,101,001
 term=FALL 2011
 providerID2=2011,2,A,Testing,102,001
 providerID1=2011,2,A,Testing,101,001
 numAssigns=2
+dupeSource=DupeSrc 101 001 F11
 creationCourseEmail=testing_101_F11
-project_site=Sample Project Site
+project_site=F11 Test Project
 creationCourseNum=101
-UMIAC_ID2=2011,2,A,Testing,102,001
+gateway_url=https\://testctools.ds.itd.umich.edu/portal
+testDupeSite=TestDupe G1

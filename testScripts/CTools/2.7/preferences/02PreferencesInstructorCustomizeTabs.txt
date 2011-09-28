@@ -1,0 +1,56 @@
+comment|Customize tabs in preferences as instructor.openURL|$urlenterText|eid|seleniumInstructorenterText|pw|seleniumInstructorclick|LoginverifyText|From the CTools TeamverifyText|Welcome to your personal workspace
+
+comment|make sure that the invisible site doesn't show upverifyTextNotPresent|Selenium 999 999 F09click|PreferencesverifyText|selenium instructorverifyText|Customize TabsverifyText|To hide a site or make a site visible in the tabs
+
+comment|make an invisible site visible and check tab
+selectList|prefs_form:_id38|Selenium 999 999 F09
+click|Move selected
+click|Update Preferences
+click|Home
+verifyText|Selenium 999 999 F09
+
+comment|now make visible tab invisible and check
+click|Preferences
+verifyText|selenium instructorverifyText|Customize TabsverifyText|To hide a site or make a site visible in the tabs
+selectList|prefs_form:_id45|Selenium 999 999 F09
+click|Remove selected
+click|Update Preferences
+click|Home
+verifyTextNotPresent|Selenium 999 999 F09
+
+comment|now change the number of visible sites
+click|Preferences
+comment|make all sites visible this should give 6 sites
+click|Move all
+comment|make only 4 visible
+selectList|prefs_form:numtabs|4
+click|Update Preferences
+click|Home
+
+verifyText|My Workspace
+verifyText|Selenium 001 001 W11
+verifyText|Sample Project Site
+verifyText|Project Dupe Source
+verifyTextNotPresent|DupeSrc 101 001 F11
+verifyTextNotPresent|Selenium 999 999 F09
+
+click|Preferences
+verifyText|selenium instructorverifyText|Customize TabsverifyText|To hide a site or make a site visible in the tabs
+selectList|prefs_form:_id45|Sample Project Site
+click|Remove selected
+selectList|prefs_form:_id45|Project Dupe Source
+click|Remove selected
+selectList|prefs_form:_id45|DupeSrc 101 001 F11
+click|Remove selected
+selectList|prefs_form:_id45|Selenium 999 999 F09
+click|Remove selected
+selectList|prefs_form:numtabs|8
+click|Update Preferences
+click|Home
+verifyText|My Workspace
+verifyText|Selenium 001 001 W11
+verifyTextNotPresent|Sample Project Site
+verifyTextNotPresent|Project Dupe Source
+verifyTextNotPresent|DupeSrc 101 001 F11
+verifyTextNotPresent|Selenium 999 999 F09
+click|LogoutverifyText|You are about to log outclick|Log OutverifyText|From the CTools TeamverifyText|Welcome

@@ -495,11 +495,19 @@ public class TestManager {
 		
 		FirefoxProfile profile = new FirefoxProfile(); 
 
+		// This section tells firefox to download all files of the user specified
+		// mimeTypes to the user specified downloadDirectory/
 		profile.setPreference("browser.download.folderList", 2);
 		profile.setPreference("browser.download.dir", downloadDirectory); 
-		
         profile.setPreference("browser.helperApps.neverAsk.saveToDisk", mimeTypes);
 
+        // Disable annoying security messages on windows 
+		profile.setPreference("network.cookie.cookieBehavior", 1);
+		
+		// Cannot set these. WebDriver freezes these by default.
+		//profile.setPreference("security.warn_viewing_mixed", "false");
+		//profile.setPreference("security.warn_viewing_mixed.show_once", "false");
+		
 		driver = new FirefoxDriver(profile); 
         }	
 	

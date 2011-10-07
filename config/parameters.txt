@@ -2,9 +2,12 @@ downloadDirectory=/storage/tests/downloads/
 fileDirectory=/storage/tests/files/
 logDirectory=/storage/tests/logs/
 
-testList=/storage/code/svn/edu/umich/keyword2/testScripts/CTools/2.7/testList.txt
+testList=/storage/tests/testList.txt
 variablesFile=/storage/tests/variables.txt
 xpathFile=/storage/tests/xpaths.xml
+
+timeout=10
+timingData=true
 
 OS=linux
 browser=firefox

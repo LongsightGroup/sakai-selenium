@@ -1,15 +1,17 @@
-#Mon Sep 26 23:23:24 EDT 2011
+#Fri Oct 07 00:34:20 EDT 2011
 creationCourseNum2=102
-url=https\://testctools.ds.itd.umich.edu/portal/xlogin
+url=https\://testctools.ds.itd.umich.edu/portal
 site=Testing 101 001 F11
 dupeProvider=2011,2,A,DupeSrc,101,001
+projDupeSite=ProjDupe G1
 term=FALL 2011
+projDupeSource=Project Dupe Source
 providerID2=2011,2,A,Testing,102,001
 providerID1=2011,2,A,Testing,101,001
 numAssigns=2
 dupeSource=DupeSrc 101 001 F11
-creationCourseEmail=testing_101_F11
 project_site=F11 Test Project
+creationCourseEmail=testing_101_F11
 creationCourseNum=101
 gateway_url=https\://testctools.ds.itd.umich.edu/portal
 testDupeSite=TestDupe G1

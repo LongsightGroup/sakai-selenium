@@ -23,7 +23,10 @@
 		</anchor>
 		<anchor>		
 			<dropbox>//li[contains(text(), element)]</dropbox>
-		</anchor>			
+		</anchor>
+		<anchor>		
+			<preferences>//a[@class=element]</preferences>
+		</anchor>				
 		<anchor>		
 			<resources>//li[contains(text(), element)]</resources>
 		</anchor>		
@@ -48,6 +51,9 @@
 		<button>
 			<generic>//input[normalize-space(@value)=element and (@type='button' or @type='submit')]</generic>
 		</button>
+		<button>
+			<lecturetools>//input[@alt=element and (@type='image')]</lecturetools>
+		</button>		
 	</buttons>
 
 	<checkboxes>

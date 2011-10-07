@@ -1,18 +1,22 @@
 openURL|$url
-enterText|eid|seleniumInstructor
-enterText|pw|seleniumInstructor
-
+verifyText|From the CTools Team
 click|Login
+
+verifyText|You are connecting to a U-M website that requires authentication.
+enterText|login|qainst
+enterText|password|sswelvalpanklidS$
+
+click|doLogin
 verifyText|From the CTools Team
 verifyText|Welcome to your personal workspace
 
 click|$site
-verifyText|selenium instructor
+verifyText|Selenium Instructor
 verifyText|Site Information Display
 verifyText|viewing announcements from the last 10 days
 
 click|Gradebook
-verifyText|selenium instructor
+verifyText|Selenium Instructor
 verifyText|Gradebook Items
 verifyText|Click a title to view complete details and to grade the item.
 verifyText|Sample Gradebook Item
@@ -22,14 +26,14 @@ click|Course Grades
 verifyText|Course Grades
 verifyText|Total points
 verifyText|132
-verifyText|seleniumstudent
+verifyText|qastud
 verifyText|A (96.96%)
 
 enterText|gbForm:gradingTable:|B|1
 click|Save Changes
 verifyText|Course Grades
 verifyText|Grade overrides saved
-verifyText|seleniumstudent
+verifyText|qastud
 verifyValue|gbForm:gradingTable:|B
 
 click|Logout

@@ -1,25 +1,29 @@
 openURL|$url
-enterText|eid|seleniumInstructor
-enterText|pw|seleniumInstructor
-
+verifyText|From the CTools Team
 click|Login
+
+verifyText|You are connecting to a U-M website that requires authentication.
+enterText|login|qainst
+enterText|password|sswelvalpanklidS$
+
+click|doLogin
 verifyText|From the CTools Team
 verifyText|Welcome to your personal workspace
 
 click|$site
-verifyText|selenium instructor
+verifyText|Selenium Instructor
 verifyText|Site Information Display
 verifyText|viewing announcements from the last 10 days
 
 comment|The syllabus should currently be redirected.
 click|Syllabus
 verifyText|Syllabus
-verifyText|seleniuminstructor
+verifyText|qainst
 verifyText|About Google
 
 click|Create/Edit
 verifyText|Redirect Syllabus
-verifyText|seleniuminstructor
+verifyText|qainst
 
 Click|Redirect
 verifyText|Redirect Syllabus
@@ -29,7 +33,7 @@ enterText|URL|
 click|Save
 verifyText|Syllabus Items
 verifyText|Redirect
-verifyText|selenium instructor
+verifyText|Selenium Instructor
 
 comment|Verify delete
 click|Redirect
@@ -40,7 +44,7 @@ verifyTextNotPresent|http://www.google.com
 click|Cancel
 verifyText|Syllabus Items
 verifyText|Redirect
-verifyText|selenium instructor
+verifyText|Selenium Instructor
 
 click|Logout
 verifyText|You are about to log out

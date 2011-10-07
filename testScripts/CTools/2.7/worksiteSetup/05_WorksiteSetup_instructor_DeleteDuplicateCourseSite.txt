@@ -1,14 +1,18 @@
 application|worksitesetup
 openURL|$url
-enterText|eid|seleniumInstructor
-enterText|pw|seleniumInstructor
-
+verifyText|From the CTools Team
 click|Login
+
+verifyText|You are connecting to a U-M website that requires authentication.
+enterText|login|qainst
+enterText|password|sswelvalpanklidS$
+
+click|doLogin
 verifyText|From the CTools Team
 verifyText|Welcome to your personal workspace
 
 click|Worksite Setup
-verifyText|selenium instructor
+verifyText|Selenium Instructor
 verifyText|Worksite Setup
 verifyText|Check box(es) to take action on a site.
 verifyText|Test Duplicate Site
@@ -21,7 +25,7 @@ verifyText|Test Duplicate Site
 
 comment|Actually Delete Site
 click|Remove
-verifyText|selenium instructor
+verifyText|Selenium Instructor
 verifyText|Worksite Setup
 verifyText|Check box(es) to take action on a site.
 

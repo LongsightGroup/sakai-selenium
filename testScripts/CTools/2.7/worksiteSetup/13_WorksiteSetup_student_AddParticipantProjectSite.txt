@@ -1,14 +1,18 @@
 application|worksitesetup
 openURL|$url
-enterText|eid|seleniumStudent
-enterText|pw|seleniumStudent
-
+verifyText|From the CTools Team
 click|Login
+
+verifyText|You are connecting to a U-M website that requires authentication.
+enterText|login|qastud
+enterText|password|Maugaityptodita6
+
+click|doLogin
 verifyText|From the CTools Team
 verifyText|Welcome to your personal workspace
 
 click|Worksite Setup
-verifyText|selenium user
+verifyText|Selenium User
 verifyText|Worksite Setup
 verifyText|Check box(es) to take action on a site.
 
@@ -16,7 +20,7 @@ selectCheckbox|$project_site
 click|Edit
 verifyText|A basic project site created during automated testing.
 verifyText|$project_site
-verifyText|seleniumstudent
+verifyText|qastud
 verifyText|Librarian
 verifyText|Can read, revise, delete, and add their own content to a site
 
@@ -25,12 +29,12 @@ click|Add Participants
 verifyText|Add Participants
 verifyText|Enter multiples each on separate line
 verifyValue|Assign all participants to the same role|true
-enterText|Official Email Address or Username|seleniuminstructor
+enterText|Official Email Address or Username|qainst
 
 click|Continue
 verifyText|Choose a Role for Participants
 verifyValue|Member|false
-verifyText|seleniuminstructor
+verifyText|qainst
 selectRadio|Member
 
 click|Continue
@@ -42,13 +46,13 @@ verifyValue|Send Now|false
 comment|Confirmation screen
 click|Continue
 verifyText|Confirming Add Participant(s) to My Workspace
-verifyText|seleniuminstructor
+verifyText|qainst
 
 click|Finish
 comment|Back at participant page
 verifyText|A basic project site created during automated testing.
 verifyText|$project_site
-verifyText|seleniumstudent
+verifyText|qastud
 verifyText|Librarian
 verifyText|Can read, revise, delete, and add their own content to a site
 

@@ -1,14 +1,19 @@
 application|signup
-openURL|$url
-enterText|eid|seleniumStudent
-enterText|pw|seleniumStudent
 
+openURL|$url
+verifyText|From the CTools Team
 click|Login
+
+verifyText|You are connecting to a U-M website that requires authentication.
+enterText|login|qastud
+enterText|password|Maugaityptodita6
+
+click|doLogin
 verifyText|From the CTools Team
 verifyText|Welcome to your personal workspace
 
 click|$testDupeSite
-verifyText|selenium user
+verifyText|Selenium User
 verifyText|Site Information Display
 verifyText|Course site that acts as a duplicate for sites that require stealth tools.
 
@@ -22,19 +27,19 @@ verifyText|In Progress
 click|Sample Course Appointment
 verifyText|Sample Course Appointment
 verifyText|This is a sample appointment, used when testing the Sign-up tool.
-verifyText|selenium instructor
+verifyText|Selenium Instructor
 verifyText|The Diag
 verifyText|Private
 
 click|Sign Up|1
 verifyText|Complete Sign-Up
 verifyText|Sample Course Appointment
-verifyText|selenium user
+verifyText|Selenium User
 
 click|Finish
 verifyText|Sample Course Appointment
 verifyText|This is a sample appointment, used when testing the Sign-up tool.
-verifyText|selenium instructor
+verifyText|Selenium Instructor
 verifyText|The Diag
 verifyText|Private
 verifyText|Signed up

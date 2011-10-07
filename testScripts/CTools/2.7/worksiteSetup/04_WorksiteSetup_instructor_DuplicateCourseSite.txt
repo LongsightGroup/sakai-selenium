@@ -1,21 +1,25 @@
 application|worksitesetup
 openURL|$url
-enterText|eid|seleniumInstructor
-enterText|pw|seleniumInstructor
-
+verifyText|From the CTools Team
 click|Login
+
+verifyText|You are connecting to a U-M website that requires authentication.
+enterText|login|qainst
+enterText|password|sswelvalpanklidS$
+
+click|doLogin
 verifyText|From the CTools Team
 verifyText|Welcome to your personal workspace
 
 click|Worksite Setup
-verifyText|selenium instructor
+verifyText|Selenium Instructor
 verifyText|Worksite Setup
 verifyText|Check box(es) to take action on a site.
 
 selectCheckbox|$dupeSource
 click|Edit
 verifyText|$dupeSource
-verifyText|seleniuminstructor
+verifyText|qainst
 verifyText|Course site that acts as a duplicate for sites that require stealth tools.
 verifyText|Can read, add, and revise content on sites in a particular department
 
@@ -30,7 +34,7 @@ comment|This duplicates the site, but takes you back to the last page
 click|Duplicate
 verifyText|$dupeSource
 verifyText|$dupeProvider
-verifyText|seleniumstudent
+verifyText|qastud
 verifyText|Can read content
 
 click|Return to Sites List

@@ -1,29 +1,33 @@
 openURL|$url
-enterText|eid|seleniumInstructor
-enterText|pw|seleniumInstructor
-
+verifyText|From the CTools Team
 click|Login
+
+verifyText|You are connecting to a U-M website that requires authentication.
+enterText|login|qainst
+enterText|password|sswelvalpanklidS$
+
+click|doLogin
 verifyText|From the CTools Team
 verifyText|Welcome to your personal workspace
 
 click|$site
-verifyText|selenium instructor
+verifyText|Selenium Instructor
 verifyText|Site Information Display
 verifyText|viewing announcements from the last 10 days
 
 click|Schedule
 verifyText|Schedule
-verifyText|seleniuminstructor
+verifyText|qainst
 verifyText|Calendar by Week
 verifyText|Merge
 
 click|Merge
 verifyText|Merging calendars
 verifyText|Show Schedule
-verifyText|Selenium 999 999 F09
-verifyValue|Selenium 999 999 F09 (47992ced-359f-4130-8e31-9fe5f400eec5)|false
-selectCheckbox|Selenium 999 999 F09 (47992ced-359f-4130-8e31-9fe5f400eec5)
-verifyValue|Selenium 999 999 F09 (47992ced-359f-4130-8e31-9fe5f400eec5)|true
+verifyText|DupeSrc 101 001 F11
+verifyValue|DupeSrc 101 001 F11|false
+selectCheckbox|DupeSrc 101 001 F11
+verifyValue|DupeSrc 101 001 F11|true
 
 click|Save
 comment|should be at the "Calendar by Week" window
@@ -41,25 +45,25 @@ selectList|customEndDay|13
 selectList|customEndYear|2014
 
 click|Filter Events
-verifyText|seleniuminstructor
+verifyText|qainst
 verifyText|Scheduled event to test merging calendars
 
-click|Selenium 999 Event
-verifyText|Selenium 999 Event
+click|QA Test Event
+verifyText|QA Test Event
 verifyText|Scheduled event to test merging calendars
 
 click|Back to Calendar
-verifyText|seleniuminstructor
+verifyText|qainst
 verifyText|Scheduled event to test merging calendars
 
 comment|removing the merged calendar so the test runs the next time.
 click|Merge
 verifyText|Merging calendars
 verifyText|Show Schedule
-verifyText|Selenium 999 999 F09
-verifyValue|Selenium 999 999 F09 (47992ced-359f-4130-8e31-9fe5f400eec5)|true
-selectCheckbox|Selenium 999 999 F09 (47992ced-359f-4130-8e31-9fe5f400eec5)
-verifyValue|Selenium 999 999 F09 (47992ced-359f-4130-8e31-9fe5f400eec5)|false
+verifyText|DupeSrc 101 001 F11
+verifyValue|DupeSrc 101 001 F11|true
+selectCheckbox|DupeSrc 101 001 F11
+verifyValue|DupeSrc 101 001 F11|false
 
 click|Save
 comment|should be at the "Calendar by Week" window

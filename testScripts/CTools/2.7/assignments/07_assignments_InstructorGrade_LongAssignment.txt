@@ -1,14 +1,18 @@
 application|assignments
 openURL|$url
-enterText|eid|seleniumInstructor
-enterText|pw|seleniumInstructor
-
+verifyText|From the CTools Team
 click|Login
+
+verifyText|You are connecting to a U-M website that requires authentication.
+enterText|login|qainst
+enterText|password|sswelvalpanklidS$
+
+click|doLogin
 verifyText|From the CTools Team
 verifyText|Welcome to your personal workspace
 
 click|$site
-verifyText|selenium instructor
+verifyText|Selenium Instructor
 verifyText|Site Information Display
 verifyText|viewing announcements from the last 10 days
 
@@ -20,11 +24,11 @@ comment|Grade Long Assignment
 clickXpath|//a[normalize-space()='Long Assignment']/following::a[normalize-space()='Grade']
 comment|Should be at list of students for this assignment.
 verifyText|Long Assignment - Submissions
-verifyText|seleniumstudent
+verifyText|qastud
 verifyText|Ungraded
 
-comment|Open submission for the selenium student.
-clickXpath|//td[contains(text(),'seleniumstudent')]//a
+comment|Open submission for the Selenium User
+clickXpath|//td[contains(text(),'qastud')]//a
 verifyText|Long Assignment - Grading
 verifyText|Important Reminder: Please do not grade assignments with multiple browser windows or tabs. Only grade assignments and navigate the system with one browser window. 
 verifyText|Ungraded

@@ -1,5 +1,3 @@
-/storage/tests/scripts/search/01_Search_Owner_DuplicateSite.txt
-/storage/tests/scripts/search/02_Search_Owner_AddUser.txt
 /storage/tests/scripts/search/04_Search_Owner_ImportResources.txt
 /storage/tests/scripts/search/06_Search_Owner_RebuildSiteIndex.txt
 /storage/tests/scripts/search/07_Search_waitFiveMinutes.txt
@@ -8,4 +6,3 @@
 /storage/tests/scripts/search/12_Search_Member_SearchForFile.txt
 /storage/tests/scripts/search/14_Search_Owner_CheckHelp.txt
 /storage/tests/scripts/search/15_Search_Member_CheckHelp.txt
-/storage/tests/scripts/search/17_Search_Owner_DeleteSite.txt

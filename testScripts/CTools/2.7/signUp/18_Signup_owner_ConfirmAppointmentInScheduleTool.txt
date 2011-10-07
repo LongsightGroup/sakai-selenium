@@ -1,14 +1,19 @@
 application|signup
-openURL|$url
-enterText|eid|seleniumStudent
-enterText|pw|seleniumStudent
 
+openURL|$url
+verifyText|From the CTools Team
 click|Login
+
+verifyText|You are connecting to a U-M website that requires authentication.
+enterText|login|qastud
+enterText|password|Maugaityptodita6
+
+click|doLogin
 verifyText|From the CTools Team
 verifyText|Welcome to your personal workspace
 
-click|Dupe Signup Site
-verifyText|selenium user
+click|$projDupeSite
+verifyText|Selenium User
 verifyText|Site Information Display
 verifyText|A project site meant to be used as a source for duplication during testing.
 
@@ -19,7 +24,7 @@ verifyText|Sample Project Appointment
 click|Sample Project Appointment
 verifyText|Sample Project Appointment
 verifyText|This is a sample appointment, used when testing the Sign-up tool.
-verifyText|selenium user
+verifyText|Selenium User
 verifyText|The Big House
 
 click|Logout

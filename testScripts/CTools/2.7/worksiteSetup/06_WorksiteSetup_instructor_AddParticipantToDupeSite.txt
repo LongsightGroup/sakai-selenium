@@ -1,21 +1,25 @@
 application|worksitesetup
 openURL|$url
-enterText|eid|seleniumInstructor
-enterText|pw|seleniumInstructor
-
+verifyText|From the CTools Team
 click|Login
+
+verifyText|You are connecting to a U-M website that requires authentication.
+enterText|login|qainst
+enterText|password|sswelvalpanklidS$
+
+click|doLogin
 verifyText|From the CTools Team
 verifyText|Welcome to your personal workspace
 
 click|Worksite Setup
-verifyText|selenium instructor
+verifyText|Selenium Instructor
 verifyText|Worksite Setup
 verifyText|Check box(es) to take action on a site.
 selectCheckbox|$testDupeSite
 
 click|Edit
 verifyText|$testDupeSite
-verifyText|seleniuminstructor
+verifyText|qainst
 verifyText|Course site that acts as a duplicate for sites that require stealth tools.
 verifyText|Can read, add, and revise content on sites in a particular department
 
@@ -24,12 +28,12 @@ click|Add Participants
 verifyText|Add Participants
 verifyText|Enter multiples each on separate line
 verifyValue|Assign all participants to the same role|true
-enterText|Official Email Address or Username|seleniumstudent
+enterText|Official Email Address or Username|qastud
 
 click|Continue
 verifyText|Choose a Role for Participants
 verifyValue|Student|false
-verifyText|seleniumstudent
+verifyText|qastud
 selectRadio|Student
 
 comment|Should email go to the participant?
@@ -41,13 +45,13 @@ verifyValue|Send Now|false
 comment|Confirmation screen
 click|Continue
 verifyText|Confirming Add Participant(s) to My Workspace
-verifyText|seleniumstudent
+verifyText|qastud
 
 click|Finish
 comment|Back at participant page
 verifyText|$testDupeSite
 verifyText|Course site that acts as a duplicate for sites that require stealth tools.
-verifyText|seleniumstudent
+verifyText|qastud
 
 click|Logout
 verifyText|You are about to log out

@@ -1,13 +1,17 @@
 openURL|$url
-enterText|eid|seleniumStudent
-enterText|pw|seleniumStudent
-
+verifyText|From the CTools Team
 click|Login
+
+verifyText|You are connecting to a U-M website that requires authentication.
+enterText|login|qastud
+enterText|password|Maugaityptodita6
+
+click|doLogin
 verifyText|From the CTools Team
 verifyText|Welcome to your personal workspace
 
 click|$site
-verifyText|selenium user
+verifyText|Selenium User
 verifyText|Site Information Display
 verifyText|viewing announcements from the last 10 days
 
@@ -18,7 +22,7 @@ verifyText|Enter chat message
 
 enterText|Enter chat message|First Test Message
 click|Add message
-verifyText|selenium user
+verifyText|Selenium User
 verifyText|First Test Message
 
 click|Logout

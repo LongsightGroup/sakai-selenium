@@ -1,47 +1,48 @@
 application|worksitesetup
 openURL|$url
-enterText|eid|seleniumStudent
-enterText|pw|seleniumStudent
-
+verifyText|From the CTools Team
 click|Login
+
+verifyText|You are connecting to a U-M website that requires authentication.
+enterText|login|qastud
+enterText|password|Maugaityptodita6
+
+click|doLogin
 verifyText|From the CTools Team
 verifyText|Welcome to your personal workspace
 
 click|Worksite Setup
-verifyText|selenium user
+verifyText|Selenium User
 verifyText|Worksite Setup
 verifyText|Check box(es) to take action on a site.
+selectCheckbox|$projDupeSource
 
-selectCheckbox|$project_site
 click|Edit
-verifyText|$project_site
-verifyText|seleniumstudent
-verifyText|A basic project site created during automated testing.
+verifyText|$projDupeSource
+verifyText|qastud
+verifyText|A project site meant to be used as a source for duplication during testing
 verifyText|Can read, revise, delete, and add their own content to a site
 
 comment|Duplicate Site
 click|Duplicate Site
 verifyText|Duplicate site
-verifyText|$project_site
-enterText|Site Title|Dupe Project Site
-
+verifyText|$projDupeSource
+enterText|Site Title|$projDupeSite
 
 comment|This duplicates the site, but takes you back to the last page
 click|Duplicate
-verifyText|$project_site
-verifyText|seleniumstudent
-verifyText|A basic project site created during automated testing.
+verifyText|$projDupeSource
+verifyText|qastud
+verifyText|A project site meant to be used as a source for duplication during testing
 verifyText|Librarian
 verifyText|Can read, revise, delete, and add their own content to a site
 
 click|Return to Sites List
-verifyText|Dupe Project Site
+verifyText|$projDupeSite
 
 comment|Open site to make sure it exists.
-click|Dupe Project Site
-verifyText|There are currently no announcements at this location
-verifyText|Recent Chat Messages
-verifyText|A basic project site created during automated testing.
+click|$projDupeSite
+verifyText|A project site meant to be used as a source for duplication during testing
 
 click|Logout
 verifyText|You are about to log out

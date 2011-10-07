@@ -1,20 +1,25 @@
 application|syllabus
-openURL|$url
-enterText|eid|seleniumInstructor
-enterText|pw|seleniumInstructor
 
+openURL|$url
+verifyText|From the CTools Team
 click|Login
+
+verifyText|You are connecting to a U-M website that requires authentication.
+enterText|login|qainst
+enterText|password|sswelvalpanklidS$
+
+click|doLogin
 verifyText|From the CTools Team
 verifyText|Welcome to your personal workspace
 
 click|$site
-verifyText|selenium instructor
+verifyText|Selenium Instructor
 verifyText|Site Information Display
 verifyText|viewing announcements from the last 10 days
 
 click|Syllabus
 verifyText|Syllabus
-verifyText|seleniuminstructor
+verifyText|qainst
 
 click|Create/Edit
 verifyText|Syllabus Item
@@ -25,11 +30,11 @@ verifyText|Title
 verifyValue|Only members of this site can see this syllabus item.|true
 verifyText|Email Notification
 enterText|Title|Selenium Syllabus
-fckEnter|Content|Scheduled event message for selenium instructor.
+fckEnter|Content|Scheduled event message for Selenium Instructor.
 
 Click|Post
 verifyText|Syllabus Items
-verifyText|selenium instructor
+verifyText|Selenium Instructor
 verifyText|Selenium Syllabus
 verifyText|Posted
 

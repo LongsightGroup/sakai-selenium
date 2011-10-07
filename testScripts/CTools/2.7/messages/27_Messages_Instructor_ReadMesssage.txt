@@ -1,13 +1,17 @@
 openURL|$url
-enterText|eid|seleniumInstructor
-enterText|pw|seleniumInstructor
-
+verifyText|From the CTools Team
 click|Login
+
+verifyText|You are connecting to a U-M website that requires authentication.
+enterText|login|qainst
+enterText|password|sswelvalpanklidS$
+
+click|doLogin
 verifyText|From the CTools Team
 verifyText|Welcome to your personal workspace
 
 click|$site
-verifyText|selenium instructor
+verifyText|Selenium Instructor
 verifyText|Site Information Display
 verifyText|viewing announcements from the last 10 days
 
@@ -21,7 +25,7 @@ verifyText|Messages
 comment|Open the folder that should have a message from the student
 click|Received
 verifyText|Student Test Message
-verifyText|seleniumstudent
+verifyText|qastud
 verifyValue|View|All Messages
 
 click|Student Test Message

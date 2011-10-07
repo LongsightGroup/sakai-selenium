@@ -1,21 +1,25 @@
 application|worksitesetup
 openURL|$url
-enterText|eid|seleniumStudent
-enterText|pw|seleniumStudent
-
+verifyText|From the CTools Team
 click|Login
+
+verifyText|You are connecting to a U-M website that requires authentication.
+enterText|login|qastud
+enterText|password|Maugaityptodita6
+
+click|doLogin
 verifyText|From the CTools Team
 verifyText|Welcome to your personal workspace
 
 click|Worksite Setup
-verifyText|selenium user
+verifyText|Selenium User
 verifyText|Worksite Setup
 verifyText|Check box(es) to take action on a site.
 
 selectCheckbox|$project_site
 click|Edit
 verifyText|A basic project site created during automated testing.
-verifyText|seleniumstudent
+verifyText|qastud
 verifyText|Librarian
 verifyText|Can read, revise, delete, and add their own content to a site
 verifyText|$project_site
@@ -40,7 +44,7 @@ comment|This should put us back at the basic information page
 click|Finish
 verifyText|A basic project site created during automated testing.
 verifyText|$project_site
-verifyText|seleniumstudent
+verifyText|qastud
 verifyText|Librarian
 verifyText|Can read, revise, delete, and add their own content to a site
 
@@ -65,7 +69,7 @@ comment|This should put us back at the basic information page
 click|Finish
 verifyText|A basic project site created during automated testing.
 verifyText|$project_site
-verifyText|seleniumstudent
+verifyText|qastud
 verifyText|Librarian
 verifyText|Can read, revise, delete, and add their own content to a site
 
@@ -79,7 +83,7 @@ verifyValue|SAMS Scores|false
 comment|click|Cancel
 comment|verifyText|A basic course created during automated testing.
 comment|verifyText|$project_site
-comment|verifyText|seleniumstudent
+comment|verifyText|qastud
 comment|verifyText|Librarian
 comment|verifyText|Can read, revise, delete, and add their own content to a site
 

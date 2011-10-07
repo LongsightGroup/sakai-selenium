@@ -1,13 +1,17 @@
 openURL|$url
-enterText|eid|seleniumInstructor
-enterText|pw|seleniumInstructor
-
+verifyText|From the CTools Team
 click|Login
+
+verifyText|You are connecting to a U-M website that requires authentication.
+enterText|login|qainst
+enterText|password|sswelvalpanklidS$
+
+click|doLogin
 verifyText|From the CTools Team
 verifyText|Welcome to your personal workspace
 
 click|$site
-verifyText|selenium instructor
+verifyText|Selenium Instructor
 verifyText|Site Information Display
 verifyText|viewing announcements from the last 10 days
 
@@ -27,12 +31,12 @@ verifyText|Global Actions (for this Test)
 verifyText|Adjust the score of all submissions by
 
 comment|Open the selenium student's assessment for grading.
-click|user, selenium (seleniumstudent)
+click|User, Selenium (qastud)
 
 comment|Should see all of the the student's answers.
 verifyText|Sample Assessment
 verifyText|No. of questions contested by this student: 0
-verifyText|seleniumstudent
+verifyText|qastud
 verifyText|Final Score
 selectCheckbox|Mark as evaluated
 
@@ -43,7 +47,7 @@ verifyValue|Mark as evaluated|true
 
 click|Done
 verifyText|Grade Submissions
-verifyText|user, selenium (seleniumstudent)
+verifyText|User, Selenium (qastud)
 verifyValue|UiSelection_|true|2
 verifyValue|UiSelection_|true|3
 

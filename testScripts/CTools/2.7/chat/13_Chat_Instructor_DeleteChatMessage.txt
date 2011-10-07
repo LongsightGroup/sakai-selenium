@@ -1,13 +1,17 @@
 openURL|$url
-enterText|eid|seleniumInstructor
-enterText|pw|seleniumInstructor
-
+verifyText|From the CTools Team
 click|Login
+
+verifyText|You are connecting to a U-M website that requires authentication.
+enterText|login|qainst
+enterText|password|sswelvalpanklidS$
+
+click|doLogin
 verifyText|From the CTools Team
 verifyText|Welcome to your personal workspace
 
 click|$site
-verifyText|selenium instructor
+verifyText|Selenium Instructor
 verifyText|Site Information Display
 verifyText|viewing announcements from the last 10 days
 
@@ -19,11 +23,11 @@ verifyText|Enter chat message
 
 click|Delete this message|4
 verifyText|Are you sure you want to permanently delete this message?
-verifyText|selenium instructor
+verifyText|Selenium Instructor
 verifyText|Fourth Test Message
 
 click|Delete
-verifyText|selenium instructor
+verifyText|Selenium Instructor
 verifyText|First Test Message
 verifyText|Second Test Message
 verifyText|Third Test Message

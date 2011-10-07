@@ -1,4 +1,11 @@
-comment|Check help text as instructor.openURL|$urlenterText|eid|seleniumStudententerText|pw|seleniumStudentclick|LoginverifyText|From the CTools TeamverifyText|Welcome to your personal workspaceclick|$siteverifyText|selenium userverifyText|Site Information DisplayverifyText|the Regents of The University of MichiganverifyText|Options
+comment|Check help text as instructor.openURL|$urlverifyText|From the CTools Team
+click|Login
+
+verifyText|You are connecting to a U-M website that requires authentication.
+enterText|login|qastud
+enterText|password|Maugaityptodita6
+
+click|doLoginverifyText|From the CTools TeamverifyText|Welcome to your personal workspaceclick|$siteverifyText|Selenium UserverifyText|Site Information DisplayverifyText|the Regents of The University of MichiganverifyText|Options
 
 verifyText|Recent Announcements
 verifyText|Unread Messages and Forums

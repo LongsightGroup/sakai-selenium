@@ -1,14 +1,19 @@
 application|siteinfo
-openURL|$url
-enterText|eid|seleniumInstructor
-enterText|pw|seleniumInstructor
 
+openURL|$url
+verifyText|From the CTools Team
 click|Login
+
+verifyText|You are connecting to a U-M website that requires authentication.
+enterText|login|qainst
+enterText|password|sswelvalpanklidS$
+
+click|doLogin
 verifyText|From the CTools Team
 verifyText|Welcome to your personal workspace
 
 click|$site
-verifyText|selenium instructor
+verifyText|Selenium Instructor
 verifyText|Site Information Display
 verifyText|There are currently no announcements at this location.
 
@@ -29,7 +34,7 @@ click|I would like to merge my data
 verifyText|Import Material from Other Sites
 verifyText|You can choose to import material only from other sites that you own. You can combine material from more than one site.
 
-selectCheckbox|Selenium 999 999 F09
+selectCheckbox|DupeSrc 101 001 F11
 click|Continue
 verifyText|Re-use Material from Other Sites
 
@@ -42,7 +47,7 @@ verifyText|Can read, revise, delete and add both content and participants to a s
 
 comment|Verify that the new announcement appears on the site.
 click|Announcements
-verifyText|Selenium Announcement
+verifyText|Test Announcement
 verifyValue|View|All
 
 click|Logout

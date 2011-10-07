@@ -1,18 +1,22 @@
 openURL|$url
-enterText|eid|seleniumInstructor
-enterText|pw|seleniumInstructor
-
+verifyText|From the CTools Team
 click|Login
+
+verifyText|You are connecting to a U-M website that requires authentication.
+enterText|login|qainst
+enterText|password|sswelvalpanklidS$
+
+click|doLogin
 verifyText|From the CTools Team
 verifyText|Welcome to your personal workspace
 
 click|$site
-verifyText|selenium instructor
+verifyText|Selenium Instructor
 verifyText|Site Information Display
 verifyText|viewing announcements from the last 10 days
 
 click|Gradebook
-verifyText|selenium instructor
+verifyText|Selenium Instructor
 verifyText|Gradebook Items
 verifyText|Click a title to view complete details and to grade the item.
 verifyText|Sample Gradebook Item
@@ -23,7 +27,7 @@ click|Course Grades
 verifyText|Course Grades
 verifyText|Total points
 verifyText|132
-verifyText|seleniumstudent
+verifyText|qastud
 verifyValue|gbForm:gradingTable:|B
 
 comment|Remove any override so the actual computed grade takes precedence.
@@ -31,7 +35,7 @@ enterText|gbForm:gradingTable:|
 click|Save Changes
 verifyText|Course Grades
 verifyText|Grade overrides saved
-verifyText|seleniumstudent
+verifyText|qastud
 verifyValue|gbForm:gradingTable:| 
 
 comment|Calculate the course grade based on the score of the 1 item.
@@ -42,7 +46,7 @@ verifyText|Calculate Course Grades
 click|Continue
 verifyText|Course Grades have been calculated
 verifyText|A+ (100%)
-verifyText|seleniumstudent
+verifyText|qastud
 
 comment|Confirm that the grade is calculated, but not displayed.
 click|Gradebook Items

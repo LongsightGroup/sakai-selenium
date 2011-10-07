@@ -1,14 +1,19 @@
 application|worksitesetup
-openURL|$url
-enterText|eid|seleniumInstructor
-enterText|pw|seleniumInstructor
 
+openURL|$url
+verifyText|From the CTools Team
 click|Login
+
+verifyText|You are connecting to a U-M website that requires authentication.
+enterText|login|qainst
+enterText|password|sswelvalpanklidS$
+
+click|doLogin
 verifyText|From the CTools Team
 verifyText|Welcome to your personal workspace
 
 click|Worksite Setup
-verifyText|selenium instructor
+verifyText|Selenium Instructor
 verifyText|Worksite Setup
 verifyText|Check box(es) to take action on a site.
 
@@ -28,7 +33,7 @@ verifyText|Authorization to Allow Roster(s) Site Access
 enterText|id-Subject:1|Testing
 enterText|id-Course:1|$creationCourseNum
 enterText|id-Section:1|001
-enterText|uniqname|seleniuminstructor
+enterText|uniqname|qainst
 
 click|Continue
 verifyText|Course Site Information
@@ -116,7 +121,7 @@ verifyText|A basic course created during automated testing.
 comment|This will create the site and bring you back to a list of sites.
 click|Request Site
 verifyText|Check box(es) to take action on a site. Click column title to sort.
-verifyText|seleniuminstructor
+verifyText|qainst
 verifyText|$site
 
 click|Logout

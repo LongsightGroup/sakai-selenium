@@ -1,14 +1,18 @@
 application|assignments
 openURL|$url
-enterText|eid|seleniumStudent
-enterText|pw|seleniumStudent
-
+verifyText|From the CTools Team
 click|Login
+
+verifyText|You are connecting to a U-M website that requires authentication.
+enterText|login|qastud
+enterText|password|Maugaityptodita6
+
+click|doLogin
 verifyText|From the CTools Team
 verifyText|Welcome to your personal workspace
 
 click|$site
-verifyText|selenium user
+verifyText|Selenium User
 verifyText|Site Information Display
 verifyText|viewing announcements from the last 10 days
 
@@ -18,7 +22,7 @@ verifyText|Long Assignment
 
 comment|Open Long Assignment.  Should be inside the assignment window
 click|Long Assignment
-verifyText|selenium user
+verifyText|Selenium User
 verifyText|Long Assignment - Submitted
 verifyText|Model Answer
 
@@ -26,7 +30,7 @@ click|Model Answer
 verifyText|This is the model text for the answer
 
 click|Back to list
-verifyText|selenium user
+verifyText|Selenium User
 verifyText|Long Assignment
 verifyText|Submitted
 

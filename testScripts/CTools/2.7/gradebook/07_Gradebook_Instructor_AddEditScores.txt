@@ -1,18 +1,22 @@
 openURL|$url
-enterText|eid|seleniumInstructor
-enterText|pw|seleniumInstructor
-
+verifyText|From the CTools Team
 click|Login
+
+verifyText|You are connecting to a U-M website that requires authentication.
+enterText|login|qainst
+enterText|password|sswelvalpanklidS$
+
+click|doLogin
 verifyText|From the CTools Team
 verifyText|Welcome to your personal workspace
 
 click|$site
-verifyText|selenium instructor
+verifyText|Selenium Instructor
 verifyText|Site Information Display
 verifyText|viewing announcements from the last 10 days
 
 click|Gradebook
-verifyText|selenium instructor
+verifyText|Selenium Instructor
 verifyText|Gradebook Items
 verifyText|Click a title to view complete details and to grade the item.
 verifyText|Sample Gradebook Item
@@ -22,7 +26,7 @@ click|Sample Gradebook Item
 verifyText|Gradebook Item Summary
 verifyText|Sample Gradebook Item
 verifyText|Remove gradebook item from gradebook
-verifyText|seleniumstudent
+verifyText|qastud
 verifyValue|gbForm:gradingTable:0:Score|128
 
 comment|Change the students score to 132, the maximum for this item.

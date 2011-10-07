@@ -1,14 +1,18 @@
 application|worksitesetup
 openURL|$url
-enterText|eid|seleniumStudent
-enterText|pw|seleniumStudent
-
+verifyText|From the CTools Team
 click|Login
+
+verifyText|You are connecting to a U-M website that requires authentication.
+enterText|login|qastud
+enterText|password|Maugaityptodita6
+
+click|doLogin
 verifyText|From the CTools Team
 verifyText|Welcome to your personal workspace
 
 click|Worksite Setup
-verifyText|selenium user
+verifyText|Selenium User
 verifyText|Worksite Setup
 verifyText|Check box(es) to take action on a site.
 
@@ -32,7 +36,7 @@ verifyText|Enter basic information about the project site...
 enterText|Site Title|$project_site
 fckEnter|Description|A basic project site created during automated testing.  This is a description.
 enterText|Short Description|An even shorter description
-verifyText|selenium user
+verifyText|Selenium User
 click|Continue
 
 comment|Should be on the list of tools
@@ -104,7 +108,7 @@ verifyText|A basic project site created during automated testing.
 comment|This will create the site and bring you back to a list of sites.
 click|Create Site
 verifyText|Check box(es) to take action on a site. Click column title to sort.
-verifyText|seleniumstudent
+verifyText|qastud
 verifyText|$project_site
 
 click|Logout

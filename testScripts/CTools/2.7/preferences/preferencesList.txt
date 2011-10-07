@@ -1,2 +1,4 @@
-/Users/admin/Desktop/keywordframework/trunk/selenium/keyword2/testScripts/CTools/2.7/preferences/01PreferencesInstructorChangeLanguage.txt
-/Users/admin/Desktop/keywordframework/trunk/selenium/keyword2/testScripts/CTools/2.7/preferences/02PreferencesInstructorCustomizeTabs.txt
+/storage/code/svn/edu/umich/keyword2/testScripts/CTools/2.7/preferences/01PreferencesInstructorChangeLanguage.txt
+/storage/code/svn/edu/umich/keyword2/testScripts/CTools/2.7/preferences/02PreferencesInstructorCustomizeVisibleTabs.txt
+/storage/code/svn/edu/umich/keyword2/testScripts/CTools/2.7/preferences/03PreferencesInstructorCustomizeTabNumber.txt
+/storage/code/svn/edu/umich/keyword2/testScripts/CTools/2.7/preferences/04PreferencesInstructorResetLanguage.txt

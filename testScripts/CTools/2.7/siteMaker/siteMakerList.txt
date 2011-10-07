@@ -1,10 +1,4 @@
-/storage/tests/scripts/siteMaker/01_SiteMaker_Owner_DuplicateSite.txt
-/storage/tests/scripts/siteMaker/02_SiteMaker_Owner_AddUser.txt
-/storage/tests/scripts/siteMaker/04_SiteMaker_Owner_ConfigureTool.txt
-/storage/tests/scripts/siteMaker/06_SiteMaker_Member_ViewTool.txt
-/storage/tests/scripts/siteMaker/08_SiteMaker_Owner_DeleteSite.txt
-/storage/tests/scripts/siteMaker/11_SiteMaker_Instructor_DuplicateSite.txt
-/storage/tests/scripts/siteMaker/12_SiteMaker_Instructor_AddUser.txt
-/storage/tests/scripts/siteMaker/14_SiteMaker_Instructor_ConfigureTool.txt
-/storage/tests/scripts/siteMaker/16_SiteMaker_Student_ViewTool.txt
-/storage/tests/scripts/siteMaker/18_SiteMaker_Instructor_DeleteSite.txt
+/home/chris/Desktop/2.7/siteMaker/01_SiteMaker_Owner_ViewTool.txt
+/home/chris/Desktop/2.7/siteMaker/02_SiteMaker_Member_ViewTool.txt
+/home/chris/Desktop/2.7/siteMaker/05_SiteMaker_Instructor_ViewTool.txt
+/home/chris/Desktop/2.7/siteMaker/06_SiteMaker_Student_ViewTool.txt

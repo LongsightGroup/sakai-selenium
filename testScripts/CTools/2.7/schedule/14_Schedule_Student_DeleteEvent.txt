@@ -1,20 +1,24 @@
 openURL|$url
-enterText|eid|seleniumStudent
-enterText|pw|seleniumStudent
-
+verifyText|From the CTools Team
 click|Login
+
+verifyText|You are connecting to a U-M website that requires authentication.
+enterText|login|qastud
+enterText|password|Maugaityptodita6
+
+click|doLogin
 verifyText|From the CTools Team
 verifyText|Welcome to your personal workspace
 
 comment|Student can only add a schedule to a project site. 
 click|$project_site
-verifyText|selenium user
+verifyText|Selenium User
 verifyText|Site Information Display
 verifyText|viewing announcements from the last 10 days
 
 click|Schedule
 verifyText|Schedule
-verifyText|selenium user
+verifyText|Selenium User
 verifyText|Calendar by Week
 selectList|View|List of Events
 verifyText|List of Events

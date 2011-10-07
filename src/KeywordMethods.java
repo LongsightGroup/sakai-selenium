@@ -104,7 +104,7 @@ public class KeywordMethods {
 	
 	// click clicks on an interface element.
 	// use: click|object where object is the id, name or label of an element to be clicked on.
-	protected static String click (WebDriver driver, String application, Integer timeout, String xpathFile, String ... object)  throws Exception {
+	protected static String click (WebDriver driver, String application, Integer timeout, String xpathFile, Boolean timingData, BufferedWriter timingPointer, String ... object)  throws Exception {
 		
 		String iteration = "1";
 		if (object.length >= 2) 
@@ -120,8 +120,18 @@ public class KeywordMethods {
 	        paramHash.put("objectID", object[0]); 
 	        paramHash.put("iteration", iteration);
 	        paramHash.put("xpathFile", xpathFile);
-		
+	        
+	        long start = System.currentTimeMillis();
+
 			ElementLocator.pathFinder(driver, timeout, paramHash, elementTypes).click();
+
+	        long end = System.currentTimeMillis();
+	        long duration = end - start;
+	        
+	        if (timingData) {
+	        	//System.out.println(duration);
+	        	timingPointer.write(String.valueOf(duration) + "\n");
+	        }
 			
 			return "pass";
 			
@@ -262,7 +272,7 @@ public class KeywordMethods {
 		// loop|verifyText|sample text to verify
 		// endloop		
 		protected static String loopWhile (String varName, String OS, String logDirectory, String fileDirectory, String downloadDirectory, String testName, 
-				String variablePath, String xpathFile, BufferedReader scriptPointer, BufferedWriter logPointer)  throws Exception {
+				String variablePath, String xpathFile, BufferedReader scriptPointer, BufferedWriter logPointer, BufferedWriter timingPointer)  throws Exception {
 			
 			try {
 				
@@ -301,7 +311,7 @@ public class KeywordMethods {
 						//which is 5 characters long.
 						scriptLine = scriptLine.substring(5);
 						
-						testStatus = TestManager.commandRunner(scriptLine, OS, logDirectory, fileDirectory, downloadDirectory, testName, variablePath, xpathFile, scriptPointer, logPointer);
+						testStatus = TestManager.commandRunner(scriptLine, OS, logDirectory, fileDirectory, downloadDirectory, testName, variablePath, xpathFile, scriptPointer, logPointer, timingPointer);
 		
 						if (testStatus.equalsIgnoreCase("fail")) {
 							return "fail";

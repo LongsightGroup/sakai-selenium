@@ -32,6 +32,7 @@ public class TestManager {
 	private static String application, browser, chromeExecutable, fileDirectory, downloadDirectory, logDirectory,
 		mimeTypes, OS, testListFile, variablesPath, xpathFile;
 	private static Integer timeout, minTimeout;
+	private static Boolean timingData;
 
 	// This method reads the parameters file, creates the logging directory, and reads all tests into
 	// an array.  For each test, it starts the browser and calls testRunner with the test to run.
@@ -170,6 +171,7 @@ public class TestManager {
 		xpathFile = propReader.getProperty("xpathFile");
 		timeout = Integer.parseInt(propReader.getProperty("timeout", "10"));
 		minTimeout = Integer.parseInt(propReader.getProperty("minTimeout", "3"));
+		timingData = Boolean.parseBoolean(propReader.getProperty("timingData", "false"));
 		
 		// Check that the user has ended the path to their test scripts with a slash, add one if they haven't put it there.
 		if (!fileDirectory.endsWith(File.separator)) {
@@ -225,6 +227,9 @@ public class TestManager {
 		// Create a log file for receiving the results of the commands as we process them.
 		BufferedWriter logPointer = new BufferedWriter(new FileWriter(logDirectory + testName + ".log"));
 		
+		// Create a log file for receiving the timing information from the click command as it is processed.
+		BufferedWriter timingPointer = new BufferedWriter(new FileWriter(logDirectory + "timingData.log", true));		
+		
 		// Create the variables to read the test files
 		// test files have csv extension, but are pipe delimited.
 		FileInputStream fis1 = new FileInputStream(testScript);	
@@ -256,6 +261,8 @@ public class TestManager {
 		    	}
 		    }
 	    }
+	    
+	    
 		
 		// Read the next line while there is a line to read and the last command did NOT fail.
 		while (((scriptLine = scriptPointer.readLine()) != null) && (!testStatus.equals("fail"))) {
@@ -266,20 +273,25 @@ public class TestManager {
 				logPointer.write("\r\n"); 
 			}
 			else { 
-				testStatus = commandRunner(scriptLine, OS, logDirectory, fileDirectory, downloadDirectory, testName, variablePath, xpathFile, scriptPointer, logPointer);
+				testStatus = commandRunner(scriptLine, OS, logDirectory, fileDirectory, downloadDirectory, testName, variablePath, xpathFile, scriptPointer, logPointer, timingPointer);
 			}
 		}
 		
 		//Close logging file at the end successful test run.
 	    logPointer.close();
+	    timingPointer.close();
 		
+	    if (timingData) {
+	    	calculateTimings(logDirectory);
+	    }
+	    
 		return testStatus;	
 		}
 
 	// This receives the command to call from testRunner, makes the appropriate call to selenium and logs
 	// the results in the script-level log file.
 	protected static String commandRunner (String scriptLine, String OS, String logDirectory, String fileDirectory, String downloadDirectory, 
-			String testName, String variablePath, String xpathFile, BufferedReader scriptPointer, BufferedWriter logPointer) throws Exception {
+			String testName, String variablePath, String xpathFile, BufferedReader scriptPointer, BufferedWriter logPointer, BufferedWriter timingPointer) throws Exception {
 	
 		//Assume there are no variables unless explicitly stated.
 		boolean hasVariables = false;
@@ -351,10 +363,10 @@ public class TestManager {
 	    	testStatus = KeywordMethods.captureText(driver, application, timeout, xpathFile, variablePath, vars[1], vars[2], vars[3]);
 	    	}		    
 	    else if (vars[0].equalsIgnoreCase("click") && (vars.length == 2)) { 
-	    	testStatus = KeywordMethods.click(driver, application, timeout, xpathFile, vars[1]);
+	    	testStatus = KeywordMethods.click(driver, application, timeout, xpathFile, timingData, timingPointer, vars[1]);
 	    	}	
 	    else if (vars[0].equalsIgnoreCase("click") && (vars.length == 3)) { 
-	    	testStatus = KeywordMethods.click(driver, application, timeout, xpathFile, vars[1], vars[2]);
+	    	testStatus = KeywordMethods.click(driver, application, timeout, xpathFile, timingData, timingPointer, vars[1], vars[2]);
 	    	}			 	    
 	    else if (vars[0].equalsIgnoreCase("clickxpath")) { 
 	    	testStatus = KeywordMethods.clickXPath(driver, vars[1]);
@@ -376,7 +388,7 @@ public class TestManager {
 	    	testStatus = KeywordMethods.fckEnter(driver, application, timeout, xpathFile, vars[1], vars[2]);
 	    }
 	    else if (vars[0].equalsIgnoreCase("loopwhile")) { 
-	    	testStatus = KeywordMethods.loopWhile(vars[1], OS, logDirectory, fileDirectory, downloadDirectory, testName, variablePath, xpathFile, scriptPointer, logPointer);
+	    	testStatus = KeywordMethods.loopWhile(vars[1], OS, logDirectory, fileDirectory, downloadDirectory, testName, variablePath, xpathFile, scriptPointer, logPointer, timingPointer);
 	    	}
 	    else if (vars[0].equalsIgnoreCase("mceEnter") && (vars.length == 3)) { 
 	    	testStatus = KeywordMethods.mceEnter(driver, application, timeout, xpathFile, vars[1], vars[2]);
@@ -490,6 +502,38 @@ public class TestManager {
 		    	    		    
 		return "pass";	
 		}
+	
+	private static void calculateTimings(String logDirectory) throws Exception {
+
+		String timingLine;
+		Integer totalTiming = 0;
+		Integer totalRows = 0;
+		StringBuilder text = new StringBuilder();
+		
+		// Open and read the file containing all of the timing information.
+		FileInputStream fis1 = new FileInputStream(logDirectory + "timingData.log");	
+		BufferedReader timingReader = new BufferedReader(new InputStreamReader(fis1));
+		
+		// Read the timing file one line at a time.  Also keep track of the number of rows as we will need that to calculate an average.
+		while ((timingLine = timingReader.readLine()) != null) {
+			Integer time = Integer.parseInt(timingLine);
+			totalTiming = totalTiming + time;
+			totalRows ++;
+			text.append(timingLine + "\n");
+		}
+
+		Integer averageTiming = totalTiming / totalRows;		
+		
+		BufferedWriter timingWriter = new BufferedWriter(new FileWriter(logDirectory + "timingData.log", false));
+		
+		timingWriter.write("Total wait time after clicks: " + totalTiming + "\n");
+		timingWriter.write("Sample size: " + totalRows + "\n");
+		timingWriter.write("Average time: " + averageTiming + "\n\n");
+		
+		timingWriter.write("Timing Samples:\n");
+		timingWriter.write(text.toString());
+		timingWriter.close(); 
+	}
 	
 	private static void prepFirefoxProfile (String downloadDirectory, String mimeTypes)  throws Exception {
 		

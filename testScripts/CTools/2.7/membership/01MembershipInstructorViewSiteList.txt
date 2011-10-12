@@ -1,3 +1,0 @@
-comment|View membership list as instructor.openURL|$urlenterText|eid|seleniumInstructorenterText|pw|seleniumInstructorclick|LoginverifyText|From the CTools TeamverifyText|Welcome to your personal workspaceverifyText| selenium instructorclick|MembershipverifyText|selenium instructorverifyText|My Current SitesverifyText|Selenium 001 001 W11
-verifyText|Sample Project Site
-verifyText|Selenium 999 999 F09click|LogoutverifyText|You are about to log outclick|Log OutverifyText|From the CTools TeamverifyText|Welcome

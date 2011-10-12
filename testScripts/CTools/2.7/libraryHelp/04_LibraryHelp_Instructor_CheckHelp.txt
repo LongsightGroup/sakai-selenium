@@ -1,13 +1,17 @@
 openURL|$url
-enterText|eid|seleniumInstructor
-enterText|pw|seleniumInstructor
-
+verifyText|From the CTools Team
 click|Login
+
+verifyText|You are connecting to a U-M website that requires authentication.
+enterText|login|qainst
+enterText|password|sswelvalpanklidS$
+
+click|doLogin
 verifyText|From the CTools Team
 verifyText|Welcome to your personal workspace
 
 click|$site
-verifyText|selenium instructor
+verifyText|Selenium Instructor
 verifyText|Site Information Display
 verifyText|viewing announcements from the last 10 days
 
@@ -16,9 +20,12 @@ verifyText|Welcome to the University Library's
 verifyText|Ask a Librarian
 verifyText|reference and research help service!
 
-click|Ask a Librarian
-verifyText|About MLibrary
-verifyText|Ask a Librarian is tailored to the research needs of UM students
+click|Help for Library Help
+waitForPopup|30
+verifyText|Library Help Tool
+verifyText|Search Help
+verifyText|Other Library Tools & Services in CTools
+closePopUp|
 
 click|Logout
 verifyText|You are about to log out

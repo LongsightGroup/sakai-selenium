@@ -21,6 +21,7 @@ verifyText|qastud
 verifyText|Calendar by Week
 verifyText|Legend
 
+comment|This verifies that this process generates a file, but not its contents
 click|Printable Version
 verifyFileExists|schedule.pdf
 

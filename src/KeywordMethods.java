@@ -595,6 +595,7 @@ public class KeywordMethods {
 			}			
 			
 
+		
 		protected static String verifyFile ( String downloadDirectory,  String fileDirectory, String fileName, Integer timeout)  throws Exception {
 			
 			try {
@@ -627,6 +628,7 @@ public class KeywordMethods {
 				
 				// Verify that our test file has been download and exists.
 				// Wait for as long as the timeout is specified.
+				// First, account for cases where we are checking for a wild-carded file.				
 				if (fileName.contains("*")) {
 						
 					File downloadFileDirectory = new File(downloadDirectory);
@@ -634,12 +636,12 @@ public class KeywordMethods {
 					for (int i=0; i<timeout; i++) {
 						
 						testFiles = downloadFileDirectory.listFiles(fileFilter);
+						testFile = testFiles[0];
 						
-						if (testFiles.length > 0) {
-							testFile = testFiles[0];
-							break;
+						if (testFile.length() > 0) {
+								break;
 						}
-						
+						// Sleep for a second if the file does not exist yet.							
 						Thread.sleep(1000);	
 					}
 						
@@ -647,12 +649,12 @@ public class KeywordMethods {
 
 					for (int i=0; i<timeout; i++) {
 					
-					testFile = new File(downloadDirectory + fileName);
-					
-					if (testFile.canRead()) {
-						break;
-					}
-					
+						testFile = new File(downloadDirectory + fileName);
+						
+						if (testFile.length() > 0) {
+							break;
+						}
+					// Sleep for a second if the file does not exist yet.
 					Thread.sleep(1000);
 					}
 				}
@@ -661,6 +663,7 @@ public class KeywordMethods {
 					return "fail: your test file does not exist at this path: " + downloadDirectory + fileName;
 				}
 				
+				// Verify that the length of the two files matches.
 				if (baselineFile.length() == testFile.length()) {
 					return "pass"; 
 				} else {
@@ -673,8 +676,9 @@ public class KeywordMethods {
 				}
 			
 		}		
+
 		
-		// Useful for dynamic files, you just want to verify that a non-zero file has been downloaded.
+		// Useful for files with a variable length, you just want to verify that a non-zero file has been downloaded.
 		protected static String verifyFileExists ( String downloadDirectory,  String fileName, Integer timeout)  throws Exception {
 			
 			try {
@@ -687,6 +691,7 @@ public class KeywordMethods {
 				
 				// Verify that our test file has been download and exists.
 				// Wait for as long as the timeout is specified.
+				// First, account for cases where we are checking for a wild-carded file.
 				if (fileName.contains("*")) {
 						
 					File downloadFileDirectory = new File(downloadDirectory);
@@ -694,37 +699,34 @@ public class KeywordMethods {
 					for (int i=0; i<timeout; i++) {
 						
 						testFiles = downloadFileDirectory.listFiles(fileFilter);
+						testFile = testFiles[0];
 						
-						if (testFiles.length > 0) {
-							testFile = testFiles[0];
-							break;
+						if (testFile.length() > 0) {
+								break;
 						}
-						
+						// Sleep for a second if the file does not exist yet.						
 						Thread.sleep(1000);	
 					}
-						
+
+				// Check our target file where there are no wildcard characters to account for.
 				} else {
 
 					for (int i=0; i<timeout; i++) {
 					
-					testFile = new File(downloadDirectory + fileName);
-					
-					if (testFile.canRead()) {
-						break;
-					}
-					
+						testFile = new File(downloadDirectory + fileName);
+						
+						if (testFile.length() > 0) {
+							break;
+						}
+					// Sleep for a second if the file does not exist yet.
 					Thread.sleep(1000);
 					}
 				}
 					
-				if (!testFile.exists()) {
+				if (!testFile.canRead()) {
 					return "fail: your test file does not exist at this path: " + downloadDirectory + fileName;
-				}
-				
-				if (testFile.length() > 0) {
-					return "pass"; 
 				} else {
-					return "fail: you have downloaded a zero-byte file.";
+					return "pass";
 				}
 				
 				} catch (Exception e) {

@@ -133,6 +133,10 @@ public class TestManager {
 			reportLogPointer.write(testResult + "," + testName + "\r\n");
 			}
 		
+	    if (timingData) {
+	    	calculateTimings(logDirectory);
+	    }
+		
 		reportLogPointer.write("\r\n" + passedTests + " tests passed\r\n");
 		reportLogPointer.write(failedTests + " tests failed");
 		// Close the master report after all the tests are finished.
@@ -281,10 +285,6 @@ public class TestManager {
 	    logPointer.close();
 	    timingPointer.close();
 		
-	    if (timingData) {
-	    	calculateTimings(logDirectory);
-	    }
-	    
 		return testStatus;	
 		}
 
@@ -522,36 +522,44 @@ public class TestManager {
 			text.append(timingLine + "\n");
 		}
 
-		Integer averageTiming = totalTiming / totalRows;		
+		BufferedWriter timingWriter = new BufferedWriter(new FileWriter(logDirectory + "timingData.log", false));		
 		
-		BufferedWriter timingWriter = new BufferedWriter(new FileWriter(logDirectory + "timingData.log", false));
+		// If we have collected some timing data, write it to the log file.
+		if(totalRows > 0) {
+			Integer averageTiming = totalTiming / totalRows;		
 		
-		timingWriter.write("Total wait time after clicks: " + totalTiming + "\n");
-		timingWriter.write("Sample size: " + totalRows + "\n");
-		timingWriter.write("Average time: " + averageTiming + "\n\n");
-		
-		timingWriter.write("Timing Samples:\n");
-		timingWriter.write(text.toString());
-		timingWriter.close(); 
+			timingWriter.write("Total wait time after clicks: " + totalTiming + "\n");
+			timingWriter.write("Sample size: " + totalRows + "\n");
+			timingWriter.write("Average time: " + averageTiming + "\n\n");
+			
+			timingWriter.write("Timing Samples:\n");
+			timingWriter.write(text.toString());
+			timingWriter.close(); 
+		} else {
+			timingWriter.write("You have collected no timing samples.\n");
+			timingWriter.close(); 
+		}		
 	}
 	
 	private static void prepFirefoxProfile (String downloadDirectory, String mimeTypes)  throws Exception {
 		
 		FirefoxProfile profile = new FirefoxProfile(); 
-
+		
 		// This section tells firefox to download all files of the user specified
-		// mimeTypes to the user specified downloadDirectory/
+		// mimeTypes to the user specified downloadDirectory
 		profile.setPreference("browser.download.folderList", 2);
 		profile.setPreference("browser.download.dir", downloadDirectory); 
+		
         profile.setPreference("browser.helperApps.neverAsk.saveToDisk", mimeTypes);
-
-        // Disable annoying security messages on windows 
+        
+        // Attempt to disable annoying security messages on windows 
 		profile.setPreference("network.cookie.cookieBehavior", 1);
 		
 		// Cannot set these. WebDriver freezes these by default.
 		//profile.setPreference("security.warn_viewing_mixed", "false");
 		//profile.setPreference("security.warn_viewing_mixed.show_once", "false");
-		
+		        
+
 		driver = new FirefoxDriver(profile); 
         }	
 	

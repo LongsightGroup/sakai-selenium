@@ -382,6 +382,9 @@ public class KeywordMethods {
 				if(action.equalsIgnoreCase("ok")) {
 					driver.switchTo().alert().accept();
 					return "pass";
+				} else if (action.equalsIgnoreCase("continue")) {
+					driver.switchTo().alert().accept();
+					return "pass";					
 				} else {
 					driver.switchTo().alert().dismiss();
 					return "pass";

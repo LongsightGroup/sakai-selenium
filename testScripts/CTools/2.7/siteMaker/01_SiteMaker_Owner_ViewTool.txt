@@ -18,6 +18,8 @@ verifyText|Site Information Display
 verifyText|A project site meant to be used as a source for duplication during testing.
 
 click|SiteMaker
+comment|This next command clicks on a modal security window, which informs the user that secure information may be sent over a non-secure connection
+modalClick|continue
 verifyText|Hey, it's working!
 verifyText|Student Only
 verifyText|Instructor Only

@@ -85,6 +85,9 @@
 			<generic>//label[normalize-space()=element]/following-sibling::input[@type='checkbox']</generic>
 		</checkbox>
 		<checkbox>
+			<membership>//td[normalize-space()=element]/preceding-sibling::td/input[@type='checkbox']</membership>
+		</checkbox>			
+		<checkbox>
 			<polls>//span[normalize-space()=element]/preceding::input[(@type='checkbox')][1]</polls>
 		</checkbox>	
 		<checkbox>

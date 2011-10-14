@@ -14,6 +14,7 @@ import java.util.Properties;
 
 import org.apache.commons.lang.StringUtils;
 import org.apache.commons.io.filefilter.WildcardFileFilter;
+import org.apache.commons.io.FileUtils;
 
 import org.openqa.selenium.NoSuchElementException;
 import org.openqa.selenium.By;
@@ -605,6 +606,7 @@ public class KeywordMethods {
 				
 				File[] baselineFiles, testFiles;
 				File baselineFile, testFile = null;
+				File badFileDirectory = new File(downloadDirectory + "/errors");
 
 				// Construct a filter, for use later if the file contains a wildcard.
 				FileFilter fileFilter = new WildcardFileFilter(fileName);				
@@ -670,6 +672,9 @@ public class KeywordMethods {
 				if (baselineFile.length() == testFile.length()) {
 					return "pass"; 
 				} else {
+					// copy test file to a holding directory for comparison after the test.
+					FileUtils.copyFileToDirectory(testFile, badFileDirectory);
+					
 					return "fail: the files do not match.";
 				}
 				

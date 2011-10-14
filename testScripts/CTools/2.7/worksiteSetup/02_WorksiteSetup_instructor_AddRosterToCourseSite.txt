@@ -24,9 +24,6 @@ verifyText|qainst
 verifyText|A basic course created during automated testing.
 verifyText|Can read, add, and revise content on sites in a particular department
 
-comment|Give 30 seconds for the roster to successfully get added to the course
-wait|30
-
 click|Edit Class Roster(s)
 verifyText|Edit Roster Access for
 verifyText|$providerID1

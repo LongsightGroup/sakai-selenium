@@ -24,10 +24,10 @@ verifyText|Merge
 click|Merge
 verifyText|Merging calendars
 verifyText|Show Schedule
-verifyText|DupeSrc 101 001 F11
-verifyValue|DupeSrc 101 001 F11|false
-selectCheckbox|DupeSrc 101 001 F11
-verifyValue|DupeSrc 101 001 F11|true
+verifyText|$dupeSource
+verifyValue|$dupeSource|false
+selectCheckbox|$dupeSource
+verifyValue|$dupeSource|true
 
 click|Save
 comment|should be at the "Calendar by Week" window
@@ -60,10 +60,10 @@ comment|removing the merged calendar so the test runs the next time.
 click|Merge
 verifyText|Merging calendars
 verifyText|Show Schedule
-verifyText|DupeSrc 101 001 F11
-verifyValue|DupeSrc 101 001 F11|true
-selectCheckbox|DupeSrc 101 001 F11
-verifyValue|DupeSrc 101 001 F11|false
+verifyText|$dupeSource
+verifyValue|$dupeSource|true
+selectCheckbox|$dupeSource
+verifyValue|$dupeSource|false
 
 click|Save
 comment|should be at the "Calendar by Week" window

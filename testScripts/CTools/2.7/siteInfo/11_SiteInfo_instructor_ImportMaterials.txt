@@ -34,7 +34,7 @@ click|I would like to merge my data
 verifyText|Import Material from Other Sites
 verifyText|You can choose to import material only from other sites that you own. You can combine material from more than one site.
 
-selectCheckbox|DupeSrc 101 001 F11
+selectCheckbox|$dupeSource
 click|Continue
 verifyText|Re-use Material from Other Sites
 

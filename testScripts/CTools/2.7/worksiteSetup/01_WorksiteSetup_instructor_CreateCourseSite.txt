@@ -125,6 +125,10 @@ verifyText|Check box(es) to take action on a site. Click column title to sort.
 verifyText|qainst
 verifyText|$site
 
+comment|Wait 30 seconds for the roster to be added to the course
+comment|This helps the next script to proceed more cleanly.
+wait|30
+
 click|Logout
 verifyText|You are about to log out
 

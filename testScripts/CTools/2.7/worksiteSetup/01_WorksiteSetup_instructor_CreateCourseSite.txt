@@ -30,6 +30,7 @@ comment|Create a course site for the current term.
 click|Continue
 verifyText|Course/Section(s) Selection
 verifyText|Authorization to Allow Roster(s) Site Access
+enterText|id-Campus(Enter A for Ann Arbor and D for Dearborn):1|A
 enterText|id-Subject:1|Testing
 enterText|id-Course:1|$creationCourseNum
 enterText|id-Section:1|001

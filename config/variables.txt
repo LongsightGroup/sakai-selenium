@@ -1,17 +1,17 @@
-#Fri Oct 07 00:34:20 EDT 2011
+#Sun Oct 16 01:50:32 EDT 2011
 creationCourseNum2=102
 url=https\://testctools.ds.itd.umich.edu/portal
 site=Testing 101 001 F11
 dupeProvider=2011,2,A,DupeSrc,101,001
-projDupeSite=ProjDupe G1
+projDupeSite=ProjDupeCoco
 term=FALL 2011
-projDupeSource=Project Dupe Source
+projDupeSource=Dupe Source Project
 providerID2=2011,2,A,Testing,102,001
 providerID1=2011,2,A,Testing,101,001
 numAssigns=2
-dupeSource=DupeSrc 101 001 F11
-project_site=F11 Test Project
+dupeSource=Dupe Source Site
+project_site=Coconut Test Project
 creationCourseEmail=testing_101_F11
 creationCourseNum=101
 gateway_url=https\://testctools.ds.itd.umich.edu/portal
-testDupeSite=TestDupe G1
+testDupeSite=SiteDupeCoco

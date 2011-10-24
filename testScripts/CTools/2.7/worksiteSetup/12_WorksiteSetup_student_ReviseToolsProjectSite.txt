@@ -29,16 +29,16 @@ click|Edit Tools
 verifyText|Choose tools to include on your site...
 verifyValue|Gradebook|true
 verifyValue|Messages|true
-verifyValue|SAMS Scores|false
+verifyValue|Modules|false
 selectCheckbox|Gradebook
 selectCheckbox|Messages
-selectCheckbox|SAMS Scores
+selectCheckbox|Modules
 
 click|Continue
 verifyText|Confirming site tools edits for
 verifyText|$project_site
 verifyText|You have selected the following for your site
-verifyText|SAMS Scores
+verifyText|Modules
 
 comment|This should put us back at the basic information page
 click|Finish
@@ -53,15 +53,15 @@ click|Edit Tools
 verifyText|Choose tools to include on your site...
 verifyValue|Gradebook|false
 verifyValue|Messages|false
-verifyValue|SAMS Scores|true
+verifyValue|Modules|true
 selectCheckbox|Gradebook
 selectCheckbox|Messages
-selectCheckbox|SAMS Scores
+selectCheckbox|Modules
 
 click|Continue
 verifyText|Confirming site tools edits for
 verifyText|$project_site
-verifyText|SAMS Scores
+verifyText|Modules
 verifyText|You have selected the following for your site
 verifyText|Messages
 
@@ -78,7 +78,7 @@ click|Edit Tools
 verifyText|Choose tools to include on your site...
 verifyValue|Gradebook|true
 verifyValue|Messages|true
-verifyValue|SAMS Scores|false
+verifyValue|Modules|false
 
 comment|click|Cancel
 comment|verifyText|A basic course created during automated testing.

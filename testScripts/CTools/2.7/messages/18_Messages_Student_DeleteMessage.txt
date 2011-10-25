@@ -20,7 +20,6 @@ click|Messages
 verifyText|Received
 verifyText|Sent
 verifyText|Deleted
-verifyText|Student Test Folder
 verifyText|Messages
 
 click|Student Test Folder
@@ -36,7 +35,6 @@ click|Reset
 verifyText|Received
 verifyText|Sent
 verifyText|Deleted
-verifyText|Student Test Folder
 verifyText|Messages
 
 click|Deleted

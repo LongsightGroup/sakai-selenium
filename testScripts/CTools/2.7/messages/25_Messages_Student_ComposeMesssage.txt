@@ -24,28 +24,28 @@ verifyText|Messages
 click|Compose Message
 verifyText|Compose a Message
 verifyText|Required items marked with *
-selectList|To|Owner Role
+selectList|*To|Instructor, Selenium (qainst)
 verifyValue|Send a copy of this message to recipients|false
 selectList|Label|High
-enterText|Subject|Student Test Message
+enterText|*Subject|Student Test Message
 fckEnter|Message|A hearty hello to you.
 
 click|Add attachments
 verifyText|Upload local file
 verifyText|Add Attachment
 
-uploadFile|test.docx
-verifyText|test.docx
+uploadFile|TestAttachment.doc
+verifyText|TestAttachment.doc
 
-click|test.docx
-verifyFile|test.docx
+click|TestAttachment.doc
+verifyFile|TestAttachment.doc
 
 click|Continue
 verifyText|Compose a Message
-verifyValue|To|Owner Role
-verifyValue|Subject|Student Test Message
+verifyValue|*To|Instructor, Selenium (qainst)
+verifyValue|*Subject|Student Test Message
 verifyText|A hearty hello to you.
-verifyText|test.docx
+verifyText|TestAttachment.doc
 
 click|Send
 verifyText|Received

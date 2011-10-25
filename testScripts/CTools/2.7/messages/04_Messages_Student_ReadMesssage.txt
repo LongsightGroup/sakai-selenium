@@ -33,8 +33,8 @@ verifyText|High
 verifyText|A hearty hello to you.
 verifyText|Instructor Test Message
 
-click|test.docx
-verifyFile|test.docx
+click|TestAttachment.doc
+verifyFile|TestAttachment.doc
 
 click|Logout
 verifyText|You are about to log out

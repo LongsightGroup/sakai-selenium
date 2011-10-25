@@ -19,34 +19,32 @@ click|Messages
 verifyText|Received
 verifyText|Sent
 verifyText|Deleted
-verifyText|Instructor Test Folder
 verifyText|Messages
 
 click|Compose Message
 verifyText|Compose a Message
 verifyText|Required items marked with *
-selectList|To|Student Role
+selectList|*To|User, Selenium (qastud)
 verifyValue|Send a copy of this message to recipients|false
 selectList|Label|High
-enterText|Subject|Instructor Test Message
+enterText|*Subject|Instructor Test Message
 fckEnter|Message|A hearty hello to you.
 
 click|Add attachments
 verifyText|Upload local file
 verifyText|Add Attachment
+uploadFile|TestAttachment.doc
+verifyText|TestAttachment.doc
 
-uploadFile|test.docx
-verifyText|test.docx
-
-click|test.docx
-verifyFile|test.docx
+click|TestAttachment.doc
+verifyFile|TestAttachment.doc
 
 click|Continue
 verifyText|Compose a Message
-verifyValue|To|Student Role
-verifyValue|Subject|Instructor Test Message
+verifyValue|*To|User, Selenium (qastud)
+verifyValue|*Subject|Instructor Test Message
 verifyText|A hearty hello to you.
-verifyText|test.docx
+verifyText|TestAttachment.doc
 
 click|Send
 verifyText|Received

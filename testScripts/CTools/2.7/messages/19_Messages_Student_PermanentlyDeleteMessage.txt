@@ -20,7 +20,6 @@ click|Messages
 verifyText|Received
 verifyText|Sent
 verifyText|Deleted
-verifyText|Student Test Folder
 verifyText|Messages
 
 comment|Permanently delete the message.
@@ -40,7 +39,6 @@ click|Reset
 verifyText|Received
 verifyText|Sent
 verifyText|Deleted
-verifyText|Student Test Folder
 verifyText|Messages
 comment|There should be no messages left.
 verifyTextNotPresent|1 message

@@ -28,6 +28,10 @@ click|Student Test Folder
 verifyText|Instructor Test Message
 
 click|< Previous Folder
+verifyText|Draft
+verifyTextNotPresent|Instructor Test Message
+
+click|< Previous Folder
 verifyText|Deleted
 verifyTextNotPresent|Instructor Test Message
 

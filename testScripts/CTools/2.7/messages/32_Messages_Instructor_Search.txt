@@ -19,7 +19,6 @@ click|Messages
 verifyText|Received
 verifyText|Sent
 verifyText|Deleted
-verifyText|Instructor Test Folder
 verifyText|1 message - 0 unread
 verifyText|Messages
 
@@ -34,7 +33,6 @@ click|Reset
 verifyText|Received
 verifyText|Sent
 verifyText|Deleted
-verifyText|Instructor Test Folder
 
 comment|Now look in the folder that contains the message.
 click|Instructor Test Folder

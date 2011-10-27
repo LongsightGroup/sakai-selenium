@@ -17,7 +17,7 @@ verifyText|viewing announcements from the last 10 days
 
 click|Syllabus
 verifyText|Syllabus
-verifyText|About Google
+verifyText|Complete list of Wikipedias
 
 click|Logout
 verifyText|You are about to log out

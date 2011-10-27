@@ -25,11 +25,11 @@ verifyText|Syllabus Item
 click|Redirect
 verifyText|Redirect Syllabus
 verifyText|URL
-enterText|URL|http://www.google.com
+enterText|URL|http://en.wikipedia.org
 
 click|Save
 verifyText|Redirect Syllabus
-verifyText|About Google
+verifyText|Complete list of Wikipedias
 
 click|Logout
 verifyText|You are about to log out

@@ -15,7 +15,7 @@ verifyText|Welcome to your personal workspace
 click|$site
 verifyText|Selenium Instructor
 verifyText|Site Information Display
-verifyText|There are currently no announcements at this location.
+verifyText|Recent Announcements
 
 click|Site Info
 verifyText|$site

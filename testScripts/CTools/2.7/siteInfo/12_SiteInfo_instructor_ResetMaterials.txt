@@ -27,7 +27,7 @@ verifyText|Test Announcement
 
 click|Remove
 verifyText|viewing announcements from the last 365 days
-verifyText|There are currently no announcements at this location.
+verifyTextNotPresent|Test Announcement
 
 click|Logout
 verifyText|You are about to log out

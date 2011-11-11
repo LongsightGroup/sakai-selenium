@@ -42,7 +42,9 @@ verifyText|Are you sure you want to remove this event?
 
 comment|Where does this take us?
 click|Remove event
-verifyText|List of Events
+verifyText|Schedule
+verifyText|Printable Version
+verifyValue|view|List of Events
 verifyTextnotpresent|Team Meeting
 
 click|Logout

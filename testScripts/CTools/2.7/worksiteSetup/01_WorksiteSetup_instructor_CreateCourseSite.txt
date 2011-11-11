@@ -107,7 +107,7 @@ verifyText|Library Help
 verifyText|Library Materials
 verifyText|Messages
 verifyText|Modules
-verifyText|News ( channel-url = http://www.ns.umich.edu/htdocs/releases/rss.php )
+verifyText|News ( channel-url = http://ns.umich.edu/new/releases?format=feed&type=rss )
 verifyText|Polls
 verifyText|Resources
 verifyText|Schedule

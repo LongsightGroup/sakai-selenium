@@ -81,7 +81,7 @@ verifyText|Email Archive
 verifyText|News
 verifyText|Web Content
 enterText|Site email address|$creationCourseEmail
-enterText|URL Channel|http://www.ns.umich.edu/htdocs/releases/rss.php
+enterText|URL Channel|http://ns.umich.edu/new/releases?format=feed&type=rss
 
 click|Continue
 verifyText|Course Site Access

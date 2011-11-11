@@ -23,6 +23,8 @@ verifyText|Click the button
 
 click|Enter LectureTools
 waitForPopUp|30
+enterText|EmailAddress|qainst@umich.edu
+enterText|Password|sswelvalpanklidS$
 
 click|submit
 verifyText|welcome Selenium Instructor

@@ -66,8 +66,8 @@ selectCheckbox|$dupeSource
 verifyValue|$dupeSource|false
 
 click|Save
-comment|should be at the "Calendar by Week" window
-verifyText|Calendar by Week
+comment|should be at the "List of Events" window
+verifyValue|view|List of Events
 
 click|Logout
 verifyText|You are about to log out

@@ -20,6 +20,14 @@ verifyText|A project site meant to be used as a source for duplication during te
 click|SiteMaker
 comment|This next command clicks on a modal security window, which informs the user that secure information may be sent over a non-secure connection
 modalClick|continue
+
+comment|The next section accounts for a current SiteMaker bug
+verifyText|Sorry, you don't have permission to view that section.
+
+click|Reset
+modalClick|continue
+comment|End of section to account for SiteMaker bug.
+
 verifyText|Hey, it's working!
 verifyText|Student Only
 verifyText|Instructor Only

@@ -27,10 +27,10 @@ click|Add|1
 click|Upload Files
 verifyText|Upload Files
 verifyText|Upload as many files as you like. If you change your mind about uploading one of your files,
-uploadFile|Test.pdf
+uploadFile|test.pdf
 
 click|Upload Files Now
-verifyText|Test.pdf
+verifyText|test.pdf
 
 click|Add|1
 
@@ -47,10 +47,10 @@ click|Add|1
 click|Upload Files
 verifyText|Upload Files
 verifyText|Upload as many files as you like. If you change your mind about uploading one of your files,
-uploadFile|Test.docx
+uploadFile|test.docx
 
 click|Upload Files Now
-verifyText|Test.docx
+verifyText|test.docx
 
 click|Add|1
 

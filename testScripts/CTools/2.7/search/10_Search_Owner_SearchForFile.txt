@@ -25,7 +25,7 @@ enterText|Search|test
 
 click|Search
 verifyText|test.doc
-verifyText|Test.pdf
+verifyText|test.pdf
 verifyText|test.txt
 verifyText|Found 1 to
 

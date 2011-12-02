@@ -59,8 +59,6 @@
 /storage/tests/testScripts/CTools/2.7/discussion/26_Discussion_Instructor_DeleteTopic.txt
 /storage/tests/testScripts/CTools/2.7/discussion/27_Discussion_Instructor_DeleteOneCategory.txt
 /storage/tests/testScripts/CTools/2.7/discussion/28_Discussion_Instructor_DeleteOtherCategory.txt
-/storage/tests/testScripts/CTools/2.7/discussion/30_Discussion_Instructor_CheckHelp.txt
-/storage/tests/testScripts/CTools/2.7/discussion/31_Discussion_Student_CheckHelp.txt
 
 /storage/tests/testScripts/CTools/2.7/dropbox/01DropBoxInstructorCheckHelp.txt
 /storage/tests/testScripts/CTools/2.7/dropbox/02DropBoxStudentCheckHelp.txt

@@ -22,10 +22,10 @@ comment|This next command clicks on a modal security window, which informs the u
 modalClick|continue
 
 comment|The next section accounts for a current SiteMaker bug
-verifyText|Sorry, you don't have permission to view that section.
+comment|verifyText Sorry, you don't have permission to view that section.
 
-click|Reset
-modalClick|continue
+comment|click Reset
+comment|modalClick continue
 comment|End of section to account for SiteMaker bug.
 
 verifyText|Hey, it's working!

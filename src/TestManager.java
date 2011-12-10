@@ -361,7 +361,10 @@ public class TestManager {
 	    	}	
 	    else if (vars[0].equalsIgnoreCase("capturetext")) { 
 	    	testStatus = KeywordMethods.captureText(driver, application, timeout, xpathFile, variablePath, vars[1], vars[2], vars[3]);
-	    	}		    
+	    	}
+	    else if (vars[0].equalsIgnoreCase("ckEnter")) {
+	    	testStatus = KeywordMethods.ckEnter(driver, application, timeout, xpathFile, vars[1], vars[2]);
+	    }
 	    else if (vars[0].equalsIgnoreCase("click") && (vars.length == 2)) { 
 	    	testStatus = KeywordMethods.click(driver, application, timeout, xpathFile, timingData, timingPointer, vars[1]);
 	    	}	

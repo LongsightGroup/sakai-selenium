@@ -102,6 +102,41 @@ public class KeywordMethods {
 			}  
 		}
 
+
+	// Enter text to a ckEditor.  Is the iteration variable if their are multiple editors on the page.
+	// use: ckEnter|text|iteration where text is the text string to be entered.  Iteration is optional		
+    protected static String ckEnter (WebDriver driver, String application, Integer timeout, String xpathFile, String ... object) throws Exception {
+    	
+			try {
+				
+				String textToEnter = object[1];
+				String iteration = "1";
+				if (object.length > 2) 
+					iteration = object[2];	
+
+				HashMap<String, String> paramHash = new HashMap<String, String>();
+				
+				String [] elementTypes = {"ckeditor"};
+				
+				paramHash.put("application", application);
+		        paramHash.put("objectID", object[0]); 
+		        paramHash.put("iteration", iteration);
+		        paramHash.put("xpathFile", xpathFile);
+			
+		        // This locates the sub-frame within which the fckEditor resides from the preceding label
+				driver.switchTo().frame(ElementLocator.pathFinder(driver, timeout, paramHash, elementTypes));
+				
+				driver.findElement(By.xpath("//body")).sendKeys(textToEnter);
+				
+				return "pass";
+
+			} catch (Exception e) {	
+				
+				return "fail: " + e.toString();
+				
+			}
+		}		
+	
 	
 	// click clicks on an interface element.
 	// use: click|object where object is the id, name or label of an element to be clicked on.

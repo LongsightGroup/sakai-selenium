@@ -38,7 +38,10 @@ click|Add course(s) and/or section(s) not listed above...
 verifyText|Editing site...
 verifyText|$providerID1
 verifyText|At this time we cannot verify you are the instructor of record
-enterText|id-Campus(Enter A for Ann Arbor and D for Dearborn):1|A
+
+comment|Specific to a later H build that was redacted
+comment|enterText|id-Campus(Enter A for Ann Arbor and D for Dearborn):1|A
+
 enterText|id-Subject:1|Testing
 enterText|id-Course:1|$creationCourseNum2
 enterText|id-Section:1|001

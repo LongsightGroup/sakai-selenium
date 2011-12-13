@@ -34,7 +34,7 @@ click|Duplicate
 verifyText|$projDupeSource
 verifyText|qastud
 verifyText|A project site meant to be used as a source for duplication during testing
-verifyText|Librarian
+verifyText|Organizer
 verifyText|Can read, revise, delete, and add their own content to a site
 
 click|Return to Sites List

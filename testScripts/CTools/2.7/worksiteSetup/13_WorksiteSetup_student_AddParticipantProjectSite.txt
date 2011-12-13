@@ -21,7 +21,7 @@ click|Edit
 verifyText|A basic project site created during automated testing.
 verifyText|$project_site
 verifyText|qastud
-verifyText|Librarian
+verifyText|Organizer
 verifyText|Can read, revise, delete, and add their own content to a site
 
 comment|Add the selenium student to the course.
@@ -53,7 +53,7 @@ comment|Back at participant page
 verifyText|A basic project site created during automated testing.
 verifyText|$project_site
 verifyText|qastud
-verifyText|Librarian
+verifyText|Organizer
 verifyText|Can read, revise, delete, and add their own content to a site
 
 click|Logout

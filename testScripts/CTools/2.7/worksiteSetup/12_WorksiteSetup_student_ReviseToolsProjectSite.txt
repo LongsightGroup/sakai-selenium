@@ -20,7 +20,7 @@ selectCheckbox|$project_site
 click|Edit
 verifyText|A basic project site created during automated testing.
 verifyText|qastud
-verifyText|Librarian
+verifyText|Organizer
 verifyText|Can read, revise, delete, and add their own content to a site
 verifyText|$project_site
 
@@ -45,7 +45,7 @@ click|Finish
 verifyText|A basic project site created during automated testing.
 verifyText|$project_site
 verifyText|qastud
-verifyText|Librarian
+verifyText|Organizer
 verifyText|Can read, revise, delete, and add their own content to a site
 
 comment|Put the tools back to their original values
@@ -70,7 +70,7 @@ click|Finish
 verifyText|A basic project site created during automated testing.
 verifyText|$project_site
 verifyText|qastud
-verifyText|Librarian
+verifyText|Organizer
 verifyText|Can read, revise, delete, and add their own content to a site
 
 comment|Confirm the end state of tools
@@ -84,7 +84,7 @@ comment|click|Cancel
 comment|verifyText|A basic course created during automated testing.
 comment|verifyText|$project_site
 comment|verifyText|qastud
-comment|verifyText|Librarian
+comment|verifyText|Organizer
 comment|verifyText|Can read, revise, delete, and add their own content to a site
 
 click|Logout

@@ -107,6 +107,12 @@
 		</checkbox>
 	</checkboxes>
 
+	<ckeditors>
+		<ckeditor>
+			<generic>//label[normalize-space()=element]/following::td[contains(@class, 'cke_contents')]/iframe</generic>
+		</ckeditor>
+	</ckeditors>
+
 	<fckeditors>
 		<fckeditor>
 			<generic>//label[normalize-space()=element]/following::iframe[contains(@src, 'FCKeditor')]</generic>

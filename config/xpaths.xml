@@ -111,7 +111,10 @@
 		<ckeditor>
 			<generic>//label[normalize-space()=element]/following::td[contains(@class, 'cke_contents')]/iframe</generic>
 		</ckeditor>
-	</ckeditors>
+		<ckeditor>
+			<generic>//span[normalize-space()=element]/following::td[contains(@class, 'cke_contents')]/iframe</generic>
+		</ckeditor>
+	</ckeditors> 
 
 	<fckeditors>
 		<fckeditor>

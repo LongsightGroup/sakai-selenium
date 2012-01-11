@@ -1,0 +1,36 @@
+comment|Check help text as instructor.
+
+openURL|$url
+verifyText|From the CTools Team
+click|Login
+
+verifyText|Login Required.
+enterText|eid|qainst
+enterText|pw|sswelvalpanklidS$
+
+click|Login
+verifyText|From the CTools Team
+verifyText|Welcome to your personal workspace
+
+click|$testDupeSite
+verifyText|Selenium Instructor
+verifyText|Site Information Display
+verifyText|the Regents of The University of Michigan
+
+click|Sign-up
+verifyText|Selenium Instructor
+verifyText|Meetings
+
+click|Help for Sign-up
+waitForPopup|30
+verifyText|CTools Overview
+verifyText|Search Help
+verifyText|Welcome to the CTools Online Help
+closePopUp|
+
+click|Logout
+verifyText|You are about to log out
+
+click|Log Out
+verifyText|From the CTools Team
+verifyText|Welcome

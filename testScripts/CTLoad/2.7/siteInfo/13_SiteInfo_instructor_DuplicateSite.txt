@@ -1,0 +1,42 @@
+application|siteinfo
+
+openURL|$url
+verifyText|From the CTools Team
+click|Login
+
+verifyText|Login Required.
+enterText|eid|qainst
+enterText|pw|sswelvalpanklidS$
+
+click|Login
+verifyText|From the CTools Team
+verifyText|Welcome to your personal workspace
+
+click|$site
+verifyText|Selenium Instructor
+verifyText|Site Information Display
+verifyText|Recent Announcements
+
+click|Site Info
+verifyText|$site
+verifyText|Site Contact and email
+verifyText|Site Description
+verifyText|Can read, revise, delete and add both content and participants to a site.
+
+comment|Duplicate Site
+click|Duplicate Site
+verifyText|Duplicate site
+verifyValue|Academic term:|$term
+enterText|Site Title|Test Dupe Site
+
+comment|This duplicates the site, but takes you back to the last page
+click|Duplicate
+verifyText|$site
+verifyText|Selenium Instructor
+
+click|Logout
+verifyText|You are about to log out
+
+click|Log Out
+verifyText|From the CTools Team
+verifyText|Welcome

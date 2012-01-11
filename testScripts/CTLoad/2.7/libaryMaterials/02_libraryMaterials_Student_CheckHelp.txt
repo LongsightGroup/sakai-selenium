@@ -1,0 +1,8 @@
+comment|Check help text as studentopenURL|$urlverifyText|From the CTools Team
+click|Login
+
+verifyText|Login Required.
+enterText|eid|qastud
+enterText|pw|Maugaityptodita6
+
+click|LoginverifyText|From the CTools TeamverifyText|Welcome to your personal workspaceclick|$siteverifyText|Selenium UserverifyText|Site Information DisplayverifyText|the Regents of The University of Michiganclick|Library MaterialsverifyText|No Library Materials Locatedclick|Help for Library MaterialswaitForPopup|30verifyText|CTools OverviewverifyText|Search HelpverifyText|The Library Materials tool provides a direct link from a CTools course site to library course materials service.closePopUp|click|LogoutverifyText|You are about to log outclick|Log OutverifyText|From the CTools TeamverifyText|Welcome

@@ -1,0 +1,49 @@
+openURL|$url
+verifyText|From the CTools Team
+click|Login
+
+verifyText|Login Required.
+enterText|eid|qainst
+enterText|pw|sswelvalpanklidS$
+
+click|Login
+verifyText|From the CTools Team
+verifyText|Welcome to your personal workspace
+
+click|$site
+verifyText|Selenium Instructor
+verifyText|Site Information Display
+verifyText|viewing announcements from the last 10 days
+
+click|Gradebook
+verifyText|Selenium Instructor
+verifyText|Gradebook Items
+verifyText|Click a title to view complete details and to grade the item.
+verifyText|Sample Gradebook Item
+verifyText|128/132
+
+click|Sample Gradebook Item
+verifyText|Gradebook Item Summary
+verifyText|Sample Gradebook Item
+verifyText|Remove gradebook item from gradebook
+verifyText|qastud
+verifyValue|gbForm:gradingTable:0:Score|128
+
+comment|Change the students score to 132, the maximum for this item.
+comment|Then verify that your changes have taken place.
+enterText|gbForm:gradingTable:0:Score|132
+
+click|Save Changes
+verifyText|New scores saved.
+verifyText|Gradebook Item Summary
+verifyText|Sample Gradebook Item
+verifyText|Remove gradebook item from gradebook
+verifyValue|gbForm:gradingTable:0:Score|132
+
+click|Logout
+verifyText|You are about to log out
+
+click|Log Out
+verifyText|From the CTools Team
+verifyText|Welcome
+

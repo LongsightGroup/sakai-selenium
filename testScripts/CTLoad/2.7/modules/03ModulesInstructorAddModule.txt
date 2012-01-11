@@ -1,0 +1,19 @@
+comment|Check help text as instructor.openURL|$urlverifyText|From the CTools Team
+click|Login
+
+verifyText|Login Required.
+enterText|eid|qainst
+enterText|pw|sswelvalpanklidS$
+
+click|LoginverifyText|From the CTools TeamverifyText|Welcome to your personal workspaceclick|$siteverifyText|Selenium InstructorverifyText|Site Information DisplayverifyText|the Regents of The University of Michiganclick|Modules
+click|Add Module
+verifyText|Define Properties
+enterText|AddModuleForm:title|Test Module
+click|Add
+verifyText|You have successfully added:
+verifyText|Test Module
+verifyText|Continue adding content or return to the list of modules.
+click|Done
+verifyText|Test Module
+
+click|LogoutverifyText|You are about to log outclick|Log OutverifyText|From the CTools TeamverifyText|Welcome

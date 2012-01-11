@@ -1,0 +1,73 @@
+application|assignments
+openURL|$url
+verifyText|From the CTools Team
+click|Login
+
+verifyText|Login Required.
+enterText|eid|qainst
+enterText|pw|sswelvalpanklidS$
+
+click|Login
+verifyText|From the CTools Team
+verifyText|Welcome to your personal workspace
+
+click|$site
+verifyText|Selenium Instructor
+verifyText|Site Information Display
+verifyText|viewing announcements from the last 10 days
+
+click|Assignments
+verifyText|Assignment List
+verifyText|Long Assignment
+comment|Grade Long Assignment
+
+clickXpath|//a[normalize-space()='Long Assignment']/following::a[normalize-space()='Grade']
+comment|Should be at list of students for this assignment.
+verifyText|Long Assignment - Submissions
+verifyText|qastud
+verifyText|Ungraded
+
+comment|Open submission for the Selenium User
+clickXpath|//td[contains(text(),'qastud')]//a
+verifyText|Long Assignment - Grading
+verifyText|Important Reminder: Please do not grade assignments with multiple browser windows or tabs. Only grade assignments and navigate the system with one browser window. 
+verifyText|Ungraded
+
+click|Model Answer
+verifyText|This is the model text for the answer
+
+click|Private Notes
+verifyText|This is the sample note
+
+click|All Purpose item
+verifyText|Sample All Purpose Item
+
+click|test.doc
+verifyFile|test.doc
+
+fckEnter|Instructor Summary Comments|These are some test comments.
+
+click|Add Attachments
+UploadFile|test.docx
+
+click|Continue
+enterText|grade|100
+selectCheckbox|allowResToggle
+verifyText|Number of resubmissions allowed
+selectList|Number of resubmissions allowed|Unlimited
+selectList|allow_resubmit_closeMonth|DEC
+selectList|allow_resubmit_closeYear|2012
+
+click|Save and Release to Student
+verifyText|Comments and/or grade have been saved.
+
+click|Return to List
+verifyText|Long Assignment - Submissions
+verifyText|Returned
+
+click|Logout
+verifyText|You are about to log out
+
+click|Log Out
+verifyText|From the CTools Team
+verifyText|Welcome

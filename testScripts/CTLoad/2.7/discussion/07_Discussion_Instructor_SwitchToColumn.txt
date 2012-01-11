@@ -1,0 +1,38 @@
+openURL|$url
+verifyText|From the CTools Team
+click|Login
+
+verifyText|Login Required.
+enterText|eid|qainst
+enterText|pw|sswelvalpanklidS$
+
+click|Login
+verifyText|From the CTools Team
+verifyText|Welcome to your personal workspace
+
+click|$testDupeSite
+verifyText|Selenium Instructor
+verifyText|Site Information Display
+verifyText|Course site that acts as a duplicate for sites that require stealth tools.
+
+click|Discussion
+verifyText|Add Topic
+verifyText|Add Category
+verifyText|Expand All
+verifyText|Permissions
+
+verifyValue|View:|Row Layout
+selectList|View:|Column Layout
+verifyText|Instructor Test Topic in New Category
+verifyValue|View:|Column Layout
+
+selectList|View:|Row Layout
+verifyText|Instructor Test Topic in New Category
+verifyValue|View:|Row Layout
+
+click|Logout
+verifyText|You are about to log out
+
+click|Log Out
+verifyText|From the CTools Team
+verifyText|Welcome

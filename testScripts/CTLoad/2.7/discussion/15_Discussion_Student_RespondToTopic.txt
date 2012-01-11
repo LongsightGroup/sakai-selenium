@@ -1,0 +1,44 @@
+openURL|$url
+verifyText|From the CTools Team
+click|Login
+
+verifyText|Login Required.
+enterText|eid|qastud
+enterText|pw|Maugaityptodita6
+
+click|Login
+verifyText|From the CTools Team
+verifyText|Welcome to your personal workspace
+
+click|$testDupeSite
+verifyText|Selenium User
+verifyText|Site Information Display
+verifyText|Course site that acts as a duplicate for sites that require stealth tools.
+
+click|Discussion
+verifyText|Expand All
+verifyText|Instructor New Category
+verifyText|Instructor Test Topic in New Category
+
+click|Instructor Test Topic
+verifyText|This is a test topic message. This is sent to a new topic on an existing category
+
+click|Reply to Topic
+verifyText|New Reply
+verifyText|In reply to: Instructor Test Category > Instructor Test Topic
+enterText|Reply Title|Student Test Reply
+fckEnter|Message|This is a student test topic reply.
+
+click|Add Reply
+verifyText|Instructor Test Category
+verifyText|Instructor Test Topic
+verifyText|Instructor Test Reply
+verifyText|Student Test Reply
+verifyText|This is a student test topic reply.
+
+click|Logout
+verifyText|You are about to log out
+
+click|Log Out
+verifyText|From the CTools Team
+verifyText|Welcome

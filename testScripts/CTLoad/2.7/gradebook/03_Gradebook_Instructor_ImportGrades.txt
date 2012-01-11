@@ -1,0 +1,63 @@
+openURL|$url
+verifyText|From the CTools Team
+click|Login
+
+verifyText|Login Required.
+enterText|eid|qainst
+enterText|pw|sswelvalpanklidS$
+
+click|Login
+verifyText|From the CTools Team
+verifyText|Welcome to your personal workspace
+
+click|$site
+verifyText|Selenium Instructor
+verifyText|Site Information Display
+verifyText|viewing announcements from the last 10 days
+
+click|Gradebook
+verifyText|Selenium Instructor
+verifyText|Gradebook Items
+verifyText|Click a title to view complete details and to grade the item.
+verifyText|Sample Gradebook Item
+verifyText|These items must be graded from the tool listed and may not be graded from the gradebook
+
+click|Import Grades
+verifyText|Import Spreadsheet
+verifyText|Click Choose File, then Browse to select the file you saved in step 2
+
+click|Choose File
+verifyText|Upload a spreadsheet (csv or xls format) to Loading Dock
+verifyText|Upload local file
+
+uploadFile|SampleGradebookImportCSV.csv
+verifyText|Remove
+verifyText|SampleGradebookImportCSV.csv
+verifyText|Upload a spreadsheet (csv or xls format) to Loading Dock
+
+click|Continue
+verifyText|Import Grades
+verifyText|Import Spreadsheet
+verifyValue|gbForm:pickedFileDesc|SampleGradebookImportCSV.csv
+
+click|Import Spreadsheet
+verifyText|Verify Grade Import
+verifyText|1 gradebook item
+verifyText|qastud
+verifyText|128
+
+click|OK
+verifyText|Your spreadsheet has imported successfully
+verifyText|Click Choose File, then Browse to select the file you saved in step 2
+
+click|Course Grades
+verifyText|Course Grades
+verifyText|the gradebook does not include gradebook items that have not been graded in the course grade calculation
+verifyText|96.96
+
+click|Logout
+verifyText|You are about to log out
+
+click|Log Out
+verifyText|From the CTools Team
+verifyText|Welcome

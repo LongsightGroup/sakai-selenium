@@ -1,0 +1,3 @@
+/home/chris/Desktop/2.7/membership/01_Membership_InstructorViewSiteList.txt
+/home/chris/Desktop/2.7/membership/02_Membership_StudentJoin.txt
+/home/chris/Desktop/2.7/membership/03_Membership_StudentUnJoin.txt

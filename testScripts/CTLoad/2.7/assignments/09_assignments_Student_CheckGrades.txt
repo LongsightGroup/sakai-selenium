@@ -1,0 +1,40 @@
+openURL|$url
+verifyText|From the CTools Team
+click|Login
+
+verifyText|Login Required.
+enterText|eid|qastud
+enterText|pw|Maugaityptodita6
+
+click|Login
+verifyText|From the CTools Team
+verifyText|Welcome to your personal workspace
+
+click|$site
+verifyText|Selenium User
+verifyText|Site Information Display
+verifyText|viewing announcements from the last 10 days
+
+click|Assignments
+verifyText|Assignment List
+verifyText|Long Assignment
+verifyText|Returned
+
+click|Long Assignment
+verifyText|Long Assignment
+verifyText|100.0
+
+click|test.doc
+verifyFile|test.doc
+verifyText|I have neither given nor received aid on this assignment
+
+click|Cancel
+verifyText|Assignment List
+verifyText|Long Assignment
+
+click|Logout
+verifyText|You are about to log out
+
+click|Log Out
+verifyText|From the CTools Team
+verifyText|Welcome

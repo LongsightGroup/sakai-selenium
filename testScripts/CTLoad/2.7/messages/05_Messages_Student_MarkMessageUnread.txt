@@ -1,0 +1,46 @@
+application|messages
+openURL|$url
+verifyText|From the CTools Team
+click|Login
+
+verifyText|Login Required.
+enterText|eid|qastud
+enterText|pw|Maugaityptodita6
+
+click|Login
+verifyText|From the CTools Team
+verifyText|Welcome to your personal workspace
+
+click|$site
+verifyText|Selenium User
+verifyText|Site Information Display
+verifyText|viewing announcements from the last 10 days
+
+click|Messages
+verifyText|Received
+verifyText|Sent
+verifyText|Deleted
+
+comment|This next line is true because the previous script read the message.
+verifyText|1 message - 0 unread
+verifyText|Messages
+
+click|Received
+verifyText|Instructor Test Message
+verifyText|qainst
+verifyValue|View|All Messages
+
+click|Check All
+comment|This next line verifies that the check all command successfully checked the one message.
+verifyValue|prefs_pvt_form:pvtmsgs:0|true
+
+click|Mark Unread
+verifyValue|prefs_pvt_form:pvtmsgs:0|false
+verifyText|Instructor Test Message
+
+click|Logout
+verifyText|You are about to log out
+
+click|Log Out
+verifyText|From the CTools Team
+verifyText|Welcome

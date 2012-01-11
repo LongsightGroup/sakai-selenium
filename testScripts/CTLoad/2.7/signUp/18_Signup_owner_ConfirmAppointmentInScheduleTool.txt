@@ -1,0 +1,35 @@
+application|signup
+
+openURL|$url
+verifyText|From the CTools Team
+click|Login
+
+verifyText|Login Required.
+enterText|eid|qastud
+enterText|pw|Maugaityptodita6
+
+click|Login
+verifyText|From the CTools Team
+verifyText|Welcome to your personal workspace
+
+click|$projDupeSite
+verifyText|Selenium User
+verifyText|Site Information Display
+verifyText|A project site meant to be used as a source for duplication during testing.
+
+click|Schedule
+verifyText|Calendar by Week
+verifyText|Sample Project Appointment
+
+click|Sample Project Appointment
+verifyText|Sample Project Appointment
+verifyText|This is a sample appointment, used when testing the Sign-up tool.
+verifyText|Selenium User
+verifyText|The Big House
+
+click|Logout
+verifyText|You are about to log out
+
+click|Log Out
+verifyText|From the CTools Team
+verifyText|Welcome

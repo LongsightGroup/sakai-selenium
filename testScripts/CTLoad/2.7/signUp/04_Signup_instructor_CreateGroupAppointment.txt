@@ -1,0 +1,51 @@
+application|signup
+
+openURL|$url
+verifyText|From the CTools Team
+click|Login
+
+verifyText|Login Required.
+enterText|eid|qainst
+enterText|pw|sswelvalpanklidS$
+
+click|Login
+verifyText|From the CTools Team
+verifyText|Welcome to your personal workspace
+
+click|$testDupeSite
+verifyText|Selenium Instructor
+verifyText|Site Information Display
+
+click|Sign-up
+verifyText|Meetings
+
+click|Add
+verifyText|Create New Meeting: Basic Information
+verifyText|To create a meeting, enter the required information and click Next. 
+
+enterText|Title:|Sample Course Group Appointment
+enterText|Location:|The Diag
+fckEnter|Description:|This is a sample appointment, used when testing the Sign-up tool.  This will be assigned to a group, if one exists.
+enterText|meeting:endTime.year|2012
+
+verifyValue|meeting:siteSelection|true
+selectCheckbox|meeting:siteSelection
+selectCheckbox|meeting:currentSiteGroups:0:groupSelection
+verifyValue|meeting:siteSelection|false
+verifyValue|meeting:currentSiteGroups:0:groupSelection|true
+
+click|Next
+verifyText|ALERT: The meeting is scheduled across two different years.
+verifyText|This will be assigned to a group, if one exists.
+
+click|Publish
+verifyText|Meetings
+verifyText|Click 'Add' to create a new meeting, or click a meeting title to modify or copy it.
+verifyText|Sample Course Group Appointment
+
+click|Logout
+verifyText|You are about to log out
+
+click|Log Out
+verifyText|From the CTools Team
+verifyText|Welcome

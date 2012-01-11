@@ -1,0 +1,61 @@
+application|worksitesetup
+openURL|$url
+verifyText|From the CTools Team
+click|Login
+
+verifyText|Login Required.
+enterText|eid|qainst
+enterText|pw|sswelvalpanklidS$
+
+click|Login
+verifyText|From the CTools Team
+verifyText|Welcome to your personal workspace
+
+click|Worksite Setup
+verifyText|Selenium Instructor
+verifyText|Worksite Setup
+verifyText|Check box(es) to take action on a site.
+selectCheckbox|$testDupeSite
+
+click|Edit
+verifyText|$testDupeSite
+verifyText|qainst
+verifyText|Course site that acts as a duplicate for sites that require stealth tools.
+verifyText|Can read, add, and revise content on sites in a particular department
+
+comment|Add the selenium student to the course.
+click|Add Participants
+verifyText|Add Participants
+verifyText|Enter multiples each on separate line
+verifyValue|Assign all participants to the same role|true
+enterText|Official Email Address or Username|qastud
+
+click|Continue
+verifyText|Choose a Role for Participants
+verifyValue|Student|false
+verifyText|qastud
+selectRadio|Student
+
+comment|Should email go to the participant?
+click|Continue
+verifyText|Add participant(s) to
+verifyText|do not send an email notifying new participants
+verifyValue|Send Now|false
+
+comment|Confirmation screen
+click|Continue
+verifyText|Confirming Add Participant(s) to My Workspace
+verifyText|qastud
+
+click|Finish
+comment|Back at participant page
+verifyText|$testDupeSite
+verifyText|Course site that acts as a duplicate for sites that require stealth tools.
+verifyText|qastud
+
+click|Logout
+verifyText|You are about to log out
+
+click|Log Out
+verifyText|From the CTools Team
+verifyText|Welcome

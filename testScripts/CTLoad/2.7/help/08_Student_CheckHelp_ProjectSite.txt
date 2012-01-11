@@ -1,0 +1,8 @@
+comment|Check help text as instructor.openURL|$urlverifyText|From the CTools Team
+click|Login
+
+verifyText|Login Required.
+enterText|eid|qastud
+enterText|pw|Maugaityptodita6
+
+click|LoginverifyText|From the CTools TeamverifyText|Welcome to your personal workspaceclick|$project_siteverifyText|There are currently no announcements at this location.verifyText|Selenium UserverifyText|Recent Chat Messagesclick|HelpwaitForPopup|30verifyText|CTools OverviewverifyText|Search HelpverifyText|Welcome to the CTools Online Help closePopUp|click|LogoutverifyText|You are about to log outclick|Log OutverifyText|From the CTools TeamverifyText|Welcome

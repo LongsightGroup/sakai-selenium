@@ -1,0 +1,6 @@
+/storage/tests/scripts/announcements/01AnnouncementsInstructorCheckHelp.txt
+/storage/tests/scripts/announcements/02AnnouncementsStudentCheckHelp.txt
+/storage/tests/scripts/announcements/03AnnouncementsInstructorAddAnnouncement.txt
+/storage/tests/scripts/announcements/04AnnouncementsInstructorAddAnnouncementAttachment.txt
+/storage/tests/scripts/announcements/05AnnouncementsInstructorAddAnnouncementEmail.txt
+/storage/tests/scripts/announcements/06AnnouncementsInstructorDeleteAnnouncements.txt

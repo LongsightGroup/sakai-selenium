@@ -1,0 +1,69 @@
+openURL|$url
+verifyText|From the CTools Team
+click|Login
+
+verifyText|Login Required.
+enterText|eid|qainst
+enterText|pw|sswelvalpanklidS$
+
+click|Login
+verifyText|From the CTools Team
+verifyText|Welcome to your personal workspace
+
+click|$site
+verifyText|Selenium Instructor
+verifyText|Site Information Display
+verifyText|viewing announcements from the last 10 days
+
+click|Polls
+verifyText|Poll list
+verifyText|qainst
+verifyText|Add
+
+click|Add
+verifyText|Add a poll
+verifyText|Additional Instructions
+verifyText|to participants who have voted, or after closing date
+verifyValue|always|true
+
+enterText|Question|What is your favorite color?
+fckEnter|Additional Instructions|Choose your favorite color from the list below.
+
+click|Save and add options
+verifyText|Question: What is your favorite color?
+verifyText|Add an Option
+fckEnter|Answer option|Red
+
+click|Save and add options
+verifyText|Question: What is your favorite color?
+verifyText|Add an Option
+fckEnter|Answer option|Blue
+
+click|Save and add options
+verifyText|Question: What is your favorite color?
+verifyText|Add an Option
+fckEnter|Answer option|Green
+
+click|Save
+verifyText|Edit a poll
+verifyText|Additional Instructions (if applicable)
+verifyText|Red
+verifyText|Blue
+verifyText|Green
+verifyValue|max-votes-selection|1
+selectList|max-votes-selection|2
+verifyValue|max-votes-selection|2
+
+click|Save
+verifyText|Poll list
+verifyText|qainst
+verifyText|Add
+verifyText|What is your favorite color?
+
+click|Logout
+verifyText|You are about to log out
+
+click|Log Out
+verifyText|From the CTools Team
+verifyText|Welcome
+

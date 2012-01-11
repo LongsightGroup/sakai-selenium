@@ -1,0 +1,34 @@
+openURL|$url
+verifyText|From the CTools Team
+click|Login
+
+verifyText|Login Required.
+enterText|eid|qainst
+enterText|pw|sswelvalpanklidS$
+
+click|Login
+verifyText|From the CTools Team
+verifyText|Welcome to your personal workspace
+
+click|$site
+verifyText|Selenium Instructor
+verifyText|Site Information Display
+verifyText|viewing announcements from the last 10 days
+
+click|LectureTools
+verifyText|Welcome to LectureTools
+verifyText|Click the button
+
+click|Help for Lecture Tools
+waitForPopUp|30
+verifyText|CTools Overview
+verifyText|Search Help
+verifyText|LectureTools is a feature-rich learning environment that allows faculty to upload and present powerpoint presentations, view real-time measures of student comprehension, and collect student responses
+closePopUp|
+
+click|Logout
+verifyText|You are about to log out
+
+click|Log Out
+verifyText|From the CTools Team
+verifyText|Welcome

@@ -1,0 +1,52 @@
+openURL|$url
+verifyText|From the CTools Team
+click|Login
+
+verifyText|Login Required.
+enterText|eid|qainst
+enterText|pw|sswelvalpanklidS$
+
+click|Login
+verifyText|From the CTools Team
+verifyText|Welcome to your personal workspace
+
+click|$site
+verifyText|Selenium Instructor
+verifyText|Site Information Display
+verifyText|viewing announcements from the last 10 days
+
+click|Chat Room
+verifyText|Chat Room
+verifyText|qainst
+verifyText|All chat messages are archived and can be read by any site participant.
+verifyText|Currently viewing messages for 'Main Chat Room'
+
+click|Options
+verifyText|Manage Rooms
+verifyText|Main Chat Room
+
+click|Add Room
+verifyText|Add Room
+verifyText|Recent Chat Display
+verifyText|Allow chat participants to change the chat display settings for their own chat window
+verifyValue|Allow chat participants to change the chat display settings for their own chat window|true
+enterText|Title|Secondary Chat Room
+enterText|Description|Description of Secondary Chat Room
+selectRadio|SelectMessagesByTime
+
+click|Update Options
+verifyText|Manage Rooms
+verifyText|Main Chat Room
+verifyText|Description of Secondary Chat Room
+
+click|Reset
+verifyText|All chat messages are archived and can be read by any site participant.
+verifyText|Currently viewing messages for 'Main Chat Room'
+
+click|Logout
+verifyText|You are about to log out
+
+click|Log Out
+verifyText|From the CTools Team
+verifyText|Welcome
+

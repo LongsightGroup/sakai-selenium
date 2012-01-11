@@ -1,0 +1,95 @@
+application|worksitesetup
+openURL|$url
+verifyText|From the CTools Team
+click|Login
+
+verifyText|Login Required.
+enterText|eid|qastud
+enterText|pw|Maugaityptodita6
+
+click|Login
+verifyText|From the CTools Team
+verifyText|Welcome to your personal workspace
+
+click|Worksite Setup
+verifyText|Selenium User
+verifyText|Worksite Setup
+verifyText|Check box(es) to take action on a site.
+
+selectCheckbox|$project_site
+click|Edit
+verifyText|A basic project site created during automated testing.
+verifyText|qastud
+verifyText|Organizer
+verifyText|Can read, revise, delete, and add their own content to a site
+verifyText|$project_site
+
+comment|Revise the tools that are part of this site.
+click|Edit Tools
+verifyText|Choose tools to include on your site...
+verifyValue|Gradebook|true
+verifyValue|Messages|true
+verifyValue|Modules|false
+selectCheckbox|Gradebook
+selectCheckbox|Messages
+selectCheckbox|Modules
+
+click|Continue
+verifyText|Confirming site tools edits for
+verifyText|$project_site
+verifyText|You have selected the following for your site
+verifyText|Modules
+
+comment|This should put us back at the basic information page
+click|Finish
+verifyText|A basic project site created during automated testing.
+verifyText|$project_site
+verifyText|qastud
+verifyText|Organizer
+verifyText|Can read, revise, delete, and add their own content to a site
+
+comment|Put the tools back to their original values
+click|Edit Tools
+verifyText|Choose tools to include on your site...
+verifyValue|Gradebook|false
+verifyValue|Messages|false
+verifyValue|Modules|true
+selectCheckbox|Gradebook
+selectCheckbox|Messages
+selectCheckbox|Modules
+
+click|Continue
+verifyText|Confirming site tools edits for
+verifyText|$project_site
+verifyText|Modules
+verifyText|You have selected the following for your site
+verifyText|Messages
+
+comment|This should put us back at the basic information page
+click|Finish
+verifyText|A basic project site created during automated testing.
+verifyText|$project_site
+verifyText|qastud
+verifyText|Organizer
+verifyText|Can read, revise, delete, and add their own content to a site
+
+comment|Confirm the end state of tools
+click|Edit Tools
+verifyText|Choose tools to include on your site...
+verifyValue|Gradebook|true
+verifyValue|Messages|true
+verifyValue|Modules|false
+
+comment|click|Cancel
+comment|verifyText|A basic course created during automated testing.
+comment|verifyText|$project_site
+comment|verifyText|qastud
+comment|verifyText|Organizer
+comment|verifyText|Can read, revise, delete, and add their own content to a site
+
+click|Logout
+verifyText|You are about to log out
+
+click|Log Out
+verifyText|From the CTools Team
+verifyText|Welcome

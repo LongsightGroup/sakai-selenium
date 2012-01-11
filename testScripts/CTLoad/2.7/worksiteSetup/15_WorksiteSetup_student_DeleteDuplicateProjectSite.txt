@@ -1,0 +1,37 @@
+application|worksitesetup
+openURL|$url
+verifyText|From the CTools Team
+click|Login
+
+verifyText|Login Required.
+enterText|eid|qastud
+enterText|pw|Maugaityptodita6
+
+click|Login
+verifyText|From the CTools Team
+verifyText|Welcome to your personal workspace
+
+click|Worksite Setup
+verifyText|Selenium User
+verifyText|Worksite Setup
+verifyText|Check box(es) to take action on a site.
+verifyText|Dupe Project Site
+
+selectCheckbox|Dupe Project Site
+click|Delete
+verifyText|Deleting a site removes the entire site
+verifyText|You have selected the following site for removal
+verifyText|Dupe Project Site
+
+comment|Actually Delete Site
+click|Remove
+verifyText|Selenium User
+verifyText|Worksite Setup
+verifyText|Check box(es) to take action on a site.
+
+click|Logout
+verifyText|You are about to log out
+
+click|Log Out
+verifyText|From the CTools Team
+verifyText|Welcome

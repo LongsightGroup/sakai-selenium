@@ -1,0 +1,68 @@
+openURL|$url
+verifyText|From the CTools Team
+click|Login
+
+verifyText|Login Required.
+enterText|eid|qainst
+enterText|pw|sswelvalpanklidS$
+
+click|Login
+verifyText|From the CTools Team
+verifyText|Welcome to your personal workspace
+
+click|$site
+verifyText|Selenium Instructor
+verifyText|Site Information Display
+verifyText|viewing announcements from the last 10 days
+
+click|Test Center
+verifyText|Assessments
+verifyText|No Assessments are defined
+
+click|Question Pools
+verifyText|Question Pools
+verifyText|Combine
+verifyText|Test Pool
+
+click|Test Pool
+verifyText|Edit Pool Properties
+verifyText|Point Value: 105.0
+
+comment|Verify First Question
+click|Choose the correct answer
+verifyText|Pool: Test Pool
+verifyText|Feedback
+verifyValue|mneme:MultipleChoice|true
+
+comment|Verify Second Question
+click|Next
+verifyText|Pool: Test Pool
+verifyText|Feedback
+verifyValue|mneme:TrueFalse|true
+
+comment|Verify Third Question
+click|Next
+verifyText|Pool: Test Pool
+verifyText|Feedback
+verifyValue|mneme:Essay|true
+
+comment|Verify Fourth Question
+click|Next
+verifyText|Pool: Test Pool
+verifyText|Feedback
+verifyValue|mneme:FillBlanks|true
+verifyValue|Case Sensitive|true
+selectCheckbox|Case Sensitive
+
+click|Done
+verifyText|Question Pools
+verifyText|Test Pool
+verifyText|Difficulty Level: 2
+
+click|Logout
+verifyText|You are about to log out
+
+click|Log Out
+verifyText|From the CTools Team
+verifyText|Welcome
+

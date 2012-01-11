@@ -1,0 +1,61 @@
+openURL|$url
+verifyText|From the CTools Team
+click|Login
+
+verifyText|Login Required.
+enterText|eid|qastud
+enterText|pw|Maugaityptodita6
+
+click|Login
+verifyText|From the CTools Team
+verifyText|Welcome to your personal workspace
+
+comment|Student can only add a schedule to a project site. Has this site been created yet?
+click|$project_site
+verifyText|Selenium User
+verifyText|Site Information Display
+verifyText|viewing announcements from the last 10 days
+
+click|Schedule
+verifyText|Schedule
+verifyText|Selenium User
+verifyText|Calendar by Week
+verifyText|Add
+
+click|Add
+verifyText|Add Event
+verifyText|Title
+verifyText|Start Time
+verifyValue|Display to site|true
+
+comment|Duration defaults to 1 hour
+comment|End Time is automatically set based on duration. Check for this?
+
+enterText|Title|Student Team Meeting
+selectList|month|JUL
+selectList|day|11
+selectList|yearSelect|2011
+selectList|startHour|4
+selectList|startMinute|00
+selectList|startAmpm|pm
+fckEnter|Message|Scheduled event message for selenium student.
+verifyText|Activity occurs once
+enterText|Event Location|DMC 3350
+
+comment|intentionally scheduled event for prior month based on date constraints
+
+click|Save Event
+verifyText|Alert: Are you sure you want this scheduled event to occur in the past?
+
+click|Save Event
+verifyText|Calendar by Week
+verifyText|Mon 11
+verifyText|Student Team Meeting
+verifyText|Legend
+
+click|Logout
+verifyText|You are about to log out
+
+click|Log Out
+verifyText|From the CTools Team
+verifyText|Welcome

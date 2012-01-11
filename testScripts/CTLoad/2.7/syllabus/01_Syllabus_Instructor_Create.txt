@@ -1,0 +1,46 @@
+application|syllabus
+
+openURL|$url
+verifyText|From the CTools Team
+click|Login
+
+verifyText|Login Required.
+enterText|eid|qainst
+enterText|pw|sswelvalpanklidS$
+
+click|Login
+verifyText|From the CTools Team
+verifyText|Welcome to your personal workspace
+
+click|$site
+verifyText|Selenium Instructor
+verifyText|Site Information Display
+verifyText|viewing announcements from the last 10 days
+
+click|Syllabus
+verifyText|Syllabus
+verifyText|qainst
+
+click|Create/Edit
+verifyText|Syllabus Item
+
+click|Add
+verifyText|Add syllabus...
+verifyText|Title
+verifyValue|Only members of this site can see this syllabus item.|true
+verifyText|Email Notification
+enterText|Title|Selenium Syllabus
+fckEnter|Content|Scheduled event message for Selenium Instructor.
+
+Click|Post
+verifyText|Syllabus Items
+verifyText|Selenium Instructor
+verifyText|Selenium Syllabus
+verifyText|Posted
+
+click|Logout
+verifyText|You are about to log out
+
+click|Log Out
+verifyText|From the CTools Team
+verifyText|Welcome

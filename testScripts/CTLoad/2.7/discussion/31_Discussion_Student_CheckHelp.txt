@@ -2,7 +2,7 @@ openURL|$url
 verifyText|From the CTools Team
 click|Login
 
-verifyText|Login Required.
+verifyText|Login Required
 enterText|eid|qastud
 enterText|pw|Maugaityptodita6
 

@@ -1,4 +1,0 @@
-/storage/tests/scripts/libraryMaterials/01_libraryMaterials_Instructor_CheckHelp.txt
-/storage/tests/scripts/libraryMaterials/02_libraryMaterials_Student_CheckHelp.txt
-/storage/tests/scripts/libraryMaterials/04_libraryMaterials_Instructor_AccessMaterials.txt
-/storage/tests/scripts/libraryMaterials/05_libraryMaterials_Student_AccessMaterials.txt

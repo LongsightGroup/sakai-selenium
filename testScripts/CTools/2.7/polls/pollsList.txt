@@ -1,7 +1,0 @@
-/storage/tests/scripts/polls/01_Polls_Instructor_AddPoll.txt
-/storage/tests/scripts/polls/02_Polls_Student_TakePoll.txt
-/storage/tests/scripts/polls/03_Polls_Instructor_TakePoll.txt
-/storage/tests/scripts/polls/04_Polls_Instructor_ViewResults.txt
-/storage/tests/scripts/polls/05_Polls_Instructor_ViewHelp.txt
-/storage/tests/scripts/polls/06_Polls_Student_ViewHelp.txt
-/storage/tests/scripts/polls/07_Polls_Instructor_DeletePoll.txt

@@ -1,5 +1,0 @@
-/storage/tests/scripts/forums/01ForumsInstructorCheckHelp.txt
-/storage/tests/scripts/forums/02ForumsStudentCheckHelp.txt
-/storage/tests/scripts/forums/03ForumsInstructorCreateForumTopicThread.txt
-/storage/tests/scripts/forums/04ForumsStudentReadReplyMessage.txt
-/storage/tests/scripts/forums/05ForumsInstructorReadReplyMessage.txt

@@ -1,4 +1,0 @@
-/home/chris/Desktop/2.7/siteMaker/01_SiteMaker_Owner_ViewTool.txt
-/home/chris/Desktop/2.7/siteMaker/02_SiteMaker_Member_ViewTool.txt
-/home/chris/Desktop/2.7/siteMaker/05_SiteMaker_Instructor_ViewTool.txt
-/home/chris/Desktop/2.7/siteMaker/06_SiteMaker_Student_ViewTool.txt

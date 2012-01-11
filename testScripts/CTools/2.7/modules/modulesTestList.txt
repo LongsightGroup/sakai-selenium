@@ -1,5 +1,0 @@
-/storage/code/svn/edu/umich/keyword2/testScripts/CTools/2.7/modules/01ModulesInstructorCheckHelp.txt
-/storage/code/svn/edu/umich/keyword2/testScripts/CTools/2.7/modules/02ModulesStudentCheckHelp.txt
-/storage/code/svn/edu/umich/keyword2/testScripts/CTools/2.7/modules/03ModulesInstructorAddModule.txt
-/storage/code/svn/edu/umich/keyword2/testScripts/CTools/2.7/modules/04ModulesInstructorAddContent.txt
-/storage/code/svn/edu/umich/keyword2/testScripts/CTools/2.7/modules/06ModulesStudentCheck.txt

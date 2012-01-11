@@ -1,4 +1,0 @@
-/Users/admin/Desktop/keywordframework/trunk/selenium/keyword2/testScripts/CTools/2.7/news/01NewsInstructorCheckHelp.txt
-/Users/admin/Desktop/keywordframework/trunk/selenium/keyword2/testScripts/CTools/2.7/news/02NewsStudentCheckHelp.txt
-/Users/admin/Desktop/keywordframework/trunk/selenium/keyword2/testScripts/CTools/2.7/news/03NewsInstructorCheckNews.txt
-/Users/admin/Desktop/keywordframework/trunk/selenium/keyword2/testScripts/CTools/2.7/news/04NewsStudentCheckNews.txt

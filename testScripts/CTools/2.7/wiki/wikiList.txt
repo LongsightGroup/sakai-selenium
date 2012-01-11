@@ -1,6 +1,0 @@
-/storage/tests/scripts/wiki/01WikiInstructorCheckHelp.txt
-/storage/tests/scripts/wiki/02WikiStudentCheckHelp.txt
-/storage/tests/scripts/wiki/03WikiInstructorEdit.txt
-/storage/tests/scripts/wiki/04WikiInstructorNewPage.txt
-/storage/tests/scripts/wiki/05WikiInstructorCheckInfo.txt
-/storage/tests/scripts/wiki/06WikiInstructorCheckHistory.txt

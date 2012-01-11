@@ -1,6 +1,0 @@
-/storage/tests/scripts/help/01_Instructor_CheckHelp_MWS.txt
-/storage/tests/scripts/help/02_Student_CheckHelp_MWS.txt
-/storage/tests/scripts/help/04_Instructor_CheckHelp_CourseSite.txt
-/storage/tests/scripts/help/05_Student_CheckHelp_CourseSite.txt
-/storage/tests/scripts/help/07_Instructor_CheckHelp_ProjectSite.txt
-/storage/tests/scripts/help/08_Student_CheckHelp_ProjectSite.txt

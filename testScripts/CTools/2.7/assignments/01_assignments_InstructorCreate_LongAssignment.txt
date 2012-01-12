@@ -1,0 +1,83 @@
+openURL|$url
+verifyText|From the CTools Team
+click|Login
+
+verifyText|You are connecting to a U-M website that requires authentication.
+enterText|login|qainst
+enterText|password|sswelvalpanklidS$
+
+click|doLogin
+verifyText|From the CTools Team
+verifyText|Welcome to your personal workspace
+
+click|$site
+verifyText|Selenium Instructor
+verifyText|Site Information Display
+verifyText|viewing announcements from the last 10 days
+
+click|Assignments
+verifyText|Assignment List
+
+click|Add
+comment|Should be at the 'Add new assignment' window
+verifyText|Add new assignment
+verifyText|Complete form and then choose 'post' at the bottom.
+verifyText|Additional information
+enterText|new_assignment_title|Long Assignment
+selectList|new_assignment_openampm|AM
+verifyValue|subType|Inline and Attachments
+verifyValue|new_assignment_grade_type|Ungraded
+selectList|new_assignment_grade_type|Points
+enterText|new_assignment_grade_points|100
+fckEnter|Assignment Instructions|These are test instructions.
+selectCheckbox|Add due date to Schedule
+selectCheckbox|Add an announcement about the open date to Announcements
+selectCheckbox|Add honor pledge
+SelectRadio|Add Assignment to Gradebook
+
+click|Add Attachments
+UploadFile|FakeAssignment.doc
+verifyText|FakeAssignment.doc
+click|Continue
+
+Comment|Verify the page has reloaded, then add Model Answer
+verifyText|Complete form and then choose 'post' at the bottom.
+verifyText|Additional information
+verifyText|Model Answer
+click|modelanswer_add
+verifyText|Provide a model answer or a solution to the assignment
+enterText|modelanswer_text|This is the model text for the answer
+selectList|modelanswer_to|After student submits
+click|modelanswer_save
+
+Comment|Add Private Note
+click|note_add
+verifyText|You can use a note to track assignment issues
+enterText|note_text|This is the sample note.
+selectList|note_to|Allow other instructors to read
+click|note_save
+
+Comment|Add All Purpose Item
+click|allPurpose_add
+verifyText|Information displayed at a specific time to whomever you choose
+enterText|allPurpose_title|Sample All Purpose Item
+enterText|allPurpose_text|Some sample all purpose text.
+selectCheckbox|allPurpose_Student
+selectCheckbox|allPurpose_Owner
+click|allPurpose_save
+
+click|Post
+verifyText|Assignment List
+verifyText|Long Assignment
+verifyText|100
+
+click|Announcements
+verifyText|Long Assignment
+
+click|Logout
+verifyText|You are about to log out
+
+click|Log Out
+verifyText|From the CTools Team
+verifyText|Welcome
+

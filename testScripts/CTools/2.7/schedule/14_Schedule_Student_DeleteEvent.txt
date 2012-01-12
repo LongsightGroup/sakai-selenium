@@ -1,0 +1,57 @@
+openURL|$url
+verifyText|From the CTools Team
+click|Login
+
+verifyText|You are connecting to a U-M website that requires authentication.
+enterText|login|qastud
+enterText|password|Maugaityptodita6
+
+click|doLogin
+verifyText|From the CTools Team
+verifyText|Welcome to your personal workspace
+
+comment|Student can only add a schedule to a project site. 
+click|$project_site
+verifyText|Selenium User
+verifyText|Site Information Display
+verifyText|viewing announcements from the last 10 days
+
+click|Schedule
+verifyText|Schedule
+verifyText|Selenium User
+verifyText|Calendar by Week
+selectList|View|List of Events
+verifyText|List of Events
+verifyText|Custom date range
+
+selectList|customStartMonth|JUL
+selectList|customStartDay|1
+selectList|customStartYear|2011
+selectList|customEndMonth|SEP
+selectList|customEndDay|16
+selectList|customEndYear|2014
+
+click|Filter Events
+verifyText|Academic Calendar
+verifyText|Scheduled event message for selenium student.
+
+click|Student Team Meeting
+verifyText|Event Location
+verifyText|Frequency
+verifyText|Student Team Meeting
+
+click|Remove event
+verifyText|Are you sure you want to remove this event?
+verifyText|Student Team Meeting
+verifyText|Scheduled event message for selenium student.
+
+click|Remove event
+verifyValue|timeFilterOption|Custom date range
+verifyTextNotPresent|Student Team Meeting
+
+click|Logout
+verifyText|You are about to log out
+
+click|Log Out
+verifyText|From the CTools Team
+verifyText|Welcome

@@ -1,0 +1,94 @@
+comment|Test drive assessment as an instructor
+application|testcenter
+
+openURL|$url
+verifyText|From the CTools Team
+click|Login
+
+verifyText|You are connecting to a U-M website that requires authentication.
+enterText|login|qainst
+enterText|password|sswelvalpanklidS$
+
+click|doLogin
+verifyText|From the CTools Team
+verifyText|Welcome to your personal workspace
+
+click|$site
+verifyText|Selenium Instructor
+verifyText|Site Information Display
+verifyText|viewing announcements from the last 10 days
+
+click|Test Center
+verifyText|Assessments
+verifyText|Sample Assessment
+
+click|Test Drive
+verifyText|Test Center
+verifyText|Pool Assessment
+verifyText|Sample Assessment
+verifyText|Ready to begin
+
+comment|Click to begin the sample assessment, which should be first in the list.
+click|Begin
+comment|Should show the preliminary screen.
+verifyText|Take the entire test assessment in the time provided
+verifyText|Your Test will be completed only when you click on (and confirm) the
+verifyText|Sample Assessment
+
+click|Begin
+verifyText|Working on Test
+verifyText|Choose the correct answer
+selectRadio|A.
+click|Next
+
+comment|Should be at the second question
+verifyText|Question 2 of 5
+verifyText|Is this question true or false?
+selectRadio|True
+click|Next
+
+comment|Should be at the third question
+verifyText|Question 3 of 5
+verifyText|Check to review before finishing
+mceEnter|Answer|This is a sample answer for the third question.
+click|Next
+
+comment|Should be at the fourth question
+verifyText|Question 4 of 5
+verifyText|worth 40 points
+enterText|UiFillIn_|red|1
+enterText|UiFillIn_|blue|2
+click|Next
+
+comment|Should be at the fifth question
+verifyText|Question 5 of 5
+verifyText|worth 50 points
+selectList|1.|A.
+selectList|2.|C.
+selectList|3.|D.
+click|Finish|2
+
+verifyText|Are you sure you are completely done with your test?
+click|Finish
+verifyText|Finished
+verifyText|Sample Assessment
+
+click|Review
+verifyText|Sample Assessment
+verifyText|Started
+verifyText|Total Grade:
+verifyText|Question 1 of 5
+verifyText|Good Job!
+
+click|Return
+verifyText|Sample Assessment
+verifyText|Finished
+verifyText|(partial)
+
+click|Logout
+verifyText|You are about to log out
+
+click|Log Out
+verifyText|From the CTools Team
+verifyText|Welcome
+

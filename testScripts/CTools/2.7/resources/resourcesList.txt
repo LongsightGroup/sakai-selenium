@@ -1,0 +1,11 @@
+/storage/tests/scripts/resources/01ResourcesInstructorCheckHelp.txt
+/storage/tests/scripts/resources/02ResourcesStudentCheckHelp.txt
+/storage/tests/scripts/resources/04ResourcesInstructorCreateFolder.txt
+/storage/tests/scripts/resources/05ResourcesInstructorModifyFolderDetails.txt
+/storage/tests/scripts/resources/08ResourcesInstructorAddURL.txt
+/storage/tests/scripts/resources/09ResourcesInstructorAddTextPage.txt
+/storage/tests/scripts/resources/10ResourcesInstructorAddHTMLDocument.txt
+/storage/tests/scripts/resources/11ResourcesInstructorAddMultipleDocs.txt
+/storage/tests/scripts/resources/13ResourcesInstructorAddResourceEmailNotification.txt
+/storage/tests/scripts/resources/15ResourcesInstructorDownloadResource.txt
+/storage/tests/scripts/resources/18ResourcesInstructorDeleteResources.txt

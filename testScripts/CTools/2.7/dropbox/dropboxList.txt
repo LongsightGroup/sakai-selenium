@@ -1,0 +1,8 @@
+/storage/tests/scripts/dropbox/01DropBoxInstructorCheckHelp.txt
+/storage/tests/scripts/dropbox/02DropBoxStudentCheckHelp.txt
+/storage/tests/scripts/dropbox/03DropBoxInstructorAddResource.txt
+/storage/tests/scripts/dropbox/04DropBoxStudentAddResource.txt
+/storage/tests/scripts/dropbox/05DropBoxInstructorModifyResource.txt
+/storage/tests/scripts/dropbox/06DropBoxStudentModifyResource.txt
+/storage/tests/scripts/dropbox/07DropBoxInstructorDeleteResource.txt
+/storage/tests/scripts/dropbox/08DropBoxStudentDeleteResource.txt

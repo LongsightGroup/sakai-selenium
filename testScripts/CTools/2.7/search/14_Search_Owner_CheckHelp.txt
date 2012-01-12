@@ -1,0 +1,33 @@
+openURL|$url
+verifyText|From the CTools Team
+click|Login
+
+verifyText|You are connecting to a U-M website that requires authentication.
+enterText|login|qastud
+enterText|password|Maugaityptodita6
+
+click|doLogin
+verifyText|From the CTools Team
+verifyText|Welcome to your personal workspace
+
+click|$projDupeSite
+verifyText|Selenium User
+verifyText|Site Information Display
+verifyText|A project site meant to be used as a source for duplication during testing.
+
+click|Search
+verifyText|This Site
+
+click|Help for Search
+waitForPopUp|30
+verifyText|CTools Overview
+verifyText|Search Help
+verifyText|Welcome to the CTools Online Help
+closePopUp|
+
+click|Logout
+verifyText|You are about to log out
+
+click|Log Out
+verifyText|From the CTools Team
+verifyText|Welcome

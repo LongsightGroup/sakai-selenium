@@ -1,0 +1,54 @@
+openURL|$url
+verifyText|From the CTools Team
+click|Login
+
+verifyText|You are connecting to a U-M website that requires authentication.
+enterText|login|qastud
+enterText|password|Maugaityptodita6
+
+click|doLogin
+verifyText|From the CTools Team
+verifyText|Welcome to your personal workspace
+
+click|$site
+verifyText|Selenium User
+verifyText|Site Information Display
+verifyText|viewing announcements from the last 10 days
+
+click|Messages
+verifyText|Received
+verifyText|Sent
+verifyText|Deleted
+verifyText|Student Test Folder
+verifyText|1 message - 0 unread
+verifyText|Messages
+
+click|Student Test Folder
+verifyText|Instructor Test Message
+
+comment|The following string exists in the body, but not the title
+comment|We will verify the scope of the search, run it, modiy the scope, then run it again
+enterText|Search for text:|hearty
+click|Advanced Search
+verifyValue|Subject|true
+verifyValue|Body|false
+
+click|Search
+verifyText|Alert: No matching result found
+
+enterText|Search for text:|hearty
+click|Advanced Search
+verifyValue|Subject|true
+verifyValue|Body|false
+selectCheckbox|Body
+verifyValue|Body|true
+
+click|Search
+verifyTextNotPresent|Alert: No matching result found
+
+click|Logout
+verifyText|You are about to log out
+
+click|Log Out
+verifyText|From the CTools Team
+verifyText|Welcome

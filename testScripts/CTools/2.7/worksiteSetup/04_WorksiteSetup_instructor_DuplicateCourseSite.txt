@@ -33,7 +33,7 @@ enterText|Site Title|$testDupeSite
 comment|This duplicates the site, but takes you back to the last page
 click|Duplicate
 verifyText|$dupeSource
-verifyText|$dupeProvider
+verifyText|2011,2,A,DupeSrc,101,001
 verifyText|qastud
 verifyText|Can read content
 

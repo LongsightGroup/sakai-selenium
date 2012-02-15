@@ -29,12 +29,12 @@ verifyText|132
 verifyText|qastud
 verifyText|A (96.96%)
 
-enterText|gbForm:gradingTable:|B|1
+enterText|gbForm:gradingTable:|B|2
 click|Save Changes
 verifyText|Course Grades
 verifyText|Grade overrides saved
 verifyText|qastud
-verifyValue|gbForm:gradingTable:|B
+verifyValue|gbForm:gradingTable:|B|2
 
 click|Logout
 verifyText|You are about to log out

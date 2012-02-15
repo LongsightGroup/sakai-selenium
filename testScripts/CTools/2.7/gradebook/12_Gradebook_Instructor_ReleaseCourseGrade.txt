@@ -21,7 +21,8 @@ verifyText|Gradebook Items
 verifyText|Currently, students can see their gradebook item scores, but not their course grade.
 verifyText|Click a title to view complete details and to grade the item.
 verifyText|Sample Gradebook Item
-verifyText|132/132
+comment|verifyText|132/132
+verifyText|66/132
 
 comment|Display this score to the student.
 click|Course Grade Options

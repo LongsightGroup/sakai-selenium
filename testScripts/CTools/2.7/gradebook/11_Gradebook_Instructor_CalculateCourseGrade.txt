@@ -28,15 +28,15 @@ verifyText|Course Grades
 verifyText|Total points
 verifyText|132
 verifyText|qastud
-verifyValue|gbForm:gradingTable:|B
+verifyValue|gbForm:gradingTable:|B|2
 
 comment|Remove any override so the actual computed grade takes precedence.
-enterText|gbForm:gradingTable:|  
+enterText|gbForm:gradingTable:|  |2
 click|Save Changes
 verifyText|Course Grades
 verifyText|Grade overrides saved
 verifyText|qastud
-verifyValue|gbForm:gradingTable:| 
+verifyValue|gbForm:gradingTable:| |2
 
 comment|Calculate the course grade based on the score of the 1 item.
 click|Calculate Course Grades

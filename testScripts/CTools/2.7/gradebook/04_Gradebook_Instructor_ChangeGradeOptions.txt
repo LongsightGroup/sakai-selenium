@@ -26,6 +26,7 @@ click|Course Grade Options
 verifyText|Course Grade Options
 verifyValue|Display course grade to students now|false
 verifyValue|A+|100.0
+comment|verifyValue|A+|96.0
 
 enterText|A+|96
 click|Save

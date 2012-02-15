@@ -1,0 +1,33 @@
+openURL|$url
+verifyText|Welcome to Sakai QA
+verifyText|New Account
+enterText|user id:|qainst
+enterText|password:|sswelvalpanklidS$
+
+click|Login
+verifyText|My Workspace: Message Of The Day
+verifyText|Welcome to your personal workspace.
+
+click|$site
+verifyText|Syllabus
+verifyText|Testing 101 001 Fall 2010: Site Information Display
+verifyText|Testing 101 001 Fall 2010: Recent Announcements
+
+click|Syllabus
+verifyText|Testing 101 001 Fall 2010: Syllabus
+verifyText|Logout
+
+click|Create/Edit
+verifyText|Syllabus Items
+
+click|Redirect
+verifyText|Redirect Syllabus
+verifyText|URL
+enterText|URL|http://en.wikipedia.org
+
+click|Save
+verifyText|Redirect Syllabus
+verifyText|Wikipedia
+
+click|Logout
+verifyText|Welcome to Sakai QA

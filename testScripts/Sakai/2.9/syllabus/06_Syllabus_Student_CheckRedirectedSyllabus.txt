@@ -1,0 +1,22 @@
+openURL|$url
+verifyText|Welcome to Sakai QA
+verifyText|New Account
+enterText|user id:|qastud
+enterText|password:|Maugaityptodita6
+
+click|Login
+verifyText|My Workspace: Message Of The Day
+verifyText|Welcome to your personal workspace.
+
+click|$site
+verifyText|Syllabus
+verifyText|Testing 101 001 Fall 2010: Site Information Display
+verifyText|Testing 101 001 Fall 2010: Recent Announcements
+
+click|Syllabus
+verifyText|Testing 101 001 Fall 2010: Syllabus
+verifyText|Logout
+verifyText|Wikipedia
+
+click|Logout
+verifyText|Welcome to Sakai QA

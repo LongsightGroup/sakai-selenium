@@ -1,0 +1,40 @@
+application|syllabus
+
+openURL|$url
+verifyText|Welcome to Sakai QA
+verifyText|New Account
+enterText|user id:|qainst
+enterText|password:|sswelvalpanklidS$
+
+click|Login
+verifyText|My Workspace: Message Of The Day
+verifyText|Welcome to your personal workspace.
+
+click|$site
+verifyText|Syllabus
+verifyText|Testing 101 001 Fall 2010: Site Information Display
+verifyText|Testing 101 001 Fall 2010: Recent Announcements
+
+click|Syllabus
+verifyText|Testing 101 001 Fall 2010: Syllabus
+verifyText|Logout
+
+click|Create/Edit
+verifyText|Syllabus Item
+
+Click|Add
+VerifyText|Add syllabus...
+VerifyText|Title
+verifyValue|Only members of this site can see this syllabus item.|true
+VerifyText|Email Notification
+enterText|Title|Draft Syllabus
+ckEnter|Content|Sample Syllabus to sample draft capability
+
+Click|Save Draft
+VerifyText|Syllabus Items
+VerifyText|Logout
+VerifyText|Draft
+VerifyText|Draft Syllabus
+
+click|Logout
+verifyText|Welcome to Sakai QA

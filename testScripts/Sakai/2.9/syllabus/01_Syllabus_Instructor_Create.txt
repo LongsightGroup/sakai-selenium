@@ -1,0 +1,41 @@
+application|syllabus
+
+openURL|$url
+verifyText|Welcome to Sakai QA
+verifyText|New Account
+enterText|user id:|qainst
+enterText|password:|sswelvalpanklidS$
+
+click|Login
+verifyText|My Workspace: Message Of The Day
+verifyText|Welcome to your personal workspace.
+
+click|$site
+verifyText|Syllabus
+verifyText|Testing 101 001 Fall 2010: Site Information Display
+verifyText|Testing 101 001 Fall 2010: Recent Announcements
+
+click|Syllabus
+verifyText|$site: Syllabus
+verifyText|Logout
+
+click|Create/Edit
+verifyText|Syllabus Items
+
+click|Add
+verifyText|Add syllabus...
+verifyText|Title
+verifyValue|Only members of this site can see this syllabus item.|true
+verifyText|Email Notification
+enterText|Title|Selenium Syllabus
+ckEnter|Content|Scheduled event message for Selenium Instructor.
+
+Click|Post
+verifyText|Syllabus Items
+verifyText|Logout
+verifyText|Selenium Syllabus
+verifyText|Posted
+
+click|Logout
+verifyText|Welcome to Sakai QA
+

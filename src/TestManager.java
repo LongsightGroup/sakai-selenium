@@ -566,6 +566,7 @@ public class TestManager {
 		driver = new FirefoxDriver(profile); 
         }	
 	
+	@SuppressWarnings("deprecation")
 	private static void prepChromeProfile (String downloadDirectory, String mimeTypes, String driverPath)  throws Exception {
 		
 		// Find the chrome driver path in the user's parameter file.

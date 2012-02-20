@@ -17,6 +17,21 @@
   <build>
       <plugins>
           <plugin>
+              <!-- http://stackoverflow.com/questions/97640/force-maven2-to-copy-dependencies-into-target-lib -->
+              <artifactId>maven-dependency-plugin</artifactId>
+              <executions>
+                  <execution>
+                      <phase>package</phase>
+                      <goals>
+                          <goal>copy-dependencies</goal>
+                      </goals>
+                      <configuration>
+                          <outputDirectory>${project.build.directory}/lib</outputDirectory>
+                      </configuration>
+                  </execution>
+              </executions>
+          </plugin>
+          <plugin>
               <groupId>org.apache.maven.plugins</groupId>
               <artifactId>maven-compiler-plugin</artifactId>
               <version>2.3.2</version>
@@ -32,6 +47,7 @@
                   <archive>
                       <manifest>
                           <addClasspath>true</addClasspath>
+                          <classpathPrefix>lib/</classpathPrefix>
                           <mainClass>edu.umich.keyword.TestManager</mainClass>
                       </manifest>
                   </archive>

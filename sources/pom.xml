@@ -2,7 +2,7 @@
   xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
   <modelVersion>4.0.0</modelVersion>
 
-  <groupId>edu.umich</groupId>
+  <groupId>edu.umich.keyword</groupId>
   <artifactId>keyword</artifactId>
   <version>1.0-SNAPSHOT</version>
   <packaging>jar</packaging>
@@ -23,6 +23,18 @@
               <configuration>
                   <source>1.6</source>
                   <target>1.6</target>
+              </configuration>
+          </plugin>
+          <plugin>
+              <groupId>org.apache.maven.plugins</groupId>
+              <artifactId>maven-jar-plugin</artifactId>
+              <configuration>
+                  <archive>
+                      <manifest>
+                          <addClasspath>true</addClasspath>
+                          <mainClass>edu.umich.keyword.TestManager</mainClass>
+                      </manifest>
+                  </archive>
               </configuration>
           </plugin>
       </plugins>

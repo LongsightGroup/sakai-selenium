@@ -12,6 +12,7 @@ import java.util.Arrays;
 import java.util.Date;
 import java.util.Properties;
 import java.util.List;
+import java.util.ArrayList;
 
 import org.openqa.selenium.OutputType;
 import org.openqa.selenium.TakesScreenshot;
@@ -23,8 +24,6 @@ import org.openqa.selenium.ie.InternetExplorerDriver;
 import org.openqa.selenium.remote.DesiredCapabilities;
 
 import org.apache.commons.io.FileUtils;
-import org.testng.collections.Lists;
-
 
 public class TestManager {
 	
@@ -70,7 +69,7 @@ public class TestManager {
 			reportLogPointer.write("fail: you have not specified a download directory in your parameters file.");
 		}
 		
-		List<String> testList = Lists.newArrayList();
+		List<String> testList = new ArrayList <String> ();
 		
 		// Read the tests from the master file if it exists.
 		if (testListFile==null) {

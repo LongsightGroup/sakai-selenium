@@ -64,18 +64,8 @@
     </dependency>
     <dependency>
         <groupId>org.seleniumhq.selenium</groupId>
-        <artifactId>selenium-java</artifactId>
-        <version>${seleniumhq.version}</version>
-    </dependency>
-    <dependency>
-        <groupId>org.seleniumhq.selenium</groupId>
         <artifactId>selenium-server</artifactId>
         <version>${seleniumhq.version}</version>
-    </dependency>
-    <dependency>
-        <groupId>org.testng</groupId>
-        <artifactId>testng</artifactId>
-        <version>5.13</version>
     </dependency>
   </dependencies>
 </project>

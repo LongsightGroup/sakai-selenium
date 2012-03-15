@@ -5,4 +5,6 @@ verifyText|Login Required
 enterText|eid|qastud
 enterText|pw|Maugaityptodita6
 
-click|LoginverifyText|From the CTools TeamverifyText|Welcome to your personal workspaceclick|$siteverifyText|Selenium UserverifyText|Site Information DisplayverifyText|viewing announcements from the last 10 daysclick|SyllabusverifyText|SyllabusverifyText|qastudclick|Help for SyllabuswaitForPopUp|30verifyText|CTools OverviewverifyText|Search HelpverifyText|The syllabus is the official outline for your courseclosePopUp|click|LogoutverifyText|You are about to log outclick|Log OutverifyText|From the CTools TeamverifyText|Welcome
+click|LoginverifyText|From the CTools TeamverifyText|Welcome to your personal workspaceclick|$siteverifyText|Selenium UserverifyText|Site Information DisplayverifyText|viewing announcements from the last 10 daysclick|SyllabusverifyText|SyllabusverifyText|qastudclick|Help for SyllabuswaitForPopUp|30verifyText|CTools OverviewverifyText|Search HelpverifyText|The syllabus is the official outline for your courseclosePopUp|click|Logout
+verifyText|Login Required
+verifyText|password

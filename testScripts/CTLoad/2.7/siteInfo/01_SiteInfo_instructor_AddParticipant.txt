@@ -32,8 +32,8 @@ enterText|Email Address of Non-official Participant|student1000@test.com
 
 click|Continue
 verifyText|student1000@test.com
-selectRadio|Student (Can read content, and add content ot a site where appropriate.)
-verifyValue|Student (Can read content, and add content ot a site where appropriate.)|true
+selectRadio|Student (Can read content, and add content to a site where appropriate.)
+verifyValue|Student (Can read content, and add content to a site where appropriate.)|true
 
 click|Continue
 verifyText|Add participant(s) to
@@ -57,8 +57,5 @@ verifyText|student1000@test.com
 verifyValue|Select role for student1000@test.com|Student
 
 click|Logout
-verifyText|You are about to log out
-
-click|Log Out
-verifyText|From the CTools Team
-verifyText|Welcome
+verifyText|Login Required
+verifyText|password

@@ -57,8 +57,5 @@ verifyText|Currently, students can see their gradebook item scores, but not thei
 verifyText|Gradebook Items
 
 click|Logout
-verifyText|You are about to log out
-
-click|Log Out
-verifyText|From the CTools Team
-verifyText|Welcome
+verifyText|Login Required
+verifyText|password

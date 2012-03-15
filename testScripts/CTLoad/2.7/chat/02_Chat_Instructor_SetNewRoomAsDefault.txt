@@ -34,8 +34,5 @@ verifyText|Only messages from the past 3 days are archived and can be read by an
 verifyText|Currently viewing messages for 'Secondary Chat Room'
 
 click|Logout
-verifyText|You are about to log out
-
-click|Log Out
-verifyText|From the CTools Team
-verifyText|Welcome
+verifyText|Login Required
+verifyText|password

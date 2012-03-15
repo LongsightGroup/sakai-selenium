@@ -25,8 +25,5 @@ verifyText|About MLibrary
 verifyText|Ask a Librarian is tailored to the research needs of UM students
 
 click|Logout
-verifyText|You are about to log out
-
-click|Log Out
-verifyText|From the CTools Team
-verifyText|Welcome
+verifyText|Login Required
+verifyText|password

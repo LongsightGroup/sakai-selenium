@@ -36,8 +36,5 @@ verifyText|Currently, students can see their course grade (as Graded (GRD)) and 
 click|Sample Gradebook Item
 
 click|Logout
-verifyText|You are about to log out
-
-click|Log Out
-verifyText|From the CTools Team
-verifyText|Welcome
+verifyText|Login Required
+verifyText|password

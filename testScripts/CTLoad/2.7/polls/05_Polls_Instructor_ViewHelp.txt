@@ -29,8 +29,5 @@ verifyText|The Poll tool allows users to set up an online vote.
 closePopUp|
 
 click|Logout
-verifyText|You are about to log out
-
-click|Log Out
-verifyText|From the CTools Team
-verifyText|Welcome
+verifyText|Login Required
+verifyText|password

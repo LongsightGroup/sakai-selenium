@@ -11,4 +11,6 @@ verifyText|Recent Announcements
 verifyText|Unread Messages and Forums
 verifyText|New Messages
 verifyText|New in Forums
-verifyText|Recent Chat Messagesclick|LogoutverifyText|You are about to log outclick|Log OutverifyText|From the CTools TeamverifyText|Welcome
+verifyText|Recent Chat Messagesclick|Logout
+verifyText|Login Required
+verifyText|password

@@ -35,8 +35,5 @@ verifyText|Instructor Test Topic
 verifyText|This is a test topic message. This is sent to a new topic on an existing category
 
 click|Logout
-verifyText|You are about to log out
-
-click|Log Out
-verifyText|From the CTools Team
-verifyText|Welcome
+verifyText|Login Required
+verifyText|password

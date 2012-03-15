@@ -26,7 +26,7 @@ verifyText|To create a meeting, enter the required information and click Next.
 enterText|Title:|Sample Course Group Appointment
 enterText|Location:|The Diag
 fckEnter|Description:|This is a sample appointment, used when testing the Sign-up tool.  This will be assigned to a group, if one exists.
-enterText|meeting:endTime.year|2012
+enterText|meeting:endTime.year|2013
 
 verifyValue|meeting:siteSelection|true
 selectCheckbox|meeting:siteSelection
@@ -44,8 +44,5 @@ verifyText|Click 'Add' to create a new meeting, or click a meeting title to modi
 verifyText|Sample Course Group Appointment
 
 click|Logout
-verifyText|You are about to log out
-
-click|Log Out
-verifyText|From the CTools Team
-verifyText|Welcome
+verifyText|Login Required
+verifyText|password

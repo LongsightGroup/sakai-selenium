@@ -54,8 +54,5 @@ verifyText|A project site meant to be used as a source for duplication during te
 verifyText|qainst
 
 click|Logout
-verifyText|You are about to log out
-
-click|Log Out
-verifyText|From the CTools Team
-verifyText|Welcome
+verifyText|Login Required
+verifyText|password

@@ -5,4 +5,6 @@ verifyText|Login Required
 enterText|eid|qainst
 enterText|pw|sswelvalpanklidS$
 
-click|LoginverifyText|From the CTools TeamverifyText|Welcome to your personal workspaceclick|HelpwaitForPopup|30verifyText|CTools OverviewverifyText|Search HelpverifyText|Welcome to the CTools Online Help closePopUp|click|LogoutverifyText|You are about to log outclick|Log OutverifyText|From the CTools TeamverifyText|Welcome
+click|LoginverifyText|From the CTools TeamverifyText|Welcome to your personal workspaceclick|HelpwaitForPopup|30verifyText|CTools OverviewverifyText|Search HelpverifyText|Welcome to the CTools Online Help closePopUp|click|Logout
+verifyText|Login Required
+verifyText|password

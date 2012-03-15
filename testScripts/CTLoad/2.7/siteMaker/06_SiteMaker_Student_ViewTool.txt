@@ -41,8 +41,8 @@ verifyText|Sorry, you don't have permission to view that section.
 verifyText|Insufficient privileges.
 
 click|eidLink1
-verifyText|You are about to log out
 
-click|Log Out
+
+
 verifyText|From the CTools Team
 verifyText|Welcome

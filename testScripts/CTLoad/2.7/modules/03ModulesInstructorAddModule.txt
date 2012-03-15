@@ -16,4 +16,6 @@ verifyText|Continue adding content or return to the list of modules.
 click|Done
 verifyText|Test Module
 
-click|LogoutverifyText|You are about to log outclick|Log OutverifyText|From the CTools TeamverifyText|Welcome
+click|Logout
+verifyText|Login Required
+verifyText|password

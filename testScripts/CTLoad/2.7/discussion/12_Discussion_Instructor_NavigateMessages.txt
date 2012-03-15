@@ -38,8 +38,5 @@ click|Previous Message
 verifyText|This is a test topic reply.
 
 click|Logout
-verifyText|You are about to log out
-
-click|Log Out
-verifyText|From the CTools Team
-verifyText|Welcome
+verifyText|Login Required
+verifyText|password

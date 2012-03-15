@@ -129,11 +129,8 @@ verifyText|qainst
 verifyText|$site
 
 click|Logout
-verifyText|You are about to log out
-
-click|Log Out
-verifyText|From the CTools Team
-verifyText|Welcome
+verifyText|Login Required
+verifyText|password
 
 comment|Give five minutes for the roster get applied to the site.
 wait|300

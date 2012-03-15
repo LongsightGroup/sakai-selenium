@@ -36,8 +36,5 @@ click|TestAttachment.doc
 verifyFile|TestAttachment.doc
 
 click|Logout
-verifyText|You are about to log out
-
-click|Log Out
-verifyText|From the CTools Team
-verifyText|Welcome
+verifyText|Login Required
+verifyText|password

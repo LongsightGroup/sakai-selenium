@@ -32,8 +32,5 @@ verifyText|Check box(es) to take action on a site.
 verifyTextNotPresent|Test Dupe Site
 
 click|Logout
-verifyText|You are about to log out
-
-click|Log Out
-verifyText|From the CTools Team
-verifyText|Welcome
+verifyText|Login Required
+verifyText|password

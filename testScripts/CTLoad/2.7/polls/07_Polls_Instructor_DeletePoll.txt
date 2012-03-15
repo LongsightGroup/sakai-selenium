@@ -27,8 +27,5 @@ verifyText|No polls have been created yet.
 verifyText|Poll list
 
 click|Logout
-verifyText|You are about to log out
-
-click|Log Out
-verifyText|From the CTools Team
-verifyText|Welcome
+verifyText|Login Required
+verifyText|password

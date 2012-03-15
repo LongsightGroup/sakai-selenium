@@ -54,8 +54,5 @@ verifyText|Course site that acts as a duplicate for sites that require stealth t
 verifyText|qastud
 
 click|Logout
-verifyText|You are about to log out
-
-click|Log Out
-verifyText|From the CTools Team
-verifyText|Welcome
+verifyText|Login Required
+verifyText|password

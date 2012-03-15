@@ -41,9 +41,6 @@ verifyText|Remove gradebook item from gradebook
 verifyValue|gbForm:gradingTable:0:Score|132
 
 click|Logout
-verifyText|You are about to log out
-
-click|Log Out
-verifyText|From the CTools Team
-verifyText|Welcome
+verifyText|Login Required
+verifyText|password
 

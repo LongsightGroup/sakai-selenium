@@ -44,8 +44,5 @@ verifyText|CTools default
 verifyText|Can read, revise, delete and add both content and participants to a site.
 
 click|Logout
-verifyText|You are about to log out
-
-click|Log Out
-verifyText|From the CTools Team
-verifyText|Welcome
+verifyText|Login Required
+verifyText|password

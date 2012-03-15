@@ -43,9 +43,6 @@ verifyText|Sample Assessment
 comment|No easily automatable way to verify publishing from here.  Will need to see if student can access.
 
 click|Logout
-verifyText|You are about to log out
-
-click|Log Out
-verifyText|From the CTools Team
-verifyText|Welcome
+verifyText|Login Required
+verifyText|password
 

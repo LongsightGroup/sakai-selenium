@@ -1,0 +1,64 @@
+comment|To Add a question pool and then copy into it
+
+openURL|$url
+verifyText|Welcome to Sakai QA
+verifyText|New Account
+enterText|user id:|qainst
+enterText|password:|sswelvalpanklidS$
+
+click|Login
+verifyText|My Workspace: Message Of The Day
+verifyText|Welcome to your personal workspace.
+verifyText|Testing 101 001 Fall 2010
+
+click|$site
+verifyText|Tests & Quizzes
+verifyText|Testing 101 001 Fall 2010: Site Information Display
+verifyText|Testing 101 001 Fall 2010: Recent Announcements
+
+click|Tests & Quizzes
+verifyText|Assessments
+verifyText|Create an Assessment
+verifyText|Working Copies
+
+click|Question Pools
+verifyText|Question Pools
+verifyText|Test Pool
+verifyText|Add New Pool
+verifyText|Copy
+
+click|Add New Pool
+verifyText|Add Pool
+verifyText|Required items marked with 
+enterText|Pool Name*|Test Pool Copy
+enterText|Department/Group|Test group
+enterText|Description|This is a sample question pool to copy into
+
+click|Save
+verifyText|Test Pool Copy
+verifyText|Selenium Instructor
+
+click|Copy Pool|1
+verifyText|Copy Pool
+verifyText|Select the destination pool
+verifyText|Test Pool Copy
+selectCheckbox|copyPool:TreeTable:1:checkboxes
+
+click|Copy
+verifyText|Question Pools
+
+click|Test Pool Copy
+verifyText|Question Pool: Test Pool Copy
+verifyText|1 Subpool
+verifyText|Test Pool
+verifyText|Selenium Instructor
+
+click|Test Pool
+verifyText|Question Pool: Test Pool
+verifyText|5 Questions
+verifyText|Answer this sample essay question
+verifyText|Choose the correct answer
+
+click|Logout
+verifyText|Welcome to Sakai QA
+verifyText|Message Of The Day

@@ -1,0 +1,80 @@
+comment|Test publishing of Group 1 Assessment as a student
+application|testcenter
+
+openURL|$url
+verifyText|Welcome to Sakai QA
+verifyText|New Account
+enterText|user id:|qastud
+enterText|password:|Maugaityptodita6
+
+click|Login
+verifyText|My Workspace: Message Of The Day
+verifyText|Welcome to your personal workspace.
+verifyText|Testing 101 001 Fall 2010
+
+click|$site
+verifyText|Tests & Quizzes
+verifyText|Testing 101 001 Fall 2010: Site Information Display
+verifyText|Testing 101 001 Fall 2010: Recent Announcements
+
+click|Tests & Quizzes
+verifyText|Assessments
+verifyText|Take an Assessment
+verifyText|Sample Assessment Group 1
+verifyTextNotPresent|Sample Assessment Group 2
+
+click|Sample Assessment Group 1
+verifyText|Sample Assessment Group 1
+verifyText|Begin Assessment
+verifyText|There is no time limit.
+verifyText|You can submit this assessment 1 time(s).
+click|Begin Assessment
+
+comment|Should be at the first question.
+verifyText|Choose the correct answer
+verifyText|Reset Selection
+selectRadio|a11yAutoGenInputId2
+click|Next
+
+comment|Should be at the second question
+verifyText|Question 2 of 5
+verifyText|Is this question true or false?
+selectRadio|True
+click|Next
+
+comment|Should be at the third question
+verifyText|Question 3 of 5
+verifyText|Answer this sample essay question
+enterText|takeAssessmentForm:_id53:0:_id115:0:deliverShortAnswer:_id1036_textinput|This is a sample answer for the third question.
+click|Next
+
+comment|Should be at the fourth question
+verifyText|Question 4 of 5
+verifyText|Roses are
+enterText|takeAssessmentForm:_id53:0:_id115:0:deliverFillInTheBlank:_id546:0:_id549|red
+enterText|takeAssessmentForm:_id53:0:_id115:0:deliverFillInTheBlank:_id546:1:_id549|blue
+click|Next
+
+comment|Should be at the fifth question
+verifyText|Question 5 of 5
+verifyText|Match the colors
+selectList|takeAssessmentForm:_id53:0:_id115:0:deliverMatching:_id659:0:_id662|A
+selectList|takeAssessmentForm:_id53:0:_id115:0:deliverMatching:_id659:1:_id662|C
+selectList|takeAssessmentForm:_id53:0:_id115:0:deliverMatching:_id659:2:_id662|B
+click|Submit for Grading
+
+comment|Confirm finishing
+verifyText|Assessment Submission Warning 
+verifyText|You are about to submit this assessment for grading.
+
+click|Submit for Grading
+verifyText|You have completed this assessment. Your confirmation information is below
+verifyText|Sample Assessment Group 1
+
+click|Continue
+verifyText|Take an Assessment
+verifyText|Submitted Assessments
+
+click|Logout
+verifyText|Welcome to Sakai QA
+verifyText|Message Of The Day

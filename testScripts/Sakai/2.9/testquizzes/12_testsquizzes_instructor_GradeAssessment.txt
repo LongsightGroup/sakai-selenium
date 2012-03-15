@@ -1,0 +1,59 @@
+comment|To grade an assessment as an Instructor
+
+openURL|$url
+verifyText|Welcome to Sakai QA
+verifyText|New Account
+enterText|user id:|qainst
+enterText|password:|sswelvalpanklidS$
+
+click|Login
+verifyText|My Workspace: Message Of The Day
+verifyText|Welcome to your personal workspace.
+verifyText|Testing 101 001 Fall 2010
+
+click|$site
+verifyText|Tests & Quizzes
+verifyText|Testing 101 001 Fall 2010: Site Information Display
+verifyText|Testing 101 001 Fall 2010: Recent Announcements
+
+click|Tests & Quizzes
+verifyText|Assessments
+verifyText|Create an Assessment
+verifyText|Pool Assessment
+verifyText|Sample Assessment
+verifyText|Published Copies: released to students
+
+clickXPath|//a[contains(normalize-space(), 'Published Copies:')]
+verifyText|Sample Assessment
+verifyText|Active
+verifyText|Selenium Instructor
+
+selectList|authorIndexForm:published-assessments:0:publishedSelectAction1|Scores
+verifyText|Total Scores : Sample Assessment
+verifyText|Submission Status
+verifyText|Max Score Possible
+
+comment|Open the selenium student's assessment for grading.
+click|View Student Answer|1
+
+comment|Should see all of the the student's answers.
+verifyText|Sample Assessment
+verifyText|Table of Contents
+verifyText|Selenium User
+comment|enterText|editStudentResults:_id50:0:_id60:2:adjustedScore|20
+
+click|Update
+verifyText|Total Scores : Sample Assessment
+verifyText|Submission Status
+verifyText|Max Score Possible
+verifyText|qastud
+enterText|editTotalResults:totalScoreTable:0:_id351|Good job!
+
+click|Update
+verifyText|Good job!
+verifyText|qastud
+
+click|Logout
+verifyText|Welcome to Sakai QA
+verifyText|Message Of The Day
+

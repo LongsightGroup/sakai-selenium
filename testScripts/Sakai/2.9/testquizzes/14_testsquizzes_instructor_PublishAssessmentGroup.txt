@@ -1,0 +1,72 @@
+comment|To publish an assessment to groups separately
+
+openURL|$url
+verifyText|Welcome to Sakai QA
+verifyText|New Account
+enterText|user id:|qainst
+enterText|password:|sswelvalpanklidS$
+
+click|Login
+verifyText|My Workspace: Message Of The Day
+verifyText|Welcome to your personal workspace.
+verifyText|Testing 101 001 Fall 2010
+
+click|$site
+verifyText|Tests & Quizzes
+verifyText|Testing 101 001 Fall 2010: Site Information Display
+verifyText|Testing 101 001 Fall 2010: Recent Announcements
+
+click|Tests & Quizzes
+verifyText|Assessments
+verifyText|Create an Assessment
+verifyText|Pool Assessment
+verifyText|Sample Assessment
+
+comment|Adding Group 1 specific assessment
+selectList|authorIndexForm:coreAssessments:1:pendingSelectAction1|Publish
+verifyText|You cannot have two published assessments with the same title. Please choose another title. 
+verifyText|Settings 
+
+click|Open All Menus
+
+enterText|Title|Sample Assessment Group 1
+clickXPath|//label[normalize-space()='Selected Groups']
+clickXPath|//label[normalize-space()='Group 1']
+
+click|Save Settings and Publish
+verifyText|It is due 12/31/2012 12:00:01 AM.
+verifyText|There is no time limit. Students can submit this 1 time(s)
+
+click|Publish
+verifyText|Assessments
+verifyText|Published Copies: released to students
+verifyText|Sample Assessment Group 1
+verifyText|Selected Group(s)
+
+click|Reset
+comment|Adding Group 2 specific assessment
+selectList|authorIndexForm:coreAssessments:1:pendingSelectAction1|Publish
+verifyText|You cannot have two published assessments with the same title. Please choose another title. 
+verifyText|Settings 
+
+click|Open All Menus
+
+enterText|Title|Sample Assessment Group 2
+clickXPath|//label[normalize-space()='Selected Groups']
+clickXPath|//label[normalize-space()='Group 1']
+clickXPath|//label[normalize-space()='Group 2']
+
+click|Save Settings and Publish
+verifyText|It is due 12/31/2012 12:00:01 AM.
+verifyText|There is no time limit. Students can submit this 1 time(s)
+
+click|Publish
+verifyText|Assessments
+verifyText|Published Copies: released to students
+verifyText|Sample Assessment Group 2
+verifyText|Selected Group(s)
+
+click|Logout
+verifyText|Welcome to Sakai QA
+verifyText|Message Of The Day
+

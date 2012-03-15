@@ -1,0 +1,41 @@
+comment|To Add a question pool
+
+openURL|$url
+verifyText|Welcome to Sakai QA
+verifyText|New Account
+enterText|user id:|qainst
+enterText|password:|sswelvalpanklidS$
+
+click|Login
+verifyText|My Workspace: Message Of The Day
+verifyText|Welcome to your personal workspace.
+verifyText|Testing 101 001 Fall 2010
+
+click|$site
+verifyText|Tests & Quizzes
+verifyText|Testing 101 001 Fall 2010: Site Information Display
+verifyText|Testing 101 001 Fall 2010: Recent Announcements
+
+click|Tests & Quizzes
+verifyText|Assessments
+verifyText|Create an Assessment
+verifyText|Working Copies
+
+click|Question Pools
+verifyText|Question Pools
+verifyText|Add New Pool
+
+click|Add New Pool
+verifyText|Add Pool
+verifyText|Required items marked with 
+enterText|Pool Name*|Test Pool
+enterText|Department/Group|Test group
+enterText|Description|This is a sample question pool
+
+click|Save
+verifyText|Test Pool
+verifyText|Selenium Instructor
+
+click|Logout
+verifyText|Welcome to Sakai QA
+verifyText|Message Of The Day

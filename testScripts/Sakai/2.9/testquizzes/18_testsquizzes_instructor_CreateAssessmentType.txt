@@ -1,0 +1,56 @@
+comment|To create and verify a custom assessment type
+
+openURL|$url
+verifyText|Welcome to Sakai QA
+verifyText|New Account
+enterText|user id:|qainst
+enterText|password:|sswelvalpanklidS$
+
+click|Login
+verifyText|My Workspace: Message Of The Day
+verifyText|Welcome to your personal workspace.
+verifyText|Testing 101 001 Fall 2010
+
+click|$site
+verifyText|Tests & Quizzes
+verifyText|Testing 101 001 Fall 2010: Site Information Display
+verifyText|Testing 101 001 Fall 2010: Recent Announcements
+
+click|Tests & Quizzes
+verifyText|Assessments
+verifyText|Create an Assessment
+verifyText|Assessment Types
+
+click|Assessment Types
+verifyText|Assessment Types
+verifyText|Create or edit an Assessment Type to be used
+verifyText|Create a new assessment type
+enterText|Title|My Assessment Type
+
+click|Create
+verifyText|Edit Assessment Type: My Assessment Type
+verifyText|Use the checkboxes below to select those features
+
+click|Open All Menus
+enterText|Assessment Type Title|My Assessment Type
+verifyValue|templateEditorForm:timed_assmt|true
+selectRadio|Each Part is on a separate Web page
+selectRadio|Restart numbering for each part
+selectRadio|Only
+enterText|templateEditorForm:submissions_allowed|2
+selectCheckbox|templateEditorForm:number_of_sub_allowed
+selectRadio|Late Submissions (After Due Date) will NOT be accepted
+
+selectRadio|Feedback on submission
+selectCheckbox|templateEditorForm:feedback_delivery
+selectCheckbox|templateEditorForm:select_feedback_comp
+selectCheckbox|templateEditorForm:student_response
+selectCheckbox|templateEditorForm:question_level
+selectCheckbox|templateEditorForm:correct_response
+selectRadio|Record the last score
+click|Save
+
+click|Logout
+verifyText|Welcome to Sakai QA
+verifyText|Message Of The Day
+

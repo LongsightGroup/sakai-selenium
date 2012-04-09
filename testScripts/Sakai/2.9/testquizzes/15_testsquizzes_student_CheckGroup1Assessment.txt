@@ -68,8 +68,9 @@ verifyText|Assessment Submission Warning
 verifyText|You are about to submit this assessment for grading.
 
 click|Submit for Grading
-verifyText|You have completed this assessment. Your confirmation information is below
+verifyText|Sample Assessment Group 1 Submission Information
 verifyText|Sample Assessment Group 1
+verifyText|Number of submissions remaining
 
 click|Continue
 verifyText|Take an Assessment

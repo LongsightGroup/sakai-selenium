@@ -1,0 +1,39 @@
+application|assignments
+
+openURL|$url
+verifyText|Welcome to Sakai QA
+verifyText|New Account
+enterText|user id:|qastud
+enterText|password:|Maugaityptodita6
+
+click|Login
+verifyText|My Workspace: Message Of The Day
+verifyText|Welcome to your personal workspace.
+verifyText|Testing 101 001 Fall 2010
+
+click|$site
+verifyText|Announcements
+verifyText|Testing 101 001 Fall 2010: Site Information Display
+verifyText|Testing 101 001 Fall 2010: Recent Announcements
+
+click|Assignments
+verifyText|Assignment List
+verifyText|Long Assignment
+
+comment|Open Long Assignment.  Should be inside the assignment window
+click|Long Assignment
+verifyText|Selenium User
+verifyText|Long Assignment - Submitted
+verifyText|Model Answer
+
+click|Model Answer
+verifyText|This is the model text for the answer
+
+click|Back to list
+verifyText|Selenium User
+verifyText|Long Assignment
+verifyText|Submitted
+
+click|Logout
+verifyText|Welcome to Sakai QA
+verifyText|Message Of The Day

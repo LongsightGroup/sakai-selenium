@@ -1,0 +1,38 @@
+openURL|$url
+verifyText|Welcome to Sakai QA
+verifyText|New Account
+enterText|user id:|qastud
+enterText|password:|Maugaityptodita6
+
+click|Login
+verifyText|My Workspace: Message Of The Day
+verifyText|Welcome to your personal workspace.
+verifyText|Testing 101 001 Fall 2010
+
+click|$site
+verifyText|Announcements
+verifyText|Testing 101 001 Fall 2010: Site Information Display
+verifyText|Testing 101 001 Fall 2010: Recent Announcements
+
+click|Assignments
+verifyText|Assignment List
+verifyText|Long Assignment
+verifyText|Returned
+
+click|Long Assignment
+verifyText|Long Assignment
+verifyText|100.0
+
+click|test.doc
+verifyFile|test.doc
+verifyText|I have neither given nor received aid on this assignment
+
+click|Cancel
+verifyText|Assignment List
+verifyText|Long Assignment
+
+click|Logout
+verifyText|Welcome to Sakai QA
+verifyText|Message Of The Day
+
+

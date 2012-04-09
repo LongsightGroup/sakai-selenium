@@ -1,0 +1,32 @@
+openURL|$url
+verifyText|Welcome to Sakai QA
+verifyText|New Account
+enterText|user id:|qainst
+enterText|password:|sswelvalpanklidS$
+
+click|Login
+verifyText|My Workspace: Message Of The Day
+verifyText|Welcome to your personal workspace.
+verifyText|Testing 101 001 Fall 2010
+
+click|$site
+verifyText|Announcements
+verifyText|Testing 101 001 Fall 2010: Site Information Display
+verifyText|Testing 101 001 Fall 2010: Recent Announcements
+
+click|Assignments
+verifyText|Assignment List
+verifyText|Viewing
+verifyText|Edit
+verifyText|Viewing 1 -
+captureText|Viewing 1 -|of|numAssigns
+
+loopWhile|numAssigns
+loop|selectCheckbox|Remove
+loop|click|Update
+loop|click|Delete
+endloop
+
+click|Logout
+verifyText|Welcome to Sakai QA
+verifyText|Message Of The Day

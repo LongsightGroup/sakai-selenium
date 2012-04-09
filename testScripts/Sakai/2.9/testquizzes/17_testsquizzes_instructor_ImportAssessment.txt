@@ -1,0 +1,69 @@
+comment|To import and verify settings and questions of an assessment
+
+openURL|$url
+verifyText|Welcome to Sakai QA
+verifyText|New Account
+enterText|user id:|qainst
+enterText|password:|sswelvalpanklidS$
+
+click|Login
+verifyText|My Workspace: Message Of The Day
+verifyText|Welcome to your personal workspace.
+verifyText|Testing 101 001 Fall 2010
+
+click|$site
+verifyText|Tests & Quizzes
+verifyText|Testing 101 001 Fall 2010: Site Information Display
+verifyText|Testing 101 001 Fall 2010: Recent Announcements
+
+click|Tests & Quizzes
+verifyText|Assessments
+verifyText|Create an Assessment
+verifyText|Import from File (XML or zip) 
+
+click|Import
+verifyText|Import Assessment
+verifyText|Choose an IMS QTI-compliant
+
+uploadFile|ImportAssessment.zip
+verifyText|Import Assessment
+verifyValue|importAssessmentForm:sourceType|true
+
+click|Import
+verifyText|Create an Assessment
+verifyText|Import Assessment
+selectList|authorIndexForm:coreAssessments:0:pendingSelectAction1|Edit
+comment|should be able to view the questions in the imported assessment
+verifyText|Questions: Import Assessment
+verifyText|Import Assessment Multiple choice
+verifyText|Import Assessment true or false
+verifyText|Import Assessment essay question
+verifyText|Import Assessment Roses are
+verifyText|Import Assessment Matching
+
+click|Settings
+verifyText|Settings - Import Assessment
+click|Open All Menus
+
+comment|Not to verify settings of imported assessment
+verifyText|qainst
+verifyText|This is an Assessment to be imported
+verifyText|TestAttachment.doc
+verifyValue|Testing 101 001 Fall 2010|true
+verifyValue|assessmentSettingsAction:selTimeAssess|true
+verifyValue|Each Question is on a separate Web page|true
+verifyValue|Each Part is on a separate Web page|false
+verifyValue|Continuous numbering between parts|true
+verifyValue|Only|true
+verifyValue|Late submissions WILL NOT be accepted after the due date|true
+verifyValue|Feedback on submission|true
+verifyValue|assessmentSettingsAction:feedbackCheckbox5|true
+verifyValue|assessmentSettingsAction:feedbackCheckbox6|true
+verifyValue|Anonymous grading only|true
+
+click|Reset
+
+click|Logout
+verifyText|Welcome to Sakai QA
+verifyText|Message Of The Day
+

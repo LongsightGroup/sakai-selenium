@@ -1,0 +1,82 @@
+openURL|$url
+verifyText|Welcome to Sakai QA
+verifyText|New Account
+enterText|user id:|qainst
+enterText|password:|sswelvalpanklidS$
+
+click|Login
+verifyText|My Workspace: Message Of The Day
+verifyText|Welcome to your personal workspace.
+verifyText|Testing 101 001 Fall 2010
+
+click|$site
+verifyText|Tests & Quizzes
+verifyText|Testing 101 001 Fall 2010: Site Information Display
+verifyText|Testing 101 001 Fall 2010: Recent Announcements
+
+click|Tests & Quizzes
+verifyText|Assessments
+verifyText|Create an Assessment
+verifyText|Pool Assessment
+verifyText|Sample Assessment Group 2
+
+comment|Delete Working Copies of Assessments
+selectList|authorIndexForm:coreAssessments:0:pendingSelectAction1|Remove
+verifyText|Remove Assessment Confirmation
+verifyText|Are you sure you want to remove this assessment
+click|Remove
+verifyTextNotPresent|Pool Assessment
+
+selectList|authorIndexForm:coreAssessments:0:pendingSelectAction1|Remove
+verifyText|Remove Assessment Confirmation
+verifyText|Are you sure you want to remove this assessment
+click|Remove
+comment|verifyTextNotPresent|Sample Assessment Group 2
+
+comment|To remove published assessments
+clickXPath|//a[contains(normalize-space(), 'Published Copies:')]
+verifyText|Sample Assessment
+verifyText|Sample Assessment Group 1
+verifyText|Sample Assessment Group 2
+verifyText|Active
+verifyText|Selenium Instructor
+
+selectList|authorIndexForm:published-assessments:0:publishedSelectAction1|Remove
+verifyText|Remove Assessment Confirmation
+verifyText|Are you sure you want to remove this assessment
+click|Remove
+comment|verifyTextNotPresent|Sample Assessment
+
+selectList|authorIndexForm:published-assessments:0:publishedSelectAction1|Remove
+verifyText|Remove Assessment Confirmation
+verifyText|Are you sure you want to remove this assessment
+click|Remove
+verifyTextNotPresent|Sample Assessment Group 1
+
+selectList|authorIndexForm:published-assessments:0:publishedSelectAction1|Remove
+verifyText|Remove Assessment Confirmation
+verifyText|Are you sure you want to remove this assessment
+click|Remove
+verifyTextNotPresent|Sample Assessment Group 2
+verifyTextNotPresent|Sample Assessment
+
+click|Question Pools
+verifyText|Question Pools
+verifyText|Test Pool
+verifyText|Test Pool Copy
+
+comment|This selects all question pools and deletes them.
+selectCheckbox|questionpool:TreeTable:0:removeCheckbox
+selectCheckbox|questionpool:TreeTable:1:removeCheckbox
+click|Update
+verifyText|Are you sure you want to remove the following pool(s) and ALL associated subpools and questions?
+verifyText|Pool Names
+click|Remove
+verifyTextNotPresent|Test Pool
+verifyTextNotPresent|Test Pool Copy
+
+click|Logout
+verifyText|Welcome to Sakai QA
+verifyText|Message Of The Day
+verifyText|Welcome
+

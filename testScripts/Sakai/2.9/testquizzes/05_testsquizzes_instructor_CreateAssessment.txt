@@ -37,7 +37,7 @@ enterText|Answer Point Value|5
 verifyValue|Single Correct|true
 enterText|itemForm:_id85_textinput|Choose the correct answer
 enterText|itemForm:mcchoices:0:_id143_textinput|Choice 1
-selectRadio|itemForm:mcchoices:0:mcradiobtn
+selectRadio|A
 enterText|itemForm:mcchoices:1:_id143_textinput|Choice 2
 enterText|itemForm:mcchoices:2:_id143_textinput|Choice 3
 enterText|itemForm:mcchoices:3:_id143_textinput|Choice 4

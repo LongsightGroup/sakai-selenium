@@ -1,0 +1,41 @@
+comment|Update the draft assessment created
+
+openURL|$url
+verifyText|Welcome to Sakai QA
+verifyText|New Account
+enterText|user id:|qainst
+enterText|password:|sswelvalpanklidS$
+
+click|Login
+verifyText|My Workspace: Message Of The Day
+verifyText|Welcome to your personal workspace.
+verifyText|Testing 101 001 Fall 2010
+
+click|$site
+verifyText|Announcements
+verifyText|Testing 101 001 Fall 2010: Site Information Display
+verifyText|Testing 101 001 Fall 2010: Recent Announcements
+
+click|Assignments
+verifyText|Assignment List
+verifyText|Draft - Draft Assignment
+
+click|Assignment title
+verifyText|Assignment title
+
+comment|Update draft assignment.  Should now be first element in list.
+click|Edit|1
+verifyText|Alert: You are revising an assignment after the open date. 
+verifyText|Draft Assignment - edit
+verifyValue|new_assignment_grade_type|Letter grade
+comment|verifyValue|sendnotifsummary|true
+
+click|Post
+verifyText|Assignment List
+verifyText|Draft Assignment 
+verifyText|A-F
+
+click|Logout
+verifyText|Welcome to Sakai QA
+verifyText|Message Of The Day
+

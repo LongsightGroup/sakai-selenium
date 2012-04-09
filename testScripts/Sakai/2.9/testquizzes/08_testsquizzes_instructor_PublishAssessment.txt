@@ -33,9 +33,9 @@ click|Open All Menus
 enterText|assessmentSettingsAction:startDate|01/01/2012 00:00:01 AM
 enterText|assessmentSettingsAction:endDate|12/31/2012 00:00:01 AM
 enterText|assessmentSettingsAction:retractDate|12/31/2012 00:00:01 AM
-clickXPath|//label[normalize-space()='Only']
+selectRadio|Only
 enterText|assessmentSettingsAction:submissions_Allowed|1
-clickXPath|//label[normalize-space()='Feedback on submission']
+selectRadio|Feedback on submission
 selectCheckbox|assessmentSettingsAction:feedbackCheckbox5
 selectCheckbox|assessmentSettingsAction:feedbackCheckbox6
 

@@ -1,0 +1,31 @@
+openURL|$url
+verifyText|Welcome to Sakai QA
+verifyText|New Account
+enterText|user id:|qastud
+enterText|password:|Maugaityptodita6
+
+click|Login
+verifyText|My Workspace: Message Of The Day
+verifyText|Welcome to your personal workspace.
+verifyText|Testing 101 001 Fall 2010
+
+click|$site
+verifyText|Announcements
+verifyText|Testing 101 001 Fall 2010: Site Information Display
+verifyText|Testing 101 001 Fall 2010: Recent Announcements
+
+click|Assignments
+verifyText|Assignment List
+verifyText|Group 1 Assignment
+verifyTextNotPresent|Group 2 Assignment
+
+comment|Open Group 1 Assignment.  Should be inside the assignment window
+click|Group 1 Assignment
+verifyText|Assignment - In progress
+verifyText|This is an assignment for Group 1
+verifyText|Letter grade
+
+click|Logout
+verifyText|Welcome to Sakai QA
+verifyText|Message Of The Day
+

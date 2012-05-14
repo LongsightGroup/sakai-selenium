@@ -23,8 +23,8 @@ verifyText|Click the button
 
 click|Enter LectureTools
 waitForPopUp|30
-verifyText|Welcome to LectureTools
-verifyText|Click to setup a new course
+verifyText|Welcome to
+verifyText|Create Course
 closePopUp
 
 click|Logout

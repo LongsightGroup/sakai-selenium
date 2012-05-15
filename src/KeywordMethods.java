@@ -971,7 +971,8 @@ public class KeywordMethods {
 				// Try to find the correct path, once a second for 30 seconds.
 				for (int timer = 1; timer <= intTimeout; timer++) {
 
-			        if (windowHandles.length > 0)
+			        // If there is more than a single window, attempt to switch to the newest one.
+					if (windowHandles.length > 1)
 			        {
 						driver.switchTo().window(windowHandles[windowHandles.length - 1].toString());
 						return "pass";

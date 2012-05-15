@@ -8,7 +8,7 @@ import java.nio.channels.FileChannel;
 import java.nio.charset.Charset;
 import java.text.DateFormat;
 import java.text.SimpleDateFormat;
-import java.util.Arrays;
+//import java.util.Arrays;
 import java.util.Date;
 import java.util.Properties;
 import java.util.List;
@@ -17,6 +17,8 @@ import org.openqa.selenium.OutputType;
 import org.openqa.selenium.TakesScreenshot;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
+import org.openqa.selenium.chrome.ChromeDriverService;
+import org.openqa.selenium.chrome.ChromeOptions;
 import org.openqa.selenium.firefox.FirefoxDriver;
 import org.openqa.selenium.firefox.FirefoxProfile;
 import org.openqa.selenium.ie.InternetExplorerDriver;
@@ -566,9 +568,8 @@ public class TestManager {
 		driver = new FirefoxDriver(profile); 
         }	
 	
-	@SuppressWarnings("deprecation")
 	private static void prepChromeProfile (String downloadDirectory, String mimeTypes, String driverPath)  throws Exception {
-		
+		/* Deprecated as of WebDriver 2.16
 		// Find the chrome driver path in the user's parameter file.
 		System.setProperty("webdriver.chrome.driver", driverPath);
 
@@ -577,6 +578,16 @@ public class TestManager {
 		capabilities.setCapability("chrome.switches", Arrays.asList("--download.prompt_for_download=false"));
 
 		driver = new ChromeDriver(capabilities);
+		*/
+		
+		System.setProperty(ChromeDriverService.CHROME_DRIVER_EXE_PROPERTY, driverPath);
+		
+		ChromeDriverService service = ChromeDriverService.createDefaultService();
+		
+		ChromeOptions options = new ChromeOptions();
+		options.addArguments("--download.prompt_for_download=false");
+		
+		driver = new ChromeDriver(service, options); 
 		}
 	
 	private static void prepIEProfile (String downloadDirectory, String mimeTypes)  throws Exception {

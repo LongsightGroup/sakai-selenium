@@ -27,8 +27,11 @@ public class ElementLocator {
 	protected static WebElement foundObject;
 	private static String application;
 	private static Integer frameLevel;
-	private static Integer [] numFrames = new Integer[5]; 
-	private static Integer [] currentFrame = new Integer[5];
+	
+	// The next two definitions mean you can only support 8 levels of 8 frames apiece.
+	// Increase the array size to support a larger number of frames.
+	private static Integer [] numFrames = new Integer[8]; 
+	private static Integer [] currentFrame = new Integer[8];
 	
 	protected static WebElement pathFinder (WebDriver driver, Integer timeout, HashMap<String, String> paramHash, String [] elementTypes)  throws Exception {
 		

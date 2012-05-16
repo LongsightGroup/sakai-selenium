@@ -57,7 +57,8 @@ public class ElementLocator {
 				// If you can't find it, call frameCrawler to look through the frames for it.
 				// return it if you find it.
 				frameLevel = 0;
-				if(frameCrawler(driver, locatorList, iteration)) {
+				//if(frameCrawler(driver, locatorList, iteration)) {
+				if(frameLister(driver, locatorList, iteration)) {
 					return foundObject;
 				}
 				Thread.sleep(1000);
@@ -138,12 +139,20 @@ public class ElementLocator {
 			// an array with the number of frames we find.
 			frameLevel++;
 			
+			
 			//Some frames are not iframes, determine what type of frame is contained on the page.
 			numFrames[frameLevel] = driver.findElements(By.xpath("//iframe")).size();
 			
 			if (numFrames[frameLevel] == 0) {
 				numFrames[frameLevel] = driver.findElements(By.xpath("//frame")).size();
 			}
+			/*
+			List <WebElement> framesList = driver.findElements(By.xpath("//iframe"));
+			
+			if (framesList.isEmpty()) {
+				framesList = driver.findElements(By.xpath("//frame"));
+			}
+			*/
 			// We will get here if there are no frames, that means it will throw an exception for the iframes and never get
 			// to the other frames.  Will this ever happen?
 			} catch (NoSuchElementException e) {
@@ -159,7 +168,7 @@ public class ElementLocator {
 				
 				for(int i=1; i <= frameLevel; i++) {
 					// Switch into the current frame in the level we are currently working in.
-					driver.switchTo().frame(currentFrame[i]);					
+					driver.switchTo().frame(currentFrame[i]);
 				}
 
 				// This will return true if it finds an enabled object, and false if it doesn't.
@@ -180,6 +189,52 @@ public class ElementLocator {
 			// So return false.
 			return false;
 		}
+	
+	private static Boolean frameLister (WebDriver driver, List<String> locatorList, Integer iteration) throws Exception {
+		
+		try {
+		
+			// framesList is a variable local to this method, so it should create a new 
+			// instantiation of itself if it is called recursively.  This should eliminate
+			// problems with nested frames.
+			List <WebElement> framesList = driver.findElements(By.xpath("//iframe"));
+			
+			if (framesList.isEmpty()) {
+				framesList = driver.findElements(By.xpath("//frame"));
+			}
+			
+			// Switch to one of the frames so that objectLocator can look within it
+			for(WebElement myFrame:framesList) {
+				driver.switchTo().frame(myFrame);
+
+				// This will return true if it finds an enabled object, and false if it doesn't.
+				// If we don't find the object, look for sub-frames and return true if the object is found within them.
+				if (objectLocator(driver, locatorList, iteration)) {
+					return true;
+				} else {
+					if(frameLister(driver, locatorList, iteration)) {
+						return true;
+					}
+				}
+			}
+			// There are no sub-frames, so we need to navigate back up to the parent frame before going down to the next frame.
+			// This command takes us to the root frame, instead of just up one-level
+			driver.switchTo().defaultContent();
+				
+			// We will get here if we have crawled through all of the frames without finding the object we are looking for.
+			// So return false.
+			return false;
+			
+			// We will get here if there are no frames, that means it will throw an exception for the iframes and never get
+			// to the other frames.  Will this ever happen?
+			} catch (NoSuchElementException e) {
+				
+				System.out.println(e);
+				return false;
+				// continue;
+			}
+			
+		}	
 				
 	private static Boolean objectLocator (WebDriver driver, List<String> locatorList, Integer iteration) throws Exception {
 

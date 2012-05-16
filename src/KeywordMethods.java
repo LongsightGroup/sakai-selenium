@@ -11,6 +11,7 @@ import java.util.HashMap;
 import java.util.List;
 import java.util.ListIterator;
 import java.util.Properties;
+import java.util.Set;
 
 import org.apache.commons.lang.StringUtils;
 import org.apache.commons.io.filefilter.WildcardFileFilter;
@@ -198,9 +199,15 @@ public class KeywordMethods {
 			
 			try {
 
+				Set<String> allWindows = driver.getWindowHandles();
+				String myWindow = driver.getWindowHandle();
+				
+				allWindows.remove(myWindow);
+				
 				driver.close();
-				String myWindow = driver.getWindowHandles().iterator().next();
-				driver.switchTo().window(myWindow);
+				//String myWindow = driver.getWindowHandles().iterator().next();
+				//driver.switchTo().window(myWindow);
+				driver.switchTo().window(allWindows.iterator().next());
 
 				return "pass";
 				
@@ -965,23 +972,42 @@ public class KeywordMethods {
 			Integer intTimeout = Integer.parseInt(timeout);
 			
 			try {
+
+				//Object[] windowHandles  = driver.getWindowHandles().toArray();				
 				
-				Object[] windowHandles  = driver.getWindowHandles().toArray();
+				// Grab the current window handle and remove it from the list
+				// of all available window handles.  This should either yield the
+				// pop-up window or nothing, depending on whether the pop-up has appeared.
+				String currentHandle = driver.getWindowHandle();
+				Set<String> windowHandleSet = driver.getWindowHandles();
+				//System.out.println("Current list is: " + windowHandleSet.toString());
+				windowHandleSet.remove(currentHandle);
+				
+				//System.out.println("Current Handle was: " + currentHandle);
+				//System.out.println("What's left is: " + windowHandleSet.toString());
+				//System.out.println("The end");
 	        
-				// Try to find the correct path, once a second for 30 seconds.
+				// Try to find the correct path, once a second until the timeout value is reached.
+				// By default this is 30 seconds.
 				for (int timer = 1; timer <= intTimeout; timer++) {
 
 			        // If there is more than a single window, attempt to switch to the newest one.
-					if (windowHandles.length > 1)
+					//if (windowHandles.length > 1)
+					if (windowHandleSet.size() > 0)
 			        {
-						driver.switchTo().window(windowHandles[windowHandles.length - 1].toString());
+						//driver.switchTo().window(windowHandles[windowHandles.length - 1].toString());
+						driver.switchTo().window(windowHandleSet.iterator().next());
 						return "pass";
 			        }
 					
 					//Wait for one second if the popup is not found
 					Thread.sleep(1000);
 					
-					windowHandles  = driver.getWindowHandles().toArray();
+					//windowHandles  = driver.getWindowHandles().toArray();
+					// Repeat the earlier process after waiting a second.
+					windowHandleSet = driver.getWindowHandles();
+					currentHandle = driver.getWindowHandle();
+					windowHandleSet.remove(currentHandle);
 				}
 				
 			return "fail: no pop-up was found in the time interval specified.";

@@ -195,19 +195,29 @@ public class KeywordMethods {
 		
 		//close a pop up window and return to the main window
 		//use: closePopUp|
-		protected static String closePopUp (WebDriver driver) throws Exception {
+		protected static String closePopUp (WebDriver driver, String variablesPath) throws Exception {
+			
+			String origWindowHandle;
 			
 			try {
+				
+				//Define the variables stream, load the variables, and close the stream.
+				Properties currentVariables = new Properties();
+				FileInputStream curVarStream = new FileInputStream(variablesPath);
+				currentVariables.load(curVarStream);
 
-				Set<String> allWindows = driver.getWindowHandles();
-				String myWindow = driver.getWindowHandle();
+	    		if (!currentVariables.containsKey("origWindowHandle")) {
+	    			return "fail: The original window handle was not recorded.";
+	    		} else {
+	    			origWindowHandle = currentVariables.getProperty("origWindowHandle");
+	    		}
 				
-				allWindows.remove(myWindow);
-				
+				curVarStream.close();
+
 				driver.close();
 				//String myWindow = driver.getWindowHandles().iterator().next();
 				//driver.switchTo().window(myWindow);
-				driver.switchTo().window(allWindows.iterator().next());
+				driver.switchTo().window(origWindowHandle);
 
 				return "pass";
 				
@@ -442,11 +452,29 @@ public class KeywordMethods {
 
 		// opens the url of the application to test.
 		// use: openUrl|url
-		protected static String openUrl (WebDriver driver, String url)  throws Exception {
+		protected static String openUrl (WebDriver driver, String variablesPath, String url)  throws Exception {
 			
 			try {
 				
+				// Open the targeted URL
 				driver.get(url);
+				
+				String origWindowHandle = driver.getWindowHandle();
+				
+				//Define the variables stream, load the variables, and close the stream.
+				Properties currentVariables = new Properties();
+				FileInputStream curVarStream = new FileInputStream(variablesPath);
+				currentVariables.load(curVarStream);
+				curVarStream.close();
+
+				//Add the new key to the properties hash.
+		        currentVariables.setProperty("origWindowHandle" , origWindowHandle);
+			 
+		        //Reload the properties file, save new values and close stream.
+				FileOutputStream newVarStream = new FileOutputStream(variablesPath);		
+				currentVariables.store(newVarStream, null);
+				newVarStream.close();
+				
 				return "pass";
 				
 				} catch (Exception e) {
@@ -911,7 +939,7 @@ public class KeywordMethods {
 				if ((objectInQuestion.getAttribute("type").contains("radio")) || (objectInQuestion.getAttribute("type").contains("checkbox")))	{
 			
 					// Check to see if the specified element is checked or not and compare it with the user's expectations
-					String objectSelected = ((Boolean) objectInQuestion.isSelected()).toString();
+					String objectSelected = ((Boolean) objectInQuestion.isSelected()).toString().trim();
 					
 					if (objectSelected.equalsIgnoreCase(valueToVerify)) {
 						return "pass";
@@ -925,8 +953,8 @@ public class KeywordMethods {
 			        Select selectInQuestion = new Select(objectInQuestion);
 			        
 			        List<WebElement> selectedOptions = selectInQuestion.getAllSelectedOptions();
-					
-					if (selectedOptions.get(0).getText().equals(valueToVerify)) {
+			        
+					if (selectedOptions.get(0).getText().trim().equals(valueToVerify)) {
 						return "pass";
 					// Fail if the stated criteria doesn't match
 					} else {
@@ -934,7 +962,7 @@ public class KeywordMethods {
 					}
 				// For selects text boxes, we grab their text value.					
 				} else {
-					if (objectInQuestion.getAttribute("value").equals(valueToVerify)) {
+					if (objectInQuestion.getAttribute("value").trim().equals(valueToVerify)) {
 						return "pass";
 					// Fail if the stated criteria doesn't match
 					} else {
@@ -967,21 +995,35 @@ public class KeywordMethods {
 		
 
 		//wait for a pop up window to open.  Timeout is in milliseconds.
-		protected static String waitForPopUp(WebDriver driver, String timeout) throws Exception {
+		protected static String waitForPopUp(WebDriver driver, String variablesPath, String timeout) throws Exception {
 			
 			Integer intTimeout = Integer.parseInt(timeout);
+			String origWindowHandle;
 			
 			try {
+				
+				//Define the variables stream, load the variables, and close the stream.
+				Properties currentVariables = new Properties();
+				FileInputStream curVarStream = new FileInputStream(variablesPath);
+				currentVariables.load(curVarStream);
 
+	    		if (!currentVariables.containsKey("origWindowHandle")) {
+	    			return "fail: The original window handle was not recorded.";
+	    		} else {
+	    			origWindowHandle = currentVariables.getProperty("origWindowHandle");
+	    		}
+				
+				curVarStream.close();
+				
 				//Object[] windowHandles  = driver.getWindowHandles().toArray();				
 				
 				// Grab the current window handle and remove it from the list
 				// of all available window handles.  This should either yield the
 				// pop-up window or nothing, depending on whether the pop-up has appeared.
-				String currentHandle = driver.getWindowHandle();
+				// String currentHandle = driver.getWindowHandle();
 				Set<String> windowHandleSet = driver.getWindowHandles();
 				//System.out.println("Current list is: " + windowHandleSet.toString());
-				windowHandleSet.remove(currentHandle);
+				windowHandleSet.remove(origWindowHandle);
 				
 				//System.out.println("Current Handle was: " + currentHandle);
 				//System.out.println("What's left is: " + windowHandleSet.toString());
@@ -1006,8 +1048,8 @@ public class KeywordMethods {
 					//windowHandles  = driver.getWindowHandles().toArray();
 					// Repeat the earlier process after waiting a second.
 					windowHandleSet = driver.getWindowHandles();
-					currentHandle = driver.getWindowHandle();
-					windowHandleSet.remove(currentHandle);
+					windowHandleSet.remove(origWindowHandle);
+					
 				}
 				
 			return "fail: no pop-up was found in the time interval specified.";

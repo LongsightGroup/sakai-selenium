@@ -202,7 +202,7 @@ public class ElementLocator {
 			if (framesList.isEmpty()) {
 				framesList = driver.findElements(By.xpath("//frame"));
 			}
-			
+
 			// Switch to one of the frames so that objectLocator can look within it
 			for(WebElement myFrame:framesList) {
 				driver.switchTo().frame(myFrame);

@@ -377,7 +377,7 @@ public class TestManager {
 	    	testStatus = KeywordMethods.clickXPath(driver, vars[1]);
 	    	}
 	    else if (vars[0].equalsIgnoreCase("closePopUp")) {
-	    	testStatus = KeywordMethods.closePopUp (driver);
+	    	testStatus = KeywordMethods.closePopUp(driver, variablesPath);
 	    }
 	    else if (vars[0].equalsIgnoreCase("comment")) {
 	    	// this is done to include comments in the log file.
@@ -405,7 +405,7 @@ public class TestManager {
    			testStatus = KeywordMethods.modalClick(driver, vars[1]);
 	    	}		    
 	    else if (vars[0].equalsIgnoreCase("openurl")) {
-   			testStatus = KeywordMethods.openUrl(driver, vars[1]);
+   			testStatus = KeywordMethods.openUrl(driver, variablesPath, vars[1]);
 	    	}	
 	    else if (vars[0].equalsIgnoreCase("selectcheckbox") && (vars.length == 2)) { 
 	    	testStatus = KeywordMethods.selectCheckbox(driver, application, timeout, xpathFile, vars[1]);
@@ -463,7 +463,7 @@ public class TestManager {
 	    	testStatus = KeywordMethods.wait(vars[1]);
 	    	}
 	    else if ((vars[0].equalsIgnoreCase("waitforpopup"))) { 
-	    	testStatus = KeywordMethods.waitForPopUp(driver, vars[1]);
+	    	testStatus = KeywordMethods.waitForPopUp(driver, variablesPath, vars[1]);
 	    	}	    
 	    else {
 	    	testStatus = "fail: " + vars[0] + " is not a valid method.";

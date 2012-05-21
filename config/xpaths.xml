@@ -109,12 +109,18 @@
 
 	<ckeditors>
 		<ckeditor>
-			<generic>//label[normalize-space()=element]/following::td[contains(@class, 'cke_contents')]/iframe</generic>
+			<generic>//label[normalize-space()=element]/following::td[contains(@class,'cke_contents')]/iframe</generic>
 		</ckeditor>
 		<ckeditor>
 			<generic>//span[normalize-space()=element]/following::td[contains(@class, 'cke_contents')]/iframe</generic>
 		</ckeditor>
-	</ckeditors> 
+		<ckeditor>
+			<forums>//text()[normalize-space()=element]/following::td[contains(@class, 'cke_contents')]/iframe</forums>
+		</ckeditor>
+		<ckeditor>
+			<announcements>//label[contains(normalize-space(), element)]/following::td[contains(@class, 'cke_contents')]/iframe</announcements>
+		</ckeditor>
+	</ckeditors>
 
 	<fckeditors>
 		<fckeditor>

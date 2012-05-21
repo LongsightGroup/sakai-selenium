@@ -21,7 +21,7 @@ verifyText|Ask a Librarian
 verifyText|reference and research help service!
 
 click|Ask a Librarian
-verifyText|About MLibrary
+verifyText|Using the Library
 verifyText|Ask a Librarian is tailored to the research needs of UM students
 
 click|Logout

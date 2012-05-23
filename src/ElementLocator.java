@@ -31,8 +31,8 @@ public class ElementLocator {
 	
 	// The next two definitions mean you can only support 8 levels of 8 frames apiece.
 	// Increase the array size to support a larger number of frames.
-	private static Integer [] numFrames = new Integer[8]; 
-	private static Integer [] currentFrame = new Integer[8];
+	//private static Integer [] numFrames = new Integer[8]; 
+	//private static Integer [] currentFrame = new Integer[8];
 	
 	static Map<Integer, WebElement> frameMap = new HashMap<Integer, WebElement>();
 	
@@ -135,7 +135,7 @@ public class ElementLocator {
 		}	
 	}
 
-	private static Boolean frameCrawlerOrig (WebDriver driver, List<String> locatorList, Integer iteration) throws Exception {
+/*	private static Boolean frameCrawlerOrig (WebDriver driver, List<String> locatorList, Integer iteration) throws Exception {
 		
 		try {
 			
@@ -187,7 +187,7 @@ public class ElementLocator {
 			// So return false.
 			return false;
 		}
-	
+*/	
 	private static Boolean frameCrawler (WebDriver driver, List<String> locatorList, Integer iteration) throws Exception {
 		
 		try {
@@ -258,7 +258,7 @@ public class ElementLocator {
 			
 		}	
 	
-	private static Boolean frameLister (WebDriver driver, List<String> locatorList, Integer iteration) throws Exception {
+/*	private static Boolean frameLister (WebDriver driver, List<String> locatorList, Integer iteration) throws Exception {
 		
 		try {
 		
@@ -303,7 +303,7 @@ public class ElementLocator {
 			}
 			
 		}	
-				
+*/				
 	private static Boolean objectLocator (WebDriver driver, List<String> locatorList, Integer iteration) throws Exception {
 
 		try {

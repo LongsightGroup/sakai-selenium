@@ -562,32 +562,25 @@ public class TestManager {
 		
 		// Cannot set these. WebDriver freezes these by default.
 		//profile.setPreference("security.warn_viewing_mixed", "false");
-		//profile.setPreference("security.warn_viewing_mixed.show_once", "false");
-		        
+		//profile.setPreference("security.warn_viewing_mixed.show_once", "false");   
 
 		driver = new FirefoxDriver(profile); 
         }	
 	
 	private static void prepChromeProfile (String downloadDirectory, String mimeTypes, String driverPath)  throws Exception {
-		/* Deprecated as of WebDriver 2.16
-		// Find the chrome driver path in the user's parameter file.
-		System.setProperty("webdriver.chrome.driver", driverPath);
-
-		DesiredCapabilities capabilities = DesiredCapabilities.chrome();
-		//capabilities.setCapability("chrome.switches", Arrays.asList("--user-download-dir=" + downloadDirectory));
-		capabilities.setCapability("chrome.switches", Arrays.asList("--download.prompt_for_download=false"));
-
-		driver = new ChromeDriver(capabilities);
-		*/
-		
+				
 		System.setProperty(ChromeDriverService.CHROME_DRIVER_EXE_PROPERTY, driverPath);
 		
 		ChromeDriverService service = ChromeDriverService.createDefaultService();
 		
 		ChromeOptions options = new ChromeOptions();
+
+		// The following option is ineffectual.  Workaround is to set the downloadDirectory
+		// equal to the user's current download directory setting
+		//options.addArguments("--download.default_directory=" + downloadDirectory);
 		options.addArguments("--download.prompt_for_download=false");
 		
-		driver = new ChromeDriver(service, options); 
+		driver = new ChromeDriver(service, options);
 		}
 	
 	private static void prepIEProfile (String downloadDirectory, String mimeTypes)  throws Exception {

@@ -412,7 +412,11 @@ public class KeywordMethods {
 				// Find the frame the contains the mceEditor and switch to it. 
 				WebElement enterPath = ElementLocator.pathFinder(driver, timeout, paramHash, elementTypes);
 				
-				driver.switchTo().frame(enterPath);
+				// The following line of code was switched to accommodate a bug in Chrome where the frame
+				// orders switch somewhat randomly.  Found this fix here:
+				// http://code.google.com/p/selenium/issues/detail?id=1969
+				//driver.switchTo().frame(enterPath);
+				driver.switchTo().frame(enterPath.getAttribute("id"));
 
 				// Either of these work.
 				//driver.findElement(By.id("tinymce")).sendKeys(textToEnter);

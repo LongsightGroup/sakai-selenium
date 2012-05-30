@@ -195,37 +195,33 @@ public class KeywordMethods {
 		
 		//close a pop up window and return to the main window
 		//use: closePopUp|
-		protected static String closePopUp (WebDriver driver, String variablesPath) throws Exception {
-			
-			String origWindowHandle;
+		protected static String closePopUp (WebDriver driver) throws Exception {
 			
 			try {
-				
-				//Define the variables stream, load the variables, and close the stream.
-				Properties currentVariables = new Properties();
-				FileInputStream curVarStream = new FileInputStream(variablesPath);
-				currentVariables.load(curVarStream);
 
-	    		if (!currentVariables.containsKey("origWindowHandle")) {
-	    			return "fail: The original window handle was not recorded.";
-	    		} else {
-	    			origWindowHandle = currentVariables.getProperty("origWindowHandle");
-	    		}
-				
-				curVarStream.close();
-
+				// Obtain the current list of window handles.
+				Set<String> windowHandleSet = driver.getWindowHandles();
+	
+				// Get the current window handle and remove it from the current set.
+				// Assuming the current handle was the pop-up window.
+				// This should leave only the original window.
+				// We have to store this prior to using the close method because chrome
+				// loses its ability to get handles after the close method is called.
+				String popupWindowHandle = driver.getWindowHandle();
+				windowHandleSet.remove(popupWindowHandle);
+						
 				driver.close();
-				//String myWindow = driver.getWindowHandles().iterator().next();
-				//driver.switchTo().window(myWindow);
-				driver.switchTo().window(origWindowHandle);
-
+				
+				// Switch to the remaining handle.
+				driver.switchTo().window(windowHandleSet.iterator().next());				
+				
+				// If we can switch to this new window, our work here is done.
 				return "pass";
 				
 			} catch (Exception e) {
 				
 					return "fail: " + e.toString();
 			}
-			
 			
 		}
 		
@@ -837,6 +833,7 @@ public class KeywordMethods {
 				return "pass";
 				
 				} catch (Exception e) {
+
 					return "fail: " + e.toString();
 				}  
 			}
@@ -999,60 +996,37 @@ public class KeywordMethods {
 		
 
 		//wait for a pop up window to open.  Timeout is in milliseconds.
-		protected static String waitForPopUp(WebDriver driver, String variablesPath, String timeout) throws Exception {
+		protected static String waitForPopUp(WebDriver driver, String timeout) throws Exception {
 			
 			Integer intTimeout = Integer.parseInt(timeout);
-			String origWindowHandle;
 			
 			try {
 				
-				//Define the variables stream, load the variables, and close the stream.
-				Properties currentVariables = new Properties();
-				FileInputStream curVarStream = new FileInputStream(variablesPath);
-				currentVariables.load(curVarStream);
-
-	    		if (!currentVariables.containsKey("origWindowHandle")) {
-	    			return "fail: The original window handle was not recorded.";
-	    		} else {
-	    			origWindowHandle = currentVariables.getProperty("origWindowHandle");
-	    		}
-				
-				curVarStream.close();
-				
-				//Object[] windowHandles  = driver.getWindowHandles().toArray();				
-				
-				// Grab the current window handle and remove it from the list
-				// of all available window handles.  This should either yield the
-				// pop-up window or nothing, depending on whether the pop-up has appeared.
-				// String currentHandle = driver.getWindowHandle();
-				Set<String> windowHandleSet = driver.getWindowHandles();
-				//System.out.println("Current list is: " + windowHandleSet.toString());
-				windowHandleSet.remove(origWindowHandle);
-				
-				//System.out.println("Current Handle was: " + currentHandle);
-				//System.out.println("What's left is: " + windowHandleSet.toString());
-				//System.out.println("The end");
-	        
-				// Try to find the correct path, once a second until the timeout value is reached.
+				// Wait for the new handle, once a second until the timeout value is reached.
 				// By default this is 30 seconds.
 				for (int timer = 1; timer <= intTimeout; timer++) {
+				
+					// Grab the current window handle and remove it from the list
+					// of all available window handles.  This should either yield the
+					// pop-up window or nothing, depending on whether the pop-up has appeared.
+					String currentHandle = driver.getWindowHandle();
+					Set<String> windowHandleSet = driver.getWindowHandles();
+					windowHandleSet.remove(currentHandle);
+				       
+					String popupHandle = windowHandleSet.iterator().next();
 
-			        // If there is more than a single window, attempt to switch to the newest one.
-					//if (windowHandles.length > 1)
-					if (windowHandleSet.size() > 0)
+					// If there is more than a single window and the new handle is not null
+					// attempt to switch to the newest one.
+					if ((popupHandle.length() > 1) && (windowHandleSet.size() > 0))
 			        {
-						//driver.switchTo().window(windowHandles[windowHandles.length - 1].toString());
-						driver.switchTo().window(windowHandleSet.iterator().next());
+						
+						driver.switchTo().window(popupHandle);				
+						// If we can switch to this new window, our work here is done.
 						return "pass";
 			        }
 					
 					//Wait for one second if the popup is not found
 					Thread.sleep(1000);
-					
-					//windowHandles  = driver.getWindowHandles().toArray();
-					// Repeat the earlier process after waiting a second.
-					windowHandleSet = driver.getWindowHandles();
-					windowHandleSet.remove(origWindowHandle);
 					
 				}
 				
@@ -1060,7 +1034,7 @@ public class KeywordMethods {
 				
 			} catch (Exception e) {
 				
-					return "fail: " + e.toString();
+				return "fail: " + e.toString();
 			}
 		}		
 	    

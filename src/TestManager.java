@@ -405,7 +405,7 @@ public class TestManager {
    			testStatus = KeywordMethods.modalClick(driver, vars[1]);
 	    	}		    
 	    else if (vars[0].equalsIgnoreCase("openurl")) {
-   			testStatus = KeywordMethods.openUrl(driver, variablesPath, vars[1]);
+	    	testStatus = KeywordMethods.openUrl(driver, vars[1]);
 	    	}	
 	    else if (vars[0].equalsIgnoreCase("selectcheckbox") && (vars.length == 2)) { 
 	    	testStatus = KeywordMethods.selectCheckbox(driver, application, timeout, xpathFile, vars[1]);
@@ -463,7 +463,6 @@ public class TestManager {
 	    	testStatus = KeywordMethods.wait(vars[1]);
 	    	}
 	    else if ((vars[0].equalsIgnoreCase("waitforpopup"))) { 
-	    	//testStatus = KeywordMethods.waitForPopUp(driver, logPointer, variablesPath, vars[1]);
 	    	testStatus = KeywordMethods.waitForPopUp(driver, vars[1]);
 	    	}	    
 	    else {

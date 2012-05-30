@@ -452,29 +452,13 @@ public class KeywordMethods {
 
 		// opens the url of the application to test.
 		// use: openUrl|url
-		protected static String openUrl (WebDriver driver, String variablesPath, String url)  throws Exception {
+		protected static String openUrl (WebDriver driver, String url)  throws Exception {
 			
 			try {
 				
 				// Open the targeted URL
 				driver.get(url);
-				
-				String origWindowHandle = driver.getWindowHandle();
-				
-				//Define the variables stream, load the variables, and close the stream.
-				Properties currentVariables = new Properties();
-				FileInputStream curVarStream = new FileInputStream(variablesPath);
-				currentVariables.load(curVarStream);
-				curVarStream.close();
-
-				//Add the new key to the properties hash.
-		        currentVariables.setProperty("origWindowHandle" , origWindowHandle);
-			 
-		        //Reload the properties file, save new values and close stream.
-				FileOutputStream newVarStream = new FileOutputStream(variablesPath);		
-				currentVariables.store(newVarStream, null);
-				newVarStream.close();
-				
+					
 				return "pass";
 				
 				} catch (Exception e) {

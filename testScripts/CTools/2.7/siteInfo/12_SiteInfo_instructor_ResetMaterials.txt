@@ -16,13 +16,14 @@ click|$site
 verifyText|Selenium Instructor
 verifyText|Site Information Display
 
+comment|The previous script imported two announcements from the dupe source site
+comment|We will now verify and remove those announcements.
 click|Announcements
 verifyText|Test Announcement
+verifyText|Test Announcement with Email
 verifyValue|View|All
 selectCheckbox|Select to remove
 selectCheckbox|Select to remove|2
-selectCheckbox|Select to remove|3
-selectCheckbox|Select to remove|4
 
 click|Update
 verifyText|Are you sure you want to delete the following announcements?

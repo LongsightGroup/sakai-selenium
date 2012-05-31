@@ -653,7 +653,11 @@ public class KeywordMethods {
 			}			
 			
 
-		
+		// This method verifies a downloaded file against a baseline copy of the file.  The baseline copy
+		// Should be held in the /files directory, as specified in the properties file.
+		// Some downloads have variable strings in their names.  In this case, the baseline file
+		// can replace the string with the string 'wildcard'.  This is done because OSs have 
+		// varying requirements about wildcard characters within file names.
 		protected static String verifyFile ( String downloadDirectory,  String fileDirectory, String fileName, Integer timeout)  throws Exception {
 			
 			try {
@@ -661,12 +665,19 @@ public class KeywordMethods {
 				File[] baselineFiles, testFiles;
 				File baselineFile, testFile = null;
 				File badFileDirectory = new File(downloadDirectory + "/errors");
+				String testFileName = null;
 
+				// modify the wild card character that is used internally, so that java can 
+				// search with the wild card when using a file filter. 
+				if (fileName.contains("wildcard")) {
+					testFileName = fileName.replace("wildcard", "*");
+				}
+				
 				// Construct a filter, for use later if the file contains a wildcard.
-				FileFilter fileFilter = new WildcardFileFilter(fileName);				
+				FileFilter fileFilter = new WildcardFileFilter(testFileName);				
 				
 				// Verify that our baseline file exists
-				if (fileName.contains("*")) {
+				if (fileName.contains("wildcard")) {
 					
 					File baselineDirectory = new File(fileDirectory);
 					baselineFiles = baselineDirectory.listFiles(fileFilter);
@@ -688,7 +699,7 @@ public class KeywordMethods {
 				// Verify that our test file has been download and exists.
 				// Wait for as long as the timeout is specified.
 				// First, account for cases where we are checking for a wild-carded file.				
-				if (fileName.contains("*")) {
+				if (fileName.contains("wildcard")) {
 						
 					File downloadFileDirectory = new File(downloadDirectory);
 					

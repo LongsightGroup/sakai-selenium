@@ -33,7 +33,7 @@ comment|Probably better as a manual test, the download process for this button w
 comment|This does not work and will break.
 click|Export Course Grades as CSV
 wait|5
-verifyFile|course_grade-*.csv
+verifyFile|course_grade-wildcard.csv
 
 click|Logout
 verifyText|You are about to log out

@@ -1,4 +1,3 @@
 /storage/code/svn/edu/umich/keyword2/testScripts/CTools/2.7/preferences/01PreferencesInstructorChangeLanguage.txt
 /storage/code/svn/edu/umich/keyword2/testScripts/CTools/2.7/preferences/02PreferencesInstructorCustomizeVisibleTabs.txt
 /storage/code/svn/edu/umich/keyword2/testScripts/CTools/2.7/preferences/03PreferencesInstructorCustomizeTabNumber.txt
-/storage/code/svn/edu/umich/keyword2/testScripts/CTools/2.7/preferences/04PreferencesInstructorResetLanguage.txt

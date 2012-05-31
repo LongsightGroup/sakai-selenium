@@ -19,7 +19,6 @@
 /storage/tests/testScripts/CTools/2.7/announcements/03AnnouncementsInstructorAddAnnouncement.txt
 /storage/tests/testScripts/CTools/2.7/announcements/04AnnouncementsInstructorAddAnnouncementAttachment.txt
 /storage/tests/testScripts/CTools/2.7/announcements/05AnnouncementsInstructorAddAnnouncementEmail.txt
-/storage/tests/testScripts/CTools/2.7/announcements/06AnnouncementsInstructorDeleteAnnouncements.txt
 /storage/tests/testScripts/CTools/2.7/announcements/10AnnouncementsInstructorAddGroupAnnouncement.txt
 /storage/tests/testScripts/CTools/2.7/announcements/11AnnouncementsGroup1CheckAnnouncement.txt
 /storage/tests/testScripts/CTools/2.7/announcements/12AnnouncementsGroup2CheckAnnouncement.txt
@@ -32,6 +31,8 @@
 /storage/tests/testScripts/CTools/2.7/announcements/20AnnouncementsStudentVerifyDeleteAnyPermissions.txt
 /storage/tests/testScripts/CTools/2.7/announcements/25AnnouncementsInstructorDraftAnnouncement.txt
 /storage/tests/testScripts/CTools/2.7/announcements/26AnnouncementsStudentVerifyDraftPermissions.txt
+/storage/tests/testScripts/CTools/2.7/announcements/30AnnouncementsInstructorDeleteAnnouncements.txt
+/storage/tests/testScripts/CTools/2.7/announcements/31AnnouncementsInstructorMakePermissionsDefault.txt
 
 /storage/tests/testScripts/CTools/2.7/assignments/01_assignments_InstructorCreate_LongAssignment.txt
 /storage/tests/testScripts/CTools/2.7/assignments/02_assignments_InstructorCreate_DraftAssignment.txt
@@ -218,7 +219,6 @@
 /storage/tests/testScripts/CTools/2.7/preferences/01PreferencesInstructorChangeLanguage.txt
 /storage/tests/testScripts/CTools/2.7/preferences/02PreferencesInstructorCustomizeVisibleTabs.txt
 /storage/tests/testScripts/CTools/2.7/preferences/03PreferencesInstructorCustomizeTabNumber.txt
-/storage/tests/testScripts/CTools/2.7/preferences/04PreferencesInstructorResetLanguage.txt
 
 /storage/tests/testScripts/CTools/2.7/resources/01ResourcesInstructorCheckHelp.txt
 /storage/tests/testScripts/CTools/2.7/resources/02ResourcesStudentCheckHelp.txt

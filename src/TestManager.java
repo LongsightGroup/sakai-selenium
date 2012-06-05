@@ -70,26 +70,26 @@ public class TestManager {
 		// Make sure the download directory is not null, then empty it.
 		if (downloadDirectory==null) {
 			reportLogPointer.write("fail: you have not specified a download directory in your parameters file.");
+			reportLogPointer.close();			
+			return;
 		}
-		
-		List<String> testList = Lists.newArrayList();
-		
+
 		// Read the tests from the master file if it exists.
 		if (testListFile==null) {
 			reportLogPointer.write("fail: you have not specified a master test list in your parameters file, which is located here: " + System.getProperty("user.dir"));
-		}
-			
-		// Create the variables to read the test files
-		// test files have csv extension, but are pipe delimited.
-		FileInputStream testListFileStream = new FileInputStream(testListFile);
-		BufferedReader testListFilePointer = new BufferedReader(new InputStreamReader(testListFileStream));
-		String line = null;
+			reportLogPointer.close();			
+			return;
+		}		
 		
-		// Read the next line while there is a line to read and the last command did NOT fail.
-		while ((line = testListFilePointer.readLine()) != null) {
-			if (!line.isEmpty()) {
-				testList.add(line);
-			}
+		List<String> testList = prepareScriptList(testListFile);
+		
+		String result = testList.get(testList.size() - 1); 
+		
+		if (result.startsWith("fail: ")) {
+			reportLogPointer.write("fail: one of your test scripts does not exist.  Specifically, \r\n");
+			reportLogPointer.write(result.substring(5));
+			reportLogPointer.close();
+			return;
 		}
 		
 		// How many tests do we need to run?
@@ -208,6 +208,43 @@ public class TestManager {
 		  }
 		}
 	
+
+	private static List<String> prepareScriptList(String scriptList) throws Exception {
+
+		List<String> testList = Lists.newArrayList();
+
+		// Create the variables to read the test files
+		// We will read the test list one line at a time and verify that the target file
+		// exists before proceeding.
+		FileInputStream testListFileStream = new FileInputStream(testListFile);
+		BufferedReader testListFilePointer = new BufferedReader(new InputStreamReader(testListFileStream));
+		String line = null;		
+		
+		try {
+		
+			// Read the contents of the test list into a list object,
+			// then verify the scripts within the list exist before proceeding.
+			while ((line = testListFilePointer.readLine()) != null) {
+				if (!line.isEmpty()) {
+					
+					// read the target file from one line of the test list.
+					FileInputStream stream = new FileInputStream(new File(line));
+					
+					// If the file has bytes--meaning that it exists--add it to the test list.
+					if (stream.available() > 0) {
+						testList.add(line);
+					}
+				}
+			}
+			
+			return testList;
+		
+		} catch (FileNotFoundException e) {
+			
+			testList.add("fail: " + line + " does not exist.");
+			return testList;
+	} 
+}	
 	
 	
 	private static WebDriver startDriver(String browser, String downloadDirectory, String mimeTypes, String chromeExecutable) throws Exception {
@@ -240,10 +277,6 @@ public class TestManager {
 		// test files have csv extension, but are pipe delimited.
 		FileInputStream fis1 = new FileInputStream(testScript);	
 			
-		if (fis1.available()==0) {
-			return "fail: " + testName + " does not exist at the provided path.  Please check your test list.";
-		}
-		
 		BufferedReader scriptPointer = new BufferedReader(new InputStreamReader(fis1));
 	
 		// scriptLine holds single line from a test script.
@@ -578,7 +611,11 @@ public class TestManager {
 		// The following option is ineffectual.  Workaround is to set the downloadDirectory
 		// equal to the user's current download directory setting
 		//options.addArguments("--download.default_directory=" + downloadDirectory);
-		options.addArguments("--download.prompt_for_download=false");
+		//options.addArguments("--download.prompt_for_download=false");
+		//options.addArguments("--plugins.plugins_disabled=Chrome PDF Viewer");
+		//options.addArguments("--plugins.plugins_disabled=C:/Program Files (x86)/Adobe/Reader 10.0/Reader/Browser/nppdf32.dll");
+		//options.addArguments("--plugins.plugins_disabled=C:/Program Files (x86)/Google/Chrome/Application/19.0.1084.52/pdf.dll");		
+		//options.addArguments("plugins_disabled=C:/Program Files (x86)/Google/Chrome/Application/19.0.1084.52/pdf.dll");		
 		
 		driver = new ChromeDriver(service, options);
 		}

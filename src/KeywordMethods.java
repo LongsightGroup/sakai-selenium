@@ -671,6 +671,8 @@ public class KeywordMethods {
 				// search with the wild card when using a file filter. 
 				if (fileName.contains("wildcard")) {
 					testFileName = fileName.replace("wildcard", "*");
+				} else {
+					testFileName = fileName;
 				}
 				
 				// Construct a filter, for use later if the file contains a wildcard.
@@ -994,44 +996,50 @@ public class KeywordMethods {
 		protected static String waitForPopUp(WebDriver driver, String timeout) throws Exception {
 			
 			Integer intTimeout = Integer.parseInt(timeout);
+
+			try {			
 			
-			try {
-				
 				// Wait for the new handle, once a second until the timeout value is reached.
 				// By default this is 30 seconds.
-				for (int timer = 1; timer <= intTimeout; timer++) {
+				for (int timer = 1; timer <= intTimeout; timer++) {			
 				
-					// Grab the current window handle and remove it from the list
-					// of all available window handles.  This should either yield the
-					// pop-up window or nothing, depending on whether the pop-up has appeared.
+					// Grab the current window handle and the 
+					// list of all available window handles.
 					String currentHandle = driver.getWindowHandle();
 					Set<String> windowHandleSet = driver.getWindowHandles();
-					windowHandleSet.remove(currentHandle);
-				       
-					String popupHandle = windowHandleSet.iterator().next();
-
-					// If there is more than a single window and the new handle is not null
-					// attempt to switch to the newest one.
-					if ((popupHandle.length() > 1) && (windowHandleSet.size() > 0))
-			        {
+					
+					// only proceed if there is two or more handles
+					if (windowHandleSet.size() >= 2) {
 						
-						driver.switchTo().window(popupHandle);				
-						// If we can switch to this new window, our work here is done.
-						return "pass";
-			        }
+						// Having established that there is more than one handle, 
+						// remove the current window from the list of all handles.
+						// This should yield the handle to the pop-up window.
+						windowHandleSet.remove(currentHandle);
+						String popupHandle = windowHandleSet.iterator().next();					
+					
+						// Switch to the new handle if it is not null
+						if (!popupHandle.trim().isEmpty())
+				        {						
+							driver.switchTo().window(popupHandle);				
+							// If we can switch to this new window, our work here is done.
+							return "pass";
+				        }
+						
+					}
 					
 					//Wait for one second if the popup is not found
-					Thread.sleep(1000);
-					
+					//System.out.println("I took it easy for a second.");
+					Thread.sleep(1000);			
 				}
-				
-			return "fail: no pop-up was found in the time interval specified.";
+
+				// We have waited for the timeout interval and have still not found the window.
+				return "fail: no pop-up was found in the time interval specified.";	
 				
 			} catch (Exception e) {
-				
 				return "fail: " + e.toString();
 			}
-		}		
+			
+		}	
 	    
 
 }

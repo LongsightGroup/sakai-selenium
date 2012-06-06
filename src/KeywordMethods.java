@@ -17,6 +17,7 @@ import org.apache.commons.lang.StringUtils;
 import org.apache.commons.io.filefilter.WildcardFileFilter;
 import org.apache.commons.io.FileUtils;
 
+import org.openqa.selenium.NoAlertPresentException;
 import org.openqa.selenium.NoSuchElementException;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
@@ -428,25 +429,34 @@ public class KeywordMethods {
 
 		// Handle modal dialogs
 		// use: modalClick|action where action is the desired button to push.
-		protected static String modalClick (WebDriver driver, String action)  throws Exception {
+		protected static String modalClick (WebDriver driver, String action, Integer timeout)  throws Exception {
+
+			// Wait for the new handle, once a second until the timeout value is reached.
+			// By default this is 30 seconds.
+			for (int timer = 1; timer <= timeout; timer++) {				
 			
-			try {
+				try {	
 				
-				if(action.equalsIgnoreCase("ok")) {
-					driver.switchTo().alert().accept();
-					return "pass";
-				} else if (action.equalsIgnoreCase("continue")) {
-					driver.switchTo().alert().accept();
-					return "pass";					
-				} else {
-					driver.switchTo().alert().dismiss();
-					return "pass";
-				}
-			
-			} catch (Exception e) {
+					if(action.equalsIgnoreCase("ok")) {
+						driver.switchTo().alert().accept();
+						return "pass";
+					} else if (action.equalsIgnoreCase("continue")) {
+						driver.switchTo().alert().accept();
+						return "pass";					
+					} else {
+						driver.switchTo().alert().dismiss();
+						return "pass";
+					}
 				
-				return "fail: " + e.toString();
+				} catch (NoAlertPresentException e) {
+					// We will get here if the modal dialog does not exist.
+					// Wait for one second if no modal dialog is found.
+					System.out.println("I took it easy for a second.");
+					Thread.sleep(1000);	
+				}				
 			}
+			
+			return "fail: no modal dialog appeared within the timeout window. ";
 		}	
 		
 

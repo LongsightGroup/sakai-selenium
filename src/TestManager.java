@@ -435,7 +435,7 @@ public class TestManager {
 	    	testStatus = KeywordMethods.mceEnter(driver, application, timeout, xpathFile, vars[1], vars[2], vars[3]);
 	    	}
 	    else if (vars[0].equalsIgnoreCase("modalClick")) {
-   			testStatus = KeywordMethods.modalClick(driver, vars[1]);
+   			testStatus = KeywordMethods.modalClick(driver, vars[1], timeout);
 	    	}		    
 	    else if (vars[0].equalsIgnoreCase("openurl")) {
 	    	testStatus = KeywordMethods.openUrl(driver, vars[1]);

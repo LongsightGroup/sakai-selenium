@@ -399,7 +399,7 @@ public class TestManager {
 	    	}
 	    else if (vars[0].equalsIgnoreCase("ckEnter")) {
 	    	testStatus = KeywordMethods.ckEnter(driver, application, timeout, xpathFile, vars[1], vars[2]);
-	    }
+	    	}
 	    else if (vars[0].equalsIgnoreCase("click") && (vars.length == 2)) { 
 	    	testStatus = KeywordMethods.click(driver, application, timeout, xpathFile, timingData, timingPointer, vars[1]);
 	    	}	
@@ -411,11 +411,14 @@ public class TestManager {
 	    	}
 	    else if (vars[0].equalsIgnoreCase("closePopUp")) {
 	    	testStatus = KeywordMethods.closePopUp(driver);
-	    }
+	    	}
 	    else if (vars[0].equalsIgnoreCase("comment")) {
 	    	// this is done to include comments in the log file.
 	    	testStatus = "comment";
-	    	}		    
+	    	}	
+	    else if (vars[0].equalsIgnoreCase("downloadFile") && (vars.length == 2)) { 
+	    	testStatus = KeywordMethods.downloadFile(driver, application, timeout, downloadDirectory, xpathFile, vars[1]);
+	    	}	    
 	    else if (vars[0].equalsIgnoreCase("entertext") && (vars.length == 3)) { 
 	    	testStatus = KeywordMethods.enterText(driver, application, timeout, xpathFile, vars[1], vars[2]);
 	    	}
@@ -424,7 +427,7 @@ public class TestManager {
 	    	}	    
 	    else if (vars[0].equalsIgnoreCase("fckEnter")) {
 	    	testStatus = KeywordMethods.fckEnter(driver, application, timeout, xpathFile, vars[1], vars[2]);
-	    }
+	    	}
 	    else if (vars[0].equalsIgnoreCase("loopwhile")) { 
 	    	testStatus = KeywordMethods.loopWhile(vars[1], OS, logDirectory, fileDirectory, downloadDirectory, testName, variablePath, xpathFile, scriptPointer, logPointer, timingPointer);
 	    	}

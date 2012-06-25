@@ -100,12 +100,12 @@ public class TestManager {
 			reportLogPointer.close();
 			return;
 		}		
+
+		// Start the browser with the proper parameters.
+		driver = startDriver(browser, downloadDirectory, mimeTypes, chromeExecutable);		
 		
 		// Run each test file in the input directory. 
 		for (int a = 0; a < numTests; a++) {
-			
-			// Start the browser with the proper parameters.
-			driver = startDriver(browser, downloadDirectory, mimeTypes, chromeExecutable);
 			
 			// Our tests come from the master test list, specified in parameters.
 			testScript = testList.get(a);
@@ -121,9 +121,6 @@ public class TestManager {
 
 			// Actually run the test
 			testResult = testRunner(testScript, OS, logDirectory, fileDirectory, downloadDirectory, testName, variablesPath, xpathFile);
-			// Shutdown the browser
-			//driver.close();
-			driver.quit();
 			
 			if (testResult.equals("pass")) {
 				passedTests++;
@@ -134,6 +131,10 @@ public class TestManager {
 			// Write test results out to our master log file.
 			reportLogPointer.write(testResult + "," + testName + "\r\n");
 			}
+		
+		// Shutdown the browser
+		//driver.close();
+		driver.quit();		
 		
 	    if (timingData) {
 	    	calculateTimings(logDirectory);

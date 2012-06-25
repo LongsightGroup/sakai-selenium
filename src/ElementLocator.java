@@ -12,6 +12,7 @@ import javax.xml.parsers.DocumentBuilderFactory;
 
 import org.openqa.selenium.By;
 import org.openqa.selenium.NoSuchElementException;
+import org.openqa.selenium.StaleElementReferenceException;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 
@@ -60,15 +61,27 @@ public class ElementLocator {
 				// If you can't find it, call frameCrawler to look through the frames for it.
 				// return it if you find it.
 				frameLevel = 0;
-				if(frameCrawler(driver, locatorList, iteration)) {
-				//if(frameLister(driver, locatorList, iteration)) {
-					return foundObject;
+				
+				try { 
+					if(frameCrawler(driver, locatorList, iteration)) {
+					//if(frameLister(driver, locatorList, iteration)) {
+						return foundObject;
+					}
+					Thread.sleep(1000);
+					//System.out.println("Ahh, napping.");
+				} catch (StaleElementReferenceException e) {
+
+					// This typically occurs because the DOM is not up to date.
+					// Wait for a second and continue.
+					System.out.println("Ahh, napping.");
+					Thread.sleep(1000);
+					continue;
 				}
-				Thread.sleep(1000);
 			}
 	
 			// Return an exception if you still can't find it.
 			throw new Exception("fail: " + objectID + " is not found.");
+			
 		}  catch (Exception e) {
 			throw e;
 		}
@@ -250,12 +263,18 @@ public class ElementLocator {
 			
 			// We will get here if there are no frames, that means it will throw an exception for the iframes and never get
 			// to the other frames.  Will this ever happen?
-			} catch (NoSuchElementException e) {
+			/*} catch (Exception e) {
 				
+				if (e.getMessage().contains("NoSuchElementException")) {
+					return false;
+				} else {
+					return false;
+				}
+			*/
+			// This will occur if the frameCrawler cannot switch to a particular frame.
+			} catch (NoSuchElementException e) {
 				return false;
-				// continue;
 			}
-			
 		}	
 	
 /*	private static Boolean frameLister (WebDriver driver, List<String> locatorList, Integer iteration) throws Exception {
@@ -322,11 +341,13 @@ public class ElementLocator {
 					// We will only get here if the proceeding call found an object.  Check if the object is displayed.
 					// If it isn't, continue looking through the various xpaths.
 					if (foundObject.isDisplayed()) {
+						//System.out.println("Found: " + foundObject);
 						return true;
 					} else {
 						continue;
 					}
 				} catch (NoSuchElementException ex) {
+					//System.out.println("Didn't find: " + iteratedPath);
 					continue;
 				}
 			}

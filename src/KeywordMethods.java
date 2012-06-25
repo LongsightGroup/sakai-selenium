@@ -1,5 +1,7 @@
 package edu.umich.keyword;
 
+import edu.umich.keyword.FileDownloader;
+
 import java.io.BufferedReader;
 import java.io.BufferedWriter;
 import java.io.File;
@@ -149,10 +151,12 @@ public class KeywordMethods {
 			iteration = object[1];
 		
 		HashMap<String, String> paramHash = new HashMap<String, String>();
+		String [] elementTypes = {"button", "anchor"};
+		WebElement clickThing = null;
 		
 		try {
 			
-			String [] elementTypes = {"button", "anchor"};
+			//String [] elementTypes = {"button", "anchor"};
 			
 			paramHash.put("application", application);
 	        paramHash.put("objectID", object[0]); 
@@ -161,7 +165,21 @@ public class KeywordMethods {
 	        
 	        long start = System.currentTimeMillis();
 
-			ElementLocator.pathFinder(driver, timeout, paramHash, elementTypes).click();
+	        //ElementLocator.pathFinder(driver, timeout, paramHash, elementTypes).click();
+	        
+	        //
+			clickThing = ElementLocator.pathFinder(driver, timeout, paramHash, elementTypes);
+			
+			//if (clickThing.getTagName().equals("input")) {
+			//	clickThing.sendKeys(Keys.ENTER);				
+			//} else {
+				clickThing.click();				
+			//}
+			//
+				
+			//System.out.println(clickThing);			
+			//System.out.println("Is visible? " + clickThing.isDisplayed());
+			//System.out.println("ID is: " + clickThing.getAttribute("id"));
 
 	        long end = System.currentTimeMillis();
 	        long duration = end - start;
@@ -174,6 +192,13 @@ public class KeywordMethods {
 			return "pass";
 			
 			}  catch (Exception e) {
+				
+				//if (e.getMessage().contains("not clickable")){
+				// For dealing with the chrome driver issue that says
+				// the element is not clickable at point(x,y).
+				// We see this in advanced search in the messages tool.
+				//}
+				
 				return "fail: " + e.toString();
 			}			
 		}			
@@ -225,6 +250,39 @@ public class KeywordMethods {
 			}
 			
 		}
+		
+		//close a pop up window and return to the main window
+		//use: closePopUp|
+		protected static String downloadFile (WebDriver driver, String application, Integer timeout, String downloadPath, String xpathFile, String ... object) throws Exception {
+
+			String iteration = "1";
+			if (object.length > 1) 
+				iteration = object[1];
+
+			HashMap<String, String> paramHash = new HashMap<String, String>();
+			
+			paramHash.put("application", application);
+	        paramHash.put("objectID", object[0]); 
+	        paramHash.put("iteration", iteration);
+	        paramHash.put("xpathFile", xpathFile);			
+			
+			String [] elementTypes = {"anchor", "button"};
+	
+			try {
+				
+				WebElement objectInQuestion = ElementLocator.pathFinder(driver, timeout, paramHash, elementTypes);
+
+				String fileStatus = FileDownloader.downloader(driver, objectInQuestion, downloadPath, timeout);				
+				
+				// If we can switch to this new window, our work here is done.
+				return fileStatus;
+				
+			} catch (Exception e) {
+				
+					return "fail: " + e.toString();
+			}
+			
+		}		
 		
 		// enter text into a text field
 		// use: enterText|object|text where object is the id for the text field and 
@@ -451,7 +509,7 @@ public class KeywordMethods {
 				} catch (NoAlertPresentException e) {
 					// We will get here if the modal dialog does not exist.
 					// Wait for one second if no modal dialog is found.
-					System.out.println("I took it easy for a second.");
+					System.out.println("I waited for the modal dialog for a second.");
 					Thread.sleep(1000);	
 				}				
 			}

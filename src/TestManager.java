@@ -12,6 +12,7 @@ import java.text.SimpleDateFormat;
 import java.util.Date;
 import java.util.Properties;
 import java.util.List;
+import java.util.Scanner;
 
 import org.openqa.selenium.OutputType;
 import org.openqa.selenium.TakesScreenshot;
@@ -151,12 +152,36 @@ public class TestManager {
 	    	calculateTimings(logDirectory);
 	    }
 		
-		reportLogPointer.write("\r\n" + passedTests + " tests passed\r\n");
-		reportLogPointer.write(failedTests + " tests failed");
 		// Close the master report after all the tests are finished.
 		reportLogPointer.close();
+
+		// Write out the final results report.
+		writeResultReport(passedTests, failedTests);
 	}
 
+	private static void writeResultReport(Integer passedTests, Integer failedTests) {
+		
+		FileWriter outputStream = null;
+		String file = logDirectory + "report.txt";
+		
+		try {
+            // Read the current file contents into a string
+			String results = new Scanner(new File(file)).useDelimiter("\\Z").next();
+			
+            // open our file for output.
+            outputStream = new FileWriter(file);			
+			
+			outputStream.write(passedTests + " tests passed\r\n");
+			outputStream.write(failedTests + " tests failed\r\n\r\n");
+			outputStream.write(results);
+
+			outputStream.close();
+			
+		} catch (IOException e) {
+			e.printStackTrace();
+		}
+	}
+	
 	
 	private static void readProperties() throws Exception {
 		

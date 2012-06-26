@@ -62,18 +62,17 @@ public class ElementLocator {
 				// return it if you find it.
 				frameLevel = 0;
 				
-				try { 
+				try {
+					
 					if(frameCrawler(driver, locatorList, iteration)) {
-					//if(frameLister(driver, locatorList, iteration)) {
 						return foundObject;
 					}
 					Thread.sleep(1000);
-					//System.out.println("Ahh, napping.");
-				} catch (StaleElementReferenceException e) {
 
-					// This typically occurs because the DOM is not up to date.
+				} catch (StaleElementReferenceException e) {
+					// This typically occurs because the DOM has not caught up.
 					// Wait for a second and continue.
-					System.out.println("Ahh, napping.");
+					// System.out.println("Ahh, napping.");
 					Thread.sleep(1000);
 					continue;
 				}

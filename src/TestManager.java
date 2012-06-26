@@ -126,7 +126,14 @@ public class TestManager {
 				passedTests++;
 			}
 			else {
+				// If the test fails, it will frequently leave the browser in an unknown state.
+				// So, shutdown the browser and restart in addition to incrementing the failed
+				// tests counter.
 				failedTests++;
+				
+				driver.quit();
+				// Start the browser with the proper parameters.
+				driver = startDriver(browser, downloadDirectory, mimeTypes, chromeExecutable);				
 			}
 			// Write test results out to our master log file.
 			reportLogPointer.write(testResult + "," + testName + "\r\n");

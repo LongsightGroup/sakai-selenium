@@ -119,13 +119,16 @@ public class TestManager {
 			
 			testName = testScriptPath[(testScriptPath.length - 1)];
 
-			// Actually run the test
-			testResult = testRunner(testScript, OS, logDirectory, fileDirectory, downloadDirectory, testName, variablesPath, xpathFile);
+			try {
+				// Actually run the test
+				testResult = testRunner(testScript, OS, logDirectory, fileDirectory, downloadDirectory, testName, variablesPath, xpathFile);
+			} catch (Exception e) {
+				testResult = "fail" + e.getMessage();
+			}
 			
 			if (testResult.equals("pass")) {
 				passedTests++;
-			}
-			else {
+			} else {
 				// If the test fails, it will frequently leave the browser in an unknown state.
 				// So, shutdown the browser and restart in addition to incrementing the failed
 				// tests counter.
@@ -135,9 +138,10 @@ public class TestManager {
 				// Start the browser with the proper parameters.
 				driver = startDriver(browser, downloadDirectory, mimeTypes, chromeExecutable);				
 			}
+			
 			// Write test results out to our master log file.
 			reportLogPointer.write(testResult + "," + testName + "\r\n");
-			}
+		}
 		
 		// Shutdown the browser
 		//driver.close();
@@ -152,6 +156,7 @@ public class TestManager {
 		// Close the master report after all the tests are finished.
 		reportLogPointer.close();
 	}
+
 	
 	private static void readProperties() throws Exception {
 		
@@ -202,6 +207,7 @@ public class TestManager {
 			}
 		
 	}
+
 	
 	private static String readFile(String path) throws IOException {
 		  FileInputStream stream = new FileInputStream(new File(path));
@@ -251,8 +257,8 @@ public class TestManager {
 			
 			testList.add("fail: " + line + " does not exist.");
 			return testList;
-	} 
-}	
+		} 
+	}	
 	
 	
 	private static WebDriver startDriver(String browser, String downloadDirectory, String mimeTypes, String chromeExecutable) throws Exception {
@@ -268,6 +274,8 @@ public class TestManager {
 			return driver;
 	}
 
+	
+	
 	// This method reads the test file line by line and calls commandRunner with the command to run.
 	private static String testRunner (String testScript, String OS, String logDirectory, String fileDirectory, 
 			String downloadDirectory, String testName, String variablePath, String xpathFile) throws Exception {

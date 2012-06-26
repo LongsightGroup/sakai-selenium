@@ -272,7 +272,7 @@ public class KeywordMethods {
 				
 				WebElement objectInQuestion = ElementLocator.pathFinder(driver, timeout, paramHash, elementTypes);
 
-				String fileStatus = FileDownloader.downloader(driver, objectInQuestion, downloadPath, timeout);				
+				String fileStatus = FileDownloader.fileDownloader(driver, objectInQuestion, downloadPath, timeout);				
 				
 				// If we can switch to this new window, our work here is done.
 				return fileStatus;

@@ -21,35 +21,25 @@ import org.openqa.selenium.WebElement;
 
 public class FileDownloader {
 
-    public static String downloader(WebDriver driver, WebElement element, String downloadPath, Integer timeout) throws Exception {
+    public static String fileDownloader(WebDriver driver, WebElement element, String downloadPath, Integer timeout) throws Exception {
     	
     	String result = "";
- 	
+     	
     	// This will grab the URL to download from the web element in question.
-    	// Web element comes from the object locator.
+    	// Web element comes from the objectLocator.
         String urlHREF = element.getAttribute("href");
+        
+        // Throw an exception if there is no referenced URL.
         if (urlHREF.trim().equals("")) {
             throw new Exception("The element you have specified does not link to anything!");
         }
+        
         URL downloadURL = new URL(urlHREF); 
         
-        DefaultHttpClient client = new DefaultHttpClient();        
+        DefaultHttpClient client = new DefaultHttpClient();
         
-        client.getParams().setParameter(ClientPNames.COOKIE_POLICY, CookiePolicy.RFC_2965);
-        
-        CookieStore cookieStore = new BasicCookieStore();
-        Set<org.openqa.selenium.Cookie> driverCookieSet = driver.manage().getCookies(); 
-        
-        // Somewhere in here, 4 of the 6 cookies are getting lost.  Their values are also getting mangled.
-        for (org.openqa.selenium.Cookie myCookie : driverCookieSet) {
-        	BasicClientCookie newCookie = new BasicClientCookie(myCookie.getName(), myCookie.getValue());
-        	newCookie.setDomain(myCookie.getDomain());
-        	newCookie.setPath(myCookie.getPath());
-        	newCookie.setSecure(myCookie.isSecure());         
-            cookieStore.addCookie(newCookie);
-            }
-        
-        client.setCookieStore(cookieStore);
+        // We need to get the cookies from the webDriver session, so any authentication is replicated accurately.
+        client = setCookies(client, driver);   
         
         HttpGet getRequest = new HttpGet(downloadURL.toURI());    
              
@@ -73,43 +63,40 @@ public class FileDownloader {
         }       
         return result;
     }
+
+    // Retrieve the cookies from the webDriver session and place them in a cookie store array.
+    // Attach this array to the client, so any requests will be properly authenticated.
+    private static DefaultHttpClient setCookies(DefaultHttpClient client, WebDriver driver) {
+    	
+        client.getParams().setParameter(ClientPNames.COOKIE_POLICY, CookiePolicy.RFC_2965);
+        
+        CookieStore cookieStore = new BasicCookieStore();
+        
+        Set<org.openqa.selenium.Cookie> driverCookieSet = driver.manage().getCookies(); 
+        
+        for (org.openqa.selenium.Cookie myCookie : driverCookieSet) {
+        	BasicClientCookie newCookie = new BasicClientCookie(myCookie.getName(), myCookie.getValue());
+        	newCookie.setDomain(myCookie.getDomain());
+        	newCookie.setPath(myCookie.getPath());
+        	newCookie.setSecure(myCookie.isSecure());         
+            cookieStore.addCookie(newCookie);
+            }
+        
+        client.setCookieStore(cookieStore);
+
+    	return client;
+    }    
     
     
     private static String fileWriter(String downloadPath, HttpResponse myResponse) {
-
-    	String fileName = "";
-    	
+   	
     	try {
    	
 	        // Read in the content and write it out one line at a time.
-	        //BufferedReader rd = new BufferedReader(new InputStreamReader(myResponse.getEntity().getContent()));
     		InputStream rd = myResponse.getEntity().getContent();
 	    	
-	        // Obtain the name of the file from the header.
-	        // Use this name for writing the file.
-	        for (Header header : myResponse.getAllHeaders()) {
-	        	HeaderElement[] helelms = header.getElements();
-	        	if (helelms.length > 0) {
-	        	    HeaderElement helem = helelms[0];
-	        	    if (helem.getName().equalsIgnoreCase("inline")) {
-	        	        NameValuePair nmv = helem.getParameterByName("filename");
-	        	        if (nmv != null) {
-	        	            fileName = nmv.getValue();
-	        	        }
-	        	   }           	
-	        	}
-	        }
+    		String fileName = getFileName(myResponse);
 	        
-	        /*
-	        BufferedWriter downloadedFile = new BufferedWriter(new FileWriter(downloadPath + fileName)); 
-	        
-	        String chunk;
-	        while ((chunk = rd.readLine()) != null) {
-	        	//downloadedFile.write(chunk + System.lineSeparator());
-	        	downloadedFile.write(chunk);
-	        }
-	        */
-	        //
 	        FileOutputStream fout = new FileOutputStream(new File(downloadPath + fileName));
 
 	        byte[] b = new byte[8192];
@@ -125,12 +112,9 @@ public class FileDownloader {
 	        
 	        fout.flush();
 	        fout.close();
-	        //
-	        
 	        
 	        // Close down our reader and writer.
 	        rd.close();
-	        //downloadedFile.close();
 	       
     	} catch (Exception ex) {
     		return "fail: " + ex;
@@ -139,4 +123,28 @@ public class FileDownloader {
         return "pass";
     	
     }
+
+    // Retrieves the file name portion of the server response.
+    // Separated, as we may wish to provide a custom file name at a later date.
+    private static String getFileName(HttpResponse myResponse) {
+    	
+    	String fileName = "";
+    	
+        // Obtain the name of the file from the header.
+        // Use this name for writing the file.
+        for (Header header : myResponse.getAllHeaders()) {
+        	HeaderElement[] helelms = header.getElements();
+        	if (helelms.length > 0) {
+        	    HeaderElement helem = helelms[0];
+        	    if (helem.getName().equalsIgnoreCase("inline")) {
+        	        NameValuePair nmv = helem.getParameterByName("filename");
+        	        if (nmv != null) {
+        	            fileName = nmv.getValue();
+        	        }
+        	   }           	
+        	}
+        }
+        
+        return fileName;
+    }   
 }

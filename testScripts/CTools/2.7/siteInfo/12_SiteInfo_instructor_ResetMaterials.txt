@@ -28,7 +28,6 @@ selectCheckbox|Select to remove|2
 click|Update
 verifyText|Are you sure you want to delete the following announcements?
 verifyText|Test Announcement
-verifyText|Draft Announcement
 
 click|Remove
 verifyText|viewing announcements from the last 365 days

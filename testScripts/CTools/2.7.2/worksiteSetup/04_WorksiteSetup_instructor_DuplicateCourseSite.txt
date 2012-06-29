@@ -44,6 +44,14 @@ comment|Open site to make sure it exists.
 click|$testDupeSite
 verifyText|Site Information Display
 verifyText|Course site that acts as a duplicate for sites that require stealth tools.
+verifyText|Home
+verifyText|Schedule
+verifyText|Sign-up
+verifyText|Announcements
+verifyText|Discussion
+verifyText|Site Info
+verifyText|SiteMaker
+verifyText|Help
 
 click|Logout
 verifyText|You are about to log out

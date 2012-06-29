@@ -1,0 +1,4 @@
+/home/chris/Desktop/2.7/libraryHelp/01_LibraryHelp_Instructor_AccessLibraryHelp.txt
+/home/chris/Desktop/2.7/libraryHelp/02_LibraryHelp_Student_AccessLibraryHelp.txt
+/home/chris/Desktop/2.7/libraryHelp/04_LibraryHelp_Instructor_CheckHelp.txt
+/home/chris/Desktop/2.7/libraryHelp/05_LibraryHelp_Student_CheckHelp.txt

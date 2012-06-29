@@ -1,0 +1,54 @@
+openURL|$url
+verifyText|From the CTools Team
+click|Login
+
+verifyText|You are connecting to a U-M website that requires authentication.
+enterText|login|qainst
+enterText|password|sswelvalpanklidS$
+
+click|doLogin
+verifyText|From the CTools Team
+verifyText|Welcome to your personal workspace
+
+click|$site
+verifyText|Selenium Instructor
+verifyText|Site Information Display
+verifyText|viewing announcements from the last 10 days
+
+comment|The syllabus should currently be redirected.
+click|Syllabus
+verifyText|Syllabus
+verifyText|qainst
+verifyText|Complete list of Wikipedias
+
+click|Create/Edit
+verifyText|Redirect Syllabus
+verifyText|qainst
+
+Click|Redirect
+verifyText|Redirect Syllabus
+verifyText|URL
+enterText|URL| 
+
+click|Save
+verifyText|Syllabus Items
+verifyText|Redirect
+verifyText|Selenium Instructor
+
+comment|Verify delete
+click|Redirect
+verifyText|Redirect Syllabus
+verifyText|URL
+verifyTextNotPresent|http://en.wikipedia.org
+
+click|Cancel
+verifyText|Syllabus Items
+verifyText|Redirect
+verifyText|Selenium Instructor
+
+click|Logout
+verifyText|You are about to log out
+
+click|Log Out
+verifyText|From the CTools Team
+verifyText|Welcome

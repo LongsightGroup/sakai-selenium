@@ -1,0 +1,35 @@
+openURL|$url
+verifyText|From the CTools Team
+click|Login
+
+verifyText|You are connecting to a U-M website that requires authentication.
+enterText|login|qastud
+enterText|password|Maugaityptodita6
+
+click|doLogin
+verifyText|From the CTools Team
+verifyText|Welcome to your personal workspace
+
+click|$site
+verifyText|Selenium User
+verifyText|Site Information Display
+verifyText|viewing announcements from the last 10 days
+
+click|Library Help
+verifyText|Welcome to the University Library's
+verifyText|Ask a Librarian
+verifyText|reference and research help service!
+
+click|Help for Library Help
+waitForPopup|30
+verifyText|Library Help Tool
+verifyText|Search Help
+verifyText|Other Library Tools & Services in CTools
+closePopUp|
+
+click|Logout
+verifyText|You are about to log out
+
+click|Log Out
+verifyText|From the CTools Team
+verifyText|Welcome

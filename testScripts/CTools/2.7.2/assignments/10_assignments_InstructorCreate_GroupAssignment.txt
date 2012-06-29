@@ -1,0 +1,76 @@
+comment|create Group specific assignements
+
+openURL|$url
+verifyText|From the CTools Team
+click|Login
+
+verifyText|You are connecting to a U-M website that requires authentication.
+enterText|login|qainst
+enterText|password|sswelvalpanklidS$
+
+click|doLogin
+verifyText|From the CTools Team
+verifyText|Welcome to your personal workspace
+
+click|$site
+verifyText|Selenium Instructor
+verifyText|Site Information Display
+verifyText|viewing announcements from the last 10 days
+
+click|Assignments
+verifyText|Assignment List
+
+comment|Create an assignment for Group 1.
+click|Add
+verifyText|Add new assignment
+verifyText|Complete form and then choose 'post' at the bottom.
+verifyText|Additional information
+verifyText|Model Answer
+enterText|new_assignment_title|Group 1 Assignment
+selectList|new_assignment_openampm|AM
+verifyValue|subType|Inline and Attachments
+verifyValue|new_assignment_grade_type|Ungraded
+selectList|new_assignment_grade_type|Letter grade
+fckEnter|Assignment Instructions|This is an assignment for Group 1.
+selectCheckbox|Add honor pledge
+selectRadio|Display to selected groups
+verifyText|Group 1
+selectCheckbox|Group 1
+verifyValue|Group 2|false
+
+click|Post
+verifyText|Assignment List
+verifyText|Group 1 Assignment 
+verifyText|A-F
+
+comment|Create a assignment for Group 2.
+click|Add
+verifyText|Add new assignment
+verifyText|Complete form and then choose 'post' at the bottom.
+verifyText|Additional information
+verifyText|Model Answer
+enterText|new_assignment_title|Group 2 Assignment
+selectList|new_assignment_openampm|AM
+verifyValue|subType|Inline and Attachments
+verifyValue|new_assignment_grade_type|Ungraded
+selectList|new_assignment_grade_type|Points
+enterText|new_assignment_grade_points|100
+fckEnter|Assignment Instructions|This is an assignment for Group 2.
+selectCheckbox|Add honor pledge
+selectRadio|Display to selected groups
+verifyText|Group 2
+selectCheckbox|Group 2
+verifyValue|Group 1|false
+
+click|Post
+verifyText|Assignment List
+verifyText|Group 2 Assignment 
+verifyText|100
+
+click|Logout
+verifyText|You are about to log out
+
+click|Log Out
+verifyText|From the CTools Team
+verifyText|Welcome
+

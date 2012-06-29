@@ -1,0 +1,17 @@
+/storage/tests/scripts/signUp/03_Signup_instructor_CreateAppointment.txt
+/storage/tests/scripts/signUp/04_Signup_instructor_CreateGroupAppointment.txt
+/storage/tests/scripts/signUp/05_Signup_instructor_ConfirmAppointmentInScheduleTool.txt
+/storage/tests/scripts/signUp/07_Signup_student_ConfirmApppointmentInScheduleTool.txt
+/storage/tests/scripts/signUp/08_Signup_student_SignUpForAppointment.txt
+/storage/tests/scripts/signUp/09_Signup_instructor_ConfirmRegistration.txt
+/storage/tests/scripts/signUp/10_Signup_instructor_CheckHelp.txt
+/storage/tests/scripts/signUp/11_Signup_student_CheckHelp.txt
+/storage/tests/scripts/signUp/12_Signup_instructor_DeleteAppointments.txt
+/storage/tests/scripts/signUp/16_Signup_owner_CreateAppointment.txt
+/storage/tests/scripts/signUp/18_Signup_owner_ConfirmAppointmentInScheduleTool.txt
+/storage/tests/scripts/signUp/20_Signup_member_ConfirmApppointmentInScheduleTool.txt
+/storage/tests/scripts/signUp/21_Signup_member_SignUpForAppointment.txt
+/storage/tests/scripts/signUp/22_Signup_owner_ConfirmRegistration.txt
+/storage/tests/scripts/signUp/24_Signup_owner_CheckHelp.txt
+/storage/tests/scripts/signUp/25_Signup_member_CheckHelp.txt
+/storage/tests/scripts/signUp/28_Signup_owner_DeleteAppointments.txt

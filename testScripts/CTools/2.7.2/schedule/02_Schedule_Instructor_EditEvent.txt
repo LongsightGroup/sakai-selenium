@@ -1,0 +1,57 @@
+openURL|$url
+verifyText|From the CTools Team
+click|Login
+
+verifyText|You are connecting to a U-M website that requires authentication.
+enterText|login|qainst
+enterText|password|sswelvalpanklidS$
+
+click|doLogin
+verifyText|From the CTools Team
+verifyText|Welcome to your personal workspace
+
+click|$site
+verifyText|Selenium Instructor
+verifyText|Site Information Display
+verifyText|viewing announcements from the last 10 days
+
+click|Schedule
+verifyText|Schedule
+verifyText|qainst
+verifyText|Calendar by Week
+selectList|View|List of Events
+verifyText|List of Events
+verifyText|Custom date range
+selectList|customStartMonth|JUL
+selectList|customStartDay|1
+selectList|customStartYear|2011
+selectList|customEndMonth|SEP
+selectList|customEndDay|16
+selectList|customEndYear|2014
+
+click|Filter Events
+verifyText|Scheduled event message for Selenium Instructor.
+verifyText|Academic Calendar
+verifyText|Selenium Instructor
+
+click|Team Meeting
+verifyText|Jul 19, 2011
+verifyText|Team Meeting
+VerifyText|Event Location
+
+click|Edit
+verifyText|Editing event
+verifyText|Frequency
+selectList|startMinute|30
+
+click|Save Event
+verifyText|Schedule
+verifyText|4:30 pm
+verifyText|Team Meeting
+
+click|Logout
+verifyText|You are about to log out
+
+click|Log Out
+verifyText|From the CTools Team
+verifyText|Welcome

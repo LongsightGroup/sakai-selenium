@@ -1,0 +1,6 @@
+/storage/tests/scripts/gateway/01_Gateway_VerifyContent.txt
+/storage/tests/scripts/gateway/02_Gateway_VerifyLinks.txt
+/storage/tests/scripts/gateway/03_Gateway_VerifyBottomLinks.txt
+/storage/tests/scripts/gateway/04_Gateway_VerifyContactUs_Form.txt
+/storage/tests/scripts/gateway/05_Gateway_VerifySuggestion_Form.txt
+/storage/tests/scripts/gateway/07_Gateway_CheckHelp.txt

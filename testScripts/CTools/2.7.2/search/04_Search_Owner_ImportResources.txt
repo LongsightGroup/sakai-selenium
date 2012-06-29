@@ -1,0 +1,80 @@
+comment|Add multiple resource to search site as the site owner
+
+openURL|$url
+verifyText|From the CTools Team
+click|Login
+
+verifyText|You are connecting to a U-M website that requires authentication.
+enterText|login|qastud
+enterText|password|Maugaityptodita6
+
+click|doLogin
+verifyText|From the CTools Team
+verifyText|Welcome to your personal workspace
+
+click|$projDupeSite
+verifyText|Selenium User
+verifyText|Site Information Display
+verifyText|A project site meant to be used as a source for duplication during testing.
+
+click|Resources
+verifyText|Selenium User
+verifyText|Location
+verifyText|Resources
+
+click|Add|1
+
+click|Upload Files
+verifyText|Upload Files
+verifyText|Upload as many files as you like. If you change your mind about uploading one of your files,
+uploadFile|test.pdf
+
+click|Upload Files Now
+verifyText|test.pdf
+
+click|Add|1
+
+click|Upload Files
+verifyText|Upload Files
+verifyText|Upload as many files as you like. If you change your mind about uploading one of your files,
+uploadFile|test.doc
+
+click|Upload Files Now
+verifyText|test.doc
+
+click|Add|1
+
+click|Upload Files
+verifyText|Upload Files
+verifyText|Upload as many files as you like. If you change your mind about uploading one of your files,
+uploadFile|test.docx
+
+click|Upload Files Now
+verifyText|test.docx
+
+click|Add|1
+
+click|Upload Files
+verifyText|Upload Files
+verifyText|Upload as many files as you like. If you change your mind about uploading one of your files,
+uploadFile|test.jpeg
+
+click|Upload Files Now
+verifyText|test.jpeg
+
+click|Add|1
+
+click|Upload Files
+verifyText|Upload Files
+verifyText|Upload as many files as you like. If you change your mind about uploading one of your files,
+uploadFile|test.txt
+
+click|Upload Files Now
+verifyText|test.txt
+
+click|Logout
+verifyText|You are about to log out
+
+click|Log Out
+verifyText|From the CTools Team
+verifyText|Welcome

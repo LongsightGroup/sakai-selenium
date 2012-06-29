@@ -1,0 +1,1 @@
+comment|Check gateway content.openURL|$urlverifyText|From the CTools TeamverifyText|Welcomeclick|HelpwaitForPopup|30verifyText|CTools OverviewverifyText|Search HelpverifyText|Welcome to the CTools Online Help closePopUp|

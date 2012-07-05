@@ -27,8 +27,8 @@ comment|Edit Site Information
 click|Edit Site Information
 verifyText|Revising Site Information for
 verifyText|$site
-verifyValue|Appearance (Icon)|CTools default
-selectList|Appearance (Icon)|LS&A
+verifyValue|Appearance (Theme)|CTools default
+selectList|Appearance (Theme)|LS&A
 
 click|Continue
 verifyText|Confirming edits to

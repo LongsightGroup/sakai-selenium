@@ -2,7 +2,6 @@
 /storage/tests/testScripts/CTools/2.7/worksiteSetup/02_WorksiteSetup_instructor_AddRosterToCourseSite.txt
 /storage/tests/testScripts/CTools/2.7/worksiteSetup/03_WorksiteSetup_instructor_AddParticipantToCourseSite.txt
 /storage/tests/testScripts/CTools/2.7/worksiteSetup/04_WorksiteSetup_instructor_DuplicateCourseSite.txt
-/storage/tests/testScripts/CTools/2.7/worksiteSetup/05_WorksiteSetup_instructor_DeleteDuplicateCourseSite.txt
 /storage/tests/testScripts/CTools/2.7/worksiteSetup/06_WorksiteSetup_instructor_AddParticipantToDupeSite.txt
 /storage/tests/testScripts/CTools/2.7/worksiteSetup/07_WorksiteSetup_instructor_AddParticipant2ToCourseSite.txt
 /storage/tests/testScripts/CTools/2.7/worksiteSetup/08_WorksiteSetup_instructor_AddAssistantParticipantToCourseSite.txt
@@ -11,7 +10,6 @@
 /storage/tests/testScripts/CTools/2.7/worksiteSetup/12_WorksiteSetup_student_ReviseToolsProjectSite.txt
 /storage/tests/testScripts/CTools/2.7/worksiteSetup/13_WorksiteSetup_student_AddParticipantProjectSite.txt
 /storage/tests/testScripts/CTools/2.7/worksiteSetup/14_WorksiteSetup_student_DuplicateProjectSite.txt
-/storage/tests/testScripts/CTools/2.7/worksiteSetup/15_WorksiteSetup_student_DeleteDuplicateProjectSite.txt
 /storage/tests/testScripts/CTools/2.7/worksiteSetup/16_WorksiteSetup_owner_AddParticipantToDupeProjectSite.txt
 /storage/tests/testScripts/CTools/2.7/worksiteSetup/21_WorksiteSetup_Student_CheckHelp.txt
 /storage/tests/testScripts/CTools/2.7/worksiteSetup/22_WorksiteSetup_Instructor_CheckHelp.txt

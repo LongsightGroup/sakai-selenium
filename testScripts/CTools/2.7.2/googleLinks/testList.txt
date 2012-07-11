@@ -1,0 +1,8 @@
+/storage/tests/svn/testScripts/CTools/googleLinks/01_google_Student_Check_GMail.txt
+/storage/tests/svn/testScripts/CTools/googleLinks/02_google_Student_Check_GoogleDocs.txt
+/storage/tests/svn/testScripts/CTools/googleLinks/03_google_Student_Check_Calendar.txt
+/storage/tests/svn/testScripts/CTools/googleLinks/04_google_Student_Check_GooglePlus.txt
+/storage/tests/svn/testScripts/CTools/googleLinks/06_google_Instructor_Check_GMail.txt
+/storage/tests/svn/testScripts/CTools/googleLinks/07_google_Instructor_Check_GoogleDocs.txt
+/storage/tests/svn/testScripts/CTools/googleLinks/08_google_Instructor_Check_Calendar.txt
+/storage/tests/svn/testScripts/CTools/googleLinks/09_google_Instructor_Check_GooglePlus.txt

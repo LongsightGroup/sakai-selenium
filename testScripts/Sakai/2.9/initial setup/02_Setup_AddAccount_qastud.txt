@@ -4,24 +4,6 @@ verifyText|Message Of The Day
 
 click|New Account
 verifyText|Enter the following information to create a new account
-enterText|User Id|qainst
-enterText|First Name|Selenium
-enterText|Last Name|Instructor
-enterText|Create New Password|sswelvalpanklidS$
-enterText|Verify New Password|sswelvalpanklidS$
-
-click|Create Account
-verifyText|My Workspace
-verifyText|Welcome to your personal workspace.
-verifyText|Selenium Instructor
-verifyText|qainst
-
-click|Logout
-verifyText|Welcome to Sakai QA
-verifyText|Message Of The Day
-
-click|New Account
-verifyText|Enter the following information to create a new account
 enterText|User Id|qastud
 enterText|First Name|Selenium
 enterText|Last Name|Student

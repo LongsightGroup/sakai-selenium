@@ -105,8 +105,6 @@ c:/storage/tests/testScripts/CTools/2.7.2B/forums/13ForumsInstructorApproveDenyM
 c:/storage/tests/testScripts/CTools/2.7.2B/gateway/01_Gateway_VerifyContent.txt
 c:/storage/tests/testScripts/CTools/2.7.2B/gateway/02_Gateway_VerifyLinks.txt
 c:/storage/tests/testScripts/CTools/2.7.2B/gateway/03_Gateway_VerifyBottomLinks.txt
-c:/storage/tests/testScripts/CTools/2.7.2B/gateway/04_Gateway_VerifyContactUs_Form.txt
-c:/storage/tests/testScripts/CTools/2.7.2B/gateway/05_Gateway_VerifySuggestion_Form.txt
 c:/storage/tests/testScripts/CTools/2.7.2B/gateway/07_Gateway_CheckHelp.txt
 
 c:/storage/tests/testScripts/CTools/2.7.2B/gradebook/01_Gradebook_Instructor_AddItem.txt
@@ -124,8 +122,6 @@ c:/storage/tests/testScripts/CTools/2.7.2B/gradebook/21_Gradebook_Student_CheckH
 c:/storage/tests/testScripts/CTools/2.7.2B/gradebook/22_Gradebook_Instructor_CheckHelp.txt
 c:/storage/tests/testScripts/CTools/2.7.2B/gradebook/31_Gradebook_Instructor_DeleteAll.txt
 
-c:/storage/tests/testScripts/CTools/2.7.2B/home/01HomeInstructorCheckHelp.txt
-c:/storage/tests/testScripts/CTools/2.7.2B/home/02HomeStudentCheckHelp.txt
 c:/storage/tests/testScripts/CTools/2.7.2B/home/03HomeInstructorCheckSynopticTools.txt
 c:/storage/tests/testScripts/CTools/2.7.2B/home/04HomeStudentCheckSynopticTools.txt
 
@@ -145,8 +141,6 @@ c:/storage/tests/testScripts/CTools/2.7.2B/honorCode/06HonorCodeInstructorResetC
 
 c:/storage/tests/testScripts/CTools/2.7.2B/lectureTools/01_LectureTools_Instructor_RequestRegistration.txt
 c:/storage/tests/testScripts/CTools/2.7.2B/lectureTools/02_LectureTools_Student_VerifyNoAuth.txt
-c:/storage/tests/testScripts/CTools/2.7.2B/lectureTools/04_LectureTools_Instructor_CheckHelp.txt
-c:/storage/tests/testScripts/CTools/2.7.2B/lectureTools/05_LectureTools_Student_CheckHelp.txt
 
 c:/storage/tests/testScripts/CTools/2.7.2B/libaryMaterials/01_libraryMaterials_Instructor_CheckHelp.txt
 c:/storage/tests/testScripts/CTools/2.7.2B/libaryMaterials/02_libraryMaterials_Student_CheckHelp.txt

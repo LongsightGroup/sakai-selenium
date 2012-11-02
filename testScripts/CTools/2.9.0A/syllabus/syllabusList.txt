@@ -1,0 +1,13 @@
+/storage/tests/scripts/syllabus/01_Syllabus_Instructor_Create.txt
+/storage/tests/scripts/syllabus/02_Syllabus_Student_CheckSyllabus.txt
+/storage/tests/scripts/syllabus/03_Syllabus_Instructor_Edit.txt
+/storage/tests/scripts/syllabus/05_Syllabus_Instructor_Redirect.txt
+/storage/tests/scripts/syllabus/06_Syllabus_Student_CheckRedirectedSyllabus.txt
+/storage/tests/scripts/syllabus/08_Syllabus_Instructor_DeleteRedirect.txt
+/storage/tests/scripts/syllabus/10_Syllabus_Instructor_Attach.txt
+/storage/tests/scripts/syllabus/11_Syllabus_Student_CheckAttachedSyllabus.txt
+/storage/tests/scripts/syllabus/14_Syllabus_Instructor_SaveDraft.txt
+/storage/tests/scripts/syllabus/15_Syllabus_Instructor_Preview.txt
+/storage/tests/scripts/syllabus/18_Syllabus_Student_CheckHelp.txt
+/storage/tests/scripts/syllabus/19_Syllabus_Instructor_CheckHelp.txt
+/storage/tests/scripts/syllabus/20_Syllabus_Instructor_DeleteAll.txt

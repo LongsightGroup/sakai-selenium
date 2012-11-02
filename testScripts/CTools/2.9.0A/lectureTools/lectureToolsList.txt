@@ -1,0 +1,2 @@
+/home/chris/Desktop/2.7/lectureTools/01_LectureTools_Instructor_RequestRegistration.txt
+/home/chris/Desktop/2.7/lectureTools/02_LectureTools_Student_VerifyNoAuth.txt

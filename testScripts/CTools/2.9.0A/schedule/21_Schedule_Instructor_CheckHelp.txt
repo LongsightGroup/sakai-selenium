@@ -1,0 +1,36 @@
+openURL|$url
+verifyText|From the CTools Team
+click|Login
+
+verifyText|You are connecting to a U-M website that requires authentication.
+enterText|login|qainst
+enterText|password|sswelvalpanklidS$
+
+click|doLogin
+verifyText|From the CTools Team
+verifyText|Welcome to your personal workspace
+
+click|$site
+verifyText|Selenium Instructor
+verifyText|Site Information Display
+verifyText|viewing announcements from the last 10 days
+
+click|Schedule
+verifyText|Schedule
+verifyText|qainst
+verifyText|Calendar by Week
+verifyText|Legend
+
+click|Help for Schedule
+waitForPopup|30
+verifyText|CTools Overview
+verifyText|Search Help
+verifyText|Schedule
+closePopUp|
+
+click|Logout
+verifyText|You are about to log out
+
+click|Log Out
+verifyText|From the CTools Team
+verifyText|Welcome

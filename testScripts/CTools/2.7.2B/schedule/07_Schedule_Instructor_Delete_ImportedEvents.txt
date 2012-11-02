@@ -1,0 +1,83 @@
+openURL|$url
+verifyText|From the CTools Team
+click|Login
+
+verifyText|You are connecting to a U-M website that requires authentication.
+enterText|login|qainst
+enterText|password|sswelvalpanklidS$
+
+click|doLogin
+verifyText|From the CTools Team
+verifyText|Welcome to your personal workspace
+
+click|$site
+verifyText|Selenium Instructor
+verifyText|Site Information Display
+verifyText|viewing announcements from the last 10 days
+
+click|Schedule
+verifyText|Schedule
+verifyText|qainst
+verifyText|Calendar by Week
+
+selectList|View|List of Events
+verifyText|List of Events
+verifyText|Custom date range
+selectList|customStartMonth|JUL
+selectList|customStartDay|1
+selectList|customStartYear|2011
+selectList|customEndMonth|SEP
+selectList|customEndDay|13
+selectList|customEndYear|2014
+
+click|Filter Events
+verifyText|Example Event 1
+verifyText|Example Event 2
+verifyText|Example Event 3
+
+click|Example Event 1
+verifyText|Example Event 1
+verifyText|Jul 2, 2011
+
+click|Remove event
+verifyText|Are you sure you want to remove this event?
+verifyText|Example Event 1
+selectList|intention|Delete all occurrences
+
+click|Remove event
+verifyText|This is the description for event #2
+verifyText|Academic Calendar
+verifyTextNotPresent|Example Event 1
+
+click|Example Event 2
+verifyText|Taubman Library 2919
+verifyText|Example Event 2
+verifyText|Jul 8, 2011
+
+click|Remove event
+verifyText|Are you sure you want to remove this event?
+verifyText|Example Event 2
+
+comment|Confirm removing the event.
+click|Remove event
+verifyText|Academic Calendar
+
+click|Example Event 3
+verifyText|Taubman Library 2919
+verifyText|Example Event 3
+verifyText|Aug 2, 2011
+
+click|Remove event
+verifyText|Are you sure you want to remove this event?
+verifyText|Example Event 3
+
+click|Remove event
+verifyText|Printable Version
+verifyTextNotPresent|Example Event 3
+
+click|Logout
+verifyText|You are about to log out
+
+click|Log Out
+verifyText|From the CTools Team
+verifyText|Welcome

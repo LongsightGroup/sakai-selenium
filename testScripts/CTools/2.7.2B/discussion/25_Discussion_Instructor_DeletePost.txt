@@ -1,0 +1,46 @@
+openURL|$url
+verifyText|From the CTools Team
+click|Login
+
+verifyText|You are connecting to a U-M website that requires authentication.
+enterText|login|qainst
+enterText|password|sswelvalpanklidS$
+
+click|doLogin
+verifyText|From the CTools Team
+verifyText|Welcome to your personal workspace
+
+click|$testDupeSite
+verifyText|Selenium Instructor
+verifyText|Site Information Display
+verifyText|Course site that acts as a duplicate for sites that require stealth tools.
+
+click|Discussion
+verifyText|Add Topic
+verifyText|Add Category
+verifyText|Expand All
+verifyText|Permissions
+
+click|Expand All
+verifyText|Instructor Test Reply
+verifyText|Instructor Reply to Post
+verifyText|Student Reply to Post
+
+clickXpath|//h4[normalize-space()="Student Reply to Post"]/following-sibling::a[@title='Delete this message']
+verifyText|Deleting message
+verifyText|Are you sure you want to delete this message?
+verifyText|Student Reply to Post
+
+click|Delete Message
+verifyText|Add Topic
+verifyText|Add Category
+verifyText|Permissions
+verifyText|Instructor Test Category
+verifyTextNotPresent|Student Reply to Post
+
+click|Logout
+verifyText|You are about to log out
+
+click|Log Out
+verifyText|From the CTools Team
+verifyText|Welcome

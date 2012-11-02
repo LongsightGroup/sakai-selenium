@@ -1,0 +1,77 @@
+openURL|$url
+verifyText|From the CTools Team
+click|Login
+
+verifyText|You are connecting to a U-M website that requires authentication.
+enterText|login|qainst
+enterText|password|sswelvalpanklidS$
+
+click|doLogin
+verifyText|From the CTools Team
+verifyText|Welcome to your personal workspace
+
+click|$site
+verifyText|Selenium Instructor
+verifyText|Site Information Display
+verifyText|viewing announcements from the last 10 days
+
+click|Gradebook
+verifyText|Selenium Instructor
+verifyText|Gradebook Items
+verifyText|Click a title to view complete details and to grade the item.
+verifyText|Sample Gradebook Item
+verifyText|128/132
+
+click|Course Grade Options
+verifyText|Course Grade Options
+verifyValue|Display course grade to students now|false
+verifyValue|A+|100.0
+comment|verifyValue|A+|96.0
+
+enterText|A+|96
+click|Save
+verifyText|Course grade options have been saved.
+verifyText|Gradebook Items
+
+comment|Confirm that the modified grade level is reflected in the student's grade.
+comment|Should be changed from A to A+.
+
+click|Course Grades
+verifyText|Course Grades
+verifyText|Total points
+verifyText|132
+verifyText|qastud
+verifyText|A+
+
+comment|Now reset Grade Options back to default, should lead to an A instead of A+.
+
+click|Course Grade Options
+verifyText|Course Grade Options
+verifyValue|A+|96.0
+
+click|Reset to default values
+verifyText|Course Grade Options
+verifyValue|A+|100.0
+verifyValue|Display course grade to students now|false
+
+click|Save
+verifyText|Course grade options have been saved.
+verifyText|Gradebook Items
+
+comment|Confirm that the modified grade level is reflected in the student's grade.
+comment|Should be changed from A to A+.
+
+click|Course Grades
+verifyText|Course Grades
+verifyText|Total points
+verifyText|132
+verifyText|qastud
+verifyText|A (96.96%)
+
+click|Logout
+verifyText|You are about to log out
+
+click|Log Out
+verifyText|From the CTools Team
+verifyText|Welcome
+

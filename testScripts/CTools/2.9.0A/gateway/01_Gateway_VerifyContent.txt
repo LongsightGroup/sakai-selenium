@@ -1,0 +1,1 @@
+comment|Check gateway content.openURL|$urlverifyText|From the CTools TeamverifyText|GatewayverifyText|SerververifyText|University of MichiganverifyText|WelcomeverifyText|AboutverifyText|SitesverifyText|FeaturesverifyText|TrainingverifyText|Survey ResultsverifyText|Contact UsverifyText|Maintenance ScheduleverifyText|CTools NewsverifyText|Help

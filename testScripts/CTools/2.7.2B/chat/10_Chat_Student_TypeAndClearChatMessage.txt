@@ -1,0 +1,36 @@
+openURL|$url
+verifyText|From the CTools Team
+click|Login
+
+verifyText|You are connecting to a U-M website that requires authentication.
+enterText|login|qastud
+enterText|password|Maugaityptodita6
+
+click|doLogin
+verifyText|From the CTools Team
+verifyText|Welcome to your personal workspace
+
+click|$site
+verifyText|Selenium User
+verifyText|Site Information Display
+verifyText|viewing announcements from the last 10 days
+
+click|Chat Room
+verifyText|Only messages from the past 3 days are archived and can be read by any site participant. 
+verifyText|Currently viewing messages for 'Secondary Chat Room'
+verifyText|Fourth Test Message
+verifyTextNotPresent|Instructor test message that should not exist
+verifyText|Enter chat message
+
+enterText|Enter chat message|Student test message that should not exist
+click|Clear
+verifyText|Selenium User
+verifyTextNotPresent|Student test message that should not exist
+verifyTextNotPresent|Instructor test message that should not exist
+
+click|Logout
+verifyText|You are about to log out
+
+click|Log Out
+verifyText|From the CTools Team
+verifyText|Welcome

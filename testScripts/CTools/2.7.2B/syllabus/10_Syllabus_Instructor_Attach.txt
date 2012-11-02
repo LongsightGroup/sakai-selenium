@@ -1,0 +1,56 @@
+openURL|$url
+verifyText|From the CTools Team
+click|Login
+
+verifyText|You are connecting to a U-M website that requires authentication.
+enterText|login|qainst
+enterText|password|sswelvalpanklidS$
+
+click|doLogin
+verifyText|From the CTools Team
+verifyText|Welcome to your personal workspace
+
+click|$site
+verifyText|Selenium Instructor
+verifyText|Site Information Display
+verifyText|viewing announcements from the last 10 days
+
+click|Syllabus
+verifyText|Syllabus
+verifyText|qainst
+click|Create/Edit
+verifyText|Syllabus Item
+
+Click|Add
+VerifyText|Add syllabus...
+VerifyText|Title
+VerifyText|Email Notification
+enterText|Title|Attach a Syllabus
+fckEnter|Content|Selenium test to attach a syllabus.
+
+Click|Add attachments
+VerifyText|Add Attachment
+VerifyText|Select a resource
+
+UploadFile|FakeSyllabus.doc
+verifyText|FakeSyllabus.doc
+verifyText|Remove
+
+click|Continue
+comment|Verify the page has reloaded with attached document
+verifyText|Add syllabus...
+verifyText|Attachments
+verifyText|FakeSyllabus.doc
+
+click|Post
+Comment|Verify the syllabus is added to the page
+VerifyText|Syllabus Items
+VerifyText|Attach a Syllabus
+VerifyText|Posted
+
+click|Logout
+verifyText|You are about to log out
+
+click|Log Out
+verifyText|From the CTools Team
+verifyText|Welcome

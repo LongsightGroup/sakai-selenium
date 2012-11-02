@@ -1,0 +1,41 @@
+comment|View the siteMaker site as the project site member
+
+openURL|$url
+verifyText|From the CTools Team
+click|Login
+
+verifyText|You are connecting to a U-M website that requires authentication.
+enterText|login|qainst
+enterText|password|sswelvalpanklidS$
+
+click|doLogin
+verifyText|From the CTools Team
+verifyText|Welcome to your personal workspace
+
+click|$projDupeSite
+verifyText|Selenium Instructor
+verifyText|Site Information Display
+verifyText|A project site meant to be used as a source for duplication during testing.
+
+click|SiteMaker
+comment|This next command clicks on a modal security window, which informs the user that secure information may be sent over a non-secure connection
+comment|modalClick|continue
+
+verifyText|Hey, it's working!
+verifyText|Student Only
+verifyText|Instructor Only
+
+click|Student Only
+verifyText|Student Only
+verifyTextNotPresent|Sorry
+
+click|Instructor Only
+verifyText|Sorry, you don't have permission to view that section.
+verifyText|Insufficient privileges.
+
+click|loginLink1
+verifyText|You are about to log out
+
+click|Log Out
+verifyText|From the CTools Team
+verifyText|Welcome

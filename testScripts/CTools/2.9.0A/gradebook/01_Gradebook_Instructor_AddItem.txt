@@ -1,0 +1,46 @@
+openURL|$url
+verifyText|From the CTools Team
+click|Login
+
+verifyText|You are connecting to a U-M website that requires authentication.
+enterText|login|qainst
+enterText|password|sswelvalpanklidS$
+
+click|doLogin
+verifyText|From the CTools Team
+verifyText|Welcome to your personal workspace
+
+click|$site
+verifyText|Selenium Instructor
+verifyText|Site Information Display
+verifyText|viewing announcements from the last 10 days
+
+click|Gradebook
+verifyText|Selenium Instructor
+verifyText|Gradebook Items
+verifyText|Click a title to view complete details and to grade the item.
+verifyText|These items must be graded from the tool listed and may not be graded from the gradebook
+
+click|Add Gradebook Item(s)
+verifyText|Submit this form to add gradebook item
+verifyText|Add Another Gradebook Item
+enterText|Title *|Sample Gradebook Item
+enterText|Gradebook Item Point Value *|127
+enterText|Due Date (mm/dd/yy)|12/31/15
+
+click|Add Item(s)
+verifyText|Gradebook item Sample Gradebook Item has been added.
+verifyText|2015
+verifyText|Click a title to view complete details and to grade the item.
+
+click|Sample Gradebook Item
+verifyText|qastud
+verifyText|127
+verifyText|Sample Gradebook Item
+
+click|Logout
+verifyText|You are about to log out
+
+click|Log Out
+verifyText|From the CTools Team
+verifyText|Welcome

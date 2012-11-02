@@ -1,0 +1,39 @@
+application|worksitesetup
+
+openURL|$url
+verifyText|From the CTools Team
+click|Login
+
+verifyText|You are connecting to a U-M website that requires authentication.
+enterText|login|qainst
+enterText|password|sswelvalpanklidS$
+
+click|doLogin
+verifyText|From the CTools Team
+verifyText|Welcome to your personal workspace
+
+click|Worksite Setup
+verifyText|Selenium Instructor
+verifyText|Worksite Setup
+verifyText|Check box(es) to take action on a site.
+
+click|New
+verifyText|Site Type
+verifyText|Build your own site
+
+verifyText|course site
+verifyText|project site
+verifyText|portfolio site
+verifyText|Create site from template
+
+comment|Verify clicking on course site will yield the academic term drop-down
+selectRadio|course site
+verifyText|Academic term
+verifyValue|Academic term:|$term
+
+click|Logout
+verifyText|You are about to log out
+
+click|Log Out
+verifyText|From the CTools Team
+verifyText|Welcome

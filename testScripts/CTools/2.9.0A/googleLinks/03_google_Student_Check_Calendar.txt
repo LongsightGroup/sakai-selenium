@@ -1,0 +1,34 @@
+openURL|$url
+verifyText|From the CTools Team
+click|Login
+
+verifyText|You are connecting to a U-M website that requires authentication.
+enterText|login|qastud
+enterText|password|Maugaityptodita6
+
+click|doLogin
+verifyText|From the CTools Team
+verifyText|Welcome to your personal workspace
+
+click|M+Google
+comment|Should pop-up the list of google links
+click|Calendar
+
+comment|This should launch the google calendar interface
+waitForPopUp|30
+verifyText|qastud@umich.edu
+verifyText|Calendar
+verifyText|My calendars
+
+comment|Once we have confirmed the gmail window, shut it down and log out.
+closePopUp|
+verifyText|From the CTools Team
+verifyText|Welcome to your personal workspace
+
+click|Logout
+verifyText|You are about to log out
+
+click|Log Out
+verifyText|From the CTools Team
+verifyText|Welcome
+

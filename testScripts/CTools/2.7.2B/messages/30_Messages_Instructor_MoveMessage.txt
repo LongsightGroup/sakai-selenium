@@ -1,0 +1,53 @@
+application|messages
+openURL|$url
+verifyText|From the CTools Team
+click|Login
+
+verifyText|You are connecting to a U-M website that requires authentication.
+enterText|login|qainst
+enterText|password|sswelvalpanklidS$
+
+click|doLogin
+verifyText|From the CTools Team
+verifyText|Welcome to your personal workspace
+
+click|$site
+verifyText|Selenium Instructor
+verifyText|Site Information Display
+verifyText|viewing announcements from the last 10 days
+
+click|Messages
+verifyText|Received
+verifyText|Sent
+verifyText|Deleted
+comment|This next line is true because the previous script marked the message read
+verifyText|1 message - 0 unread
+verifyText|Messages
+
+click|Received
+verifyText|Student Test Message
+verifyText|qastud
+verifyValue|View|All Messages
+
+click|Check All
+comment|This next line verifies that the check all command successfully checked the one message.
+verifyValue|prefs_pvt_form:pvtmsgs:0|true
+
+click|Move
+verifyText|Move Message(s) To
+verifyValue|Received|true
+verifyValue|Instructor Test Folder|false
+
+selectRadio|Instructor Test Folder
+click|Move Messages
+comment|Verify that the message was moved.
+
+click|Instructor Test Folder
+verifyText|Student Test Message
+
+click|Logout
+verifyText|You are about to log out
+
+click|Log Out
+verifyText|From the CTools Team
+verifyText|Welcome

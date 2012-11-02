@@ -1,0 +1,157 @@
+application|worksitesetup
+
+openURL|$url
+verifyText|From the CTools Team
+click|Login
+
+verifyText|You are connecting to a U-M website that requires authentication.
+enterText|login|qainst
+enterText|password|sswelvalpanklidS$
+
+click|doLogin
+verifyText|From the CTools Team
+verifyText|Welcome to your personal workspace
+
+click|Worksite Setup
+verifyText|Selenium Instructor
+verifyText|Worksite Setup
+verifyText|Check box(es) to take action on a site.
+
+click|New
+verifyText|Site Type
+verifyText|Build your own site
+verifyText|Create site from template
+
+selectRadio|course site
+verifyText|Academic term
+verifyValue|Academic term:|$term
+
+comment|Create a course site for the current term.
+click|Continue
+verifyText|Course/Section(s) Selection
+comment|This is the campus list box
+verifyContents|Campus(Enter A for Ann Arbor and D for Dearborn):|Dearborn
+selectList|Campus(Enter A for Ann Arbor and D for Dearborn):|Ann Arbor
+comment|Subject list box
+verifyContents|Subject:|Administration
+selectList|Subject:|Accounting
+comment|Course list box
+verifyContents|Course:|300 (Financial Acctg)
+selectList|Course:|Financial Acctg
+comment|Section list box
+verifyContents|Section:|001 (Financial Acctg)
+comment|do not select as the Authorizer's username may change.
+
+click|Still cannot find your course/section?
+verifyText|Course/Section(s) Selection
+verifyText|Authorization to Allow Roster(s) Site Access
+
+comment|Specific to a later H build that was redacted
+comment|This change was re-enacted for the A release.
+
+enterText|id-Campus(Enter A for Ann Arbor and D for Dearborn):1|A
+enterText|id-Subject:1|Testing
+enterText|id-Course:1|$creationCourseNum
+enterText|id-Section:1|001
+enterText|uniqname|qainst
+
+click|Continue
+verifyText|Course Site Information
+verifyText|Enter basic information about the course site...
+verifyText|$term
+fckEnter|Description|A basic course created during automated testing.  This is a description.
+enterText|Short Description|An even shorter description
+verifyText|Site will display this theme
+click|Continue
+
+comment|Should be on the list of tools
+verifyText|Course Site Tools
+verifyText|Choose tools to include on your site...
+verifyText|Re-use Material from Other Sites You Own 
+selectCheckbox|Announcements
+selectCheckbox|Assignments
+selectCheckbox|Chat Room
+selectCheckbox|Drop Box
+selectCheckbox|Email Archive
+selectCheckbox|Engineering Honor Code
+selectCheckbox|Evaluate This Class
+selectCheckbox|Forums
+selectCheckbox|Gradebook
+selectCheckbox|iTunes U
+selectCheckbox|Library Help
+selectCheckbox|Library Materials
+selectCheckbox|Messages
+selectCheckbox|Modules
+selectCheckbox|News
+selectCheckbox|Polls
+selectCheckbox|Resources
+selectCheckbox|Schedule
+selectCheckbox|Syllabus
+selectCheckbox|Test Center
+selectCheckbox|Textbooks
+selectCheckbox|Web Content
+selectCheckbox|Wiki
+selectCheckbox|Lecture Tools
+verifyValue|No, thanks.|true
+
+click|Continue
+verifyText|Customize tool instances
+verifyText|Lecture Tools
+verifyText|Email Archive
+verifyText|News
+verifyText|Web Content
+enterText|Tool Configuration Title|Lecture Tools
+enterText|Site email address|$creationCourseEmail
+enterText|URL Channel|http://www.nytimes.com/services/xml/rss/nyt/World.xml
+
+click|Continue
+verifyText|Course Site Access
+verifyText|Site Status
+verifyValue|Publish site|true
+verifyText|Display in public site list
+
+click|Continue
+verifyText|Confirm your site setup selections
+verifyText|Home
+verifyText|Announcements
+verifyText|Assignments
+verifyText|Chat Room
+verifyText|Drop Box
+verifyText|$creationCourseEmail
+verifyText|Engineering Honor Code
+verifyText|Evaluate This Class
+verifyText|Forums
+verifyText|Gradebook
+verifyText|iTunes U
+verifyText|Library Help
+verifyText|Library Materials
+verifyText|Messages
+verifyText|Modules
+verifyText|News ( channel-url = http://www.nytimes.com/services/xml/rss/nyt/World.xml )
+verifyText|Polls
+verifyText|Resources
+verifyText|Schedule
+verifyText|Site Info
+verifyText|Syllabus
+verifyText|Test Center
+verifyText|Textbooks
+verifyText|Web Content ( source = http:// )
+verifyText|Wiki
+verifyText|A basic course created during automated testing.
+comment|verifyText|Lecture Tools|This should show up, but doesn't because of a bug.
+
+comment|This will create the site and bring you back to a list of sites.
+click|Request Site
+verifyText|Check box(es) to take action on a site. Click column title to sort.
+verifyText|qainst
+verifyText|$site
+
+click|Logout
+verifyText|You are about to log out
+
+click|Log Out
+verifyText|From the CTools Team
+verifyText|Welcome
+
+comment|Give five minutes for the roster get applied to the site.
+wait|300

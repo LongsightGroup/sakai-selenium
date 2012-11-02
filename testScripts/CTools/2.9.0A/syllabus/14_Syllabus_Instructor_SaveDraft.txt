@@ -1,0 +1,45 @@
+application|syllabus
+
+openURL|$url
+verifyText|From the CTools Team
+click|Login
+
+verifyText|You are connecting to a U-M website that requires authentication.
+enterText|login|qainst
+enterText|password|sswelvalpanklidS$
+
+click|doLogin
+verifyText|From the CTools Team
+verifyText|Welcome to your personal workspace
+
+click|$site
+verifyText|Selenium Instructor
+verifyText|Site Information Display
+verifyText|viewing announcements from the last 10 days
+
+click|Syllabus
+verifyText|Syllabus
+verifyText|qainst
+
+click|Create/Edit
+verifyText|Syllabus Item
+
+Click|Add
+VerifyText|Add syllabus...
+VerifyText|Title
+verifyValue|Only members of this site can see this syllabus item.|true
+VerifyText|Email Notification
+enterText|Title|Draft Syllabus
+fckEnter|Content|Sample Syllabus to sample draft capability
+
+Click|Save Draft
+VerifyText|Syllabus Items
+VerifyText|Selenium Instructor
+VerifyText|Draft Syllabus
+
+click|Logout
+verifyText|You are about to log out
+
+click|Log Out
+verifyText|From the CTools Team
+verifyText|Welcome

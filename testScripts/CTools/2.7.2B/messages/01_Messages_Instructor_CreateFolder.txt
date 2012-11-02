@@ -1,0 +1,46 @@
+openURL|$url
+verifyText|From the CTools Team
+click|Login
+
+verifyText|You are connecting to a U-M website that requires authentication.
+enterText|login|qainst
+enterText|password|sswelvalpanklidS$
+
+click|doLogin
+verifyText|From the CTools Team
+verifyText|Welcome to your personal workspace
+
+click|$site
+verifyText|Selenium Instructor
+verifyText|Site Information Display
+verifyText|viewing announcements from the last 10 days
+
+click|Messages
+verifyText|Received
+verifyText|Sent
+verifyText|Deleted
+verifyText|Messages
+
+click|New Folder
+verifyText|Messages - Create Folder
+verifyText|Required items marked with *
+enterText|Folder Title|Instructor Test Folder
+
+click|Add
+verifyText|Received
+verifyText|Instructor Test Folder
+
+click|Folder Settings
+verifyText|Messages - Folder Settings
+verifyText|Instructor Test Folder
+
+click|Cancel
+verifyText|Received
+verifyText|Instructor Test Folder
+
+click|Logout
+verifyText|You are about to log out
+
+click|Log Out
+verifyText|From the CTools Team
+verifyText|Welcome

@@ -1,0 +1,4 @@
+/storage/tests/scripts/myProfile/01_myProfile_ModifyProfile.txt
+/storage/tests/scripts/myProfile/02_myProfile_VerifyChanges.txt
+/storage/tests/scripts/myProfile/03_myProfile_ResetProfile.txt
+/storage/tests/scripts/myProfile/04_myProfile_VerifyChanges.txt

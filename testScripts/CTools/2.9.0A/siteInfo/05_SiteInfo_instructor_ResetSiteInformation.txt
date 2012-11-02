@@ -1,0 +1,51 @@
+application|siteinfo
+
+openURL|$url
+verifyText|From the CTools Team
+click|Login
+
+verifyText|You are connecting to a U-M website that requires authentication.
+enterText|login|qainst
+enterText|password|sswelvalpanklidS$
+
+click|doLogin
+verifyText|From the CTools Team
+verifyText|Welcome to your personal workspace
+
+click|$site
+verifyText|Selenium Instructor
+verifyText|Site Information Display
+verifyText|Recent Announcements
+
+click|Site Info
+verifyText|$site
+verifyText|Site Contact and email
+verifyText|Site Description
+verifyText|Can read, revise, delete and add both content and participants to a site.
+
+comment|Edit Site Information
+click|Edit Site Information
+verifyText|Revising Site Information for
+verifyText|$site
+verifyValue|Appearance (Theme)|LS&A
+selectList|Appearance (Theme)|CTools default
+
+click|Continue
+verifyText|Confirming edits to
+verifyText|$site
+verifyText|CTools default
+verifyTextNotPresent|LS&A
+
+click|Finish
+verifyText|$site
+verifyText|Site Contact and email
+verifyText|Site Description
+verifyText|CTools default
+verifyText|Can read, revise, delete and add both content and participants to a site.
+
+click|Logout
+verifyText|You are about to log out
+
+click|Log Out
+verifyText|From the CTools Team
+verifyText|Welcome

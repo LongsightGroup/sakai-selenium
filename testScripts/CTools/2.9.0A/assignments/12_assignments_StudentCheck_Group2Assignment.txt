@@ -1,0 +1,35 @@
+openURL|$url
+verifyText|From the CTools Team
+click|Login
+
+verifyText|You are connecting to a U-M website that requires authentication.
+enterText|login|qastudc
+enterText|password|rubleitoonoicH?
+
+click|doLogin
+verifyText|From the CTools Team
+verifyText|Welcome to your personal workspace
+
+click|$site
+verifyText|QA Studc
+verifyText|Site Information Display
+verifyText|viewing announcements from the last 10 days
+
+click|Assignments
+verifyText|Assignment List
+verifyText|Group 2 Assignment
+verifyTextNotPresent|Group 1 Assignment
+
+comment|Open Group 2 Assignment.  Should be inside the assignment window
+click|Group 2 Assignment
+verifyText|Assignment - In progress
+verifyText|This is an assignment for Group 2
+verifyText|Points (max 100.0)
+
+click|Logout
+verifyText|You are about to log out
+
+click|Log Out
+verifyText|From the CTools Team
+verifyText|Welcome
+

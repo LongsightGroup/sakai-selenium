@@ -1,0 +1,2 @@
+/Users/admin/Desktop/keywordframework/trunk/selenium/keyword2/testScripts/CTools/2.7/home/03HomeInstructorCheckSynopticTools.txt
+/Users/admin/Desktop/keywordframework/trunk/selenium/keyword2/testScripts/CTools/2.7/home/04HomeStudentCheckSynopticTools.txt

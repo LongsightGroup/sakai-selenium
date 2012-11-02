@@ -1,0 +1,41 @@
+openURL|$url
+verifyText|From the CTools Team
+click|Login
+
+verifyText|You are connecting to a U-M website that requires authentication.
+enterText|login|qainst
+enterText|password|sswelvalpanklidS$
+
+click|doLogin
+verifyText|From the CTools Team
+verifyText|Welcome to your personal workspace
+
+click|$site
+verifyText|Selenium Instructor
+verifyText|Site Information Display
+verifyText|viewing announcements from the last 10 days
+
+click|Chat Room
+verifyText|Chat Room
+verifyText|qainst
+verifyText|All chat messages are archived and can be read by any site participant.
+verifyText|Currently viewing messages for 'Main Chat Room'
+
+click|Options
+verifyText|Manage Rooms
+verifyText|Main Chat Room
+verifyText|Description of Secondary Chat Room
+
+click|Set as Default
+verifyText|qainst
+
+click|Reset
+verifyText|Only messages from the past 3 days are archived and can be read by any site participant.
+verifyText|Currently viewing messages for 'Secondary Chat Room'
+
+click|Logout
+verifyText|You are about to log out
+
+click|Log Out
+verifyText|From the CTools Team
+verifyText|Welcome

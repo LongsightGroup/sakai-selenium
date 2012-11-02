@@ -1,0 +1,65 @@
+openURL|$url
+verifyText|From the CTools Team
+click|Login
+
+verifyText|You are connecting to a U-M website that requires authentication.
+enterText|login|qainst
+enterText|password|sswelvalpanklidS$
+
+click|doLogin
+verifyText|From the CTools Team
+verifyText|Welcome to your personal workspace
+
+click|$site
+verifyText|Selenium Instructor
+verifyText|Site Information Display
+verifyText|viewing announcements from the last 10 days
+
+click|Schedule
+verifyText|Schedule
+verifyText|qainst
+verifyText|Calendar by Week
+verifyText|Import
+
+click|Import
+verifyText|Calendar Import
+verifyText|Type of calendar to import
+SelectRadio|Generic calendar import (comma-separate values)
+
+click|Continue
+verifyText|Reformat data and select the file to import
+verifyText|Generic Import Template
+uploadFile|FakeSchedule.csv
+
+click|Continue
+verifyText|Review activities and confirm import
+verifyText|Example Event 1
+verifyText|Example Event 2
+verifyText|Example Event 3
+
+click|Import Events
+verifyText|Calendar by Week
+comment|verify imported events
+selectList|View|List of Events
+verifyText|List of Events
+verifyText|Custom date range
+
+selectList|customStartMonth|JUL
+selectList|customStartDay|1
+selectList|customStartYear|2011
+selectList|customEndMonth|SEP
+selectList|customEndDay|16
+selectList|customEndYear|2014
+click|Filter Events
+verifyText|JUL 2, 2011
+verifyText|Example Event 1
+verifyText|Example Event 2
+verifyText|JUL 16, 2011
+verifyText|Example Event 3
+
+click|Logout
+verifyText|You are about to log out
+
+click|Log Out
+verifyText|From the CTools Team
+verifyText|Welcome

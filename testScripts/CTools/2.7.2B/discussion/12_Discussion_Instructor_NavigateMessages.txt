@@ -1,0 +1,45 @@
+openURL|$url
+verifyText|From the CTools Team
+click|Login
+
+verifyText|You are connecting to a U-M website that requires authentication.
+enterText|login|qainst
+enterText|password|sswelvalpanklidS$
+
+click|doLogin
+verifyText|From the CTools Team
+verifyText|Welcome to your personal workspace
+
+click|$testDupeSite
+verifyText|Selenium Instructor
+verifyText|Site Information Display
+verifyText|Course site that acts as a duplicate for sites that require stealth tools.
+
+click|Discussion
+verifyText|Add Topic
+verifyText|Add Category
+verifyText|Expand All
+verifyText|Permissions
+
+click|Expand All
+verifyText|Instructor Test Reply
+verifyText|Instructor Reply to Post
+
+click|Instructor Test Topic
+verifyText|This is a test topic message. This is sent to a new topic on an existing category
+
+click|Next Message
+verifyText|This is a test topic reply.
+
+click|Next Message
+verifyText|This is a test reply to a post.
+
+click|Previous Message
+verifyText|This is a test topic reply.
+
+click|Logout
+verifyText|You are about to log out
+
+click|Log Out
+verifyText|From the CTools Team
+verifyText|Welcome

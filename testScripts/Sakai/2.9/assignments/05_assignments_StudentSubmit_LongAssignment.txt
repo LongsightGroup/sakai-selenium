@@ -7,12 +7,10 @@ enterText|password:|Maugaityptodita6
 click|Login
 verifyText|My Workspace: Message Of The Day
 verifyText|Welcome to your personal workspace.
-verifyText|Testing 101 001 Fall 2010
 
 click|$site
-verifyText|Announcements
-verifyText|Testing 101 001 Fall 2010: Site Information Display
-verifyText|Testing 101 001 Fall 2010: Recent Announcements
+verifyText|Site Information Display
+verifyText|Recent Announcements
 
 click|Assignments
 verifyText|Assignment List
@@ -40,7 +38,7 @@ verifyFile|test.doc
 
 click|Submit
 verifyText|You have successfully submitted your work
-verifyText|Selenium User
+verifyText|Selenium Student
 verifyText|Long Assignment
 
 click|Back to list

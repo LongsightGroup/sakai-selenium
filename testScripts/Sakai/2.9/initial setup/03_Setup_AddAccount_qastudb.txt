@@ -1,0 +1,21 @@
+openURL|$url
+verifyText|Welcome to Sakai QA
+verifyText|Message Of The Day
+
+click|New Account
+verifyText|Enter the following information to create a new account
+enterText|User Id|qastudb
+enterText|First Name|Selenium
+enterText|Last Name|Studentb
+enterText|Create New Password|hopicenucinseC%
+enterText|Verify New Password|hopicenucinseC%
+
+click|Create Account
+verifyText|My Workspace
+verifyText|Welcome to your personal workspace.
+verifyText|Selenium User
+verifyText|qastud
+
+click|Logout
+verifyText|Welcome to Sakai QA
+verifyText|Message Of The Day

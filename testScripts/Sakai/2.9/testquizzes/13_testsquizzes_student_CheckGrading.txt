@@ -9,12 +9,11 @@ enterText|password:|Maugaityptodita6
 click|Login
 verifyText|My Workspace: Message Of The Day
 verifyText|Welcome to your personal workspace.
-verifyText|Testing 101 001 Fall 2010
 
 click|$site
 verifyText|Tests & Quizzes
-verifyText|Testing 101 001 Fall 2010: Site Information Display
-verifyText|Testing 101 001 Fall 2010: Recent Announcements
+verifyText|Site Information Display
+verifyText|Recent Announcements
 
 click|Tests & Quizzes
 verifyText|Assessments

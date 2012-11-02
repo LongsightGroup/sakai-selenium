@@ -1,0 +1,119 @@
+application|worksitesetup
+
+openURL|$url
+verifyText|Welcome to Sakai QA
+verifyText|Message Of The Day
+enterText|user id:|qainst
+enterText|password:|sswelvalpanklidS$
+
+click|submit
+verifyText|Recent Announcements
+verifyText|Welcome to your personal workspace
+
+click|Worksite Setup
+verifyText|Selenium Instructor
+verifyText|Worksite Setup
+verifyText|Check box(es) to take action on a site.
+selectCheckbox|$site
+
+click|Edit
+verifyText|$site
+verifyText|qainst
+verifyText|A basic course created during automated testing.
+verifyText|Can read, revise, delete and add both content and participants to a site.
+
+comment|Add the selenium student to the course.
+click|Add Participants
+verifyText|Add Participants
+verifyText|Enter multiples each on separate line
+verifyValue|Assign all participants to the same role|true
+enterText|Official Email Address or Username|qastud
+
+click|Continue
+verifyText|Choose a Role for Participants
+verifyValue|Student|false
+verifyText|qastud
+selectRadio|Student
+
+comment|Should email go to the participant?
+click|Continue
+verifyText|Add participant(s) to
+verifyText|do not send an email notifying new participants
+verifyValue|Send Now|false
+
+comment|Confirmation screen
+click|Continue
+verifyText|Confirming Add Participant(s) to My Workspace
+verifyText|qastud
+
+click|Finish
+comment|Back at participant page
+verifyText|$site
+comment|We the roster from the previous script is not added in a timely fashion.  So, we cannot assume it exists here.
+verifyText|A basic course created during automated testing
+verifyText|qastud
+
+comment|Add the qastudb to the course.
+click|Add Participants
+verifyText|Add Participants
+verifyText|Enter multiples each on separate line
+verifyValue|Assign all participants to the same role|true
+enterText|Official Email Address or Username|qastudb
+
+click|Continue
+verifyText|Choose a Role for Participants
+verifyValue|Student|false
+verifyText|qastudb
+selectRadio|Teaching Assistant
+
+comment|Should email go to the participant?
+click|Continue
+verifyText|Add participant(s) to
+verifyText|do not send an email notifying new participants
+verifyValue|Send Now|false
+
+comment|Confirmation screen
+click|Continue
+verifyText|Confirming Add Participant(s) to My Workspace
+verifyText|qastudb
+
+click|Finish
+comment|Back at participant page
+verifyText|$site
+comment|We the roster from the previous script is not added in a timely fashion.  So, we cannot assume it exists here.
+verifyText|A basic course created during automated testing
+verifyText|qastudb
+
+comment|Add the qastudc to the course.
+click|Add Participants
+verifyText|Add Participants
+verifyText|Enter multiples each on separate line
+verifyValue|Assign all participants to the same role|true
+enterText|Official Email Address or Username|qastudc
+
+click|Continue
+verifyText|Choose a Role for Participants
+verifyValue|Student|false
+verifyText|qastudc
+selectRadio|Student
+
+comment|Should email go to the participant?
+click|Continue
+verifyText|Add participant(s) to
+verifyText|do not send an email notifying new participants
+verifyValue|Send Now|false
+
+comment|Confirmation screen
+click|Continue
+verifyText|Confirming Add Participant(s) to My Workspace
+verifyText|qastudc
+
+click|Finish
+comment|Back at participant page
+verifyText|$site
+comment|We the roster from the previous script is not added in a timely fashion.  So, we cannot assume it exists here.
+verifyText|A basic course created during automated testing
+verifyText|qastudc
+
+click|Logout
+verifyText|Message Of The Day

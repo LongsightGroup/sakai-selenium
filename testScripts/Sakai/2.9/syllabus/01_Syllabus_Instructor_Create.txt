@@ -12,11 +12,12 @@ verifyText|Welcome to your personal workspace.
 
 click|$site
 verifyText|Syllabus
-verifyText|Testing 101 001 Fall 2010: Site Information Display
-verifyText|Testing 101 001 Fall 2010: Recent Announcements
+verifyText|Site Information Display
+verifyText|Recent Announcements
 
 click|Syllabus
-verifyText|$site: Syllabus
+verifyText|$site
+verifyText|Syllabus
 verifyText|Logout
 
 click|Create/Edit

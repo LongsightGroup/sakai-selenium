@@ -9,26 +9,24 @@ enterText|password:|sswelvalpanklidS$
 click|Login
 verifyText|My Workspace: Message Of The Day
 verifyText|Welcome to your personal workspace.
-verifyText|Testing 101 001 Fall 2010
 
 click|$site
-verifyText|Announcements
-verifyText|Testing 101 001 Fall 2010: Site Information Display
-verifyText|Testing 101 001 Fall 2010: Recent Announcements
+verifyText|Site Information Display
+verifyText|Recent Announcements
 
 click|Assignments
 verifyText|Assignment List
 verifyText|Long Assignment
 comment|Grade Long Assignment
 
-clickXpath|//a[normalize-space()='Long Assignment']/following::a[normalize-space()='Grade']
+clickXpath|//a[normalize-space()='Long Assignment']/following::a[starts-with(normalize-space(),'Grade')][1]
 comment|Should be at list of students for this assignment.
 verifyText|Long Assignment - Submissions
 verifyText|qastud
 verifyText|Ungraded
 
 comment|Open submission for the Selenium User
-click|Grade submission|3
+click|Grade submission|2
 comment|clickXpath|//td[contains(text(),'qastud')]//a
 verifyText|Long Assignment - Grading
 verifyText|Important Reminder: Please do not grade assignments with multiple browser windows or tabs. Grade assignments and navigate the system with only one browser window.

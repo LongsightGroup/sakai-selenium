@@ -103,6 +103,9 @@
 			<worksitesetup>//a[normalize-space()=element]/preceding::input[@type='checkbox'][1]</worksitesetup>
 		</checkbox>
 		<checkbox>
+			<worksitesetup>//input[@type='checkbox' and @value=//label[normalize-space()=element]/@for]</worksitesetup>
+		</checkbox>			
+		<checkbox>
 			<siteinfo>//input[@type='checkbox' and @id=//label[contains(normalize-space(), element)]/@for]</siteinfo>
 		</checkbox>
 	</checkboxes>
@@ -115,11 +118,20 @@
 			<generic>//span[normalize-space()=element]/following::td[contains(@class, 'cke_contents')]/iframe</generic>
 		</ckeditor>
 		<ckeditor>
-			<forums>//text()[normalize-space()=element]/following::td[contains(@class, 'cke_contents')]/iframe</forums>
-		</ckeditor>
+			<generic>//label[starts-with(normalize-space(), element)]/following::td[contains(@class, 'cke_contents')]/iframe</generic>
+		</ckeditor>		
 		<ckeditor>
 			<announcements>//label[contains(normalize-space(), element)]/following::td[contains(@class, 'cke_contents')]/iframe</announcements>
 		</ckeditor>
+		<ckeditor>
+			<forums>//text()[normalize-space()=element]/following::td[contains(@class, 'cke_contents')]/iframe</forums>
+		</ckeditor>	
+		<ckeditor>
+			<resources>//text()[normalize-space()=element]/following::td[contains(@class, 'cke_contents')]/iframe</resources>
+		</ckeditor>		
+		<ckeditor>
+			<worksitesetup>//label[contains(normalize-space(), element)]/following::td[contains(@class, 'cke_contents')]/iframe</worksitesetup>
+		</ckeditor>						
 	</ckeditors>
 
 	<fckeditors>
@@ -161,6 +173,9 @@
 		</listbox>				
 		<listbox>
 			<generic>//*[normalize-space()=element]/following-sibling::select</generic>
+		</listbox>	
+		<listbox>
+			<generic>//select[@id=//label[contains(normalize-space(), element)]/@for]</generic>
 		</listbox>		
 		<listbox>
 			<testcenter>//*[normalize-space()=element]/following::select</testcenter>
@@ -256,14 +271,17 @@
 			<generic>//input[starts-with(@name, element) and (@type='text' or @type='password')]</generic>
 		</textbox>		
 		<textbox>
-			<testcenter>//label[starts-with(normalize-space(),element)]/following::input[(@type='text' or @type='password')]</testcenter>
-		</textbox>	
-		<textbox>
 			<generic>//*[text()=element]/following::input[(@type='text' or @type='password')][1]</generic>
 		</textbox>
 		<textbox>
+			<generic>//input[@id=//label[contains(normalize-space(), element)]/@for]</generic>
+		</textbox>		
+		<textbox>
 			<signup>//input[@id=element]</signup>
 		</textbox>
+		<textbox>
+			<testcenter>//label[starts-with(normalize-space(),element)]/following::input[(@type='text' or @type='password')]</testcenter>
+		</textbox>			
 	</textboxes>
 	
 	<uploadpaths>

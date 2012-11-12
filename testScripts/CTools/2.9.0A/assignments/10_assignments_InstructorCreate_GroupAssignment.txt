@@ -31,7 +31,7 @@ selectList|new_assignment_openampm|AM
 verifyValue|subType|Inline and Attachments
 verifyValue|new_assignment_grade_type|Ungraded
 selectList|new_assignment_grade_type|Letter grade
-fckEnter|Assignment Instructions|This is an assignment for Group 1.
+ckEnter|Assignment Instructions|This is an assignment for Group 1.
 selectCheckbox|Add honor pledge
 selectRadio|Display to selected groups
 verifyText|Group 1
@@ -55,7 +55,7 @@ verifyValue|subType|Inline and Attachments
 verifyValue|new_assignment_grade_type|Ungraded
 selectList|new_assignment_grade_type|Points
 enterText|new_assignment_grade_points|100
-fckEnter|Assignment Instructions|This is an assignment for Group 2.
+ckEnter|Assignment Instructions|This is an assignment for Group 2.
 selectCheckbox|Add honor pledge
 selectRadio|Display to selected groups
 verifyText|Group 2

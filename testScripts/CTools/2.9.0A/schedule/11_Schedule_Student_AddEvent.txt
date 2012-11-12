@@ -38,7 +38,7 @@ selectList|yearSelect|2011
 selectList|startHour|4
 selectList|startMinute|00
 selectList|startAmpm|pm
-fckEnter|Message|Scheduled event message for selenium student.
+ckEnter|Message|Scheduled event message for selenium student.
 verifyText|Activity occurs once
 enterText|Event Location|DMC 3350
 

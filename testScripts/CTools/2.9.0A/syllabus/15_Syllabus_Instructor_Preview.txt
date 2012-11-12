@@ -30,7 +30,7 @@ verifyText|Title
 verifyValue|Only members of this site can see this syllabus item.|true
 verifyText|Email Notification
 enterText|Title|Preview Syllabus
-fckEnter|Content|Sample Syllabus to sample preview capability
+ckEnter|Content|Sample Syllabus to sample preview capability
 
 Click|Preview
 VerifyText|Preview Syllabus Item

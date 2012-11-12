@@ -25,7 +25,7 @@ verifyText|To create a meeting, enter the required information and click Next.
 
 enterText|Title:|Sample Course Group Appointment
 enterText|Location:|The Diag
-fckEnter|Description:|This is a sample appointment, used when testing the Sign-up tool.  This will be assigned to a group, if one exists.
+ckEnter|Description:|This is a sample appointment, used when testing the Sign-up tool.  This will be assigned to a group, if one exists.
 enterText|meeting:endTime.year|2013
 
 verifyValue|meeting:siteSelection|true

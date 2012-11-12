@@ -28,7 +28,7 @@ verifyValue|Category|-- Select a category --
 enterText|Or Create a Category|Instructor New Category
 enterText|Topic Title|Instructor Test Topic in New Category
 verifyValue|Within this topic, allow replies to any message|true
-fckEnter|Message|This is a test topic message. This is sent to a new topic in a new category
+ckEnter|Message|This is a test topic message. This is sent to a new topic in a new category
 
 click|Add Topic
 verifyText|Instructor New Category

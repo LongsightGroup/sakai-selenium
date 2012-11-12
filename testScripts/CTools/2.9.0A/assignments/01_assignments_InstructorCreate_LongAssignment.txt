@@ -29,7 +29,7 @@ verifyValue|subType|Inline and Attachments
 verifyValue|new_assignment_grade_type|Ungraded
 selectList|new_assignment_grade_type|Points
 enterText|new_assignment_grade_points|100
-fckEnter|Assignment Instructions|These are test instructions.
+ckEnter|Assignment Instructions|These are test instructions.
 selectCheckbox|Add due date to Schedule
 selectCheckbox|Add an announcement about the open date to Announcements
 selectCheckbox|Add honor pledge

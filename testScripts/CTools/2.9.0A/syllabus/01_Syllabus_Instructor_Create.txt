@@ -30,7 +30,7 @@ verifyText|Title
 verifyValue|Only members of this site can see this syllabus item.|true
 verifyText|Email Notification
 enterText|Title|Selenium Syllabus
-fckEnter|Content|Scheduled event message for Selenium Instructor.
+ckEnter|Content|Scheduled event message for Selenium Instructor.
 
 Click|Post
 verifyText|Syllabus Items

@@ -27,22 +27,22 @@ verifyText|to participants who have voted, or after closing date
 verifyValue|always|true
 
 enterText|Question|What is your favorite color?
-fckEnter|Additional Instructions|Choose your favorite color from the list below.
+ckEnter|Additional Instructions|Choose your favorite color from the list below.
 
 click|Save and add options
 verifyText|Question: What is your favorite color?
 verifyText|Add an Option
-fckEnter|Answer option|Red
+ckEnter|Answer option|Red
 
 click|Save and add options
 verifyText|Question: What is your favorite color?
 verifyText|Add an Option
-fckEnter|Answer option|Blue
+ckEnter|Answer option|Blue
 
 click|Save and add options
 verifyText|Question: What is your favorite color?
 verifyText|Add an Option
-fckEnter|Answer option|Green
+ckEnter|Answer option|Green
 
 click|Save
 verifyText|Edit a poll

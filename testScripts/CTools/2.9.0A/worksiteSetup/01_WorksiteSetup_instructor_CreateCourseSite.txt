@@ -59,7 +59,7 @@ click|Continue
 verifyText|Course Site Information
 verifyText|Enter basic information about the course site...
 verifyText|$term
-fckEnter|Description|A basic course created during automated testing.  This is a description.
+ckEnter|Description|A basic course created during automated testing.  This is a description.
 enterText|Short Description|An even shorter description
 verifyText|Site will display this theme
 click|Continue

@@ -29,7 +29,7 @@ selectList|new_assignment_openampm|AM
 verifyValue|subType|Inline and Attachments
 verifyValue|new_assignment_grade_type|Ungraded
 selectList|new_assignment_grade_type|Letter grade
-fckEnter|Assignment Instructions|These are draft assignment instructions.
+ckEnter|Assignment Instructions|These are draft assignment instructions.
 selectCheckbox|Add honor pledge
 selectRadio|Send me one email per day summarizing notifications for student submissions
 

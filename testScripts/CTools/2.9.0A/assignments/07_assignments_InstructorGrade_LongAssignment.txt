@@ -46,7 +46,7 @@ verifyText|Sample All Purpose Item
 click|test.doc
 verifyFile|test.doc
 
-fckEnter|Instructor Summary Comments|These are some test comments.
+ckEnter|Instructor Summary Comments|These are some test comments.
 
 click|Add Attachments
 UploadFile|test.docx

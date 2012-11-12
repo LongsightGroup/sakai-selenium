@@ -24,7 +24,7 @@ click|Long Assignment
 verifyText|Assignment - In progress
 verifyText|Complete the form, then choose the appropriate button at the bottom.
 verifyText|All Purpose item
-fckEnter|Assignment Text|This is my test submission for an assignment that I will be submitting.
+ckEnter|Assignment Text|This is my test submission for an assignment that I will be submitting.
 click|FakeAssignment.doc
 verifyFile|FakeAssignment.doc
 

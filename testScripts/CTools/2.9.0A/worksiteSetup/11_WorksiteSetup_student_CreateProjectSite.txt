@@ -34,7 +34,7 @@ click|Continue
 verifyText|Project Site Information
 verifyText|Enter basic information about the project site...
 enterText|Site Title|$project_site
-fckEnter|Description|A basic project site created during automated testing.  This is a description.
+ckEnter|Description|A basic project site created during automated testing.  This is a description.
 enterText|Short Description|An even shorter description
 verifyText|Selenium User
 click|Continue

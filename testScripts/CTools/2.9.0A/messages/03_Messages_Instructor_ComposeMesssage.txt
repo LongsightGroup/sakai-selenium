@@ -28,7 +28,7 @@ selectList|*To|User, Selenium (qastud)
 verifyValue|Send a copy of this message to recipients|false
 selectList|Label|High
 enterText|*Subject|Instructor Test Message
-fckEnter|Message|A hearty hello to you.
+ckEnter|Message|A hearty hello to you.
 
 click|Add attachments
 verifyText|Upload local file

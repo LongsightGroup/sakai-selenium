@@ -23,7 +23,7 @@ verifyText|Build your own site
 
 verifyText|course site
 verifyText|project site
-verifyText|portfolio site
+verifyTextNotPresent|portfolio site
 verifyText|Create site from template
 
 comment|Verify clicking on course site will yield the academic term drop-down

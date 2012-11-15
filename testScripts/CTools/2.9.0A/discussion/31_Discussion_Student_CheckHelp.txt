@@ -11,7 +11,6 @@ verifyText|From the CTools Team
 verifyText|Welcome to your personal workspace
 
 click|$testDupeSite
-verifyText|Selenium User
 verifyText|Site Information Display
 
 click|Discussion

@@ -23,7 +23,7 @@ verifyText|128/132
 click|Course Grade Options
 verifyText|Course Grade Options
 verifyValue|Display course grade to students now|false
-verifyValue|A+|100.0
+verifyValue|A+|100
 comment|verifyValue|A+|96.0
 
 enterText|A+|96
@@ -45,11 +45,11 @@ comment|Now reset Grade Options back to default, should lead to an A instead of 
 
 click|Course Grade Options
 verifyText|Course Grade Options
-verifyValue|A+|96.0
+verifyValue|A+|96
 
 click|Reset to default values
 verifyText|Course Grade Options
-verifyValue|A+|100.0
+verifyValue|A+|100
 verifyValue|Display course grade to students now|false
 
 click|Save

@@ -11,7 +11,6 @@ verifyText|From the CTools Team
 verifyText|Welcome to your personal workspace
 
 click|$site
-verifyText|Selenium Instructor
 verifyText|Site Information Display
 verifyText|viewing announcements from the last 10 days
 

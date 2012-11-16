@@ -121,6 +121,9 @@
 			<generic>//label[starts-with(normalize-space(), element)]/following::td[contains(@class, 'cke_contents')]/iframe</generic>
 		</ckeditor>		
 		<ckeditor>
+			<generic>//h4[normalize-space()=element]/following::td[contains(@class, 'cke_contents')]/iframe</generic>
+		</ckeditor>		
+		<ckeditor>
 			<announcements>//label[contains(normalize-space(), element)]/following::td[contains(@class, 'cke_contents')]/iframe</announcements>
 		</ckeditor>
 		<ckeditor>

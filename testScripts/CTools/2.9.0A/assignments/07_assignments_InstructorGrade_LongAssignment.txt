@@ -20,7 +20,7 @@ verifyText|Assignment List
 verifyText|Long Assignment
 comment|Grade Long Assignment
 
-clickXpath|//a[normalize-space()='Long Assignment']/following::a[normalize-space()='Grade']
+clickXpath|//a[normalize-space()='Long Assignment']/following::a[starts-with(normalize-space(), 'Grade')][1]
 comment|Should be at list of students for this assignment.
 verifyText|Long Assignment - Submissions
 verifyText|qastud

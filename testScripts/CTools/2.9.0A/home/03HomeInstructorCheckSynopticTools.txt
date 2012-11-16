@@ -5,7 +5,8 @@ verifyText|You are connecting to a U-M website that requires authentication.
 enterText|login|qainst
 enterText|password|sswelvalpanklidS$
 
-click|doLoginverifyText|From the CTools TeamverifyText|Welcome to your personal workspaceclick|$siteverifyText|Selenium InstructorverifyText|Site Information DisplayverifyText|the Regents of The University of MichiganverifyText|Options
+click|doLoginverifyText|From the CTools TeamverifyText|Welcome to your personal workspaceclick|$site
+verifyText|Site Information DisplayverifyText|the Regents of The University of MichiganverifyText|Options
 
 verifyText|Recent Announcements
 verifyText|Unread Messages and Forums

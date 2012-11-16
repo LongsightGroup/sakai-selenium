@@ -31,7 +31,8 @@ selectCheckbox|Display course grade to students now
 click|Save
 verifyText|Course grade options have been saved.
 verifyText|Click a title to view complete details and to grade the item
-verifyText|Currently, students can see their course grade (as Graded (GRD)) and their gradebook item scores
+verifyText|Currently, students can see their course grade
+verifyText|(as Letter Grades with +/-) and their gradebook item scores
 click|Sample Gradebook Item
 
 click|Logout

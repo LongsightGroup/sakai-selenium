@@ -13,7 +13,6 @@ verifyText|From the CTools Team
 verifyText|Welcome to your personal workspace
 
 click|$testDupeSite
-verifyText|Selenium Instructor
 verifyText|Site Information Display
 verifyText|the Regents of The University of Michigan
 

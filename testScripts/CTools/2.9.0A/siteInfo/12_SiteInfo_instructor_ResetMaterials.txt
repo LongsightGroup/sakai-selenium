@@ -13,7 +13,6 @@ verifyText|From the CTools Team
 verifyText|Welcome to your personal workspace
 
 click|$site
-verifyText|Selenium Instructor
 verifyText|Site Information Display
 
 comment|The previous script imported two announcements from the dupe source site

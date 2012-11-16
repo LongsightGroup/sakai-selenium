@@ -13,7 +13,6 @@ verifyText|From the CTools Team
 verifyText|Welcome to your personal workspace
 
 click|$site
-verifyText|Selenium Instructor
 verifyText|Site Information Display
 verifyText|viewing announcements from the last 10 days
 
@@ -37,7 +36,6 @@ verifyValue|This syllabus item is publicly viewable.|true
 
 Click|Post
 VerifyText|Syllabus Items
-VerifyText|Selenium Instructor
 VerifyText|Selenium Syllabus
 VerifyText|Posted
 

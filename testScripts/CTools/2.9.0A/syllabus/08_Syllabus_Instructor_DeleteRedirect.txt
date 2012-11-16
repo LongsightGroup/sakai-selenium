@@ -11,7 +11,6 @@ verifyText|From the CTools Team
 verifyText|Welcome to your personal workspace
 
 click|$site
-verifyText|Selenium Instructor
 verifyText|Site Information Display
 verifyText|viewing announcements from the last 10 days
 
@@ -33,7 +32,6 @@ enterText|URL|
 click|Save
 verifyText|Syllabus Items
 verifyText|Redirect
-verifyText|Selenium Instructor
 
 comment|Verify delete
 click|Redirect
@@ -44,7 +42,6 @@ verifyTextNotPresent|http://en.wikipedia.org
 click|Cancel
 verifyText|Syllabus Items
 verifyText|Redirect
-verifyText|Selenium Instructor
 
 click|Logout
 verifyText|You are about to log out

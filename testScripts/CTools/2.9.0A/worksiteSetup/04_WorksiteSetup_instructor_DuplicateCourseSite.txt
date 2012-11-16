@@ -12,7 +12,6 @@ verifyText|From the CTools Team
 verifyText|Welcome to your personal workspace
 
 click|Worksite Setup
-verifyText|Selenium Instructor
 verifyText|Worksite Setup
 verifyText|Check box(es) to take action on a site.
 

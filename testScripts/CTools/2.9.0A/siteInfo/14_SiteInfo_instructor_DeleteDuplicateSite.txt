@@ -13,7 +13,6 @@ verifyText|From the CTools Team
 verifyText|Welcome to your personal workspace
 
 click|Worksite Setup
-verifyText|Selenium Instructor
 verifyText|Worksite Setup
 verifyText|Check box(es) to take action on a site.
 verifyText|Test Dupe Site
@@ -26,7 +25,6 @@ verifyText|Test Dupe Site
 
 comment|Actually Delete Site
 click|Remove
-verifyText|Selenium Instructor
 verifyText|Worksite Setup
 verifyText|Check box(es) to take action on a site.
 verifyTextNotPresent|Test Dupe Site

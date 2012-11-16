@@ -5,4 +5,4 @@ verifyText|You are connecting to a U-M website that requires authentication.
 enterText|login|qainst
 enterText|password|sswelvalpanklidS$
 
-click|doLoginverifyText|From the CTools TeamverifyText|Welcome to your personal workspaceclick|Worksite SetupverifyText|Selenium InstructorverifyText|Worksite SetupverifyText|Check box(es) to take action on a site.click|Help for Worksite SetupwaitForPopup|30verifyText|CTools OverviewverifyText|Search HelpverifyText|Setting up and Publishing a Course or Project WebsiteclosePopUp|click|LogoutverifyText|You are about to log outclick|Log OutverifyText|From the CTools TeamverifyText|Welcome
+click|doLoginverifyText|From the CTools TeamverifyText|Welcome to your personal workspaceclick|Worksite SetupverifyText|Worksite SetupverifyText|Check box(es) to take action on a site.click|Help for Worksite SetupwaitForPopup|30verifyText|CTools OverviewverifyText|Search HelpverifyText|Setting up and Publishing a Course or Project WebsiteclosePopUp|click|LogoutverifyText|You are about to log outclick|Log OutverifyText|From the CTools TeamverifyText|Welcome

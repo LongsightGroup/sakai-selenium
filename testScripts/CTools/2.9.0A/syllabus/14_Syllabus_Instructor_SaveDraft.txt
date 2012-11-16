@@ -13,7 +13,6 @@ verifyText|From the CTools Team
 verifyText|Welcome to your personal workspace
 
 click|$site
-verifyText|Selenium Instructor
 verifyText|Site Information Display
 verifyText|viewing announcements from the last 10 days
 
@@ -34,7 +33,6 @@ ckEnter|Content|Sample Syllabus to sample draft capability
 
 Click|Save Draft
 VerifyText|Syllabus Items
-VerifyText|Selenium Instructor
 VerifyText|Draft Syllabus
 
 click|Logout

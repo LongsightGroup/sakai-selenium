@@ -11,7 +11,6 @@ verifyText|From the CTools Team
 verifyText|Welcome to your personal workspace
 
 click|$projDupeSite
-verifyText|Selenium Instructor
 verifyText|Site Information Display
 verifyText|A project site meant to be used as a source for duplication during testing.
 

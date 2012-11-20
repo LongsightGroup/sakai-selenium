@@ -49,8 +49,6 @@ verifyText|qastud
 click|Finish
 comment|Back at participant page
 verifyText|$site
-verifyText|$providerID1
-comment|We the roster from the previous script is not added in a timely fashion.  So, we cannot assume it exists here.
 verifyText|A basic course created during automated testing
 verifyText|qastud
 

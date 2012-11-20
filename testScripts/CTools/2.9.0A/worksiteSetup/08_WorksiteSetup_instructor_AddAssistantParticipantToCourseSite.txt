@@ -32,7 +32,7 @@ enterText|Official Email Address or Username|qastudb
 click|Continue
 verifyText|Choose a Role for Participants
 verifyValue|Student|false
-verifyText|qastud
+verifyText|qastudb
 selectRadio|Assistant
 
 comment|Should email go to the participant?
@@ -49,8 +49,6 @@ verifyText|qastudb
 click|Finish
 comment|Back at participant page
 verifyText|$site
-verifyText|$providerID1
-comment|We the roster from the previous script is not added in a timely fashion.  So, we cannot assume it exists here.
 verifyText|A basic course created during automated testing
 verifyText|qastudb
 

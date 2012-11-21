@@ -7,7 +7,7 @@
 			<generic>//a[@title=element]</generic>
 		</anchor>
 		<anchor>		
-			<generic>//a/span[normalize-space()=element and @class!='skip']</generic>
+			<generic>//span[normalize-space()=element and @class!='skip']/ancestor::a</generic>
 		</anchor>
 		<anchor>		
 			<generic>//a[normalize-space(text())=element]</generic>

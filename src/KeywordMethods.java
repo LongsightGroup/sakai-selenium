@@ -282,6 +282,28 @@ public class KeywordMethods {
 					return "fail: " + e.toString();
 			}
 			
+		}
+		
+		
+		// enter text into a text field
+		// use: enterText|object|text where object is the id for the text field and 
+		// text is the string to be entered.		
+		protected static String enterActionKeys (WebDriver driver, String keys)  throws Exception {
+
+			try {
+				
+		        //WebElement objectInQuestion = driver.findElement(By.xpath("//body"));
+				WebElement objectInQuestion = driver.findElement(By.xpath("//div[contains(@class, 'ui-draggable') and normalize-space()='Invisible Site']"));
+		        
+				// This clears all text from the existing field before typing the new...
+				objectInQuestion.sendKeys(Keys.chord(Keys.CONTROL, Keys.ARROW_LEFT));
+
+				return "pass";
+				
+			} catch (Exception e) {
+				return "fail: " + e.toString();
+			}
+			
 		}		
 		
 		// enter text into a text field
@@ -589,7 +611,17 @@ public class KeywordMethods {
 		        
 		        Select mySelect = new Select(myElement);
 		        
-		        mySelect.selectByVisibleText(object[1]);
+		        //start new
+		        List<WebElement> options = mySelect.getOptions();
+		        
+		        for (WebElement option : options) {
+		            if (option.getText().contains(object[1])) {
+		            	mySelect.selectByVisibleText(option.getText());
+		                break;
+		            }
+		        }
+		        
+		        /*mySelect.selectByVisibleText(object[1]);*/
 		        
 		    	return "pass";
 		        
@@ -961,7 +993,7 @@ public class KeywordMethods {
 		        
 		        while(optionList.hasNext()) {
 
-		            if(optionList.next().getText().equals(valueToVerify)){
+		            if(optionList.next().getText().trim().contains(valueToVerify)){
 		            	return "pass";
 		            }
 		        } 

@@ -124,7 +124,7 @@ public class TestManager {
 				// Actually run the test
 				testResult = testRunner(testScript, OS, logDirectory, fileDirectory, downloadDirectory, testName, variablesPath, xpathFile);
 			} catch (Exception e) {
-				testResult = "fail" + e.getMessage();
+				testResult = "fail," + e.getMessage();
 			}
 			
 			if (testResult.equals("pass")) {
@@ -465,6 +465,9 @@ public class TestManager {
 	    	}
 	    else if (vars[0].equalsIgnoreCase("entertext") && (vars.length == 4)) { 
 	    	testStatus = KeywordMethods.enterText(driver, application, timeout, xpathFile, vars[1], vars[2], vars[3]);
+	    	}
+	    else if (vars[0].equalsIgnoreCase("enteractionkeys")) { 
+	    	testStatus = KeywordMethods.enterActionKeys(driver, vars[1]);
 	    	}	    
 	    else if (vars[0].equalsIgnoreCase("fckEnter")) {
 	    	testStatus = KeywordMethods.fckEnter(driver, application, timeout, xpathFile, vars[1], vars[2]);
@@ -670,6 +673,25 @@ public class TestManager {
         ieCapabilities.setCapability(InternetExplorerDriver.INTRODUCE_FLAKINESS_BY_IGNORING_SECURITY_DOMAINS, true);
 		
 		driver = new InternetExplorerDriver(ieCapabilities);
-		}		
+		}
+	
+	private static void prepSafariProfile (String downloadDirectory, String mimeTypes, String driverPath)  throws Exception {
+		
+		ChromeDriverService service = ChromeDriverService.createDefaultService();
+		
+		ChromeOptions options = new ChromeOptions();
+
+		// The following option is ineffectual.  Workaround is to set the downloadDirectory
+		// equal to the user's current download directory setting
+		//options.addArguments("--download.default_directory=" + downloadDirectory);
+		//options.addArguments("--download.prompt_for_download=false");
+		//options.addArguments("--plugins.plugins_disabled=Chrome PDF Viewer");
+		//options.addArguments("--plugins.plugins_disabled=C:/Program Files (x86)/Adobe/Reader 10.0/Reader/Browser/nppdf32.dll");
+		//options.addArguments("--plugins.plugins_disabled=C:/Program Files (x86)/Google/Chrome/Application/19.0.1084.52/pdf.dll");		
+		//options.addArguments("plugins_disabled=C:/Program Files (x86)/Google/Chrome/Application/19.0.1084.52/pdf.dll");		
+		
+		driver = new ChromeDriver(service, options);
+		}
+	
 	
 }

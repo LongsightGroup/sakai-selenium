@@ -340,11 +340,21 @@ public class ElementLocator {
 					// We will only get here if the proceeding call found an object.  Check if the object is displayed.
 					// If it isn't, continue looking through the various xpaths.
 					if (foundObject.isDisplayed()) {
-						//System.out.println("Found: " + foundObject);
-						return true;
+						
+						// occassionally an element will have the aria-disabled property, which the webDriver 'isEnabled'
+						// method ignores, so we have to check for this by hand.
+						if (foundObject.getAttribute("aria-disabled") == null) {
+							// This property is not in place, so the element should be clickable.
+							return true;
+						} else if (foundObject.getAttribute("aria-disabled").equalsIgnoreCase("true")) {
+							// The property is set to true, so continue searching for the next element
+							continue;
+						}
+
 					} else {
 						continue;
 					}
+					
 				} catch (NoSuchElementException ex) {
 					//System.out.println("Didn't find: " + iteratedPath);
 					continue;

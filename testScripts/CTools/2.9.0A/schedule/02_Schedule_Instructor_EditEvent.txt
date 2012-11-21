@@ -29,7 +29,7 @@ selectList|customEndDay|16
 selectList|customEndYear|2014
 
 click|Filter Events
-verifyText|Scheduled event message for Selenium Instructor.
+verifyText|Scheduled event message for Selenium Instructor
 verifyText|Academic Calendar
 
 click|Team Meeting

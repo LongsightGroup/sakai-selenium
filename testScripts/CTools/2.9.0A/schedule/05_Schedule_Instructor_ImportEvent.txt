@@ -21,8 +21,10 @@ verifyText|Calendar by Week
 verifyText|Import
 
 click|Import
-verifyText|Calendar Import
-verifyText|Type of calendar to import
+verifyText|Import calendar
+verifyText|Select type of calendar to import
+verifyText|Microsoft Outlook
+verifyText|Meeting Maker
 SelectRadio|Generic calendar import (comma-separate values)
 
 click|Continue

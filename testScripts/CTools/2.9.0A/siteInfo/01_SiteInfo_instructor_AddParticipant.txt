@@ -49,7 +49,7 @@ verifyText|Student
 
 click|Finish
 verifyText|$site
-verifyText|Site Contact and email
+verifyText|Site contact and email
 verifyText|Site Description
 verifyText|Can read, revise, delete and add both content and participants to a site.
 verifyText|student1000@test.com

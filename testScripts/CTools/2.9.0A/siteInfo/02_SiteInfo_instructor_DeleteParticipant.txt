@@ -18,7 +18,7 @@ verifyText|Recent Announcements
 
 click|Site Info
 verifyText|$site
-verifyText|Site Contact and email
+verifyText|Site contact and email
 verifyText|Site Description
 verifyText|Can read, revise, delete and add both content and participants to a site.
 verifyValue|Select role for student1000@test.com|Student
@@ -28,7 +28,7 @@ selectCheckbox|student1000@test.com
 
 click|Update Participants
 verifyText|$site
-verifyText|Site Contact and email
+verifyText|Site contact and email
 verifyText|Site Description
 verifyText|Can read, revise, delete and add both content and participants to a site.
 verifyTextNotPresent|student1000@test.com

@@ -21,7 +21,7 @@ verifyValue|View|All
 
 click|Site Info
 verifyText|$site
-verifyText|Site Contact and email
+verifyText|Site contact and email
 verifyText|Site Description
 verifyText|Can read, revise, delete and add both content and participants to a site.
 
@@ -39,7 +39,7 @@ verifyText|Re-use Material from Other Sites
 selectCheckbox|sakai.announcements
 click|Finish
 verifyText|$site
-verifyText|Site Contact and email
+verifyText|Site contact and email
 verifyText|Site Description
 verifyText|Can read, revise, delete and add both content and participants to a site.
 

@@ -18,7 +18,7 @@ verifyText|Recent Announcements
 
 click|Site Info
 verifyText|$site
-verifyText|Site Contact and email
+verifyText|Site contact and email
 verifyText|Site Description
 verifyText|Can read, revise, delete and add both content and participants to a site.
 
@@ -36,7 +36,7 @@ verifyText|LS&A
 
 click|Finish
 verifyText|$site
-verifyText|Site Contact and email
+verifyText|Site contact and email
 verifyText|Site Description
 verifyText|Can read, revise, delete and add both content and participants to a site.
 

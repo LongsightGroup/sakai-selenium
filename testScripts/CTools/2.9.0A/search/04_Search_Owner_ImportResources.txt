@@ -24,7 +24,8 @@ click|Add|1
 
 click|Upload Files
 verifyText|Upload Files
-verifyText|Upload as many files as you like. If you change your mind about uploading one of your files,
+verifyText|Upload as many files as you like.
+verifyText|You can only upload 50 MB worth of files at one time.
 uploadFile|test.pdf
 
 click|Upload Files Now
@@ -34,7 +35,8 @@ click|Add|1
 
 click|Upload Files
 verifyText|Upload Files
-verifyText|Upload as many files as you like. If you change your mind about uploading one of your files,
+verifyText|Upload as many files as you like.
+verifyText|You can only upload 50 MB worth of files at one time.
 uploadFile|test.doc
 
 click|Upload Files Now
@@ -44,7 +46,8 @@ click|Add|1
 
 click|Upload Files
 verifyText|Upload Files
-verifyText|Upload as many files as you like. If you change your mind about uploading one of your files,
+verifyText|Upload as many files as you like.
+verifyText|You can only upload 50 MB worth of files at one time.
 uploadFile|test.docx
 
 click|Upload Files Now
@@ -54,7 +57,8 @@ click|Add|1
 
 click|Upload Files
 verifyText|Upload Files
-verifyText|Upload as many files as you like. If you change your mind about uploading one of your files,
+verifyText|Upload as many files as you like.
+verifyText|You can only upload 50 MB worth of files at one time.
 uploadFile|test.jpeg
 
 click|Upload Files Now
@@ -64,7 +68,8 @@ click|Add|1
 
 click|Upload Files
 verifyText|Upload Files
-verifyText|Upload as many files as you like. If you change your mind about uploading one of your files,
+verifyText|Upload as many files as you like.
+verifyText|You can only upload 50 MB worth of files at one time.
 uploadFile|test.txt
 
 click|Upload Files Now

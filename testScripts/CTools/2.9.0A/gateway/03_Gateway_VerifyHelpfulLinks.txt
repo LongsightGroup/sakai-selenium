@@ -1,0 +1,35 @@
+comment|Check links in lower right hand corner of gateway.
+
+openURL|$url
+verifyText|$gatewayText
+
+comment|Should start on the gateway.  We will navigate from there
+comment|and return back there at the end of the test case.
+
+click|Training and workshops
+waitForPopup|30
+verifyText|Session Listing
+closePopUp|
+
+click|FAQs
+waitForPopup|30
+verifyText|Common Questions about Using CTools
+closePopUp|
+
+click|User Support (4-Help)
+waitForPopup|30
+verifyText|Contact Us
+closePopUp|
+
+click|Help Guide
+waitForPopup|30
+verifyText|Search Help
+verifyText|$helpText
+closePopUp|
+
+click|Browse Course Sites
+waitForPopup|30
+verifyText|Courses
+verifyText|Go to:
+verifyText|Instructor
+closePopUp|

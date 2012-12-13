@@ -1,4 +1,4 @@
 /storage/tests/scripts/gateway/01_Gateway_VerifyContent.txt
-/storage/tests/scripts/gateway/02_Gateway_VerifyLinks.txt
-/storage/tests/scripts/gateway/03_Gateway_VerifyBottomLinks.txt
-/storage/tests/scripts/gateway/07_Gateway_CheckHelp.txt
+/storage/tests/scripts/gateway/02_Gateway_VerifyNewToCToolsLinks.txt
+/storage/tests/scripts/gateway/03_Gateway_VerifyHelpfulLinks.txt
+/storage/tests/scripts/gateway/04_Gateway_VerifyBottomLinks.txt

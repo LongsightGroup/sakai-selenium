@@ -1,0 +1,29 @@
+comment|Check links in lower left corner of gateway.
+
+openURL|$url
+verifyText|$gatewayText
+
+comment|We start on the gateway page.  We will navigate from there
+comment|and return back there at the end of the test case.
+
+click|What is CTools?
+waitForPopup|30
+verifyText|What is CTools?
+verifyText|CTools is an advanced web-based
+closePopUp|
+
+click|Instructional Uses
+waitForPopup|30
+verifyText|What Can Instructors Do With CTools?
+closePopUp|
+
+click|Tools and Features
+waitForPopup|30
+verifyText|Tools and Features
+verifyText|For posting documents
+closePopUp|
+
+click|Getting started
+waitForPopup|30
+verifyText|Setting up and Publishing a Course or Project Website
+closePopUp|

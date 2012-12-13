@@ -1,0 +1,32 @@
+comment|Check links at the bottom of the gateway.
+
+openURL|$url
+verifyText|$gatewayText
+
+comment|Should start on the Welcome page.  We will navigate from there
+comment|and return back there at the end of the test case.
+
+comment|For some reason, this first link is not handled well by WebDriver.  An explicit wait
+comment|is necessary to reach this lick.
+wait|10
+click|ITS Teaching & Learning
+verifyText|Teaching & Learning Group
+
+comment|Go back to gateway
+openURL|$url
+
+click|University of Michigan
+verifyText|About U-M
+
+comment|Go back to gateway
+openURL|$url
+
+click|Acknowledgements
+verifyText|Copyright
+verifyText|Portions of Sakai
+
+comment|Go back to gateway
+openURL|$url
+
+click|Contact Us/Suggestions
+verifyText|Contact Us

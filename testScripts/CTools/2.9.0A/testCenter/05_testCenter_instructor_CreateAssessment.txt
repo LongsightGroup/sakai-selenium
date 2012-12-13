@@ -1,6 +1,6 @@
 openURL|$url
-verifyText|From the CTools Team
-click|Login
+verifyText|$gatewayText
+click|ctoolsLogin
 
 verifyText|You are connecting to a U-M website that requires authentication.
 enterText|login|qainst
@@ -122,7 +122,7 @@ enterText|UiFloatEdit_|30|3
 enterText|UiFloatEdit_|40|4
 enterText|UiFloatEdit_|50|5
 
-click|Save
+click|Save|2
 verifyText|Total Questions: 5
 verifyText|Total Points: 150.0
 
@@ -130,6 +130,5 @@ click|Logout
 verifyText|You are about to log out
 
 click|Log Out
-verifyText|From the CTools Team
-verifyText|Welcome
+verifyText|$gatewayText
 

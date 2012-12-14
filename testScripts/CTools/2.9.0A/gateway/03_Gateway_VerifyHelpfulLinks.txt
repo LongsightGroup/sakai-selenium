@@ -16,7 +16,7 @@ waitForPopup|30
 verifyText|Common Questions about Using CTools
 closePopUp|
 
-click|User Support (4-Help)
+click|User Support (4-HELP)
 waitForPopup|30
 verifyText|Contact Us
 closePopUp|

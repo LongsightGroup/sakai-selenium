@@ -3,11 +3,11 @@ comment|Check gateway content.
 openURL|$url
 verifyText|$gatewayText
 
-verifyText|New to CTools
+verifyText|New to CTools?
 verifyText|What is CTools?
 verifyText|Instructional Uses
 verifyText|Tools and Features
-verifyText|Getting started
+verifyText|Getting Started
 
 verifyText|Helpful links
 verifyText|Training and workshops

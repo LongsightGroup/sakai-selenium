@@ -23,7 +23,7 @@ verifyText|Tools and Features
 verifyText|For posting documents
 closePopUp|
 
-click|Getting started
+click|Getting Started
 waitForPopup|30
 verifyText|Setting up and Publishing a Course or Project Website
 closePopUp|

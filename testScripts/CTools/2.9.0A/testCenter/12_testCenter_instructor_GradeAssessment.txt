@@ -1,6 +1,6 @@
 openURL|$url
-verifyText|From the CTools Team
-click|Login
+verifyText|$gatewayText
+click|ctoolsLogin
 
 verifyText|You are connecting to a U-M website that requires authentication.
 enterText|login|qainst
@@ -39,7 +39,7 @@ verifyText|qastud
 verifyText|Final Score
 selectCheckbox|Mark as evaluated
 
-click|Save
+click|Save|2
 verifyText|Total Points:
 verifyText|Mark as evaluated
 verifyValue|Mark as evaluated|true
@@ -54,6 +54,5 @@ click|Logout
 verifyText|You are about to log out
 
 click|Log Out
-verifyText|From the CTools Team
-verifyText|Welcome
+verifyText|$gatewayText
 

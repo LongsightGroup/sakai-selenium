@@ -1,7 +1,7 @@
 comment|create Group specific assignements
 
 openURL|$url
-verifyText|Welcome to Sakai QA
+verifyText|Welcome to the Sakai Demo
 verifyText|New Account
 enterText|user id:|qainst
 enterText|password:|sswelvalpanklidS$
@@ -65,6 +65,6 @@ verifyText|Group 2 Assignment
 verifyText|100
 
 click|Logout
-verifyText|Welcome to Sakai QA
+verifyText|Welcome to the Sakai Demo
 verifyText|Message Of The Day
 

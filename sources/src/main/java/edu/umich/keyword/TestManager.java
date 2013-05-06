@@ -14,6 +14,7 @@ import java.util.Properties;
 import java.util.List;
 import java.util.ArrayList;
 
+import org.openqa.selenium.Dimension;
 import org.openqa.selenium.OutputType;
 import org.openqa.selenium.TakesScreenshot;
 import org.openqa.selenium.WebDriver;
@@ -217,6 +218,7 @@ public class TestManager {
 				prepChromeProfile(downloadDirectory, mimeTypes, chromeExecutable);
 			} else throw new Exception("You have entered an invalid browser string.  Must be either firefox, explorer or chrome.");
 			
+			driver.manage().window().setSize(new Dimension(1280, 720));
 			return driver;
 	}
 

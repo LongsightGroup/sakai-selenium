@@ -1,5 +1,5 @@
 openURL|$url
-verifyText|Welcome to Sakai QA
+verifyText|Welcome to the Sakai Demo
 verifyText|New Account
 enterText|user id:|qastud
 enterText|password:|Maugaityptodita6
@@ -18,5 +18,5 @@ verifyText|Testing 101 001
 verifyText|Logout
 
 click|Logout
-verifyText|Welcome to Sakai QA
+verifyText|Welcome to the Sakai Demo
 verifyText|New Account

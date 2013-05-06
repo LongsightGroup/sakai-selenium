@@ -3,7 +3,7 @@ comment|This also verifies that the exam has been published.
 
 application|testcenter
 openURL|$url
-verifyText|Welcome to Sakai QA
+verifyText|Welcome to the Sakai Demo
 verifyText|New Account
 enterText|user id:|qastud
 enterText|password:|Maugaityptodita6
@@ -44,22 +44,22 @@ click|Next
 comment|Should be at the third question
 verifyText|Question 3 of 5
 verifyText|Answer this sample essay question
-enterText|takeAssessmentForm:_id53:0:_id115:0:deliverShortAnswer:_id1036_textinput|This is a sample answer for the third question.
+enterText|takeAssessmentForm:_id56:0:_id118:0:deliverShortAnswer:_id1045_textinput|This is a sample answer for the third question.
 click|Next
 
 comment|Should be at the fourth question
 verifyText|Question 4 of 5
 verifyText|Roses are
-enterText|takeAssessmentForm:_id53:0:_id115:0:deliverFillInTheBlank:_id546:0:_id549|red
-enterText|takeAssessmentForm:_id53:0:_id115:0:deliverFillInTheBlank:_id546:1:_id549|blue
+enterText|takeAssessmentForm:_id56:0:_id118:0:deliverFillInTheBlank:_id549:0:_id552|read
+enterText|takeAssessmentForm:_id56:0:_id118:0:deliverFillInTheBlank:_id549:1:_id552|blue
 click|Next
 
 comment|Should be at the fifth question
 verifyText|Question 5 of 5
 verifyText|Match the colors
-selectList|takeAssessmentForm:_id53:0:_id115:0:deliverMatching:_id659:0:_id662|A
-selectList|takeAssessmentForm:_id53:0:_id115:0:deliverMatching:_id659:1:_id662|C
-selectList|takeAssessmentForm:_id53:0:_id115:0:deliverMatching:_id659:2:_id662|B
+selectList|takeAssessmentForm:_id56:0:_id118:0:deliverMatching:_id662:0:_id665|A
+selectList|takeAssessmentForm:_id56:0:_id118:0:deliverMatching:_id662:0:_id665|C
+selectList|takeAssessmentForm:_id56:0:_id118:0:deliverMatching:_id662:0:_id665|B
 click|Submit for Grading
 
 comment|Confirm finishing, how do we do this?
@@ -67,7 +67,7 @@ verifyText|Assessment Submission Warning
 verifyText|You are about to submit this assessment for grading.
 
 click|Submit for Grading
-verifyText|Sample Assessment Submission Information
+verifyText|Submission Information
 verifyText|Sample Assessment
 verifyText|Number of submissions remaining
 
@@ -76,5 +76,5 @@ verifyText|Take an Assessment
 verifyText|Submitted Assessments
 
 click|Logout
-verifyText|Welcome to Sakai QA
+verifyText|Welcome to the Sakai Demo
 verifyText|Message Of The Day

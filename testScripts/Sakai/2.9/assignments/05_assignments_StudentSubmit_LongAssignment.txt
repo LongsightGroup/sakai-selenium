@@ -1,5 +1,5 @@
 openURL|$url
-verifyText|Welcome to Sakai QA
+verifyText|Welcome to the Sakai Demo
 verifyText|New Account
 enterText|user id:|qastud
 enterText|password:|Maugaityptodita6
@@ -39,13 +39,12 @@ verifyFile|test.doc
 click|Submit
 verifyText|You have successfully submitted your work
 verifyText|Selenium Student
-verifyText|Long Assignment
 
 click|Back to list
 verifyText|Assignment List
 verifyText|Long Assignment
 
 click|Logout
-verifyText|Welcome to Sakai QA
+verifyText|Welcome to the Sakai Demo
 verifyText|Message Of The Day
 

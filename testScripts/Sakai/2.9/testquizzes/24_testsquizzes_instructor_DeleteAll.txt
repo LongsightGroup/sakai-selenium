@@ -1,5 +1,5 @@
 openURL|$url
-verifyText|Welcome to Sakai QA
+verifyText|Welcome to the Sakai Demo
 verifyText|New Account
 enterText|user id:|qainst
 enterText|password:|sswelvalpanklidS$
@@ -33,26 +33,26 @@ click|Remove
 comment|verifyTextNotPresent|Sample Assessment Group 2
 
 comment|To remove published assessments
-clickXPath|//a[contains(normalize-space(), 'Published Copies:')]
+clickXPath|//a[contains(text(), 'Published Copies:')]
 verifyText|Sample Assessment
 verifyText|Sample Assessment Group 1
 verifyText|Sample Assessment Group 2
 verifyText|Active
 verifyText|Selenium Instructor
 
-selectList|authorIndexForm:published-assessments:0:publishedSelectAction1|Remove
+selectList|authorIndexForm:published-assessments:0:publishedSelectAction2|Remove
 verifyText|Remove Assessment Confirmation
 verifyText|Are you sure you want to remove this assessment
 click|Remove
 comment|verifyTextNotPresent|Sample Assessment
 
-selectList|authorIndexForm:published-assessments:0:publishedSelectAction1|Remove
+selectList|authorIndexForm:published-assessments:0:publishedSelectAction2|Remove
 verifyText|Remove Assessment Confirmation
 verifyText|Are you sure you want to remove this assessment
 click|Remove
 verifyTextNotPresent|Sample Assessment Group 1
 
-selectList|authorIndexForm:published-assessments:0:publishedSelectAction1|Remove
+selectList|authorIndexForm:published-assessments:0:publishedSelectAction2|Remove
 verifyText|Remove Assessment Confirmation
 verifyText|Are you sure you want to remove this assessment
 click|Remove
@@ -75,7 +75,7 @@ verifyTextNotPresent|Test Pool
 verifyTextNotPresent|Test Pool Copy
 
 click|Logout
-verifyText|Welcome to Sakai QA
+verifyText|Welcome to the Sakai Demo
 verifyText|Message Of The Day
 verifyText|Welcome
 

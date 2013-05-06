@@ -1,5 +1,5 @@
 openURL|$url
-verifyText|Welcome to Sakai QA
+verifyText|Welcome to the Sakai Demo
 verifyText|Message Of The Day
 
 click|New Account
@@ -17,5 +17,5 @@ verifyText|Selenium Instructor
 verifyText|qainst
 
 click|Logout
-verifyText|Welcome to Sakai QA
+verifyText|Welcome to the Sakai Demo
 verifyText|Message Of The Day

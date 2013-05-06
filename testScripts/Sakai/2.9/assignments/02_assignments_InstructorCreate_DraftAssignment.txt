@@ -1,7 +1,7 @@
 comment|create Draft assignement
 
 openURL|$url
-verifyText|Welcome to Sakai QA
+verifyText|Welcome to the Sakai Demo
 verifyText|New Account
 enterText|user id:|qainst
 enterText|password:|sswelvalpanklidS$
@@ -38,6 +38,6 @@ verifyText|Draft - Draft Assignment
 verifyText|A-F
 
 click|Logout
-verifyText|Welcome to Sakai QA
+verifyText|Welcome to the Sakai Demo
 verifyText|Message Of The Day
 

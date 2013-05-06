@@ -2,9 +2,9 @@ downloadDirectory=/storage/tests/downloads/
 fileDirectory=/storage/tests/files/
 logDirectory=/storage/tests/logs/
 
-testList=/storage/tests/testList.txt
-variablesFile=/storage/tests/variables.txt
-xpathFile=/storage/tests/xpaths.xml
+testList=/storage/testList.txt
+variablesFile=/storage/variables.txt
+xpathFile=/storage/xpaths.xml
 
 timeout=10
 timingData=true
@@ -12,5 +12,5 @@ timingData=true
 OS=linux
 browser=firefox
 
-chromeExecutable=/storage/builds/Selenium/chromedriver
+chromeExecutable=/storage/chrome/chromedriver
 mimeTypes=text/comma-separated-values,application/vnd.ms-excel,application/pdf,application/msword,text/plain,application/vnd.openxmlformats-officedocument.wordprocessingml.document

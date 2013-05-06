@@ -181,15 +181,27 @@ public class KeywordMethods {
 		protected static String clickXPath (WebDriver driver, String xPath)  throws Exception {
 			
 			try {
-				
 				driver.findElement(By.xpath(xPath)).click();
 				return "pass";
-				
-				} catch (Exception e) {
-					
-						return "fail: " + e.toString();
-				}
+			} catch (Exception e) {
+				// First find the HTML element we are looking for
+				String z = StringUtils.substringAfter(xPath, "//");
+				z = StringUtils.substringBefore(z, "[");
 			
+				List<WebElement> el = driver.findElements(By.xpath("//" + z));
+				String partial = StringUtils.substringBetween(xPath, "'", "'").substring(0, 7);
+				for (WebElement l : el) {
+					if (StringUtils.contains(l.getText(), partial)) {
+						l.click();
+						return "pass";
+					}	
+					else {
+						System.out.println(l.getText() + "::" + partial);
+					}
+				}	
+				return "fail: " + e.getMessage();
+			}
+		
 		}	
 		
 		//close a pop up window and return to the main window

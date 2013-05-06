@@ -1,7 +1,7 @@
 comment|Verify Grading as student
 
 openURL|$url
-verifyText|Welcome to Sakai QA
+verifyText|Welcome to the Sakai Demo
 verifyText|New Account
 enterText|user id:|qastud
 enterText|password:|Maugaityptodita6
@@ -28,5 +28,5 @@ verifyText|Comment: Good job!...
 verifyText|45.0 Points
 
 click|Logout
-verifyText|Welcome to Sakai QA
+verifyText|Welcome to the Sakai Demo
 verifyText|Message Of The Day

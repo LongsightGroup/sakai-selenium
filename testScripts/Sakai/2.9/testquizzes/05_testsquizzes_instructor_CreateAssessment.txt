@@ -1,7 +1,7 @@
 comment|To create an assessment without using question pool
 
 openURL|$url
-verifyText|Welcome to Sakai QA
+verifyText|Welcome to the Sakai Demo
 verifyText|New Account
 enterText|user id:|qainst
 enterText|password:|sswelvalpanklidS$
@@ -110,6 +110,6 @@ click|Save
 verifyText|Match the colors with colors, simple!
 
 click|Logout
-verifyText|Welcome to Sakai QA
+verifyText|Welcome to the Sakai Demo
 verifyText|Message Of The Day
 

@@ -1,7 +1,7 @@
 application|assignments
 
 openURL|$url
-verifyText|Welcome to Sakai QA
+verifyText|Welcome to the Sakai Demo
 verifyText|New Account
 enterText|user id:|qastud
 enterText|password:|Maugaityptodita6
@@ -33,5 +33,5 @@ verifyText|Long Assignment
 verifyText|Submitted
 
 click|Logout
-verifyText|Welcome to Sakai QA
+verifyText|Welcome to the Sakai Demo
 verifyText|Message Of The Day

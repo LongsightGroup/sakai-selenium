@@ -1,7 +1,7 @@
 comment|To publish an assessment
 
 openURL|$url
-verifyText|Welcome to Sakai QA
+verifyText|Welcome to the Sakai Demo
 verifyText|New Account
 enterText|user id:|qainst
 enterText|password:|sswelvalpanklidS$
@@ -29,9 +29,9 @@ click|Edit Settings
 verifyText|Settings - Sample Assessment
 click|Open All Menus
 
-enterText|assessmentSettingsAction:startDate|01/01/2012 00:00:01 AM
-enterText|assessmentSettingsAction:endDate|12/31/2012 00:00:01 AM
-enterText|assessmentSettingsAction:retractDate|12/31/2012 00:00:01 AM
+enterText|assessmentSettingsAction:startDate|01/01/2013 00:00:01 AM
+enterText|assessmentSettingsAction:endDate|12/31/2013 00:00:01 AM
+enterText|assessmentSettingsAction:retractDate|12/31/2013 00:00:01 AM
 selectRadio|Only
 enterText|assessmentSettingsAction:submissions_Allowed|1
 selectRadio|Feedback on submission
@@ -39,7 +39,7 @@ selectCheckbox|assessmentSettingsAction:feedbackCheckbox5
 selectCheckbox|assessmentSettingsAction:feedbackCheckbox6
 
 click|Save Settings
-verifyText|It is due 12/31/2012 12:00:01 AM.
+verifyText|It is due 12/31/2013 12:00:01 AM.
 verifyText|There is no time limit. Students can submit this 1 time(s)
 
 click|Publish
@@ -51,6 +51,6 @@ verifyText|Inactive
 comment|No easily automatable way to verify publishing from here.  Will need to see if student can access.
 
 click|Logout
-verifyText|Welcome to Sakai QA
+verifyText|Welcome to the Sakai Demo
 verifyText|Message Of The Day
 

@@ -1,7 +1,7 @@
 application|worksitesetup
 
 openURL|$url
-verifyText|Welcome to Sakai QA
+verifyText|Welcome to the Sakai Demo
 verifyText|Message Of The Day
 enterText|user id:|qainst
 enterText|password:|sswelvalpanklidS$
@@ -16,8 +16,7 @@ verifyText|Check box(es) to take action on a site.
 
 click|New
 verifyText|Site Type
-verifyText|Build your own site
-verifyText|Create site from template
+verifyText|course site 
 
 selectRadio|course site
 verifyText|Academic term

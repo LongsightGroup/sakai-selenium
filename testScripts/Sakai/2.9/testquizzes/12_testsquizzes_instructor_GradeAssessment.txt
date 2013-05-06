@@ -1,7 +1,7 @@
 comment|To grade an assessment as an Instructor
 
 openURL|$url
-verifyText|Welcome to Sakai QA
+verifyText|Welcome to the Sakai Demo
 verifyText|New Account
 enterText|user id:|qainst
 enterText|password:|sswelvalpanklidS$
@@ -27,7 +27,7 @@ verifyText|Sample Assessment
 verifyText|Active
 verifyText|Selenium Instructor
 
-selectList|authorIndexForm:published-assessments:0:publishedSelectAction1|Scores
+selectList|authorIndexForm:published-assessments:0:publishedSelectAction2|Scores
 verifyText|Total Scores : Sample Assessment
 verifyText|Submission Status
 verifyText|Max Score Possible
@@ -38,7 +38,6 @@ click|View Student Answer|1
 comment|Should see all of the the student's answers.
 verifyText|Sample Assessment
 verifyText|Table of Contents
-verifyText|Selenium User
 comment|enterText|editStudentResults:_id50:0:_id60:2:adjustedScore|20
 
 click|Update
@@ -53,6 +52,6 @@ verifyText|Good job!
 verifyText|qastud
 
 click|Logout
-verifyText|Welcome to Sakai QA
+verifyText|Welcome to the Sakai Demo
 verifyText|Message Of The Day
 

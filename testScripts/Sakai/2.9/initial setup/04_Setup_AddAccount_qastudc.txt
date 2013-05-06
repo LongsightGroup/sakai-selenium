@@ -1,5 +1,5 @@
 openURL|$url
-verifyText|Welcome to Sakai QA
+verifyText|Welcome to the Sakai Demo
 verifyText|Message Of The Day
 
 click|New Account
@@ -13,9 +13,7 @@ enterText|Verify New Password|rubleitoonoicH?
 click|Create Account
 verifyText|My Workspace
 verifyText|Welcome to your personal workspace.
-verifyText|Selenium User
-verifyText|qastud
 
 click|Logout
-verifyText|Welcome to Sakai QA
+verifyText|Welcome to the Sakai Demo
 verifyText|Message Of The Day

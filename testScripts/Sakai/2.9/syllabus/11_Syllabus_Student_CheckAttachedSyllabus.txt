@@ -1,7 +1,7 @@
 application|syllabus
 
 openURL|$url
-verifyText|Welcome to Sakai QA
+verifyText|Welcome to the Sakai Demo
 verifyText|New Account
 enterText|user id:|qastud
 enterText|password:|Maugaityptodita6
@@ -22,4 +22,4 @@ click|FakeSyllabus.doc
 verifyFile|FakeSyllabus.doc
 
 click|Logout
-verifyText|Welcome to Sakai QA
+verifyText|Welcome to the Sakai Demo

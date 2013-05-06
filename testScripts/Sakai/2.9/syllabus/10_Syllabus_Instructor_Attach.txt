@@ -1,7 +1,7 @@
 application|syllabus
 
 openURL|$url
-verifyText|Welcome to Sakai QA
+verifyText|Welcome to the Sakai Demo
 verifyText|New Account
 enterText|user id:|qainst
 enterText|password:|sswelvalpanklidS$
@@ -49,4 +49,4 @@ VerifyText|Attach a Syllabus
 VerifyText|Posted
 
 click|Logout
-verifyText|Welcome to Sakai QA
+verifyText|Welcome to the Sakai Demo

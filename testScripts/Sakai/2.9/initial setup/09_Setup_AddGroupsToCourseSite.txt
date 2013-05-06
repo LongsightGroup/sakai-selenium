@@ -1,7 +1,7 @@
 application|worksitesetup
 
 openURL|$url
-verifyText|Welcome to Sakai QA
+verifyText|Welcome to the Sakai Demo
 verifyText|Message Of The Day
 enterText|user id:|qainst
 enterText|password:|sswelvalpanklidS$

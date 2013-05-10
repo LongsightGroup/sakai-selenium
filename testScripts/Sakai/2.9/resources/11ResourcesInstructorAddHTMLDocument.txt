@@ -1,1 +1,40 @@
-comment|Add HTML doocument resource as instructor.openURL|$urlverifyText|Welcome to the Sakai DemoverifyText|New AccountenterText|user id:|qainstenterText|password:|sswelvalpanklidS$click|LoginverifyText|My Workspace: Message Of The DayverifyText|Welcome to your personal workspace.click|$siteverifyText|ResourcesverifyText|Site Information DisplayverifyText|Recent Announcementsclick|ResourcesverifyText|PermissionsverifyText|Accessclick|Add|1click|Create HTML PageverifyText|Create HTML Page verifyText|Type in the text for your pagecomment|ckEnter|Type in the text for your page (use the toolbar to format it) and click 'Continue' at the bottomclick|ContinueverifyText|Create HTML Page comment|verifyText|New HTML PageverifyText|Display copyright alert and require acknowledgement when accessed by others.click|FinishverifyText|ResourcesverifyText|New HTML Pageclick|LogoutverifyText|Welcome to the Sakai DemoverifyText|Message Of The Day
+comment|Add HTML doocument resource as instructor.
+
+openURL|$url
+verifyText|Welcome to the Sakai Demo
+verifyText|New Account
+enterText|user id:|qainst
+enterText|password:|sswelvalpanklidS$
+
+click|Login
+verifyText|My Workspace: Message Of The Day
+verifyText|Welcome to your personal workspace.
+
+click|$site
+verifyText|Resources
+verifyText|Site Information Display
+verifyText|Recent Announcements
+
+click|Resources
+verifyText|Permissions
+verifyText|Access
+
+click|Add|1
+
+click|Create HTML Page
+verifyText|Create HTML Page 
+verifyText|Type in the text for your page
+comment|ckEnter|Type in the text for your page (use the toolbar to format it) and click 'Continue' at the bottom
+
+click|Continue
+verifyText|Create HTML Page 
+comment|verifyText|New HTML Page
+verifyText|Display copyright alert and require acknowledgement when accessed by others.
+
+click|Finish
+verifyText|Resources
+verifyText|New HTML Page
+
+click|Logout
+verifyText|Welcome to the Sakai Demo
+verifyText|Message Of The Day

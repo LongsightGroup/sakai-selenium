@@ -1,1 +1,35 @@
-comment|Add resource with email notification as instructor.openURL|$urlverifyText|Welcome to the Sakai DemoverifyText|New AccountenterText|user id:|qainstenterText|password:|sswelvalpanklidS$click|LoginverifyText|My Workspace: Message Of The DayverifyText|Welcome to your personal workspace.click|$siteverifyText|ResourcesverifyText|Site Information DisplayverifyText|Recent Announcementsclick|ResourcesverifyText|PermissionsverifyText|Accessclick|Addclick|Upload FilesverifyText|Upload FilesverifyText|Upload as many files as you like. However, the sum total file sizeuploadFile|FakeAssignment.docselectList|Email Notification|High - All participantsclick|Upload Files NowverifyText|FakeAssignment.docclick|LogoutverifyText|Welcome to the Sakai DemoverifyText|Message Of The Day
+comment|Add resource with email notification as instructor.
+
+openURL|$url
+verifyText|Welcome to the Sakai Demo
+verifyText|New Account
+enterText|user id:|qainst
+enterText|password:|sswelvalpanklidS$
+
+click|Login
+verifyText|My Workspace: Message Of The Day
+verifyText|Welcome to your personal workspace.
+
+click|$site
+verifyText|Resources
+verifyText|Site Information Display
+verifyText|Recent Announcements
+
+click|Resources
+verifyText|Permissions
+verifyText|Access
+
+click|Add
+
+click|Upload Files
+verifyText|Upload Files
+verifyText|Upload as many files as you like. However, the sum total file size
+uploadFile|FakeAssignment.doc
+selectList|Email Notification|High - All participants
+
+click|Upload Files Now
+verifyText|FakeAssignment.doc
+
+click|Logout
+verifyText|Welcome to the Sakai Demo
+verifyText|Message Of The Day

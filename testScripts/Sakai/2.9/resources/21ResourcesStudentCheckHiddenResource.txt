@@ -1,1 +1,25 @@
-comment|Check Hidden Resource as studentopenURL|$urlverifyText|Welcome to the Sakai DemoverifyText|New AccountenterText|user id:|qastudenterText|password:|Maugaityptodita6click|LoginverifyText|My Workspace: Message Of The DayverifyText|Welcome to your personal workspace.click|$siteverifyText|ResourcesverifyText|Site Information DisplayverifyText|Recent Announcementsclick|ResourcesverifyTextNotPresent|PermissionsverifyText|AccessverifyTextNotPresent|hidden folderclick|LogoutverifyText|Welcome to the Sakai DemoverifyText|Message Of The Day
+comment|Check Hidden Resource as student
+
+openURL|$url
+verifyText|Welcome to the Sakai Demo
+verifyText|New Account
+enterText|user id:|qastud
+enterText|password:|Maugaityptodita6
+
+click|Login
+verifyText|My Workspace: Message Of The Day
+verifyText|Welcome to your personal workspace.
+
+click|$site
+verifyText|Resources
+verifyText|Site Information Display
+verifyText|Recent Announcements
+
+click|Resources
+verifyTextNotPresent|Permissions
+verifyText|Access
+verifyTextNotPresent|hidden folder
+
+click|Logout
+verifyText|Welcome to the Sakai Demo
+verifyText|Message Of The Day

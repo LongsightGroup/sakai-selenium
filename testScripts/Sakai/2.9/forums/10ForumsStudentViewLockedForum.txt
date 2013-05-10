@@ -1,1 +1,25 @@
-application|forumscomment|Verify locked forum as a student openURL|$urlverifyText|Welcome to the Sakai DemoverifyText|New AccountenterText|user id:|qastudenterText|password:|Maugaityptodita6click|LoginverifyText|My Workspace: Message Of The DayverifyText|Welcome to your personal workspace.click|$siteverifyText|ForumsverifyText|Site Information DisplayverifyText|Recent Announcementsclick|ForumsverifyText|LogoutverifyText|ForumsverifyText|lock forumclick|lock topic titleverifyText|lock topic titleverifyText|Display Message ContentverifyText|There are no messages posted.verifyTextNotPresent|Start a New Conversationclick|LogoutverifyText|Welcome to the Sakai Demo
+application|forums
+comment|Verify locked forum as a student 
+openURL|$url
+verifyText|Welcome to the Sakai Demo
+verifyText|New Account
+enterText|user id:|qastud
+enterText|password:|Maugaityptodita6
+click|Login
+verifyText|My Workspace: Message Of The Day
+verifyText|Welcome to your personal workspace.
+click|$site
+verifyText|Forums
+verifyText|Site Information Display
+verifyText|Recent Announcements
+click|Forums
+verifyText|Logout
+verifyText|Forums
+verifyText|lock forum
+click|lock topic title
+verifyText|lock topic title
+verifyText|Display Message Content
+verifyText|There are no messages posted.
+verifyTextNotPresent|Start a New Conversation
+click|Logout
+verifyText|Welcome to the Sakai Demo

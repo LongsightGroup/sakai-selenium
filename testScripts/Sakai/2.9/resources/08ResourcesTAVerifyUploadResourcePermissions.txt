@@ -1,1 +1,54 @@
-comment|Verify modified permissions as Teaching AssistantopenURL|$urlverifyText|Welcome to the Sakai DemoverifyText|New AccountenterText|user id:|qastudbenterText|password:|hopicenucinseC%click|LoginverifyText|My Workspace: Message Of The DayverifyText|Welcome to your personal workspace.click|$siteverifyText|ResourcesverifyText|Site Information DisplayverifyText|Recent Announcementsclick|ResourcesverifyText|Site ResourcesverifyText|AccessverifyText|test folder editcomment|To verify TA can upload filesclick|Add|1click|Upload FilesverifyText|Upload FilesverifyText|Upload as many files as you like. However, the sum total file sizeuploadFile|TestAttachment.docclick|Upload Files NowverifyText|ResourcesverifyText|TestAttachment.docselectCheckbox|selectallclick|RemoveverifyText|Alert: You do not have permissions to remove: test folder editclick|test folder TA editverifyText|test folder TAverifyText|Location:click|ActionsclickXPath|//a[normalize-space()='Remove']verifyText|Are you sure you want to remove the following item(s)?verifyText|Remove confirmationclick|RemoveverifyTextNotPresent|test folder TA editclick|LogoutverifyText|Welcome to the Sakai DemoverifyText|Message Of The Day
+comment|Verify modified permissions as Teaching Assistant
+
+openURL|$url
+verifyText|Welcome to the Sakai Demo
+verifyText|New Account
+enterText|user id:|qastudb
+enterText|password:|hopicenucinseC%
+
+click|Login
+verifyText|My Workspace: Message Of The Day
+verifyText|Welcome to your personal workspace.
+
+click|$site
+verifyText|Resources
+verifyText|Site Information Display
+verifyText|Recent Announcements
+
+click|Resources
+verifyText|Site Resources
+verifyText|Access
+verifyText|test folder edit
+
+comment|To verify TA can upload files
+click|Add|1
+
+click|Upload Files
+verifyText|Upload Files
+verifyText|Upload as many files as you like. However, the sum total file size
+uploadFile|TestAttachment.doc
+
+click|Upload Files Now
+verifyText|Resources
+verifyText|TestAttachment.doc
+selectCheckbox|selectall
+
+click|Remove
+verifyText|Alert: You do not have permissions to remove: test folder edit
+
+click|test folder TA edit
+verifyText|test folder TA
+verifyText|Location:
+
+click|Actions
+
+clickXPath|//a[normalize-space()='Remove']
+verifyText|Are you sure you want to remove the following item(s)?
+verifyText|Remove confirmation
+
+click|Remove
+verifyTextNotPresent|test folder TA edit
+
+click|Logout
+verifyText|Welcome to the Sakai Demo
+verifyText|Message Of The Day

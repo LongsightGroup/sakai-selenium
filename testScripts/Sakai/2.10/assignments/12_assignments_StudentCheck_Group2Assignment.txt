@@ -1,0 +1,29 @@
+openURL|$url
+verifyText|Welcome to the Sakai Demo
+verifyText|New Account
+enterText|user id:|qastudc
+enterText|password:|rubleitoonoicH?
+
+click|Login
+verifyText|My Workspace: Message Of The Day
+verifyText|Welcome to your personal workspace.
+
+click|$site
+verifyText|Site Information Display
+verifyText|Recent Announcements
+
+click|Assignments
+verifyText|Assignment List
+verifyText|Group 2 Assignment
+verifyTextNotPresent|Group 1 Assignment
+
+comment|Open Group 2 Assignment.  Should be inside the assignment window
+click|Group 2 Assignment
+verifyText|Assignment - In progress
+verifyText|This is an assignment for Group 2
+verifyText|Points (max 100.0)
+
+click|Logout
+verifyText|Welcome to the Sakai Demo
+verifyText|Message Of The Day
+

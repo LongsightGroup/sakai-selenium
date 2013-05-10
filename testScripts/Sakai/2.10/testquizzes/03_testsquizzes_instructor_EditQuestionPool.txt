@@ -1,0 +1,66 @@
+comment|to edit Question pool
+
+openURL|$url
+verifyText|Welcome to the Sakai Demo
+verifyText|New Account
+enterText|user id:|qainst
+enterText|password:|sswelvalpanklidS$
+
+click|Login
+verifyText|My Workspace: Message Of The Day
+verifyText|Welcome to your personal workspace.
+
+click|$site
+verifyText|Tests & Quizzes
+verifyText|Site Information Display
+verifyText|Recent Announcements
+
+click|Tests & Quizzes
+verifyText|Assessments
+verifyText|Create an Assessment
+verifyText|Working Copies
+
+click|Question Pools
+verifyText|Question Pools
+verifyText|Add New Pool
+verifyText|Test Pool
+
+click|Test Pool
+verifyText|Test Pool
+verifyText|This is a sample question pool
+
+comment|Verify First Question
+click|Choose the correct answer
+verifyText|Edit Question
+verifyText|Question - Multiple Choice
+verifyValue|itemForm:chooseAnswerTypeForMC|true
+click|Cancel
+
+comment|Verify Second Question
+click|Is this question true or false?
+verifyText|Edit Question:
+verifyText|Question - True False
+enterText|Answer Point Value|2
+click|Save
+
+comment|Verify Third Question
+click|Answer this sample essay question
+verifyText|Edit Question:
+verifyText|Question - Short Answer/Essay
+verifyText|test.doc
+click|Cancel
+
+comment|Verify Fourth Question
+click|Roses are ____ and violets are ____.
+verifyText|Edit Question:
+verifyText|Question - Fill in the Blank
+verifyValue|itemForm:_id82|true
+selectCheckbox|itemForm:_id82
+
+click|Save
+verifyText|Question Pool: Test Pool
+
+click|Logout
+verifyText|Welcome to the Sakai Demo
+verifyText|Message Of The Day
+

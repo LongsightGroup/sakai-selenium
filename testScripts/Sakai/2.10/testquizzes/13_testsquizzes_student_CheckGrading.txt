@@ -1,0 +1,32 @@
+comment|Verify Grading as student
+
+openURL|$url
+verifyText|Welcome to the Sakai Demo
+verifyText|New Account
+enterText|user id:|qastud
+enterText|password:|Maugaityptodita6
+
+click|Login
+verifyText|My Workspace: Message Of The Day
+verifyText|Welcome to your personal workspace.
+
+click|$site
+verifyText|Tests & Quizzes
+verifyText|Site Information Display
+verifyText|Recent Announcements
+
+click|Tests & Quizzes
+verifyText|Assessments
+verifyText|Take an Assessment
+verifyText|Sample Assessment
+verifyText|Immediate
+
+click|Review Assessment
+comment|should see all the graded questions
+verifyText|Sample Assessment
+verifyText|Comment: Good job!...
+verifyText|45.0 Points
+
+click|Logout
+verifyText|Welcome to the Sakai Demo
+verifyText|Message Of The Day

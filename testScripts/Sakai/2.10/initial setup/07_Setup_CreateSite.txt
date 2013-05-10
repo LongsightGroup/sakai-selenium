@@ -1,0 +1,114 @@
+application|worksitesetup
+
+openURL|$url
+verifyText|Welcome to the Sakai Demo
+verifyText|Message Of The Day
+enterText|user id:|qainst
+enterText|password:|sswelvalpanklidS$
+
+click|submit
+verifyText|Recent Announcements
+verifyText|Welcome to your personal workspace
+
+click|Worksite Setup
+verifyText|Worksite Setup
+verifyText|Check box(es) to take action on a site.
+
+click|New
+verifyText|Site Type
+verifyText|course site 
+
+selectRadio|course site
+verifyText|Academic term
+SelectList|Academic term:|$term
+
+comment|Create a course site for the current term.
+click|Continue
+verifyText|Course/Section(s) Selection
+
+click|Still cannot find your course/section?
+verifyText|Course/Section(s) Selection
+verifyText|Authorization to Allow Roster(s) Site Access
+
+comment|Specific to a later H build that was redacted
+comment|This change was re-enacted for the A release.
+
+enterText|id-Subject:1|Testing
+enterText|id-Course:1|$creationCourseNum
+enterText|id-Section:1|001
+enterText|uniqname|qainst
+
+click|Continue
+verifyText|Course Site Information
+verifyText|Enter basic information about the course site...
+comment|verifyText|$term
+ckEnter|Description|A basic course created during automated testing.  This is a description.
+enterText|Short Description|An even shorter description
+verifyText|Site will display this theme
+click|Continue
+
+comment|Should be on the list of tools
+verifyText|Course Site Tools
+verifyText|Choose tools to include on your site...
+comment|Announcements is selected by default.
+comment|selectCheckbox|Announcements
+selectCheckbox|Assignments
+selectCheckbox|Chat Room
+selectCheckbox|Drop Box
+selectCheckbox|Email Archive
+selectCheckbox|Forums
+selectCheckbox|Gradebook
+selectCheckbox|Messages
+selectCheckbox|News
+selectCheckbox|Polls
+selectCheckbox|Resources
+selectCheckbox|Schedule
+selectCheckbox|Syllabus
+selectCheckbox|Tests & Quizzes
+selectCheckbox|Web Content
+selectCheckbox|Wiki
+
+click|Continue
+verifyText|Add Multiple Tool Instances
+verifyText|Email Archive
+verifyText|News
+verifyText|Web Content
+enterText|Site email address|$creationCourseEmail
+enterText|URL Channel|http://www.nytimes.com/services/xml/rss/nyt/World.xml
+
+click|Continue
+verifyText|Course Site Access
+verifyText|Site Status
+verifyValue|Publish site|true
+verifyText|Display in public site list
+
+click|Continue
+verifyText|Confirm your site setup selections
+verifyText|Home
+verifyText|Announcements
+verifyText|Assignments
+verifyText|Chat Room
+verifyText|Drop Box
+verifyText|$creationCourseEmail
+verifyText|Forums
+verifyText|Gradebook
+verifyText|Messages
+verifyText|News ( channel-url = http://www.nytimes.com/services/xml/rss/nyt/World.xml )
+verifyText|Polls
+verifyText|Resources
+verifyText|Schedule
+verifyText|Site Info
+verifyText|Syllabus
+verifyText|Tests & Quizzes
+verifyText|Web Content ( source = http:// )
+verifyText|Wiki
+verifyText|A basic course created during automated testing.
+
+comment|This will create the site and bring you back to a list of sites.
+click|Request Site
+verifyText|Check box(es) to take action on a site. Click column title to sort.
+verifyText|qainst
+verifyText|$site
+
+click|Logout
+verifyText|Message Of The Day

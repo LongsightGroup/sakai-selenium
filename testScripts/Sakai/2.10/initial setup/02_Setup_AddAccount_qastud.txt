@@ -1,0 +1,19 @@
+openURL|$url
+verifyText|Welcome to the Sakai Demo
+verifyText|Message Of The Day
+
+click|New Account
+verifyText|Enter the following information to create a new account
+enterText|User Id|qastud
+enterText|First Name|Selenium
+enterText|Last Name|Student
+enterText|Create New Password|Maugaityptodita6
+enterText|Verify New Password|Maugaityptodita6
+
+click|Create Account
+verifyText|My Workspace
+verifyText|Welcome to your personal workspace.
+
+click|Logout
+verifyText|Welcome to the Sakai Demo
+verifyText|Message Of The Day

@@ -1,0 +1,53 @@
+comment|To import and verify settings and questions of an assessment
+
+openURL|$url
+verifyText|Welcome to the Sakai Demo
+verifyText|New Account
+enterText|user id:|qainst
+enterText|password:|sswelvalpanklidS$
+
+click|Login
+verifyText|My Workspace: Message Of The Day
+verifyText|Welcome to your personal workspace.
+
+click|$site
+verifyText|Tests & Quizzes
+verifyText|Site Information Display
+verifyText|Recent Announcements
+
+click|Tests & Quizzes
+verifyText|Assessments
+verifyText|Create an Assessment
+verifyText|Import from File (XML or zip) 
+
+click|Import
+verifyText|Import Assessment
+verifyText|Choose an IMS QTI-compliant
+
+uploadFile|ImportAssessment.zip
+verifyText|Import Assessment
+verifyValue|importAssessmentForm:sourceType|true
+
+click|Import
+verifyText|Create an Assessment
+selectList|authorIndexForm:coreAssessments:0:pendingSelectAction1|Edit
+comment|should be able to view the questions in the imported assessment
+verifyText|Questions: Sample Assessment
+verifyText|5 questions
+
+click|Settings
+verifyText|Settings - Sample Assessment
+click|Open All Menus
+
+comment|Not to verify settings of imported assessment
+verifyText|qainst
+verifyValue|Each Question is on a separate Web page|true
+verifyValue|Each Part is on a separate Web page|false
+verifyValue|Continuous numbering between parts|true
+
+click|Reset
+
+click|Logout
+verifyText|Welcome to the Sakai Demo
+verifyText|Message Of The Day
+

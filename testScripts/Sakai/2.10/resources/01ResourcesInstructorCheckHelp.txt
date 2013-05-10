@@ -1,0 +1,31 @@
+comment|To check help as Instructor
+
+openURL|$url
+verifyText|Welcome to the Sakai Demo
+verifyText|New Account
+enterText|user id:|qainst
+enterText|password:|sswelvalpanklidS$
+
+click|Login
+verifyText|My Workspace: Message Of The Day
+verifyText|Welcome to your personal workspace.
+
+click|$site
+verifyText|Site Information Display
+verifyText|Recent Announcements
+
+click|Resources
+verifyText|Resources
+verifyText|Permissions
+verifyText|Access
+
+click|Help for Resources
+waitForPopUp|30
+verifyText|Resources
+verifyText|Search Help
+verifyText|Using the Resources tool, you can share many kinds of material
+closePopUp|
+
+click|Logout
+verifyText|Welcome to the Sakai Demo
+verifyText|Message Of The Day

@@ -1,0 +1,36 @@
+openURL|$url
+verifyText|Welcome to the Sakai Demo
+verifyText|New Account
+enterText|user id:|qastud
+enterText|password:|Maugaityptodita6
+
+click|Login
+verifyText|My Workspace: Message Of The Day
+verifyText|Welcome to your personal workspace.
+
+click|$site
+verifyText|Site Information Display
+verifyText|Recent Announcements
+
+click|Assignments
+verifyText|Assignment List
+verifyText|Long Assignment
+verifyText|Returned
+
+click|Long Assignment
+verifyText|Long Assignment
+verifyText|100.0
+
+click|test.doc
+verifyFile|test.doc
+verifyText|I have neither given nor received aid on this assignment
+
+click|Cancel
+verifyText|Assignment List
+verifyText|Long Assignment
+
+click|Logout
+verifyText|Welcome to the Sakai Demo
+verifyText|Message Of The Day
+
+

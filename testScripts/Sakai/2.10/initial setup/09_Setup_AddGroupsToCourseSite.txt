@@ -1,0 +1,64 @@
+application|worksitesetup
+
+openURL|$url
+verifyText|Welcome to the Sakai Demo
+verifyText|Message Of The Day
+enterText|user id:|qainst
+enterText|password:|sswelvalpanklidS$
+
+click|submit
+verifyText|Recent Announcements
+verifyText|Welcome to your personal workspace
+
+click|Worksite Setup
+verifyText|Selenium Instructor
+verifyText|Worksite Setup
+verifyText|Check box(es) to take action on a site.
+selectCheckbox|$site
+
+click|Edit
+verifyText|$site
+verifyText|qainst
+verifyText|A basic course created during automated testing.
+verifyText|Can read, revise, delete and add both content and participants to a site.
+
+click|Manage Groups
+verifyText|Group List
+verifyText|There are no groups defined
+
+click|Create New Group
+verifyText|Create New Group
+verifyText|Select members of the site member list
+enterText|Title|Group 1
+enterText|Description|This is a test group named Group 1
+
+selectList|siteMembers-selection|Instructor, Selenium (qainst)
+click|right
+selectList|siteMembers-selection|Student, Selenium (qastud)
+click|right
+selectList|siteMembers-selection|Studentb, Selenium (qastudb)
+click|right
+
+click|Add
+verifyText|Group List
+verifyText|Group 1
+
+click|Create New Group
+verifyText|Create New Group
+verifyText|Select members of the site member list
+enterText|Title|Group 2
+enterText|Description|This is a test group named Group 2
+
+selectList|siteMembers-selection|Instructor, Selenium (qainst)
+click|right
+selectList|siteMembers-selection|Studentc, Selenium (qastudc)
+click|right
+selectList|siteMembers-selection|Studentb, Selenium (qastudb)
+click|right
+
+click|Add
+verifyText|Group List
+verifyText|Group 2
+
+click|Logout
+verifyText|Message Of The Day

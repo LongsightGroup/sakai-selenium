@@ -1,0 +1,32 @@
+openURL|$url
+verifyText|Welcome to the Sakai Demo
+verifyText|New Account
+enterText|user id:|qainst
+enterText|password:|sswelvalpanklidS$
+
+click|Login
+verifyText|My Workspace: Message Of The Day
+verifyText|Welcome to your personal workspace.
+
+click|$site
+verifyText|Syllabus
+verifyText|Site Information Display
+verifyText|Recent Announcements
+
+click|Syllabus
+verifyText|Logout
+
+click|Create/Edit
+verifyText|Syllabus Items
+
+click|Redirect
+verifyText|Redirect Syllabus
+verifyText|URL
+enterText|URL|http://en.wikipedia.org
+
+click|Save
+verifyText|Redirect Syllabus
+verifyText|Wikipedia
+
+click|Logout
+verifyText|Welcome to the Sakai Demo

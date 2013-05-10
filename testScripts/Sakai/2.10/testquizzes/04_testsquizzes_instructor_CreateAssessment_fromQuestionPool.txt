@@ -1,0 +1,53 @@
+comment|create assessment from Question pool
+
+openURL|$url
+verifyText|Welcome to the Sakai Demo
+verifyText|New Account
+enterText|user id:|qainst
+enterText|password:|sswelvalpanklidS$
+
+click|Login
+verifyText|My Workspace: Message Of The Day
+verifyText|Welcome to your personal workspace.
+
+click|$site
+verifyText|Tests & Quizzes
+verifyText|Site Information Display
+verifyText|Recent Announcements
+
+click|Tests & Quizzes
+verifyText|Assessments
+verifyText|Create an Assessment
+verifyText|Assessment Title
+enterText|authorIndexForm:title|Pool Assessment
+verifyValue|authorIndexForm:_id25|true
+
+click|Create
+verifyText|Preview
+verifyText|Add Question
+verifyText|Questions: Pool Assessment
+selectList|assesssmentForm:parts:0:changeQType|Copy from Question Pool
+verifyText|Question Pools
+verifyText|Select a question pool from which you would like to copy questions
+
+click|Test Pool
+verifyText|Assign to Part
+verifyText|Question Pool: Test Pool
+selectCheckbox|editform:_id142:0:importCheckbox
+selectCheckbox|editform:_id142:1:importCheckbox
+selectCheckbox|editform:_id142:2:importCheckbox
+selectCheckbox|editform:_id142:3:importCheckbox
+selectCheckbox|editform:_id142:4:importCheckbox
+
+click|Copy
+verifyText|Answer this sample essay question
+verifyText|Fill in the Blank
+verifyText|Is this question true or false
+verifyText|Choose the correct answer
+verifyText|Match the colors with colors, simple!
+verifyText|42 total points
+
+click|Logout
+verifyText|Welcome to the Sakai Demo
+verifyText|Message Of The Day
+

@@ -1,0 +1,43 @@
+comment|Verify modified permissions as Teaching Assistant
+
+openURL|$url
+verifyText|Welcome to the Sakai Demo
+verifyText|New Account
+enterText|user id:|qastudb
+enterText|password:|hopicenucinseC%
+
+click|Login
+verifyText|My Workspace: Message Of The Day
+verifyText|Welcome to your personal workspace.
+
+click|$site
+verifyText|Resources
+verifyText|Site Information Display
+verifyText|Recent Announcements
+
+click|Resources
+verifyText|Site Resources
+verifyText|Access
+
+comment|To verify TA can edit his resources
+click|test folder TA
+verifyText|test folder TA
+verifyText|Location:
+
+click|Actions
+
+click|Edit Details
+verifyText|Edit Details
+verifyText|Change the resource's details and then choose 'Update' at the bottom. Required items marked with
+enterText|Name|test folder TA edit
+
+click|Update
+verifyText|test folder TA edit
+
+click|Reset
+verifyText|Site Resources
+verifyText|Access
+
+click|Logout
+verifyText|Welcome to the Sakai Demo
+verifyText|Message Of The Day

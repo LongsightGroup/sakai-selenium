@@ -1,0 +1,57 @@
+application|syllabus
+
+openURL|$url
+verifyText|Welcome to the Sakai Demo
+verifyText|New Account
+enterText|user id:|qainst
+enterText|password:|sswelvalpanklidS$
+
+click|Login
+verifyText|My Workspace: Message Of The Day
+verifyText|Welcome to your personal workspace.
+
+click|$site
+verifyText|Syllabus
+verifyText|Site Information Display
+verifyText|Recent Announcements
+
+click|Syllabus
+verifyText|Logout
+
+click|Create/Edit
+verifyText|Syllabus Items
+verifyText|Selenium Syllabus
+verifyText|Posted
+
+Click|Selenium Syllabus
+VerifyText|Edit Syllabus Item
+VerifyText|Title
+verifyValue|Only members of this site can see this syllabus item.|true
+VerifyValue|Email Notification|None - No notification
+
+selectRadio|This syllabus item is publicly viewable.
+verifyValue|This syllabus item is publicly viewable.|true
+
+Click|Post
+VerifyText|Syllabus Items
+VerifyText|Logout
+comment|VerifyText|Selenium Syllabus
+VerifyText|Posted
+
+Click|Selenium Syllabus
+VerifyText|Edit Syllabus Item
+VerifyText|Title
+verifyValue|Only members of this site can see this syllabus item.|false
+VerifyValue|Email Notification|None - No notification
+
+selectRadio|Only members of this site can see this syllabus item.
+verifyValue|Only members of this site can see this syllabus item.|true
+
+Click|Post
+VerifyText|Syllabus Items
+VerifyText|Logout
+VerifyText|Selenium Syllabus
+VerifyText|Posted
+
+click|Logout
+verifyText|Welcome to the Sakai Demo

@@ -1,0 +1,47 @@
+application|syllabus
+
+openURL|$url
+verifyText|Welcome to the Sakai Demo
+verifyText|New Account
+enterText|user id:|qainst
+enterText|password:|sswelvalpanklidS$
+
+click|Login
+verifyText|My Workspace: Message Of The Day
+verifyText|Welcome to your personal workspace.
+
+click|$site
+verifyText|Syllabus
+verifyText|Site Information Display
+verifyText|Recent Announcements
+
+click|Syllabus
+verifyText|Syllabus
+verifyText|Logout
+verifyText|Create/Edit
+
+click|Create/Edit
+verifyText|Syllabus Items
+verifyText|Selenium Syllabus
+verifyText|Draft Syllabus
+verifyText|Attach a Syllabus
+verifyText|Posted
+
+selectCheckbox|Select to Remove: (Selenium Syllabus)|1
+comment|selectCheckbox|Select to Remove: (Attach a Syllabus)|2
+comment|selectCheckbox|Select to Remove: (Draft Syllabus)|3
+
+click|Update
+verifyText|Deleting selected items
+verifyText|Are you sure you want to delete the specified item(s)?
+verifyText|Selenium Syllabus
+comment|verifyText|Draft Syllabus
+comment|verifyText|Attach a Syllabus
+
+click|Delete
+verifyText|Syllabus Items
+verifyTextNotPresent|Selenium Syllabus
+
+click|Logout
+verifyText|Welcome to the Sakai Demo
+

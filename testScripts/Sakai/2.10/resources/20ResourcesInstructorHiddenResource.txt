@@ -1,0 +1,42 @@
+comment|Create hidden resource as Instructor
+
+openURL|$url
+verifyText|Welcome to the Sakai Demo
+verifyText|New Account
+enterText|user id:|qainst
+enterText|password:|sswelvalpanklidS$
+
+click|Login
+verifyText|My Workspace: Message Of The Day
+verifyText|Welcome to your personal workspace.
+
+click|$site
+verifyText|Resources
+verifyText|Site Information Display
+verifyText|Recent Announcements
+
+click|Resources
+verifyText|Permissions
+verifyText|Access
+
+click|Add
+
+click|Create Folders
+verifyText|Create Folders
+verifyText|Create as many folders as you like! If you change your mind about needing one of your folders,
+verifyText|Location:
+enterText|Folder Name|hidden folder
+
+click|Add details for this item
+verifyText|Availability and Access
+verifyText|Description
+selectRadio|hidden_true_0
+verifyText|Hide this folder and its contents
+
+click|Create Folders Now
+verifyText|Selenium Instructor
+verifyText|0 items
+
+click|Logout
+verifyText|Welcome to the Sakai Demo
+verifyText|Message Of The Day

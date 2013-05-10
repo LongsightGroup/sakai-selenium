@@ -1,0 +1,60 @@
+comment|To Add a question pool and then move it
+
+openURL|$url
+verifyText|Welcome to the Sakai Demo
+verifyText|New Account
+enterText|user id:|qainst
+enterText|password:|sswelvalpanklidS$
+
+click|Login
+verifyText|My Workspace: Message Of The Day
+verifyText|Welcome to your personal workspace.
+
+click|$site
+verifyText|Tests & Quizzes
+verifyText|Site Information Display
+verifyText|Recent Announcements
+
+click|Tests & Quizzes
+verifyText|Assessments
+verifyText|Create an Assessment
+verifyText|Working Copies
+
+click|Question Pools
+verifyText|Question Pools
+verifyText|Test Pool
+verifyText|Add New Pool
+verifyText|Copy
+
+click|Add New Pool
+verifyText|Add Pool
+verifyText|Required items marked with 
+enterText|Pool Name*|Test Pool Move
+enterText|Department/Group|Test group
+enterText|Description|This is a sample question pool to move
+
+click|Save
+verifyText|Test Pool Move
+verifyText|Selenium Instructor
+
+click|Sort Question Pools by Title
+click|Move Pool
+verifyText|Move Pool
+verifyText|Select the destination pool for Test Pool Move
+verifyText|Test Pool Copy
+selectRadio|movePool:TreeTable:1:radiobtn
+
+click|Move
+verifyText|Question Pools
+
+click|Toggle Tree
+verifyText|Test Pool Move
+
+click|Test Pool Move
+verifyText|Question Pool: Test Pool Move
+verifyText|0 Questions
+verifyText|This is a sample question pool to move
+
+click|Logout
+verifyText|Welcome to the Sakai Demo
+verifyText|Message Of The Day

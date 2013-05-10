@@ -1,0 +1,32 @@
+comment|Check help text as student.
+
+openURL|$url
+verifyText|Welcome to the Sakai Demo
+verifyText|New Account
+enterText|user id:|qastud
+enterText|password:|Maugaityptodita6
+
+click|Login
+verifyText|My Workspace: Message Of The Day
+verifyText|Welcome to your personal workspace.
+
+click|$site
+verifyText|Announcements
+verifyText|Site Information Display
+verifyText|Recent Announcements
+
+click|Announcements
+verifyText|Announcements
+verifyText|viewing announcements from the last 365 days
+
+click|Help for Announcements
+waitForPopup|30
+verifyText|For site participants
+verifyText|Search Help
+verifyText|used to inform site participants
+closePopUp|
+
+click|Logout
+verifyText|Welcome to the Sakai Demo
+verifyText|Message Of The Day
+

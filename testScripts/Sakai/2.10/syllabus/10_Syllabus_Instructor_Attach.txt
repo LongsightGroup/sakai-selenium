@@ -1,0 +1,52 @@
+application|syllabus
+
+openURL|$url
+verifyText|Welcome to the Sakai Demo
+verifyText|New Account
+enterText|user id:|qainst
+enterText|password:|sswelvalpanklidS$
+
+click|Login
+verifyText|My Workspace: Message Of The Day
+verifyText|Welcome to your personal workspace.
+
+click|$site
+verifyText|Syllabus
+verifyText|Site Information Display
+verifyText|Recent Announcements
+
+click|Syllabus
+verifyText|Logout
+
+click|Create/Edit
+verifyText|Syllabus Item
+
+Click|Add
+VerifyText|Add syllabus...
+VerifyText|Title
+VerifyText|Email Notification
+enterText|Title|Attach a Syllabus
+ckEnter|Content|Selenium test to attach a syllabus.
+
+Click|Add attachments
+VerifyText|Add Attachment
+VerifyText|Upload local file
+
+UploadFile|FakeSyllabus.doc
+verifyText|FakeSyllabus.doc
+verifyText|Remove
+
+click|Continue
+comment|Verify the page has reloaded with attached document
+verifyText|Add syllabus...
+verifyText|Attachments
+verifyText|FakeSyllabus.doc
+
+click|Post
+Comment|Verify the syllabus is added to the page
+VerifyText|Syllabus Items
+VerifyText|Attach a Syllabus
+VerifyText|Posted
+
+click|Logout
+verifyText|Welcome to the Sakai Demo

@@ -1,0 +1,41 @@
+application|forums
+comment|Lock Forum as Instructor.Deletes the test forum created at end of script.
+openURL|$url
+verifyText|Welcome to the Sakai Demo
+verifyText|New Account
+enterText|user id:|qainst
+enterText|password:|sswelvalpanklidS$
+click|Login
+verifyText|My Workspace: Message Of The Day
+verifyText|Welcome to your personal workspace.
+click|$site
+verifyText|Forums
+verifyText|Site Information Display
+verifyText|Recent Announcements
+click|Forums
+verifyText|Logout
+verifyText|Forums
+click|New Forum
+verifyText|Forum Settings
+verifyText|Required items marked with
+enterText|revise:forum_title|lock forum
+ckEnter|Description|lock forum long description. lock forum long description.
+selectCheckbox|ForumLocked
+click|Save
+verifyText|lock forum
+verifyText|New Topic
+click|New Topic
+verifyText|Topic Settings
+verifyText|Required items marked with
+enterText|revise:topic_title|lock topic title
+ckEnter|Description|lock topic long description. lock topic long description.
+click|Save
+verifyText|Forums
+verifyText|lock forum
+verifyText|lock topic title
+click|lock topic title
+verifyText|lock topic title
+verifyText|There are no messages posted.
+verifyTextNotPresent|Start a New Conversation
+click|Logout
+verifyText|Welcome to the Sakai Demo

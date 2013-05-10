@@ -1,0 +1,18 @@
+#Mon Oct 29 12:41:12 EDT 2012
+creationCourseNum2=102
+url=https\://qa29.longsight.com/portal/
+site=Testing 101 001 201250
+dupeProvider=2011,2,A,DupeSrc,101,001
+projDupeSite=Testing ProjDupe
+term=Spring 2012
+projDupeSource=Dupe Source Project
+providerID2=2012,2,A,Testing,102,001
+providerID1=2012,2,A,Testing,101,001
+numAssigns=4
+searchServerURL=https\://squire.dsc.umich.edu/portal/xlogin
+dupeSource=Dupe Source Site
+helpText=Google Apps and Box are Now in CTools
+creationCourseEmail=testing_101_F12
+project_site=Testing Project
+creationCourseNum=101
+testDupeSite=Testing SiteDupe

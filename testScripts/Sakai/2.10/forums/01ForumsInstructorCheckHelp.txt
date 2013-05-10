@@ -1,0 +1,24 @@
+comment|To check help as Instructor
+openURL|$url
+verifyText|Welcome to the Sakai Demo
+verifyText|New Account
+enterText|user id:|qainst
+enterText|password:|sswelvalpanklidS$
+click|Login
+verifyText|My Workspace: Message Of The Day
+verifyText|Welcome to your personal workspace.
+click|$site
+verifyText|Forums
+verifyText|Site Information Display
+verifyText|Recent Announcements
+click|Forums
+verifyText|Logout
+verifyText|Forums
+click|Help for Forums
+waitForPopup|30
+verifyText|Forums
+verifyText|Search Help
+verifyText|The Forums tool allows instructors or site leaders to create an unlimited number 
+closePopUp|
+click|Logout
+verifyText|Welcome to the Sakai Demo

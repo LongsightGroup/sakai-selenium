@@ -1,0 +1,39 @@
+comment|Modify details of a folder as instructor.
+
+openURL|$url
+verifyText|Welcome to the Sakai Demo
+verifyText|New Account
+enterText|user id:|qainst
+enterText|password:|sswelvalpanklidS$
+
+click|Login
+verifyText|My Workspace: Message Of The Day
+verifyText|Welcome to your personal workspace.
+
+click|$site
+verifyText|Resources
+verifyText|Site Information Display
+verifyText|Recent Announcements
+
+click|Resources
+verifyText|Permissions
+verifyText|Access
+
+click|test folder
+verifyText|Resources / test folder
+verifyText|Remove
+
+click|Actions
+
+click|Edit Details
+verifyText|Edit Details
+verifyText|Change the resource's details and then choose 'Update' at the bottom. Required items marked with
+enterText|Name|test folder edit
+
+click|Update
+verifyText|Resources / test folder edit
+verifyText|test folder edit
+
+click|Logout
+verifyText|Welcome to the Sakai Demo
+verifyText|Message Of The Day

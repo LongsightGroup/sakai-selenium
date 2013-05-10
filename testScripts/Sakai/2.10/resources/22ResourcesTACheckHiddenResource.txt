@@ -1,0 +1,29 @@
+comment|Check hidden resource as Teaching assistant. By default permissions its visible to him.
+
+openURL|$url
+verifyText|Welcome to the Sakai Demo
+verifyText|New Account
+enterText|user id:|qastudb
+enterText|password:|hopicenucinseC%
+
+click|Login
+verifyText|My Workspace: Message Of The Day
+verifyText|Welcome to your personal workspace.
+
+click|$site
+verifyText|Resources
+verifyText|Site Information Display
+verifyText|Recent Announcements
+
+click|Resources
+verifyTextNotPresent|Permissions
+verifyText|Access
+verifyText|hidden folder
+
+click|hidden folder
+verifyText|hidden folder
+verifyText|Location:
+
+click|Logout
+verifyText|Welcome to the Sakai Demo
+verifyText|Message Of The Day

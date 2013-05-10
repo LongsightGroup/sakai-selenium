@@ -1,0 +1,43 @@
+comment|create Draft assignement
+
+openURL|$url
+verifyText|Welcome to the Sakai Demo
+verifyText|New Account
+enterText|user id:|qainst
+enterText|password:|sswelvalpanklidS$
+
+click|Login
+verifyText|My Workspace: Message Of The Day
+verifyText|Welcome to your personal workspace.
+
+click|$site
+verifyText|Site Information Display
+verifyText|Recent Announcements
+
+click|Assignments
+verifyText|Assignment List
+
+comment|Create a draft assignment.
+click|Add
+verifyText|Add new assignment
+verifyText|Complete form and then choose 'post' at the bottom.
+verifyText|Additional information
+verifyText|Model Answer
+enterText|new_assignment_title|Draft Assignment
+selectList|new_assignment_openampm|AM
+verifyValue|subType|Inline and Attachments
+verifyValue|new_assignment_grade_type|Ungraded
+selectList|new_assignment_grade_type|Letter grade
+ckEnter|Assignment Instructions|These are draft assignment instructions.
+selectCheckbox|Add honor pledge
+comment|selectRadio|Send me one email per day summarizing notifications for student submissions
+
+click|Save Draft
+verifyText|Assignment List
+verifyText|Draft - Draft Assignment 
+verifyText|A-F
+
+click|Logout
+verifyText|Welcome to the Sakai Demo
+verifyText|Message Of The Day
+

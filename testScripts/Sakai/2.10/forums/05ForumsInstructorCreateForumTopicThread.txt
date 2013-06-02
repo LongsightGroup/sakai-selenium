@@ -42,6 +42,6 @@ click|Post
 verifyText|test topic title
 comment|verifyText|test topic long description.
 verifyText|test thread
-verifyText|( 1 message - 0 unread )
+verifyText|0 unread of 1
 click|Logout
 verifyText|Welcome to the Sakai Demo

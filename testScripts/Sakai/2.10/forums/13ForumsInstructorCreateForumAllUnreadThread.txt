@@ -30,7 +30,7 @@ click|Save
 verifyText|Forums
 verifyText|test forum
 verifyText|moderated test topic title
-verifyText|( 0 messages - 0 unread; Moderated )
+verifyText|0 unread
 click|moderated test topic title
 verifyText|moderated test topic title
 verifyText|There are no messages posted.
@@ -43,6 +43,6 @@ click|Post
 verifyText|test topic title
 comment|verifyText|test topic long description.
 verifyText|test thread
-verifyText|( 1 message - 0 unread )
+verifyText|0 unread of 1
 click|Logout
 verifyText|Welcome to the Sakai Demo

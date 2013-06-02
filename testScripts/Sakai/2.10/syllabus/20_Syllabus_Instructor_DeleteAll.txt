@@ -25,20 +25,19 @@ verifyText|Syllabus Items
 verifyText|Selenium Syllabus
 verifyText|Draft Syllabus
 verifyText|Attach a Syllabus
-verifyText|Posted
 
-selectCheckbox|Select to Remove: (Selenium Syllabus)|1
+selectCheckbox|Select to Remove|1
 comment|selectCheckbox|Select to Remove: (Attach a Syllabus)|2
 comment|selectCheckbox|Select to Remove: (Draft Syllabus)|3
 
 click|Update
 verifyText|Deleting selected items
-verifyText|Are you sure you want to delete the specified item(s)?
+verifyText|Are you sure you want to 
 verifyText|Selenium Syllabus
 comment|verifyText|Draft Syllabus
 comment|verifyText|Attach a Syllabus
 
-click|Delete
+click|Update
 verifyText|Syllabus Items
 verifyTextNotPresent|Selenium Syllabus
 

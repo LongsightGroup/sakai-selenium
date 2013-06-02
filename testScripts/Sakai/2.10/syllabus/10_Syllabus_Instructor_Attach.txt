@@ -46,7 +46,6 @@ click|Post
 Comment|Verify the syllabus is added to the page
 VerifyText|Syllabus Items
 VerifyText|Attach a Syllabus
-VerifyText|Posted
 
 click|Logout
 verifyText|Welcome to the Sakai Demo

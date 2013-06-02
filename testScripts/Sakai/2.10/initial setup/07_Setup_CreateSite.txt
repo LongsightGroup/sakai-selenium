@@ -50,8 +50,8 @@ click|Continue
 comment|Should be on the list of tools
 verifyText|Course Site Tools
 verifyText|Choose tools to include on your site...
-comment|Announcements is selected by default.
-comment|selectCheckbox|Announcements
+comment|Announcements is no longer selected by default.
+selectCheckbox|Announcements
 selectCheckbox|Assignments
 selectCheckbox|Chat Room
 selectCheckbox|Drop Box
@@ -69,7 +69,7 @@ selectCheckbox|Web Content
 selectCheckbox|Wiki
 
 click|Continue
-verifyText|Add Multiple Tool Instances
+verifyText|Add multiple tool instances
 verifyText|Email Archive
 verifyText|News
 verifyText|Web Content
@@ -93,14 +93,14 @@ verifyText|$creationCourseEmail
 verifyText|Forums
 verifyText|Gradebook
 verifyText|Messages
-verifyText|News ( channel-url = http://www.nytimes.com/services/xml/rss/nyt/World.xml )
+verifyText|http://www.nytimes.com/services/xml/rss/nyt/World.xml
 verifyText|Polls
 verifyText|Resources
 verifyText|Schedule
 verifyText|Site Info
 verifyText|Syllabus
 verifyText|Tests & Quizzes
-verifyText|Web Content ( source = http:// )
+verifyText|Web Content (Web Content) ( http:// )
 verifyText|Wiki
 verifyText|A basic course created during automated testing.
 

@@ -43,6 +43,6 @@ verifyText|draft forum topic long description. draft forum topic long descriptio
 click|Save
 verifyText|draft topic title
 comment|verifyText|test topic long description.
-verifyText|( 0 messages - 0 unread )
+verifyText|0 unread
 click|Logout
 verifyText|Welcome to the Sakai Demo

@@ -20,7 +20,7 @@ verifyText|Assessments
 verifyText|Create an Assessment
 verifyText|Assessment Title
 enterText|authorIndexForm:title|Pool Assessment
-verifyValue|authorIndexForm:_id25|true
+verifyValue|authorIndexForm:_id27|true
 
 click|Create
 verifyText|Preview

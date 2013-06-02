@@ -35,7 +35,6 @@ Click|Post
 verifyText|Syllabus Items
 verifyText|Logout
 verifyText|Selenium Syllabus
-verifyText|Posted
 
 click|Logout
 verifyText|Welcome to the Sakai Demo

@@ -18,6 +18,7 @@ verifyText|Recent Announcements
 click|Syllabus
 verifyText|Logout
 
+click|Attach a Syllabus
 click|FakeSyllabus.doc
 verifyFile|FakeSyllabus.doc
 

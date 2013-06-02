@@ -21,9 +21,8 @@ verifyText|Logout
 click|Create/Edit
 verifyText|Syllabus Items
 verifyText|Selenium Syllabus
-verifyText|Posted
 
-Click|Selenium Syllabus
+Click|edit details
 VerifyText|Edit Syllabus Item
 VerifyText|Title
 verifyValue|Only members of this site can see this syllabus item.|true
@@ -36,9 +35,8 @@ Click|Post
 VerifyText|Syllabus Items
 VerifyText|Logout
 comment|VerifyText|Selenium Syllabus
-VerifyText|Posted
 
-Click|Selenium Syllabus
+Click|edit details
 VerifyText|Edit Syllabus Item
 VerifyText|Title
 verifyValue|Only members of this site can see this syllabus item.|false
@@ -51,7 +49,6 @@ Click|Post
 VerifyText|Syllabus Items
 VerifyText|Logout
 VerifyText|Selenium Syllabus
-VerifyText|Posted
 
 click|Logout
 verifyText|Welcome to the Sakai Demo

@@ -17,7 +17,7 @@ verifyText|Logout
 verifyText|Forums
 click|test topic title
 comment|verifyText|test topic long description.
-verifyText|test topic title ( 1 message - 1 unread )
+verifyText|test topic title 
 verifyText|New!
 verifyText|test thread
 click|test thread

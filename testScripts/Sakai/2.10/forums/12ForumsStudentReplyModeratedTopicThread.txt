@@ -16,7 +16,7 @@ click|Forums
 verifyText|Logout
 verifyText|Forums
 click|moderated test topic title
-verifyText|moderated test topic title ( 1 message - 1 unread ; Moderated )
+verifyText|moderated test topic title
 verifyText|New!
 verifyText|test thread
 click|test thread

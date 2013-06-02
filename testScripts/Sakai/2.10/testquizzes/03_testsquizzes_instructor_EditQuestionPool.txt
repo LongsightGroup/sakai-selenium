@@ -54,8 +54,8 @@ comment|Verify Fourth Question
 click|Roses are ____ and violets are ____.
 verifyText|Edit Question:
 verifyText|Question - Fill in the Blank
-verifyValue|itemForm:_id82|true
-selectCheckbox|itemForm:_id82
+verifyValue|itemForm:_id85|true
+selectCheckbox|itemForm:_id85
 
 click|Save
 verifyText|Question Pool: Test Pool

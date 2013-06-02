@@ -42,12 +42,12 @@ verifyText|Edit Question:
 verifyText|Question - Multiple Choice
 enterText|Answer Point Value|5
 verifyValue|Single Correct|true
-enterText|itemForm:_id85_textinput|Choose the correct answer
-enterText|itemForm:mcchoices:0:_id143_textinput|Choice 1
+enterText|itemForm:_id90_textinput|Choose the correct answer
+enterText|itemForm:mcchoices:0:_id148_textinput|Choice 1
 selectRadio|A
-enterText|itemForm:mcchoices:1:_id143_textinput|Choice 2
-enterText|itemForm:mcchoices:2:_id143_textinput|Choice 3
-enterText|itemForm:mcchoices:3:_id143_textinput|Choice 4
+enterText|itemForm:mcchoices:1:_id148_textinput|Choice 2
+enterText|itemForm:mcchoices:2:_id148_textinput|Choice 3
+enterText|itemForm:mcchoices:3:_id148_textinput|Choice 4
 
 click|Save
 verifyText|Choose the correct answer
@@ -63,7 +63,7 @@ click|Save
 verifyText|Edit Question:
 verifyText|Question - True False
 enterText|Answer Point Value|5
-enterText|itemForm:_id80_textinput|Is this question true or false?
+enterText|itemForm:_id83_textinput|Is this question true or false?
 selectRadio|False
 
 click|Save
@@ -80,7 +80,7 @@ click|Save
 verifyText|Edit Question:
 verifyText|Question - Short Answer/Essay
 enterText|Answer Point Value|20
-enterText|itemForm:_id72_textinput|Answer this sample essay question
+enterText|itemForm:_id75_textinput|Answer this sample essay question
 click|Add Attachments
 verifyText|Add Attachment
 verifyText|Select an existing item from Resources to attach OR add a new item to a folder to be attached.
@@ -89,7 +89,7 @@ verifyText|Add Attachment
 verifyText|test.doc
 click|Continue
 verifyText|test.doc
-enterText|itemForm:_id132_textinput|This is my model answer.
+enterText|itemForm:_id135_textinput|This is my model answer.
 
 click|Save
 verifyText|Answer this sample essay question
@@ -105,9 +105,9 @@ click|Save
 verifyText|Edit Question:
 verifyText|Question - Fill in the Blank
 enterText|Answer Point Value|5
-enterText|itemForm:_id79_textinput|Roses are {red} and violets are {blue}.
-selectCheckbox|itemForm:_id82
-verifyValue|itemForm:_id82|true
+enterText|itemForm:_id82_textinput|Roses are {red} and violets are {blue}.
+selectCheckbox|itemForm:_id85
+verifyValue|itemForm:_id85|true
 
 click|Save
 
@@ -122,19 +122,19 @@ click|Save
 verifyText|Edit Question:
 verifyText|Question - Matching
 enterText|Answer Point Value|10
-enterText|itemForm:_id80_textinput|Match the colors with colors, simple!
+enterText|itemForm:_id84_textinput|Match the colors with colors, simple!
 verifyText|Choice
-enterText|itemForm:_id149_textinput|Red
-enterText|itemForm:_id152_textinput|Red
+enterText|itemForm:_id153_textinput|Red
+enterText|itemForm:_id157_textinput|Red
 click|Save Pairing
 verifyText|Red
 verifyText|Edit
-enterText|itemForm:_id149_textinput|Green
-enterText|itemForm:_id152_textinput|Green
+enterText|itemForm:_id153_textinput|Green
+enterText|itemForm:_id157_textinput|Green
 click|Save Pairing
 verifyText|Green
-enterText|itemForm:_id149_textinput|Blue
-enterText|itemForm:_id152_textinput|Blue
+enterText|itemForm:_id153_textinput|Blue
+enterText|itemForm:_id157_textinput|Blue
 click|Save Pairing
 verifyText|Blue
 

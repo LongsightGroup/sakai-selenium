@@ -16,7 +16,7 @@ click|Forums
 verifyText|Logout
 verifyText|Forums
 click|test topic title
-comment|verifyText|test topic title ( 2 messages - 1 unread )
+comment|verifyText|test topic title
 comment|verifyText|test topic long description.
 verifyText|Authored By
 verifyText|test thread
